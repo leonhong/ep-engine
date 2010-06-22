@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_flusher.html#a7672258bcd7306fb6de20fc0e096c98e" title="Flusher::pause" alt="" coords="344,81,464,109"/>
+<area shape="rect" id="node5" href="$class_flusher.html#a16d1b095c3f8f2a942a5431ba7493829" title="Flusher::transition_state" alt="" coords="512,81,696,109"/>
+<area shape="rect" id="node7" href="$class_dispatcher.html#af5d5d7984eb0ca4b63228662b2ed815b" title="Cancel a task." alt="" coords="748,5,892,33"/>
+<area shape="rect" id="node9" href="$common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="775,55,865,83"/>
+<area shape="rect" id="node11" href="$class_flusher.html#af2bfa6e06b9825bcd75911dbf0d67315" title="Flusher::stateName" alt="" coords="744,106,896,134"/>
+<area shape="rect" id="node13" href="$flusher_8cc.html#a2bbb134c9fb868e402695252d36d1547" title="validTransition" alt="" coords="760,157,880,185"/>
+</map>

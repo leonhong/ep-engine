@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_strategic_sqlite3.html#a41f3a56350842f33beb29a6d7672d3df" title="Overrides del()." alt="" coords="295,5,452,33"/>
+<area shape="rect" id="node5" href="$class_strategic_sqlite3.html#a4bbd9e8f6ff25ead2d71cf89fa9a7dc6" title="StrategicSqlite3::delVBucket" alt="" coords="267,55,480,83"/>
+<area shape="rect" id="node7" href="$class_sqlite_strategy.html#a121df0b0afd39828da928aa073a0f68e" title="SqliteStrategy::execute" alt="" coords="285,106,461,134"/>
+<area shape="rect" id="node21" href="$class_strategic_sqlite3.html#a2e3093d65e3f6bdb11176f34de517de7" title="StrategicSqlite3::setVBState" alt="" coords="269,157,477,185"/>
+<area shape="rect" id="node9" href="$class_multi_d_b_sqlite_strategy.html#a03cc19d91b0f4ba51576777b519815a4" title="MultiDBSqliteStrategy::destroyTables" alt="" coords="528,30,795,58"/>
+<area shape="rect" id="node11" href="$class_sqlite_strategy.html#ae79a28838872a326b7aaa89267faabe5" title="SqliteStrategy::destroyTables" alt="" coords="553,81,769,109"/>
+<area shape="rect" id="node15" href="$class_multi_d_b_sqlite_strategy.html#adcd1ac1415f756d17de5dafabf3b105c" title="MultiDBSqliteStrategy::initTables" alt="" coords="543,131,780,159"/>
+<area shape="rect" id="node17" href="$class_sqlite_strategy.html#a59a89e07cca9d776eb8324f903f8325b" title="SqliteStrategy::initTables" alt="" coords="568,182,755,210"/>
+<area shape="rect" id="node13" href="$class_strategic_sqlite3.html#a46af4d4d37c32a44c820df35873aa314" title="Reset database to a clean state." alt="" coords="843,81,1013,109"/>
+<area shape="rect" id="node19" href="$class_sqlite_strategy.html#a76080df6b1c5fc847040d2ef76861a7d" title="SqliteStrategy::open" alt="" coords="849,182,1007,210"/>
+</map>

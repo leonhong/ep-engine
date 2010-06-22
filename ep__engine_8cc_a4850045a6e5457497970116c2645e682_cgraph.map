@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_eventually_persistent_engine.html#a7d812924813dcfc5ba7609923dc2e31b" title="EventuallyPersistentEngine::createTapQueue" alt="" coords="196,14,516,42"/>
+<area shape="rect" id="node7" href="$ep__engine_8cc.html#acccf4678fa01a9df3d38e5d3e8e50e20" title="EvpTapIterator" alt="" coords="297,127,415,155"/>
+<area shape="rect" id="node9" href="$ep__engine_8cc.html#a6978613380551af0677b42c2d6472cce" title="Helper function to avoid typing in the long cast all over the place." alt="" coords="675,102,765,130"/>
+<area shape="rect" id="node5" href="$common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="1033,5,1124,33"/>
+<area shape="rect" id="node11" href="$class_eventually_persistent_engine.html#af7a86dbf9bcaf99ec769734c26b94f7b" title="EventuallyPersistentEngine::walkTapQueue" alt="" coords="565,155,875,183"/>
+<area shape="rect" id="node13" href="$class_queued_item.html#a86a0531b1aab718ce060da1988a2d53d" title="QueuedItem::getKey" alt="" coords="999,106,1159,134"/>
+<area shape="rect" id="node16" href="$class_queued_item.html#afbe4b8470c4b7a8b96a9b7fdccbd3e47" title="QueuedItem::getVBucketId" alt="" coords="977,157,1180,185"/>
+<area shape="rect" id="node18" href="$class_eventually_persistent_engine.html#a30caa820a0590133a8329013d4f4e31f" title="EventuallyPersistentEngine::itemAllocate" alt="" coords="931,207,1227,235"/>
+<area shape="rect" id="node20" href="$class_eventually_persistent_engine.html#ab402b319285b5490687e41980b0ae00b" title="Visit the objects and add them to the tap connecitons queue." alt="" coords="927,258,1231,286"/>
+<area shape="rect" id="node34" href="$class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="924,334,1233,362"/>
+<area shape="rect" id="node45" href="$class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="LockHolder::unlock" alt="" coords="1004,55,1153,83"/>
+<area shape="rect" id="node22" href="$ep__engine_8cc.html#a55ebba1dc1503a6cf1eea8f650cdf44c" title="launch_backfill_thread" alt="" coords="1289,233,1463,261"/>
+<area shape="rect" id="node24" href="$class_back_fill_visitor.html#a4b3a67c5e1ca6b986b1ee8f6a34dd2e3" title="BackFillVisitor::apply" alt="" coords="1552,233,1712,261"/>
+<area shape="rect" id="node26" href="$class_eventually_persistent_store.html#a403a339804475ad6a7cdef3259179b2f" title="EventuallyPersistentStore::visit" alt="" coords="1517,283,1747,311"/>
+<area shape="rect" id="node28" href="$class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1805,334,1987,362"/>
+<area shape="rect" id="node30" href="$class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="1801,283,1991,311"/>
+<area shape="rect" id="node32" href="$class_v_bucket_visitor.html#a0e11afbfcf63018528ade208d9852041" title="Begin visiting a bucket." alt="" coords="1795,233,1997,261"/>
+<area shape="rect" id="node36" href="$class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5" title="VBucketMap::addBucket" alt="" coords="1283,385,1469,413"/>
+<area shape="rect" id="node39" href="$class_dispatcher.html#a3a657220baa43a9cde1a4a938d0bc8b5" title="Schedule a job to run." alt="" coords="1295,435,1457,463"/>
+<area shape="rect" id="node43" href="$class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db" title="VBucket::toString" alt="" coords="1305,283,1447,311"/>
+<area shape="rect" id="node41" href="$class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4" title="SyncObject::notify" alt="" coords="1560,435,1704,463"/>
+<area shape="rect" id="node47" href="$class_mutex.html#ad43ff97f225007f2fbb0da2e98676b07" title="Mutex::release" alt="" coords="1316,55,1436,83"/>
+</map>

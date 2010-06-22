@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; std::queue\&lt; T \&gt; \&gt;" alt="" coords="1640,101,1867,129"/>
+<area shape="rect" id="node4" href="$class_atomic.html" title="Atomic\&lt; std::queue\&lt; T \&gt; * \&gt;" alt="" coords="816,59,1035,87"/>
+<area shape="rect" id="node6" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="149,78,256,106"/>
+<area shape="rect" id="node12" href="$class_atomic.html" title="Atomic\&lt; T * \&gt;" alt="" coords="589,110,707,138"/>
+<area shape="rect" id="node16" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="1361,13,1500,41"/>
+<area shape="rect" id="node10" href="$class_atomic_ptr.html" title="Atomic pointer." alt="" coords="1144,110,1269,138"/>
+<area shape="rect" id="node19" href="$class_thread_local_ptr.html" title="ThreadLocalPtr\&lt; AtomicPtr\&lt; std::queue\&lt; T \&gt; \&gt; \&gt;" alt="" coords="1575,182,1932,210"/>
+<area shape="rect" id="node21" href="$class_thread_local.html" title="ThreadLocal\&lt; AtomicPtr\&lt; std::queue\&lt; T \&gt; \&gt; * \&gt;" alt="" coords="751,233,1100,261"/>
+<area shape="rect" id="node23" href="$class_thread_local.html" title="Container of thread&#45;local data." alt="" coords="131,222,275,250"/>
+<area shape="rect" id="node27" href="$class_thread_local.html" title="ThreadLocal\&lt; T * \&gt;" alt="" coords="571,182,725,210"/>
+<area shape="rect" id="node25" href="$class_thread_local_ptr.html" title="Container for a thread&#45;local pointer." alt="" coords="1125,182,1288,210"/>
+</map>

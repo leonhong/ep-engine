@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_atomic.html#a1e02f703b037b447cc0e8779716dad55" title="Atomic\&lt; uint64_t \&gt;::swap" alt="" coords="172,5,369,33"/>
+<area shape="rect" id="node5" href="$class_atomic.html#abd1e4382ff6bff6c05381889a2b9a090" title="Atomic\&lt; uint64_t \&gt;::swapIfNot" alt="" coords="156,55,385,83"/>
+</map>

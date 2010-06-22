@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_hash_table.html#a06f83b5a9f3964a30546c464be691b23" title="Get the number of buckets for a hash table." alt="" coords="147,5,352,33"/>
+<area shape="rect" id="node7" href="$class_hash_table.html#a715243b0bec643bcd61be8e75b697ba1" title="Get the number of locks for a hash table." alt="" coords="155,55,344,83"/>
+<area shape="rect" id="node5" href="$class_hash_table.html#ac9e3db51c1e03eab15f6b9ae22209ae9" title="HashTable::HashTable" alt="" coords="401,5,567,33"/>
+</map>

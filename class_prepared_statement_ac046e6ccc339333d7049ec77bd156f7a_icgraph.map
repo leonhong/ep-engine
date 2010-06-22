@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_strategic_sqlite3.html#a41f3a56350842f33beb29a6d7672d3df" title="Overrides del()." alt="" coords="309,5,467,33"/>
+<area shape="rect" id="node5" href="$class_strategic_sqlite3.html#a4bbd9e8f6ff25ead2d71cf89fa9a7dc6" title="StrategicSqlite3::delVBucket" alt="" coords="281,55,495,83"/>
+<area shape="rect" id="node7" href="$class_strategic_sqlite3.html#a976cd88df1c415e2ae6b23e425da5044" title="Overrides dump." alt="" coords="300,106,476,134"/>
+<area shape="rect" id="node11" href="$class_strategic_sqlite3.html#a5f61047da5beedded44d3dab8955830a" title="Overrides get()." alt="" coords="309,207,467,235"/>
+<area shape="rect" id="node15" href="$class_strategic_sqlite3.html#ad7d854ec9e0a1350c0c3297b05bd714b" title="StrategicSqlite3::listPersistedVbuckets" alt="" coords="249,157,527,185"/>
+<area shape="rect" id="node18" href="$class_strategic_sqlite3.html#a2e3093d65e3f6bdb11176f34de517de7" title="StrategicSqlite3::setVBState" alt="" coords="284,258,492,286"/>
+<area shape="rect" id="node9" href="$class_eventually_persistent_store.html#a1aa4c3f42b5ebece41f96f2a49ce71f5" title="EventuallyPersistentStore::warmup" alt="" coords="576,131,832,159"/>
+<area shape="rect" id="node13" href="$class_get_callback.html#a6ac10e160452f9cfc6d5d8c079356461" title="Perform my task." alt="" coords="621,207,787,235"/>
+</map>

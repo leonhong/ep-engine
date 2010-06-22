@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_callback.html" title="Callback\&lt; std::pair\&lt; bool, int64_t \&gt; \&gt;" alt="" coords="381,130,659,158"/>
+<area shape="rect" id="node9" href="$class_callback.html" title="Callback\&lt; GetValue \&gt;" alt="" coords="436,55,604,83"/>
+<area shape="rect" id="node15" href="$class_callback.html" title="Callback\&lt; T \&gt;" alt="" coords="461,245,579,273"/>
+<area shape="rect" id="node19" href="$class_callback.html" title="Callback\&lt; bool \&gt;" alt="" coords="452,181,588,209"/>
+<area shape="rect" id="node5" href="$class_bool_pair_callback.html" title="BoolPairCallback" alt="" coords="751,106,881,134"/>
+<area shape="rect" id="node7" href="$class_requeuer.html" title="Requeuer" alt="" coords="773,157,859,185"/>
+<area shape="rect" id="node11" href="$class_load_storage_k_v_pair_callback.html" title="Helper class used to insert items into the storage by using the KVStore::dump method..." alt="" coords="713,55,919,83"/>
+<area shape="rect" id="node13" href="$class_lookup_callback.html" title="LookupCallback" alt="" coords="753,5,879,33"/>
+<area shape="rect" id="node17" href="$class_remembering_callback.html" title="Threadsafe callback implementation that just captures the value." alt="" coords="711,258,921,286"/>
+<area shape="rect" id="node21" href="$class_bool_callback.html" title="BoolCallback" alt="" coords="763,207,869,235"/>
+</map>

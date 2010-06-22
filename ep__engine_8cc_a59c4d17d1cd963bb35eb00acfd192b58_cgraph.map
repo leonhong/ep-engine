@@ -1,0 +1,6 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_eventually_persistent_engine.html#a83724e24df854f27278e6a7854f56ae5" title="EventuallyPersistentEngine::destroy" alt="" coords="153,5,415,33"/>
+<area shape="rect" id="node9" href="$ep__engine_8cc.html#a6978613380551af0677b42c2d6472cce" title="Helper function to avoid typing in the long cast all over the place." alt="" coords="239,55,329,83"/>
+<area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#a3917700b7cf8af3431d501eb826faeb7" title="EventuallyPersistentEngine::stopReplication" alt="" coords="464,5,779,33"/>
+<area shape="rect" id="node7" href="$common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="827,5,917,33"/>
+</map>

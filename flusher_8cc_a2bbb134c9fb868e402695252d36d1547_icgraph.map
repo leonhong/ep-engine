@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_flusher.html#a16d1b095c3f8f2a942a5431ba7493829" title="Flusher::transition_state" alt="" coords="173,106,357,134"/>
+<area shape="rect" id="node5" href="$class_flusher.html#adfc50b01abcf6ac213ae65ddc08321eb" title="Flusher::initialize" alt="" coords="405,5,541,33"/>
+<area shape="rect" id="node7" href="$class_flusher.html#ae36fc32d84c57d06b8a1e099e811817e" title="Flusher::step" alt="" coords="687,30,793,58"/>
+<area shape="rect" id="node11" href="$class_flusher.html#a7672258bcd7306fb6de20fc0e096c98e" title="Flusher::pause" alt="" coords="413,106,533,134"/>
+<area shape="rect" id="node21" href="$class_flusher.html#aa424ca7cd5db5069b7b2c93b49886216" title="Flusher::resume" alt="" coords="408,157,539,185"/>
+<area shape="rect" id="node31" href="$class_flusher.html#a7740fb8e61622f86978a72edb02af397" title="Flusher::stop" alt="" coords="420,207,527,235"/>
+<area shape="rect" id="node9" href="$class_flusher_stepper.html#af1b42fc2d8e7eb78b307ca6988cd1ba5" title="Perform my task." alt="" coords="1037,30,1224,58"/>
+<area shape="rect" id="node13" href="$class_eventually_persistent_store.html#afed839ff1e3459b276c035f942bf6449" title="EventuallyPersistentStore::pauseFlusher" alt="" coords="595,106,885,134"/>
+<area shape="rect" id="node15" href="$class_eventually_persistent_engine.html#ad6a5b38b42f232b57418b862ceae54ae" title="EventuallyPersistentEngine::stopFlusher" alt="" coords="985,106,1276,134"/>
+<area shape="rect" id="node17" href="$ep__engine_8cc.html#ad1851871dfc6f438084e9937b2f46e36" title="stopFlusher" alt="" coords="1373,106,1472,134"/>
+<area shape="rect" id="node19" href="$ep__engine_8cc.html#acb3114cabb056ea53ec6be27f400a846" title="EvpUnknownCommand" alt="" coords="1523,131,1701,159"/>
+<area shape="rect" id="node23" href="$class_eventually_persistent_store.html#a86035a53a99baf44ac0ab09cb32f4da4" title="EventuallyPersistentStore::resumeFlusher" alt="" coords="589,157,891,185"/>
+<area shape="rect" id="node25" href="$class_eventually_persistent_engine.html#a7c8ea99b597d583c1afb6caaccc84a33" title="EventuallyPersistentEngine::startFlusher" alt="" coords="984,157,1277,185"/>
+<area shape="rect" id="node27" href="$ep__engine_8cc.html#a6c7ce89c99a495bb06c21a6080d36e93" title="startFlusher" alt="" coords="1372,157,1473,185"/>
+<area shape="rect" id="node33" href="$class_eventually_persistent_store.html#aa00c6dfea5f7951399b567bd1452a007" title="EventuallyPersistentStore::stopFlusher" alt="" coords="601,207,879,235"/>
+<area shape="rect" id="node37" href="$class_flusher.html#af2d8f2520e3c99a81f0a16b5c08547ae" title="Flusher::~Flusher" alt="" coords="671,258,809,286"/>
+<area shape="rect" id="node35" href="$class_eventually_persistent_store.html#a40ed32c5577b559a679e839468cceeec" title="EventuallyPersistentStore::~EventuallyPersistentStore" alt="" coords="940,207,1321,235"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_callback.html" title="Callback\&lt; std::pair\&lt; bool, int64_t \&gt; \&gt;" alt="" coords="803,7,1080,35"/>
+<area shape="rect" id="node4" href="$class_callback.html" title="Interface for callbacks from storage APIs." alt="" coords="408,6,533,34"/>
+<area shape="rect" id="node6" href="$class_callback.html" title="Callback\&lt; bool \&gt;" alt="" coords="873,107,1009,135"/>
+<area shape="rect" id="node9" href="$class_e_p_stats.html" title="Global engine stats container." alt="" coords="905,257,977,285"/>
+<area shape="rect" id="node11" href="$class_atomic.html" title="Atomic\&lt; int \&gt;" alt="" coords="412,281,529,309"/>
+<area shape="rect" id="node13" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="132,281,239,309"/>
+<area shape="rect" id="node17" href="$class_atomic.html" title="Atomic\&lt; time_t \&gt;" alt="" coords="400,559,541,587"/>
+<area shape="rect" id="node20" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="401,487,540,515"/>
+<area shape="rect" id="node23" href="$class_atomic.html" title="Atomic\&lt; rel_time_t \&gt;" alt="" coords="388,175,553,203"/>
+<area shape="rect" id="node26" href="$class_atomic.html" title="Atomic\&lt; bool \&gt;" alt="" coords="407,227,535,255"/>
+<area shape="rect" id="node31" href="$class_stored_value.html" title="StoredValue" alt="" coords="891,483,992,511"/>
+<area shape="rect" id="node29" href="$class_queued_item.html" title="QueuedItem" alt="" coords="889,307,993,335"/>
+</map>

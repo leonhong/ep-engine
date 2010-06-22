@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_strategic_sqlite3.html#a976cd88df1c415e2ae6b23e425da5044" title="Overrides dump." alt="" coords="300,5,476,33"/>
+<area shape="rect" id="node7" href="$class_strategic_sqlite3.html#a5f61047da5beedded44d3dab8955830a" title="Overrides get()." alt="" coords="309,106,467,134"/>
+<area shape="rect" id="node11" href="$class_strategic_sqlite3.html#ad7d854ec9e0a1350c0c3297b05bd714b" title="StrategicSqlite3::listPersistedVbuckets" alt="" coords="249,55,527,83"/>
+<area shape="rect" id="node5" href="$class_eventually_persistent_store.html#a1aa4c3f42b5ebece41f96f2a49ce71f5" title="EventuallyPersistentStore::warmup" alt="" coords="576,30,832,58"/>
+<area shape="rect" id="node9" href="$class_get_callback.html#a6ac10e160452f9cfc6d5d8c079356461" title="Perform my task." alt="" coords="621,106,787,134"/>
+</map>

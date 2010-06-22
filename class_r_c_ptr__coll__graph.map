@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; C \&gt;" alt="" coords="23,393,151,421"/>
+<area shape="rect" id="node4" href="$class_atomic.html" title="Atomic\&lt; C * \&gt;" alt="" coords="5,246,125,274"/>
+<area shape="rect" id="node6" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="61,99,168,127"/>
+<area shape="rect" id="node12" href="$class_atomic.html" title="Atomic\&lt; T * \&gt;" alt="" coords="107,193,224,221"/>
+<area shape="rect" id="node10" href="$class_atomic_ptr.html" title="Atomic pointer." alt="" coords="103,299,228,327"/>
+<area shape="rect" id="node16" href="$class_spin_lock.html" title="A lighter&#45;weight, smaller lock than a mutex." alt="" coords="175,393,257,421"/>
+</map>

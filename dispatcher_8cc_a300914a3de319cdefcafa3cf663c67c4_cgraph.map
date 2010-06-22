@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="455,5,545,33"/>
+<area shape="rect" id="node5" href="$class_dispatcher.html#ae64402ad4f9c794868be79db9655e3cb" title="Dispatcher&#39;s main loop." alt="" coords="251,94,376,122"/>
+<area shape="rect" id="node8" href="$common_8hh.html#a0e87a35ac159ea6dab7835ce9bcccdad" title="less_tv" alt="" coords="467,55,533,83"/>
+<area shape="rect" id="node10" href="$class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4" title="SyncObject::notify" alt="" coords="428,106,572,134"/>
+<area shape="rect" id="node12" href="$class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="LockHolder::unlock" alt="" coords="425,157,575,185"/>
+<area shape="rect" id="node16" href="$class_sync_object.html#a690d11a1ce8b8791f5d28942192eb51c" title="SyncObject::wait" alt="" coords="433,207,567,235"/>
+<area shape="rect" id="node14" href="$class_mutex.html#ad43ff97f225007f2fbb0da2e98676b07" title="Mutex::release" alt="" coords="624,157,744,185"/>
+</map>

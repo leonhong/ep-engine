@@ -1,0 +1,31 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_callback.html" title="Callback\&lt; GetValue \&gt;" alt="" coords="3604,229,3772,257"/>
+<area shape="rect" id="node4" href="$class_callback.html" title="Interface for callbacks from storage APIs." alt="" coords="3307,170,3432,198"/>
+<area shape="rect" id="node6" href="$class_e_p_stats.html" title="Global engine stats container." alt="" coords="861,735,933,763"/>
+<area shape="rect" id="node8" href="$class_atomic.html" title="Atomic\&lt; int \&gt;" alt="" coords="449,645,567,673"/>
+<area shape="rect" id="node40" href="$class_r_c_value.html" title="RCValue" alt="" coords="1133,403,1208,431"/>
+<area shape="rect" id="node10" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="132,354,239,382"/>
+<area shape="rect" id="node14" href="$class_atomic.html" title="Atomic\&lt; time_t \&gt;" alt="" coords="437,915,579,943"/>
+<area shape="rect" id="node17" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="439,303,577,331"/>
+<area shape="rect" id="node20" href="$class_atomic.html" title="Atomic\&lt; rel_time_t \&gt;" alt="" coords="425,713,591,741"/>
+<area shape="rect" id="node23" href="$class_atomic.html" title="Atomic\&lt; bool \&gt;" alt="" coords="444,797,572,825"/>
+<area shape="rect" id="node36" href="$class_atomic.html" title="Atomic\&lt; VBucketHolder * \&gt;" alt="" coords="2709,315,2920,343"/>
+<area shape="rect" id="node48" href="$class_atomic.html" title="Atomic\&lt; VBucket * \&gt;" alt="" coords="1605,293,1771,321"/>
+<area shape="rect" id="node62" href="$class_atomic.html" title="Atomic\&lt; vbucket_state_t \&gt;" alt="" coords="616,371,821,399"/>
+<area shape="rect" id="node68" href="$class_atomic.html" title="Atomic\&lt; T * \&gt;" alt="" coords="449,137,567,165"/>
+<area shape="rect" id="node76" href="$class_atomic.html" title="Atomic\&lt; C * \&gt;" alt="" coords="973,75,1093,103"/>
+<area shape="rect" id="node53" href="$class_hash_table.html" title="Hash table that stores all of the items in memory." alt="" coords="1127,302,1215,330"/>
+<area shape="rect" id="node57" href="$class_stored_value.html" title="StoredValue" alt="" coords="847,393,948,421"/>
+<area shape="rect" id="node26" href="$class_v_bucket_map.html" title="A map of known vbuckets." alt="" coords="3635,338,3741,366"/>
+<area shape="rect" id="node28" href="$class_mutex.html" title="Abstraction built on top of pthread mutexes." alt="" coords="867,238,928,266"/>
+<area shape="rect" id="node50" href="$class_v_bucket.html" title="An individual vbucket." alt="" coords="1313,293,1391,321"/>
+<area shape="rect" id="node30" href="$class_r_c_ptr.html" title="RCPtr\&lt; VBucketHolder \&gt;" alt="" coords="3276,221,3463,249"/>
+<area shape="rect" id="node32" href="$class_spin_lock.html" title="A lighter&#45;weight, smaller lock than a mutex." alt="" coords="1647,127,1729,155"/>
+<area shape="rect" id="node43" href="$class_r_c_ptr.html" title="RCPtr\&lt; VBucket \&gt;" alt="" coords="2163,277,2307,305"/>
+<area shape="rect" id="node72" href="$class_r_c_ptr.html" title="Concurrent reference counted pointer." alt="" coords="1895,75,1991,103"/>
+<area shape="rect" id="node34" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; VBucketHolder \&gt;" alt="" coords="2971,221,3189,249"/>
+<area shape="rect" id="node38" href="$class_v_bucket_holder.html" title="VBucketHolder" alt="" coords="2408,315,2531,343"/>
+<area shape="rect" id="node46" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; VBucket \&gt;" alt="" coords="1856,293,2029,321"/>
+<area shape="rect" id="node66" href="$class_atomic_ptr.html" title="Atomic pointer." alt="" coords="1289,150,1415,178"/>
+<area shape="rect" id="node74" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; C \&gt;" alt="" coords="1624,75,1752,103"/>
+</map>

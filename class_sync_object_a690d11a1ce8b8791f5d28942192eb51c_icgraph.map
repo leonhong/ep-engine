@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_dispatcher.html#ae64402ad4f9c794868be79db9655e3cb" title="Dispatcher&#39;s main loop." alt="" coords="261,5,387,33"/>
+<area shape="rect" id="node13" href="$class_sync_object.html#ae0d9468865145f44c772339d95b27208" title="SyncObject::wait" alt="" coords="257,55,391,83"/>
+<area shape="rect" id="node15" href="$class_remembering_callback.html#a03540cf6ba123177c4697f3ad5912089" title="Wait for a value to be available." alt="" coords="191,106,457,134"/>
+<area shape="rect" id="node5" href="$dispatcher_8cc.html#a300914a3de319cdefcafa3cf663c67c4" title="launch_dispatcher_thread" alt="" coords="508,5,703,33"/>
+<area shape="rect" id="node7" href="$class_dispatcher.html#a740a58c6547cdf33dc9323d486630ccb" title="Start this dispatcher&#39;s thread." alt="" coords="752,5,885,33"/>
+<area shape="rect" id="node9" href="$class_eventually_persistent_store.html#af8760ca2c4c5ec7744d99696bf335d45" title="EventuallyPersistentStore::startDispatcher" alt="" coords="933,5,1237,33"/>
+<area shape="rect" id="node11" href="$class_eventually_persistent_store.html#a6f50abd1a42374dc21615a028e9fb862" title="EventuallyPersistentStore::EventuallyPersistentStore" alt="" coords="1287,5,1657,33"/>
+</map>

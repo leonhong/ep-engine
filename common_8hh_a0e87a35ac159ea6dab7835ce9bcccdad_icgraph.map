@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_compare_tasks.html#ac7fa708e7fd72efced578e8e8fc460e8" title="CompareTasks::operator()" alt="" coords="123,5,317,33"/>
+<area shape="rect" id="node5" href="$class_dispatcher.html#ae64402ad4f9c794868be79db9655e3cb" title="Dispatcher&#39;s main loop." alt="" coords="157,55,283,83"/>
+<area shape="rect" id="node7" href="$dispatcher_8cc.html#a300914a3de319cdefcafa3cf663c67c4" title="launch_dispatcher_thread" alt="" coords="367,55,561,83"/>
+<area shape="rect" id="node9" href="$class_dispatcher.html#a740a58c6547cdf33dc9323d486630ccb" title="Start this dispatcher&#39;s thread." alt="" coords="611,55,744,83"/>
+<area shape="rect" id="node11" href="$class_eventually_persistent_store.html#af8760ca2c4c5ec7744d99696bf335d45" title="EventuallyPersistentStore::startDispatcher" alt="" coords="792,55,1096,83"/>
+<area shape="rect" id="node13" href="$class_eventually_persistent_store.html#a6f50abd1a42374dc21615a028e9fb862" title="EventuallyPersistentStore::EventuallyPersistentStore" alt="" coords="1145,55,1516,83"/>
+</map>

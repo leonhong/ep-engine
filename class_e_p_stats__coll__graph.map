@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_atomic.html" title="Atomic\&lt; int \&gt;" alt="" coords="5,193,123,221"/>
+<area shape="rect" id="node4" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="328,99,435,127"/>
+<area shape="rect" id="node8" href="$class_atomic.html" title="Atomic\&lt; time_t \&gt;" alt="" coords="147,193,288,221"/>
+<area shape="rect" id="node11" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="312,193,451,221"/>
+<area shape="rect" id="node14" href="$class_atomic.html" title="Atomic\&lt; rel_time_t \&gt;" alt="" coords="475,193,640,221"/>
+<area shape="rect" id="node17" href="$class_atomic.html" title="Atomic\&lt; bool \&gt;" alt="" coords="664,193,792,221"/>
+</map>
