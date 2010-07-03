@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$class_hash_table.html#a98d2474aa2d5f0e3911f393b2f3ad088" title="HashTable::bucket" alt="" coords="195,5,339,33"/>
-<area shape="rect" id="node5" href="$class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f" title="HashTable::getMutex" alt="" coords="187,55,347,83"/>
-<area shape="rect" id="node7" href="$class_hash_table.html#a65a4132a3011ea8bc100a6c0a45ce4e7" title="Delete a key from the cache without trying to lock the cache first (Please note that..." alt="" coords="173,106,360,134"/>
-<area shape="rect" id="node9" href="$class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="StoredValue::isLocked" alt="" coords="409,106,577,134"/>
-</map>

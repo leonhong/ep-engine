@@ -78,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00040"></a><a class="code" href="structfeature__data.html#a6f2d88d1e34cae5e94ad689bada173b1">00040</a>     rel_time_t <a class="code" href="structfeature__data.html#a6f2d88d1e34cae5e94ad689bada173b1">lock_expiry</a>;     <span class="comment">//&lt;! getl lock expiration</span>
 <a name="l00041"></a><a class="code" href="structfeature__data.html#ac747c42df3a5de6c2764a4639fbb4d2e">00041</a>     <span class="keywordtype">bool</span>       <a class="code" href="structfeature__data.html#ac747c42df3a5de6c2764a4639fbb4d2e">locked</a>;          <span class="comment">//&lt;! True if this item is locked</span>
 <a name="l00042"></a><a class="code" href="structfeature__data.html#a38f48a971015737a0d99bd9a1410ac22">00042</a>     uint8_t    <a class="code" href="structfeature__data.html#a38f48a971015737a0d99bd9a1410ac22">keylen</a>;          <span class="comment">//&lt;! Length of the key</span>
-<a name="l00043"></a><a class="code" href="structfeature__data.html#a5e16048cf85c07a1bfe73d9c74d094e9">00043</a>     <span class="keywordtype">char</span>       <a class="code" href="structfeature__data.html#a5e16048cf85c07a1bfe73d9c74d094e9">keybytes</a>[1]; &lt;   
+<a name="l00043"></a><a class="code" href="structfeature__data.html#a5e16048cf85c07a1bfe73d9c74d094e9">00043</a>     <span class="keywordtype">char</span>       <a class="code" href="structfeature__data.html#a5e16048cf85c07a1bfe73d9c74d094e9">keybytes</a>[1];     <span class="comment">//&lt;! The key itself.</span>
 <a name="l00044"></a>00044 };
 <a name="l00045"></a>00045 
 <a name="l00049"></a><a class="code" href="unionstored__value__bodies.html">00049</a> <span class="keyword">union </span><a class="code" href="unionstored__value__bodies.html" title="Union of StoredValue data.">stored_value_bodies</a> {
@@ -661,7 +661,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 3 00:06:06 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 3 00:54:54 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>
