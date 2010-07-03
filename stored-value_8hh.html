@@ -142,18 +142,25 @@ Variables</h2></td></tr>
 <p>Storage was attempted on a vbucket not managed by this node. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a02506aa17c2d3b817f701f16f960f692acdaa2919bac56fe1090eb3dbb9526472"></a><!-- doxytag: member="NOT_FOUND" ref="a02506aa17c2d3b817f701f16f960f692acdaa2919bac56fe1090eb3dbb9526472" args="" -->NOT_FOUND</em>&nbsp;</td><td>
+<p>The item was not found for update. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a02506aa17c2d3b817f701f16f960f692a4642a56a21db1fe4e6bc08cfcb0eb496"></a><!-- doxytag: member="INVALID_CAS" ref="a02506aa17c2d3b817f701f16f960f692a4642a56a21db1fe4e6bc08cfcb0eb496" args="" -->INVALID_CAS</em>&nbsp;</td><td>
+<p>The wrong CAS identifier was sent for a CAS update. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a02506aa17c2d3b817f701f16f960f692a717f35b39982416e8911eb3f9112cd22"></a><!-- doxytag: member="WAS_CLEAN" ref="a02506aa17c2d3b817f701f16f960f692a717f35b39982416e8911eb3f9112cd22" args="" -->WAS_CLEAN</em>&nbsp;</td><td>
+<p>The item was clean before this mutation. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a02506aa17c2d3b817f701f16f960f692a5dfc0059d3c484a57a9d73b91eb125e3"></a><!-- doxytag: member="WAS_DIRTY" ref="a02506aa17c2d3b817f701f16f960f692a5dfc0059d3c484a57a9d73b91eb125e3" args="" -->WAS_DIRTY</em>&nbsp;</td><td>
+<p>This item was already dirty before this mutation. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a02506aa17c2d3b817f701f16f960f692a46ba68980f051816ffa710ecface2753"></a><!-- doxytag: member="IS_LOCKED" ref="a02506aa17c2d3b817f701f16f960f692a46ba68980f051816ffa710ecface2753" args="" -->IS_LOCKED</em>&nbsp;</td><td>
+<p>The item is locked and can't be updated. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a02506aa17c2d3b817f701f16f960f692a30c7dfa31762c31b1002a6d883590f08"></a><!-- doxytag: member="NOMEM" ref="a02506aa17c2d3b817f701f16f960f692a30c7dfa31762c31b1002a6d883590f08" args="" -->NOMEM</em>&nbsp;</td><td>
+<p>Insufficient memory to store this item. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a02506aa17c2d3b817f701f16f960f692ac7f69f7c9e5aea9b8f54cf02870e2bf8"></a><!-- doxytag: member="SUCCESS" ref="a02506aa17c2d3b817f701f16f960f692ac7f69f7c9e5aea9b8f54cf02870e2bf8" args="" -->SUCCESS</em>&nbsp;</td><td>
+<p>Stoarage was successful (see also WAS_CLEAN/WAS_DIRTY). </p>
 </td></tr>
 </table>
 </dd>
@@ -175,8 +182,10 @@ Variables</h2></td></tr>
 <p>Types of stored values. </p>
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
 <tr><td valign="top"><em><a class="anchor" id="accfa4e65c7ce74d9157e4d6d24db2effa6eb5ea92f3d8e929ccc26a9692383761"></a><!-- doxytag: member="small" ref="accfa4e65c7ce74d9157e4d6d24db2effa6eb5ea92f3d8e929ccc26a9692383761" args="" -->small</em>&nbsp;</td><td>
+<p>Small (minimally featured) stored values. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="accfa4e65c7ce74d9157e4d6d24db2effabca93e8b7670e031fd99e0dd3a6b07bc"></a><!-- doxytag: member="featured" ref="accfa4e65c7ce74d9157e4d6d24db2effabca93e8b7670e031fd99e0dd3a6b07bc" args="" -->featured</em>&nbsp;</td><td>
+<p>Full featured stored values. </p>
 </td></tr>
 </table>
 </dd>
@@ -215,7 +224,7 @@ Variables</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 3 2010 00:59:11 for membase core engine by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 3 2010 01:11:11 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

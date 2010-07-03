@@ -64,12 +64,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">uint64_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeature__data.html#abeddfaaa97bc463bc270e937595b7e1a">cas</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">CAS identifier.  <a href="#abeddfaaa97bc463bc270e937595b7e1a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">uint32_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeature__data.html#a3c65747c79240e6fafd9a8de36d8fa7c">flags</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Client-specified flags.  <a href="#a3c65747c79240e6fafd9a8de36d8fa7c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">rel_time_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeature__data.html#a815aa2f8ae9c769da69ba419fd14d337">exptime</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Expiration time of this item.  <a href="#a815aa2f8ae9c769da69ba419fd14d337"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">rel_time_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeature__data.html#a6f2d88d1e34cae5e94ad689bada173b1">lock_expiry</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">getl lock expiration  <a href="#a6f2d88d1e34cae5e94ad689bada173b1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeature__data.html#ac747c42df3a5de6c2764a4639fbb4d2e">locked</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">True if this item is locked.  <a href="#ac747c42df3a5de6c2764a4639fbb4d2e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">uint8_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeature__data.html#a38f48a971015737a0d99bd9a1410ac22">keylen</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Length of the key.  <a href="#a38f48a971015737a0d99bd9a1410ac22"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeature__data.html#a5e16048cf85c07a1bfe73d9c74d094e9">keybytes</a> [1]</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The key itself.  <a href="#a5e16048cf85c07a1bfe73d9c74d094e9"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p><a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> "featured" data type. </p>
@@ -84,6 +91,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>CAS identifier. </p>
 
 <p>Referenced by <a class="el" href="class_stored_value.html#ae3cf1eaf21d603a3cab0ecc42c3f482c">StoredValue::getCas()</a>, <a class="el" href="class_stored_value.html#afba2369bf99f308ab9cd04fa7eff051f">StoredValue::setCas()</a>, and <a class="el" href="class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c">StoredValue::setValue()</a>.</p>
 
@@ -100,6 +109,8 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Expiration time of this item. </p>
+
 <p>Referenced by <a class="el" href="class_stored_value.html#a9027da615efcc3577e8b894db1a34d1d">StoredValue::getExptime()</a>, and <a class="el" href="class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c">StoredValue::setValue()</a>.</p>
 
 </div>
@@ -114,6 +125,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Client-specified flags. </p>
 
 <p>Referenced by <a class="el" href="class_stored_value.html#a4b121ef0b34b038dac06ac07f9e1edb6">StoredValue::getFlags()</a>, and <a class="el" href="class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c">StoredValue::setValue()</a>.</p>
 
@@ -130,6 +143,8 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>The key itself. </p>
+
 <p>Referenced by <a class="el" href="class_stored_value.html#a3d14f5422d4f95add2b3beaf67d4418c">StoredValue::getKeyBytes()</a>.</p>
 
 </div>
@@ -144,6 +159,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Length of the key. </p>
 
 <p>Referenced by <a class="el" href="class_stored_value.html#ac450ecb78542a05cfa1f3b337e2de947">StoredValue::getKeyLen()</a>.</p>
 
@@ -160,6 +177,8 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>getl lock expiration </p>
+
 <p>Referenced by <a class="el" href="class_stored_value.html#ae4da538b356f568086190b9e85b92416">StoredValue::isLocked()</a>, <a class="el" href="class_stored_value.html#a713513917219632a7a9331319f10f87a">StoredValue::lock()</a>, and <a class="el" href="class_stored_value.html#a6630950f48986ee770898a4fb14d7a68">StoredValue::unlock()</a>.</p>
 
 </div>
@@ -174,6 +193,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>True if this item is locked. </p>
 
 <p>Referenced by <a class="el" href="class_stored_value.html#ae4da538b356f568086190b9e85b92416">StoredValue::isLocked()</a>, <a class="el" href="class_stored_value.html#a713513917219632a7a9331319f10f87a">StoredValue::lock()</a>, and <a class="el" href="class_stored_value.html#a6630950f48986ee770898a4fb14d7a68">StoredValue::unlock()</a>.</p>
 
@@ -197,7 +218,7 @@ Public Attributes</h2></td></tr>
 </iframe>
 </div>
 
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 3 2010 00:59:12 for membase core engine by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Sat Jul 3 2010 01:11:12 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
