@@ -100,14 +100,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00080"></a>00080     }
 <a name="l00081"></a>00081 
 <a name="l00085"></a><a class="code" href="class_remembering_callback.html#a488ddf410ca2d8431b0344b146e4b8db">00085</a>     <span class="keywordtype">void</span> <a class="code" href="class_remembering_callback.html#a488ddf410ca2d8431b0344b146e4b8db" title="The callback implementation -- just store a value.">callback</a>(T &amp;value) {
-<a name="l00086"></a>00086         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(so);
+<a name="l00086"></a>00086         <a class="code" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> lh(so);
 <a name="l00087"></a>00087         <a class="code" href="class_remembering_callback.html#a4c05be65da1510b16b103b20fd782247" title="The value that was captured from the callback.">val</a> = value;
 <a name="l00088"></a>00088         <a class="code" href="class_remembering_callback.html#a055f063dfc88ce5e31f432368397964e" title="True if the callback has fired.">fired</a> = <span class="keyword">true</span>;
 <a name="l00089"></a>00089         so.<a class="code" href="class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4">notify</a>();
 <a name="l00090"></a>00090     }
 <a name="l00091"></a>00091 
 <a name="l00099"></a><a class="code" href="class_remembering_callback.html#a03540cf6ba123177c4697f3ad5912089">00099</a>     <span class="keywordtype">void</span> <a class="code" href="class_remembering_callback.html#a03540cf6ba123177c4697f3ad5912089" title="Wait for a value to be available.">waitForValue</a>() {
-<a name="l00100"></a>00100         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(so);
+<a name="l00100"></a>00100         <a class="code" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> lh(so);
 <a name="l00101"></a>00101         <span class="keywordflow">if</span> (!<a class="code" href="class_remembering_callback.html#a055f063dfc88ce5e31f432368397964e" title="True if the callback has fired.">fired</a>) {
 <a name="l00102"></a>00102             so.<a class="code" href="class_sync_object.html#a690d11a1ce8b8791f5d28942192eb51c">wait</a>();
 <a name="l00103"></a>00103         }
@@ -139,7 +139,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:38 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 3 00:06:06 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

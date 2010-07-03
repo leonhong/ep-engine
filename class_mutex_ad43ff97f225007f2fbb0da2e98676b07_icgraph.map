@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_multi_lock_holder.html#ac51b4af4839808017f4e510e70e73806" title="MultiLockHolder::unlock" alt="" coords="175,30,356,58"/>
-<area shape="rect" id="node7" href="$class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="LockHolder::unlock" alt="" coords="191,131,340,159"/>
+<area shape="rect" id="node3" href="$class_multi_lock_holder.html#ac51b4af4839808017f4e510e70e73806" title="Manually unlock the series." alt="" coords="175,30,356,58"/>
+<area shape="rect" id="node7" href="$class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="Manually unlock a lock." alt="" coords="191,131,340,159"/>
 <area shape="rect" id="node5" href="$class_multi_lock_holder.html#a89266f1b270e6bd59e56ed65c9512fd1" title="MultiLockHolder::~MultiLockHolder" alt="" coords="432,5,688,33"/>
 <area shape="rect" id="node9" href="$class_dispatcher.html#ae64402ad4f9c794868be79db9655e3cb" title="Dispatcher&#39;s main loop." alt="" coords="497,55,623,83"/>
 <area shape="rect" id="node19" href="$class_dispatcher.html#ae3c73ff1334bcdbc0b354fd6f89d1c27" title="Stop this dispatcher." alt="" coords="495,106,625,134"/>

@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00075"></a>00075     }
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077     <span class="keywordtype">void</span> snooze(<span class="keyword">const</span> <span class="keywordtype">double</span> secs) {
-<a name="l00078"></a>00078         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(mutex);
+<a name="l00078"></a>00078         <a class="code" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> lh(mutex);
 <a name="l00079"></a>00079         gettimeofday(&amp;waketime, NULL);
 <a name="l00080"></a>00080         <a class="code" href="common_8hh.html#a65d38ee243d8869dca1d7ac2a42e383d">advance_tv</a>(waketime, secs);
 <a name="l00081"></a>00081         state = <a class="code" href="dispatcher_8hh.html#a46c7ab5dd73831ee98458db0a68fc4a2a5bf1711b5dcdcf2118072dd4b9b1aa8b" title="The task will run later.">task_sleeping</a>;
@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00086"></a>00086     }
 <a name="l00087"></a>00087 
 <a name="l00088"></a>00088     <span class="keywordtype">void</span> cancel() {
-<a name="l00089"></a>00089         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(mutex);
+<a name="l00089"></a>00089         <a class="code" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> lh(mutex);
 <a name="l00090"></a>00090         state = <a class="code" href="dispatcher_8hh.html#a46c7ab5dd73831ee98458db0a68fc4a2ac1af2d521f2adecd7a9188210b00362d" title="The task is dead and should not be executed.">task_dead</a>;
 <a name="l00091"></a>00091     }
 <a name="l00092"></a>00092 
@@ -170,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00184"></a>00184 
 <a name="l00185"></a>00185     <span class="keywordtype">void</span> reschedule(<a class="code" href="dispatcher_8hh.html#ad67b703daa7efe14fefc8ee8e9c612b3">TaskId</a> task) {
 <a name="l00186"></a>00186         <span class="comment">// If the task is already in the queue it&#39;ll get run twice</span>
-<a name="l00187"></a>00187         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(mutex);
+<a name="l00187"></a>00187         <a class="code" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> lh(mutex);
 <a name="l00188"></a>00188         queue.push(task);
 <a name="l00189"></a>00189     }
 <a name="l00190"></a>00190 
@@ -197,7 +197,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:38 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 3 00:06:06 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

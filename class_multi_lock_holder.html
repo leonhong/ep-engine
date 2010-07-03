@@ -46,6 +46,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <h1>MultiLockHolder Class Reference</h1><!-- doxytag: class="MultiLockHolder" -->
+<p>RAII lock holder over multiple locks.  
+<a href="#_details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="locks_8hh_source.html">locks.hh</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for MultiLockHolder:</div>
@@ -59,10 +62,15 @@ Collaboration diagram for MultiLockHolder:</div>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multi_lock_holder.html#a31c14a7df66b07f7769090d36f07e2f7">MultiLockHolder</a> (<a class="el" href="class_mutex.html">Mutex</a> *m, size_t n)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Acquire a series of locks.  <a href="#a31c14a7df66b07f7769090d36f07e2f7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multi_lock_holder.html#a89266f1b270e6bd59e56ed65c9512fd1">~MultiLockHolder</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multi_lock_holder.html#a8488b8d8b4e167467a5078f034d126cd">lock</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Relock the series after having manually unlocked it.  <a href="#a8488b8d8b4e167467a5078f034d126cd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_multi_lock_holder.html#ac51b4af4839808017f4e510e70e73806">unlock</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Manually unlock the series.  <a href="#ac51b4af4839808017f4e510e70e73806"></a><br/></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Detailed Description</h2>
+<p>RAII lock holder over multiple locks. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a31c14a7df66b07f7769090d36f07e2f7"></a><!-- doxytag: member="MultiLockHolder::MultiLockHolder" ref="a31c14a7df66b07f7769090d36f07e2f7" args="(Mutex *m, size_t n)" -->
 <div class="memitem">
@@ -89,14 +97,23 @@ Collaboration diagram for MultiLockHolder:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="locks_8hh_source.html#l00063">lock()</a>.</p>
+<p>Acquire a series of locks. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>m</em>&nbsp;</td><td>beginning of an array of locks </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>the number of locks to lock </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>References <a class="el" href="locks_8hh_source.html#l00087">lock()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_multi_lock_holder_a31c14a7df66b07f7769090d36f07e2f7_cgraph.png" border="0" usemap="#class_multi_lock_holder_a31c14a7df66b07f7769090d36f07e2f7_cgraph_map" alt=""></div>
 <map name="class_multi_lock_holder_a31c14a7df66b07f7769090d36f07e2f7_cgraph_map" id="class_multi_lock_holder_a31c14a7df66b07f7769090d36f07e2f7_cgraph">
-<area shape="rect" id="node3" href="class_multi_lock_holder.html#a8488b8d8b4e167467a5078f034d126cd" title="MultiLockHolder::lock" alt="" coords="301,5,467,33"/><area shape="rect" id="node5" href="class_mutex.html#a82f17ffc2852d2ea1b498b7331e1eebe" title="Mutex::acquire" alt="" coords="515,5,637,33"/></map>
+<area shape="rect" id="node3" href="class_multi_lock_holder.html#a8488b8d8b4e167467a5078f034d126cd" title="Relock the series after having manually unlocked it." alt="" coords="301,5,467,33"/><area shape="rect" id="node5" href="class_mutex.html#a82f17ffc2852d2ea1b498b7331e1eebe" title="Mutex::acquire" alt="" coords="515,5,637,33"/></map>
 </div>
 </p>
 
@@ -117,14 +134,14 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="locks_8hh_source.html#l00070">unlock()</a>.</p>
+<p>References <a class="el" href="locks_8hh_source.html#l00097">unlock()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_multi_lock_holder_a89266f1b270e6bd59e56ed65c9512fd1_cgraph.png" border="0" usemap="#class_multi_lock_holder_a89266f1b270e6bd59e56ed65c9512fd1_cgraph_map" alt=""></div>
 <map name="class_multi_lock_holder_a89266f1b270e6bd59e56ed65c9512fd1_cgraph_map" id="class_multi_lock_holder_a89266f1b270e6bd59e56ed65c9512fd1_cgraph">
-<area shape="rect" id="node3" href="class_multi_lock_holder.html#ac51b4af4839808017f4e510e70e73806" title="MultiLockHolder::unlock" alt="" coords="313,5,495,33"/><area shape="rect" id="node5" href="class_mutex.html#ad43ff97f225007f2fbb0da2e98676b07" title="Mutex::release" alt="" coords="544,5,664,33"/></map>
+<area shape="rect" id="node3" href="class_multi_lock_holder.html#ac51b4af4839808017f4e510e70e73806" title="Manually unlock the series." alt="" coords="313,5,495,33"/><area shape="rect" id="node5" href="class_mutex.html#ad43ff97f225007f2fbb0da2e98676b07" title="Mutex::release" alt="" coords="544,5,664,33"/></map>
 </div>
 </p>
 
@@ -146,9 +163,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Relock the series after having manually unlocked it. </p>
+
 <p>References <a class="el" href="mutex_8hh_source.html#l00044">Mutex::acquire()</a>.</p>
 
-<p>Referenced by <a class="el" href="locks_8hh_source.html#l00051">MultiLockHolder()</a>.</p>
+<p>Referenced by <a class="el" href="locks_8hh_source.html#l00072">MultiLockHolder()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -164,7 +183,7 @@ Here is the caller graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_multi_lock_holder_a8488b8d8b4e167467a5078f034d126cd_icgraph.png" border="0" usemap="#class_multi_lock_holder_a8488b8d8b4e167467a5078f034d126cd_icgraph_map" alt=""></div>
 <map name="class_multi_lock_holder_a8488b8d8b4e167467a5078f034d126cd_icgraph_map" id="class_multi_lock_holder_a8488b8d8b4e167467a5078f034d126cd_icgraph">
-<area shape="rect" id="node3" href="class_multi_lock_holder.html#a31c14a7df66b07f7769090d36f07e2f7" title="MultiLockHolder::MultiLockHolder" alt="" coords="220,5,465,33"/></map>
+<area shape="rect" id="node3" href="class_multi_lock_holder.html#a31c14a7df66b07f7769090d36f07e2f7" title="Acquire a series of locks." alt="" coords="220,5,465,33"/></map>
 </div>
 </p>
 
@@ -185,9 +204,11 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Manually unlock the series. </p>
+
 <p>References <a class="el" href="mutex_8hh_source.html#l00054">Mutex::release()</a>.</p>
 
-<p>Referenced by <a class="el" href="locks_8hh_source.html#l00058">~MultiLockHolder()</a>.</p>
+<p>Referenced by <a class="el" href="locks_8hh_source.html#l00079">~MultiLockHolder()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -227,7 +248,7 @@ Here is the caller graph for this function:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:43 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 3 00:06:10 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

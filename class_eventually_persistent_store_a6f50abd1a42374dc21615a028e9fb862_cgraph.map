@@ -10,7 +10,7 @@
 <area shape="rect" id="node17" href="$class_dispatcher.html#ae64402ad4f9c794868be79db9655e3cb" title="Dispatcher&#39;s main loop." alt="" coords="1205,131,1331,159"/>
 <area shape="rect" id="node20" href="$common_8hh.html#a0e87a35ac159ea6dab7835ce9bcccdad" title="less_tv" alt="" coords="1421,93,1488,121"/>
 <area shape="rect" id="node22" href="$class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4" title="SyncObject::notify" alt="" coords="1383,143,1527,171"/>
-<area shape="rect" id="node24" href="$class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="LockHolder::unlock" alt="" coords="1380,194,1529,222"/>
+<area shape="rect" id="node24" href="$class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="Manually unlock a lock." alt="" coords="1380,194,1529,222"/>
 <area shape="rect" id="node28" href="$class_sync_object.html#a690d11a1ce8b8791f5d28942192eb51c" title="SyncObject::wait" alt="" coords="1388,245,1521,273"/>
 <area shape="rect" id="node26" href="$class_mutex.html#ad43ff97f225007f2fbb0da2e98676b07" title="Mutex::release" alt="" coords="1579,194,1699,222"/>
 <area shape="rect" id="node32" href="$class_flusher.html#adab9e822ca7b56f507aa038768318ee6" title="Flusher::start" alt="" coords="791,157,900,185"/>

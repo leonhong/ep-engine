@@ -104,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00073"></a>00073     }
 <a name="l00074"></a>00074 
 <a name="l00075"></a><a class="code" href="class_v_bucket.html#a7bd89bc578b2d206c005d3d43f71d732">00075</a>     <span class="keywordtype">bool</span> <a class="code" href="class_v_bucket.html#a7bd89bc578b2d206c005d3d43f71d732">addPendingOp</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *cookie) {
-<a name="l00076"></a>00076         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(pendingOpLock);
+<a name="l00076"></a>00076         <a class="code" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> lh(pendingOpLock);
 <a name="l00077"></a>00077         <span class="keywordflow">if</span> (state != pending) {
 <a name="l00078"></a>00078             <span class="comment">// State transitioned while we were waiting.</span>
 <a name="l00079"></a>00079             <span class="keywordflow">return</span> <span class="keyword">false</span>;
@@ -260,7 +260,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00237"></a>00237 
 <a name="l00238"></a>00238 <span class="keyword">private</span>:
 <a name="l00239"></a>00239     <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> grow(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>) {
-<a name="l00240"></a>00240         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(mutex);
+<a name="l00240"></a>00240         <a class="code" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> lh(mutex);
 <a name="l00241"></a>00241         <span class="keywordflow">if</span> (buckets-&gt;getSize() &lt;= id) {
 <a name="l00242"></a>00242             <span class="comment">// still not big enough</span>
 <a name="l00243"></a>00243             <span class="keywordtype">size_t</span> n(0);
@@ -293,7 +293,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:39 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 3 00:06:06 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

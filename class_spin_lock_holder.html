@@ -46,7 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <h1>SpinLockHolder Class Reference</h1><!-- doxytag: class="SpinLockHolder" -->
-<p>Safe <a class="el" href="class_lock_holder.html">LockHolder</a> for <a class="el" href="class_spin_lock.html" title="A lighter-weight, smaller lock than a mutex.">SpinLock</a> instances.  
+<p>Safe <a class="el" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> for <a class="el" href="class_spin_lock.html" title="A lighter-weight, smaller lock than a mutex.">SpinLock</a> instances.  
 <a href="#_details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="atomic_8hh_source.html">atomic.hh</a>&gt;</code></p>
@@ -67,7 +67,7 @@ Collaboration diagram for SpinLockHolder:</div>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spin_lock_holder.html#a910a4979d3ad1af9653febb724bdfd10">unlock</a> ()</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Safe <a class="el" href="class_lock_holder.html">LockHolder</a> for <a class="el" href="class_spin_lock.html" title="A lighter-weight, smaller lock than a mutex.">SpinLock</a> instances. </p>
+<p>Safe <a class="el" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> for <a class="el" href="class_spin_lock.html" title="A lighter-weight, smaller lock than a mutex.">SpinLock</a> instances. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a54b971ad3481c94cb30713bb4a711578"></a><!-- doxytag: member="SpinLockHolder::SpinLockHolder" ref="a54b971ad3481c94cb30713bb4a711578" args="(SpinLock *theLock)" -->
 <div class="memitem">
@@ -223,7 +223,7 @@ Here is the caller graph for this function:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:44 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 3 00:06:10 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

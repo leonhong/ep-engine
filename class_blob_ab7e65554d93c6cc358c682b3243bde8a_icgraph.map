@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$class_item.html#a1445a9ba65ccc4014b9b52774615c995" title="Append another item to this item." alt="" coords="225,5,337,33"/>
-<area shape="rect" id="node13" href="$class_blob.html#a025843b28cba4bd1774f8e71846db68d" title="Blob::New" alt="" coords="237,55,325,83"/>
+<area shape="rect" id="node13" href="$class_blob.html#a025843b28cba4bd1774f8e71846db68d" title="Create a new Blob holding the contents of the given string." alt="" coords="237,55,325,83"/>
 <area shape="rect" id="node15" href="$class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9" title="Prepend another item to this item." alt="" coords="223,106,340,134"/>
 <area shape="rect" id="node18" href="$class_eventually_persistent_engine.html#ac342b14e74c4352f55ac1ca5f64e0f63" title="EventuallyPersistentEngine::tapNotify" alt="" coords="145,157,417,185"/>
 <area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#afcbf29ea91f0193e711c5f63f7ebe90a" title="EventuallyPersistentEngine::store" alt="" coords="468,55,713,83"/>

@@ -46,6 +46,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <h1>LockHolder Class Reference</h1><!-- doxytag: class="LockHolder" -->
+<p>RAII lock holder to guarantee release of the lock.  
+<a href="#_details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="locks_8hh_source.html">locks.hh</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for LockHolder:</div>
@@ -63,8 +66,13 @@ Collaboration diagram for LockHolder:</div>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lock_holder.html#ae718cd98823888c866cb252b44ce1d16">~LockHolder</a> ()</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Release the lock.  <a href="#ae718cd98823888c866cb252b44ce1d16"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lock_holder.html#a9bf29c5d4a63881e976734695e0a592e">lock</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Relock a lock that was manually unlocked.  <a href="#a9bf29c5d4a63881e976734695e0a592e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lock_holder.html#a6429be45192a854333d64d25eeeff049">unlock</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Manually unlock a lock.  <a href="#a6429be45192a854333d64d25eeeff049"></a><br/></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Detailed Description</h2>
+<p>RAII lock holder to guarantee release of the lock. </p>
+<p>It is a very bad idea to unlock a lock held by a <a class="el" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> without using the <a class="el" href="class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="Manually unlock a lock.">LockHolder::unlock</a> method. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="add088dfe56ad2ceb15f02e7b2758cb71"></a><!-- doxytag: member="LockHolder::LockHolder" ref="add088dfe56ad2ceb15f02e7b2758cb71" args="(Mutex &amp;m)" -->
 <div class="memitem">
@@ -84,14 +92,14 @@ Collaboration diagram for LockHolder:</div>
 
 <p>Acquire the lock in the given mutex. </p>
 
-<p>References <a class="el" href="locks_8hh_source.html#l00029">lock()</a>.</p>
+<p>References <a class="el" href="locks_8hh_source.html#l00038">lock()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_lock_holder_add088dfe56ad2ceb15f02e7b2758cb71_cgraph.png" border="0" usemap="#class_lock_holder_add088dfe56ad2ceb15f02e7b2758cb71_cgraph_map" alt=""></div>
 <map name="class_lock_holder_add088dfe56ad2ceb15f02e7b2758cb71_cgraph_map" id="class_lock_holder_add088dfe56ad2ceb15f02e7b2758cb71_cgraph">
-<area shape="rect" id="node3" href="class_lock_holder.html#a9bf29c5d4a63881e976734695e0a592e" title="LockHolder::lock" alt="" coords="235,5,368,33"/><area shape="rect" id="node5" href="class_mutex.html#a82f17ffc2852d2ea1b498b7331e1eebe" title="Mutex::acquire" alt="" coords="416,5,539,33"/></map>
+<area shape="rect" id="node3" href="class_lock_holder.html#a9bf29c5d4a63881e976734695e0a592e" title="Relock a lock that was manually unlocked." alt="" coords="235,5,368,33"/><area shape="rect" id="node5" href="class_mutex.html#a82f17ffc2852d2ea1b498b7331e1eebe" title="Mutex::acquire" alt="" coords="416,5,539,33"/></map>
 </div>
 </p>
 
@@ -114,14 +122,14 @@ Here is the call graph for this function:</div>
 
 <p>Release the lock. </p>
 
-<p>References <a class="el" href="locks_8hh_source.html#l00034">unlock()</a>.</p>
+<p>References <a class="el" href="locks_8hh_source.html#l00046">unlock()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_lock_holder_ae718cd98823888c866cb252b44ce1d16_cgraph.png" border="0" usemap="#class_lock_holder_ae718cd98823888c866cb252b44ce1d16_cgraph_map" alt=""></div>
 <map name="class_lock_holder_ae718cd98823888c866cb252b44ce1d16_cgraph_map" id="class_lock_holder_ae718cd98823888c866cb252b44ce1d16_cgraph">
-<area shape="rect" id="node3" href="class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="LockHolder::unlock" alt="" coords="247,5,396,33"/><area shape="rect" id="node5" href="class_mutex.html#ad43ff97f225007f2fbb0da2e98676b07" title="Mutex::release" alt="" coords="445,5,565,33"/></map>
+<area shape="rect" id="node3" href="class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="Manually unlock a lock." alt="" coords="247,5,396,33"/><area shape="rect" id="node5" href="class_mutex.html#ad43ff97f225007f2fbb0da2e98676b07" title="Mutex::release" alt="" coords="445,5,565,33"/></map>
 </div>
 </p>
 
@@ -143,9 +151,11 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Relock a lock that was manually unlocked. </p>
+
 <p>References <a class="el" href="mutex_8hh_source.html#l00044">Mutex::acquire()</a>.</p>
 
-<p>Referenced by <a class="el" href="locks_8hh_source.html#l00018">LockHolder()</a>.</p>
+<p>Referenced by <a class="el" href="locks_8hh_source.html#l00024">LockHolder()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -182,9 +192,11 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Manually unlock a lock. </p>
+
 <p>References <a class="el" href="mutex_8hh_source.html#l00054">Mutex::release()</a>.</p>
 
-<p>Referenced by <a class="el" href="dispatcher_8cc_source.html#l00043">Dispatcher::run()</a>, <a class="el" href="dispatcher_8cc_source.html#l00099">Dispatcher::stop()</a>, <a class="el" href="stored-value_8cc_source.html#l00089">HashTable::visit()</a>, <a class="el" href="ep__engine_8h_source.html#l00912">EventuallyPersistentEngine::walkTapQueue()</a>, and <a class="el" href="locks_8hh_source.html#l00025">~LockHolder()</a>.</p>
+<p>Referenced by <a class="el" href="dispatcher_8cc_source.html#l00043">Dispatcher::run()</a>, <a class="el" href="dispatcher_8cc_source.html#l00099">Dispatcher::stop()</a>, <a class="el" href="stored-value_8cc_source.html#l00089">HashTable::visit()</a>, <a class="el" href="ep__engine_8h_source.html#l00912">EventuallyPersistentEngine::walkTapQueue()</a>, and <a class="el" href="locks_8hh_source.html#l00031">~LockHolder()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -224,7 +236,7 @@ Here is the caller graph for this function:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:43 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 3 00:06:10 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

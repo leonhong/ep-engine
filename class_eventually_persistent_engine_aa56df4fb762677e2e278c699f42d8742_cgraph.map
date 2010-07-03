@@ -12,7 +12,7 @@
 <area shape="rect" id="node32" href="$class_eventually_persistent_store.html#a262c5453ebb0a2e7d7e6a4bde2fcb429" title="EventuallyPersistentStore::set" alt="" coords="669,326,891,354"/>
 <area shape="rect" id="node42" href="$class_item.html#a45f854602ab1a9f17b8097ad00b38d3a" title="Item::setVBucketId" alt="" coords="705,174,855,202"/>
 <area shape="rect" id="node15" href="$class_item.html#ab5385ec49546b2c2eb0857630f5f25a5" title="Item::getValue" alt="" coords="1056,225,1176,253"/>
-<area shape="rect" id="node17" href="$class_blob.html#ab7e65554d93c6cc358c682b3243bde8a" title="Blob::New" alt="" coords="1072,174,1160,202"/>
+<area shape="rect" id="node17" href="$class_blob.html#ab7e65554d93c6cc358c682b3243bde8a" title="Create a new Blob holding the given data." alt="" coords="1072,174,1160,202"/>
 <area shape="rect" id="node28" href="$class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c" title="Item::getNBytes" alt="" coords="1051,275,1181,303"/>
 <area shape="rect" id="node36" href="$class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="977,377,1255,405"/>
 <area shape="rect" id="node40" href="$class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488" title="Item::getVBucketId" alt="" coords="1041,326,1191,354"/>

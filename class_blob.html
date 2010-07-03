@@ -46,20 +46,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <h1>Blob Class Reference</h1><!-- doxytag: class="Blob" -->
+<p>A blob is a minimal sized storage for data up to 2^32 bytes long.  
+<a href="#_details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="item_8hh_source.html">item.hh</a>&gt;</code></p>
 
 <p><a href="class_blob-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blob.html#a8df7ac8b1e26822fe82c27d45819d75f">getData</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the pointer to the contents of this <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a>.  <a href="#a8df7ac8b1e26822fe82c27d45819d75f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blob.html#a0eb11406bd9eb33abea488c81cf8d6dc">length</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the length of this <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a>.  <a href="#a0eb11406bd9eb33abea488c81cf8d6dc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blob.html#acc83abf9e242e58d275ff902cad85926">to_s</a> () const </td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get a std::string representation of this blob.  <a href="#acc83abf9e242e58d275ff902cad85926"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blob.html#a332fca5c1a7b36f981f5cf1cf08b206f">operator delete</a> (void *p)</td></tr>
 <tr><td colspan="2"><h2>Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_blob.html">Blob</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a">New</a> (const char *start, const size_t len)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a new <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a> holding the given data.  <a href="#ab7e65554d93c6cc358c682b3243bde8a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_blob.html">Blob</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blob.html#a025843b28cba4bd1774f8e71846db68d">New</a> (const std::string &amp;s)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a new <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a> holding the contents of the given string.  <a href="#a025843b28cba4bd1774f8e71846db68d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_blob.html">Blob</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_blob.html#abc6c8bcbf19f237fd14387facc32980c">New</a> (const size_t len, const char c)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a new <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a> pre-filled with the given character.  <a href="#abc6c8bcbf19f237fd14387facc32980c"></a><br/></td></tr>
 </table>
+<hr/><a name="_details"></a><h2>Detailed Description</h2>
+<p>A blob is a minimal sized storage for data up to 2^32 bytes long. </p>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a8df7ac8b1e26822fe82c27d45819d75f"></a><!-- doxytag: member="Blob::getData" ref="a8df7ac8b1e26822fe82c27d45819d75f" args="() const " -->
 <div class="memitem">
@@ -75,6 +86,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get the pointer to the contents of this <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a>. </p>
 
 </div>
 </div>
@@ -92,6 +105,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </table>
 </div>
 <div class="memdoc">
+
+<p>Get the length of this <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a>. </p>
 
 </div>
 </div>
@@ -120,6 +135,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="memdoc">
 
+<p>Create a new <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a> pre-filled with the given character. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>len</em>&nbsp;</td><td>the size of the blob </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>the character to fill the blob with</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the new <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a> instance </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a025843b28cba4bd1774f8e71846db68d"></a><!-- doxytag: member="Blob::New" ref="a025843b28cba4bd1774f8e71846db68d" args="(const std::string &amp;s)" -->
@@ -138,14 +163,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="item_8hh_source.html#l00020">New()</a>.</p>
+<p>Create a new <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a> holding the contents of the given string. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>the string whose contents go into the blob</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the new <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a> instance </dd></dl>
+
+<p>References <a class="el" href="item_8hh_source.html#l00031">New()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_blob_a025843b28cba4bd1774f8e71846db68d_cgraph.png" border="0" usemap="#class_blob_a025843b28cba4bd1774f8e71846db68d_cgraph_map" alt=""></div>
 <map name="class_blob_a025843b28cba4bd1774f8e71846db68d_cgraph_map" id="class_blob_a025843b28cba4bd1774f8e71846db68d_cgraph">
-<area shape="rect" id="node3" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a" title="Blob::New" alt="" coords="145,5,233,33"/></map>
+<area shape="rect" id="node3" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a" title="Create a new Blob holding the given data." alt="" coords="145,5,233,33"/></map>
 </div>
 </p>
 
@@ -176,14 +210,24 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="item_8hh_source.html#l00172">Item::append()</a>, <a class="el" href="item_8hh_source.html#l00027">New()</a>, <a class="el" href="item_8hh_source.html#l00185">Item::prepend()</a>, and <a class="el" href="ep__engine_8h_source.html#l01118">EventuallyPersistentEngine::tapNotify()</a>.</p>
+<p>Create a new <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a> holding the given data. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>start</em>&nbsp;</td><td>the beginning of the data to copy into this blob </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>len</em>&nbsp;</td><td>the amount of data to copy in</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the new <a class="el" href="class_blob.html" title="A blob is a minimal sized storage for data up to 2^32 bytes long.">Blob</a> instance </dd></dl>
+
+<p>Referenced by <a class="el" href="item_8hh_source.html#l00207">Item::append()</a>, <a class="el" href="item_8hh_source.html#l00045">New()</a>, <a class="el" href="item_8hh_source.html#l00220">Item::prepend()</a>, and <a class="el" href="ep__engine_8h_source.html#l01118">EventuallyPersistentEngine::tapNotify()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_blob_ab7e65554d93c6cc358c682b3243bde8a_icgraph.png" border="0" usemap="#class_blob_ab7e65554d93c6cc358c682b3243bde8a_icgraph_map" alt=""></div>
 <map name="class_blob_ab7e65554d93c6cc358c682b3243bde8a_icgraph_map" id="class_blob_ab7e65554d93c6cc358c682b3243bde8a_icgraph">
-<area shape="rect" id="node3" href="class_item.html#a1445a9ba65ccc4014b9b52774615c995" title="Append another item to this item." alt="" coords="225,5,337,33"/><area shape="rect" id="node13" href="class_blob.html#a025843b28cba4bd1774f8e71846db68d" title="Blob::New" alt="" coords="237,55,325,83"/><area shape="rect" id="node15" href="class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9" title="Prepend another item to this item." alt="" coords="223,106,340,134"/><area shape="rect" id="node18" href="class_eventually_persistent_engine.html#ac342b14e74c4352f55ac1ca5f64e0f63" title="EventuallyPersistentEngine::tapNotify" alt="" coords="145,157,417,185"/><area shape="rect" id="node5" href="class_eventually_persistent_engine.html#afcbf29ea91f0193e711c5f63f7ebe90a" title="EventuallyPersistentEngine::store" alt="" coords="468,55,713,83"/><area shape="rect" id="node7" href="class_eventually_persistent_engine.html#aa56df4fb762677e2e278c699f42d8742" title="EventuallyPersistentEngine::arithmetic" alt="" coords="763,30,1045,58"/><area shape="rect" id="node11" href="ep__engine_8cc.html#aef8e78a806d178e5a2d17fa9f8e2c384" title="EvpStore" alt="" coords="864,81,944,109"/><area shape="rect" id="node9" href="ep__engine_8cc.html#a93d3b7e7949034d17723e2fc86981c06" title="EvpArithmetic" alt="" coords="1093,30,1211,58"/><area shape="rect" id="node20" href="ep__engine_8cc.html#aa57359c099d4ad1d06e02c1111c81844" title="EvpTapNotify" alt="" coords="537,157,644,185"/></map>
+<area shape="rect" id="node3" href="class_item.html#a1445a9ba65ccc4014b9b52774615c995" title="Append another item to this item." alt="" coords="225,5,337,33"/><area shape="rect" id="node13" href="class_blob.html#a025843b28cba4bd1774f8e71846db68d" title="Create a new Blob holding the contents of the given string." alt="" coords="237,55,325,83"/><area shape="rect" id="node15" href="class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9" title="Prepend another item to this item." alt="" coords="223,106,340,134"/><area shape="rect" id="node18" href="class_eventually_persistent_engine.html#ac342b14e74c4352f55ac1ca5f64e0f63" title="EventuallyPersistentEngine::tapNotify" alt="" coords="145,157,417,185"/><area shape="rect" id="node5" href="class_eventually_persistent_engine.html#afcbf29ea91f0193e711c5f63f7ebe90a" title="EventuallyPersistentEngine::store" alt="" coords="468,55,713,83"/><area shape="rect" id="node7" href="class_eventually_persistent_engine.html#aa56df4fb762677e2e278c699f42d8742" title="EventuallyPersistentEngine::arithmetic" alt="" coords="763,30,1045,58"/><area shape="rect" id="node11" href="ep__engine_8cc.html#aef8e78a806d178e5a2d17fa9f8e2c384" title="EvpStore" alt="" coords="864,81,944,109"/><area shape="rect" id="node9" href="ep__engine_8cc.html#a93d3b7e7949034d17723e2fc86981c06" title="EvpArithmetic" alt="" coords="1093,30,1211,58"/><area shape="rect" id="node20" href="ep__engine_8cc.html#aa57359c099d4ad1d06e02c1111c81844" title="EvpTapNotify" alt="" coords="537,157,644,185"/></map>
 </div>
 </p>
 
@@ -222,6 +266,8 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Get a std::string representation of this blob. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
@@ -242,7 +288,7 @@ Here is the caller graph for this function:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 3 00:06:08 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -52,7 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="indexkey"><a class="el" href="class_back_fill_thread_data.html">BackFillThreadData</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_back_fill_visitor.html">BackFillVisitor</a></td><td class="indexvalue"><a class="el" href="class_v_bucket_visitor.html" title="vbucket-aware hashtable visitor.">VBucketVisitor</a> to backfill a <a class="el" href="class_tap_connection.html" title="Class used by the EventuallyPersistentEngine to keep track of all information needed...">TapConnection</a> </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_binary_message.html">BinaryMessage</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_blob.html">Blob</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_blob.html">Blob</a></td><td class="indexvalue">A blob is a minimal sized storage for data up to 2^32 bytes long </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_bool_callback.html">BoolCallback</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_bool_pair_callback.html">BoolPairCallback</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_callback.html">Callback&lt; RV &gt;</a></td><td class="indexvalue">Interface for callbacks from storage APIs </td></tr>
@@ -75,10 +75,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="indexkey"><a class="el" href="class_item.html">Item</a></td><td class="indexvalue">The <a class="el" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a> structure we use to pass information between the memcached core and the backend </td></tr>
   <tr><td class="indexkey"><a class="el" href="structkey__stats.html">key_stats</a></td><td class="indexvalue">Stats returned by key stats </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_load_storage_k_v_pair_callback.html">LoadStorageKVPairCallback</a></td><td class="indexvalue">Helper class used to insert items into the storage by using the KVStore::dump method to load items from the database </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_lock_holder.html">LockHolder</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_lock_holder.html">LockHolder</a></td><td class="indexvalue">RAII lock holder to guarantee release of the lock </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_lookup_callback.html">LookupCallback</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_multi_d_b_sqlite_strategy.html">MultiDBSqliteStrategy</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_multi_lock_holder.html">MultiLockHolder</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_multi_lock_holder.html">MultiLockHolder</a></td><td class="indexvalue">RAII lock holder over multiple locks </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_mutex.html">Mutex</a></td><td class="indexvalue">Abstraction built on top of pthread mutexes </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_need_more_buckets.html">NeedMoreBuckets</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_prepared_statement.html">PreparedStatement</a></td><td class="indexvalue">A sqlite prepared statement </td></tr>
@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="indexkey"><a class="el" href="class_set_v_b_state_callback.html">SetVBStateCallback</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="structsmall__data.html">small_data</a></td><td class="indexvalue"><a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> "small" data storage </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_spin_lock.html">SpinLock</a></td><td class="indexvalue">A lighter-weight, smaller lock than a mutex </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_spin_lock_holder.html">SpinLockHolder</a></td><td class="indexvalue">Safe <a class="el" href="class_lock_holder.html">LockHolder</a> for <a class="el" href="class_spin_lock.html" title="A lighter-weight, smaller lock than a mutex.">SpinLock</a> instances </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_spin_lock_holder.html">SpinLockHolder</a></td><td class="indexvalue">Safe <a class="el" href="class_lock_holder.html" title="RAII lock holder to guarantee release of the lock.">LockHolder</a> for <a class="el" href="class_spin_lock.html" title="A lighter-weight, smaller lock than a mutex.">SpinLock</a> instances </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_sqlite_evaluator.html">SqliteEvaluator</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_sqlite_strategy.html">SqliteStrategy</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_statements.html">Statements</a></td><td class="indexvalue"></td></tr>
@@ -131,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Sat Jul 3 00:06:07 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

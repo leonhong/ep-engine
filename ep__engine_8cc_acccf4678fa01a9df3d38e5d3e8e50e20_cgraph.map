@@ -7,7 +7,7 @@
 <area shape="rect" id="node13" href="$class_eventually_persistent_engine.html#a30caa820a0590133a8329013d4f4e31f" title="EventuallyPersistentEngine::itemAllocate" alt="" coords="539,157,835,185"/>
 <area shape="rect" id="node15" href="$class_eventually_persistent_engine.html#ae01d8ac86fed6a4cb22d0ee014f96ee5" title="Visit the objects and add them to the tap connecitons queue." alt="" coords="535,207,839,235"/>
 <area shape="rect" id="node29" href="$class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="532,258,841,286"/>
-<area shape="rect" id="node40" href="$class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="LockHolder::unlock" alt="" coords="612,334,761,362"/>
+<area shape="rect" id="node40" href="$class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="Manually unlock a lock." alt="" coords="612,334,761,362"/>
 <area shape="rect" id="node17" href="$ep__engine_8cc.html#a55ebba1dc1503a6cf1eea8f650cdf44c" title="launch_backfill_thread" alt="" coords="897,131,1071,159"/>
 <area shape="rect" id="node19" href="$class_back_fill_visitor.html#a4b3a67c5e1ca6b986b1ee8f6a34dd2e3" title="BackFillVisitor::apply" alt="" coords="1160,106,1320,134"/>
 <area shape="rect" id="node21" href="$class_eventually_persistent_store.html#a403a339804475ad6a7cdef3259179b2f" title="EventuallyPersistentStore::visit" alt="" coords="1125,157,1355,185"/>
