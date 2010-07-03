@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_item.html" title="The Item structure we use to pass information between the memcached core and the..." alt="" coords="57,286,108,314"/>
+<area shape="rect" id="node2" href="$class_item.html" title="The Item structure we use to pass information between the memcached core and the backend." alt="" coords="167,286,217,314"/>
 <area shape="rect" id="node4" href="$class_atomic.html" title="Atomic\&lt; uint64_t \&gt;" alt="" coords="5,193,160,221"/>
 <area shape="rect" id="node6" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="29,99,136,127"/>
 </map>

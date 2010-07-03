@@ -1,18 +1,17 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$class_stored_value.html#ac0fdbefbc61365b58e3310d3e12a885a" title="Get this item&#39;s key." alt="" coords="236,55,393,83"/>
 <area shape="rect" id="node9" href="$class_stored_value.html#a5690735ab7df847bb83295eb67dbc900" title="True of this item is for the given key." alt="" coords="236,131,393,159"/>
-<area shape="rect" id="node15" href="$class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="Get the total size of this item." alt="" coords="247,359,383,387"/>
+<area shape="rect" id="node15" href="$class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="Get the total size of this item." alt="" coords="247,334,383,362"/>
 <area shape="rect" id="node5" href="$class_back_fill_visitor.html#a24d109dc93214921475991185ed231d7" title="Visit an individual item within a hash table." alt="" coords="485,5,635,33"/>
 <area shape="rect" id="node7" href="$class_verify_stored_visitor.html#a41763d7a69e1757ac8ff5b1ee581cb0e" title="Visit an individual item within a hash table." alt="" coords="468,55,652,83"/>
-<area shape="rect" id="node11" href="$class_hash_table.html#a65a4132a3011ea8bc100a6c0a45ce4e7" title="Delete a key from the cache without trying to lock the cache first (Please note that..." alt="" coords="467,106,653,134"/>
+<area shape="rect" id="node11" href="$class_hash_table.html#a65a4132a3011ea8bc100a6c0a45ce4e7" title="Delete a key from the cache without trying to lock the cache first (Please note that you MUST acquire..." alt="" coords="467,106,653,134"/>
 <area shape="rect" id="node13" href="$class_hash_table.html#a92572ea340897dbee6f3e50cbff6dd1d" title="Find an item within a specific bucket assuming you already locked the bucket." alt="" coords="464,157,656,185"/>
 <area shape="rect" id="node17" href="$class_hash_table.html#a0e58e888d0f0963247b5eea143da7ab4" title="Get the bucket number for the given C string key." alt="" coords="488,207,632,235"/>
-<area shape="rect" id="node19" href="$class_hash_table.html#a95a64de238722621660852b97e1a4ca6" title="Get the number of hash table buckets this hash table has." alt="" coords="487,258,633,286"/>
-<area shape="rect" id="node21" href="$class_hash_table.html#a06fb934d9694fa3b0ef6c721b3ddd364" title="Create a HashTable." alt="" coords="477,309,643,337"/>
-<area shape="rect" id="node23" href="$class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c" title="Set a new value for this item." alt="" coords="476,359,644,387"/>
-<area shape="rect" id="node27" href="$class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a" title="Get the size of a StoredValue object." alt="" coords="484,410,636,438"/>
-<area shape="rect" id="node32" href="$class_hash_table_depth_stat_visitor.html#acb1f7a14057176b0a3f8a5f1460ab3cb" title="Called once for each hashtable bucket with its depth." alt="" coords="443,461,677,489"/>
-<area shape="rect" id="node34" href="$class_stored_value.html#aa855286bf93c8db63c297dc43cb34f62" title="StoredValue::~StoredValue" alt="" coords="459,511,661,539"/>
-<area shape="rect" id="node25" href="$class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0" title="Set a new Item into this hashtable." alt="" coords="727,359,844,387"/>
-<area shape="rect" id="node29" href="$sizes_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="757,410,813,438"/>
+<area shape="rect" id="node19" href="$class_hash_table.html#a06fb934d9694fa3b0ef6c721b3ddd364" title="Create a HashTable." alt="" coords="477,258,643,286"/>
+<area shape="rect" id="node21" href="$class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c" title="Set a new value for this item." alt="" coords="476,309,644,337"/>
+<area shape="rect" id="node25" href="$class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a" title="Get the size of a StoredValue object." alt="" coords="484,359,636,387"/>
+<area shape="rect" id="node30" href="$class_hash_table_depth_stat_visitor.html#acb1f7a14057176b0a3f8a5f1460ab3cb" title="Called once for each hashtable bucket with its depth." alt="" coords="443,410,677,438"/>
+<area shape="rect" id="node32" href="$class_stored_value.html#aa855286bf93c8db63c297dc43cb34f62" title="StoredValue::~StoredValue" alt="" coords="459,461,661,489"/>
+<area shape="rect" id="node23" href="$class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0" title="Set a new Item into this hashtable." alt="" coords="727,309,844,337"/>
+<area shape="rect" id="node27" href="$sizes_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="757,359,813,387"/>
 </map>

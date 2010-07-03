@@ -1,9 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$ep__testsuite_8cc.html#a599df5fcbdcac1eb4e66735c38a6488b" title="test_flush_multiv_restart" alt="" coords="247,5,433,33"/>
-<area shape="rect" id="node7" href="$ep__testsuite_8cc.html#a885f2022b840d5cf9b15fc3e1c6c2619" title="test_novb0" alt="" coords="292,55,388,83"/>
-<area shape="rect" id="node10" href="$ep__testsuite_8cc.html#a331c95282789f76f7590683a580d40fa" title="test_vbucket_create" alt="" coords="263,106,417,134"/>
-<area shape="rect" id="node13" href="$ep__testsuite_8cc.html#af6832c97f46bc7e6fcc588c28ac00f13" title="test_vbucket_destroy" alt="" coords="259,157,421,185"/>
-<area shape="rect" id="node16" href="$ep__testsuite_8cc.html#a2117e472438b31f4cd9b710476858e27" title="test_vbucket_destroy_restart" alt="" coords="232,207,448,235"/>
-<area shape="rect" id="node19" href="$ep__testsuite_8cc.html#ae2029db678d83bdcd8105cc4a3f742c8" title="test_vbucket_get_miss" alt="" coords="253,258,427,286"/>
-<area shape="rect" id="node5" href="$ep__testsuite_8cc.html#acdaa774975aecb0d89593094cdc14b68" title="get_tests" alt="" coords="496,131,579,159"/>
+<area shape="rect" id="node5" href="$ep__testsuite_8cc.html#a885f2022b840d5cf9b15fc3e1c6c2619" title="test_novb0" alt="" coords="292,55,388,83"/>
+<area shape="rect" id="node7" href="$ep__testsuite_8cc.html#a331c95282789f76f7590683a580d40fa" title="test_vbucket_create" alt="" coords="263,106,417,134"/>
+<area shape="rect" id="node9" href="$ep__testsuite_8cc.html#af6832c97f46bc7e6fcc588c28ac00f13" title="test_vbucket_destroy" alt="" coords="259,157,421,185"/>
+<area shape="rect" id="node11" href="$ep__testsuite_8cc.html#a2117e472438b31f4cd9b710476858e27" title="test_vbucket_destroy_restart" alt="" coords="232,207,448,235"/>
+<area shape="rect" id="node13" href="$ep__testsuite_8cc.html#ae2029db678d83bdcd8105cc4a3f742c8" title="test_vbucket_get_miss" alt="" coords="253,258,427,286"/>
 </map>

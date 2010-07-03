@@ -1,49 +1,48 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$ep__engine_8cc.html#a444da8477401c35ec6946b21deb4236d" title="deleteVBucket" alt="" coords="233,135,351,163"/>
-<area shape="rect" id="node22" href="$ep__engine_8cc.html#a6978613380551af0677b42c2d6472cce" title="Helper function to avoid typing in the long cast all over the place." alt="" coords="247,357,337,385"/>
-<area shape="rect" id="node24" href="$ep__engine_8cc.html#a278969498b4686e1f1014865b1553ced" title="getVbucket" alt="" coords="243,186,341,214"/>
-<area shape="rect" id="node28" href="$ep__engine_8cc.html#a1422921e437cea5bf774068e5b5fe735" title="setParam" alt="" coords="251,407,333,435"/>
-<area shape="rect" id="node54" href="$ep__engine_8cc.html#a948e461c8f950af46a4ea50a5bbc6ac5" title="setVbucket" alt="" coords="244,262,340,290"/>
-<area shape="rect" id="node72" href="$ep__engine_8cc.html#a6c7ce89c99a495bb06c21a6080d36e93" title="startFlusher" alt="" coords="241,650,343,678"/>
-<area shape="rect" id="node94" href="$class_eventually_persistent_engine.html#a169cce655db799f6039adecabc98c6c8" title="EventuallyPersistentEngine::startReplication" alt="" coords="1512,866,1829,894"/>
-<area shape="rect" id="node97" href="$ep__engine_8cc.html#ad1851871dfc6f438084e9937b2f46e36" title="stopFlusher" alt="" coords="243,534,341,562"/>
-<area shape="rect" id="node109" href="$class_eventually_persistent_engine.html#a3917700b7cf8af3431d501eb826faeb7" title="EventuallyPersistentEngine::stopReplication" alt="" coords="1513,917,1828,945"/>
-<area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#a6f703485e33d95adc2aab023c4989500" title="EventuallyPersistentEngine::deleteVBucket" alt="" coords="407,59,716,87"/>
-<area shape="rect" id="node15" href="$class_eventually_persistent_engine.html#a73067d30ccb9733332a0f5c14dcc802c" title="EventuallyPersistentEngine::getVBucket" alt="" coords="417,135,705,163"/>
-<area shape="rect" id="node20" href="$common_8hh.html#adc37afe8902889256d57848f4c88663c" title="parseUint16" alt="" coords="509,186,613,214"/>
-<area shape="rect" id="node7" href="$class_eventually_persistent_store.html#ab91fc6aee88dbb8abcb21538740cb98a" title="EventuallyPersistentStore::deleteVBucket" alt="" coords="785,58,1084,86"/>
+<area shape="rect" id="node3" href="$ep__engine_8cc.html#a444da8477401c35ec6946b21deb4236d" title="deleteVBucket" alt="" coords="233,182,351,210"/>
+<area shape="rect" id="node22" href="$ep__engine_8cc.html#a6978613380551af0677b42c2d6472cce" title="Helper function to avoid typing in the long cast all over the place." alt="" coords="247,410,337,438"/>
+<area shape="rect" id="node24" href="$ep__engine_8cc.html#a278969498b4686e1f1014865b1553ced" title="getVbucket" alt="" coords="243,233,341,261"/>
+<area shape="rect" id="node28" href="$ep__engine_8cc.html#a1422921e437cea5bf774068e5b5fe735" title="setParam" alt="" coords="251,461,333,489"/>
+<area shape="rect" id="node54" href="$ep__engine_8cc.html#a948e461c8f950af46a4ea50a5bbc6ac5" title="setVbucket" alt="" coords="244,283,340,311"/>
+<area shape="rect" id="node70" href="$ep__engine_8cc.html#a6c7ce89c99a495bb06c21a6080d36e93" title="startFlusher" alt="" coords="241,650,343,678"/>
+<area shape="rect" id="node92" href="$class_eventually_persistent_engine.html#a169cce655db799f6039adecabc98c6c8" title="EventuallyPersistentEngine::startReplication" alt="" coords="1512,866,1829,894"/>
+<area shape="rect" id="node95" href="$ep__engine_8cc.html#ad1851871dfc6f438084e9937b2f46e36" title="stopFlusher" alt="" coords="243,537,341,565"/>
+<area shape="rect" id="node107" href="$class_eventually_persistent_engine.html#a3917700b7cf8af3431d501eb826faeb7" title="EventuallyPersistentEngine::stopReplication" alt="" coords="1513,917,1828,945"/>
+<area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#a6f703485e33d95adc2aab023c4989500" title="EventuallyPersistentEngine::deleteVBucket" alt="" coords="407,81,716,109"/>
+<area shape="rect" id="node15" href="$class_eventually_persistent_engine.html#a73067d30ccb9733332a0f5c14dcc802c" title="EventuallyPersistentEngine::getVBucket" alt="" coords="417,182,705,210"/>
+<area shape="rect" id="node20" href="$common_8hh.html#adc37afe8902889256d57848f4c88663c" title="parseUint16" alt="" coords="509,233,613,261"/>
+<area shape="rect" id="node7" href="$class_eventually_persistent_store.html#ab91fc6aee88dbb8abcb21538740cb98a" title="EventuallyPersistentStore::deleteVBucket" alt="" coords="785,67,1084,95"/>
 <area shape="rect" id="node9" href="$class_atomic.html#a2015110afb1268ae3306cfc35f186607" title="Atomic::decr" alt="" coords="1251,55,1360,83"/>
 <area shape="rect" id="node11" href="$class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1215,106,1396,134"/>
 <area shape="rect" id="node13" href="$class_v_bucket_map.html#ab5c37008460a1cf992f22115ee4a05da" title="VBucketMap::removeBucket" alt="" coords="1200,5,1411,33"/>
-<area shape="rect" id="node17" href="$class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="796,121,1073,149"/>
-<area shape="rect" id="node30" href="$ep__engine_8cc.html#a27f3ec2dd08be4cf7886d6181cb1ebf5" title="setFlushParam" alt="" coords="501,407,621,435"/>
-<area shape="rect" id="node50" href="$ep__engine_8cc.html#ade71b97ccab07316c5a50faa160af10b" title="setTapParam" alt="" coords="508,350,615,378"/>
+<area shape="rect" id="node17" href="$class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="796,131,1073,159"/>
+<area shape="rect" id="node30" href="$ep__engine_8cc.html#a27f3ec2dd08be4cf7886d6181cb1ebf5" title="setFlushParam" alt="" coords="501,359,621,387"/>
+<area shape="rect" id="node50" href="$ep__engine_8cc.html#ade71b97ccab07316c5a50faa160af10b" title="setTapParam" alt="" coords="508,461,615,489"/>
 <area shape="rect" id="node32" href="$class_eventually_persistent_engine.html#aa7f57575fd7391195eec7a3321586d74" title="EventuallyPersistentEngine::setMinDataAge" alt="" coords="779,410,1091,438"/>
 <area shape="rect" id="node38" href="$class_eventually_persistent_engine.html#a3d0385b884e54ae7d116de7cf73d326b" title="EventuallyPersistentEngine::setQueueAgeCap" alt="" coords="771,309,1099,337"/>
 <area shape="rect" id="node43" href="$class_eventually_persistent_engine.html#afbde2dd2c36956abd2c9f717aca11f92" title="EventuallyPersistentEngine::setTxnSize" alt="" coords="792,359,1077,387"/>
-<area shape="rect" id="node48" href="$ep__engine_8cc.html#a63110ce3636d5d5bb36b41633bad361e" title="validate" alt="" coords="897,461,972,489"/>
+<area shape="rect" id="node48" href="$ep__engine_8cc.html#a63110ce3636d5d5bb36b41633bad361e" title="validate" alt="" coords="897,258,972,286"/>
 <area shape="rect" id="node34" href="$class_eventually_persistent_store.html#ad61387f0c42959878403cbf880af3695" title="EventuallyPersistentStore::setMinDataAge" alt="" coords="1155,410,1456,438"/>
 <area shape="rect" id="node36" href="$class_atomic.html#a4cb63ddba4b2a38c9afdbb05fa5113fb" title="Atomic::set" alt="" coords="1621,359,1720,387"/>
 <area shape="rect" id="node40" href="$class_eventually_persistent_store.html#a1b0a19aedfa7197e20abaab8b9342b79" title="EventuallyPersistentStore::setQueueAgeCap" alt="" coords="1148,309,1463,337"/>
 <area shape="rect" id="node45" href="$class_eventually_persistent_store.html#a0d789b1bb07c397aac3962ed5104d970" title="EventuallyPersistentStore::setTxnSize" alt="" coords="1169,359,1441,387"/>
-<area shape="rect" id="node52" href="$class_eventually_persistent_engine.html#ac0cf3c94869a08aca1374b5e6a6f6e7c" title="EventuallyPersistentEngine::setTapPeer" alt="" coords="793,258,1076,286"/>
-<area shape="rect" id="node57" href="$class_eventually_persistent_engine.html#a64296190a342ab55e5486d617a41337d" title="EventuallyPersistentEngine::setVBucketState" alt="" coords="400,287,723,315"/>
-<area shape="rect" id="node70" href="$class_flusher.html#a8993c1f2b50b26bbaed8b09febadc462" title="Flusher::state" alt="" coords="505,237,617,265"/>
+<area shape="rect" id="node52" href="$class_eventually_persistent_engine.html#ac0cf3c94869a08aca1374b5e6a6f6e7c" title="EventuallyPersistentEngine::setTapPeer" alt="" coords="793,461,1076,489"/>
+<area shape="rect" id="node57" href="$class_eventually_persistent_engine.html#a64296190a342ab55e5486d617a41337d" title="EventuallyPersistentEngine::setVBucketState" alt="" coords="400,283,723,311"/>
 <area shape="rect" id="node59" href="$class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="780,207,1089,235"/>
 <area shape="rect" id="node61" href="$class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5" title="VBucketMap::addBucket" alt="" coords="1212,258,1399,286"/>
 <area shape="rect" id="node64" href="$class_dispatcher.html#a3a657220baa43a9cde1a4a938d0bc8b5" title="Schedule a job to run." alt="" coords="1224,157,1387,185"/>
 <area shape="rect" id="node68" href="$class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db" title="VBucket::toString" alt="" coords="1235,207,1376,235"/>
 <area shape="rect" id="node66" href="$class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4" title="SyncObject::notify" alt="" coords="1599,157,1743,185"/>
-<area shape="rect" id="node74" href="$class_eventually_persistent_engine.html#a7c8ea99b597d583c1afb6caaccc84a33" title="EventuallyPersistentEngine::startFlusher" alt="" coords="415,714,708,742"/>
-<area shape="rect" id="node76" href="$class_eventually_persistent_store.html#a64b0ddc0bd7bfb29906560523fe2ea4c" title="EventuallyPersistentStore::getFlusher" alt="" coords="799,663,1071,691"/>
-<area shape="rect" id="node78" href="$common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="1908,815,1999,843"/>
-<area shape="rect" id="node80" href="$class_eventually_persistent_store.html#a86035a53a99baf44ac0ab09cb32f4da4" title="EventuallyPersistentStore::resumeFlusher" alt="" coords="784,765,1085,793"/>
-<area shape="rect" id="node89" href="$class_flusher.html#af2bfa6e06b9825bcd75911dbf0d67315" title="Flusher::stateName" alt="" coords="1877,663,2029,691"/>
-<area shape="rect" id="node82" href="$class_flusher.html#aa424ca7cd5db5069b7b2c93b49886216" title="Flusher::resume" alt="" coords="1240,765,1371,793"/>
-<area shape="rect" id="node84" href="$class_flusher.html#a16d1b095c3f8f2a942a5431ba7493829" title="Flusher::transition_state" alt="" coords="1579,714,1763,742"/>
-<area shape="rect" id="node86" href="$class_dispatcher.html#af5d5d7984eb0ca4b63228662b2ed815b" title="Cancel a task." alt="" coords="1881,714,2025,742"/>
-<area shape="rect" id="node91" href="$flusher_8cc.html#a2bbb134c9fb868e402695252d36d1547" title="validTransition" alt="" coords="1893,765,2013,793"/>
-<area shape="rect" id="node99" href="$class_eventually_persistent_engine.html#ad6a5b38b42f232b57418b862ceae54ae" title="EventuallyPersistentEngine::stopFlusher" alt="" coords="416,562,707,590"/>
-<area shape="rect" id="node103" href="$class_eventually_persistent_store.html#afed839ff1e3459b276c035f942bf6449" title="EventuallyPersistentStore::pauseFlusher" alt="" coords="789,562,1080,590"/>
-<area shape="rect" id="node105" href="$class_flusher.html#a7672258bcd7306fb6de20fc0e096c98e" title="Flusher::pause" alt="" coords="1245,587,1365,615"/>
+<area shape="rect" id="node72" href="$class_eventually_persistent_engine.html#a7c8ea99b597d583c1afb6caaccc84a33" title="EventuallyPersistentEngine::startFlusher" alt="" coords="415,714,708,742"/>
+<area shape="rect" id="node74" href="$class_eventually_persistent_store.html#a64b0ddc0bd7bfb29906560523fe2ea4c" title="EventuallyPersistentStore::getFlusher" alt="" coords="799,663,1071,691"/>
+<area shape="rect" id="node76" href="$common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="1908,815,1999,843"/>
+<area shape="rect" id="node78" href="$class_eventually_persistent_store.html#a86035a53a99baf44ac0ab09cb32f4da4" title="EventuallyPersistentStore::resumeFlusher" alt="" coords="784,765,1085,793"/>
+<area shape="rect" id="node87" href="$class_flusher.html#af2bfa6e06b9825bcd75911dbf0d67315" title="Flusher::stateName" alt="" coords="1877,663,2029,691"/>
+<area shape="rect" id="node80" href="$class_flusher.html#aa424ca7cd5db5069b7b2c93b49886216" title="Flusher::resume" alt="" coords="1240,765,1371,793"/>
+<area shape="rect" id="node82" href="$class_flusher.html#a16d1b095c3f8f2a942a5431ba7493829" title="Flusher::transition_state" alt="" coords="1579,714,1763,742"/>
+<area shape="rect" id="node84" href="$class_dispatcher.html#af5d5d7984eb0ca4b63228662b2ed815b" title="Cancel a task." alt="" coords="1881,714,2025,742"/>
+<area shape="rect" id="node89" href="$flusher_8cc.html#a2bbb134c9fb868e402695252d36d1547" title="validTransition" alt="" coords="1893,765,2013,793"/>
+<area shape="rect" id="node97" href="$class_eventually_persistent_engine.html#ad6a5b38b42f232b57418b862ceae54ae" title="EventuallyPersistentEngine::stopFlusher" alt="" coords="416,562,707,590"/>
+<area shape="rect" id="node101" href="$class_eventually_persistent_store.html#afed839ff1e3459b276c035f942bf6449" title="EventuallyPersistentStore::pauseFlusher" alt="" coords="789,562,1080,590"/>
+<area shape="rect" id="node103" href="$class_flusher.html#a7672258bcd7306fb6de20fc0e096c98e" title="Flusher::pause" alt="" coords="1245,587,1365,615"/>
 </map>

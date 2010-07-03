@@ -5,6 +5,6 @@
 <area shape="rect" id="node9" href="$class_prepared_statement.html#a81ce84821547fb9dd6072fe97ab9c60c" title="Get the number of bytes stored in the given column for the current row." alt="" coords="229,157,483,185"/>
 <area shape="rect" id="node11" href="$class_prepared_statement.html#a035ffcc95008ad024f915278e268ab05" title="Get the integer valueof the given column at the current row." alt="" coords="239,207,473,235"/>
 <area shape="rect" id="node13" href="$class_prepared_statement.html#a4d21626a2a86d6f02f2363f5218401ce" title="Get the 64&#45;bit integer value of the given column at the current row." alt="" coords="231,258,481,286"/>
-<area shape="rect" id="node15" href="$class_prepared_statement.html#a49f6ffcb5e8d5a915caa0f144cbe0291" title="Execute a prepared statement that does return results and/or return the next row..." alt="" coords="259,309,453,337"/>
+<area shape="rect" id="node15" href="$class_prepared_statement.html#a49f6ffcb5e8d5a915caa0f144cbe0291" title="Execute a prepared statement that does return results and/or return the next row." alt="" coords="259,309,453,337"/>
 <area shape="rect" id="node17" href="$class_prepared_statement.html#ac046e6ccc339333d7049ec77bd156f7a" title="Reset the bindings." alt="" coords="260,359,452,387"/>
 </map>

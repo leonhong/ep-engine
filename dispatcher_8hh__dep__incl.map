@@ -1,14 +1,15 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$ep_8cc.html" title="ep.cc" alt="" coords="5,161,61,189"/>
-<area shape="rect" id="node6" href="$ep_8hh.html" title="ep.hh" alt="" coords="327,83,385,111"/>
-<area shape="rect" id="node21" href="$flusher_8hh.html" title="flusher.hh" alt="" coords="781,161,869,189"/>
-<area shape="rect" id="node9" href="$ep__engine_8cc.html" title="ep_engine.cc" alt="" coords="485,238,595,266"/>
-<area shape="rect" id="node12" href="$ep__engine_8h.html" title="ep_engine.h" alt="" coords="237,238,341,266"/>
-<area shape="rect" id="node16" href="$ep__extension_8h.html" title="ep_extension.h" alt="" coords="109,161,232,189"/>
-<area shape="rect" id="node27" href="$sizes_8cc.html" title="sizes.cc" alt="" coords="357,161,429,189"/>
-<area shape="rect" id="node29" href="$sqlite-eval_8cc.html" title="sqlite&#45;eval.cc" alt="" coords="453,161,563,189"/>
-<area shape="rect" id="node32" href="$sqlite-strategies_8cc.html" title="sqlite&#45;strategies.cc" alt="" coords="611,161,757,189"/>
-<area shape="rect" id="node14" href="$tapclient_8cc.html" title="tapclient.cc" alt="" coords="240,315,339,343"/>
-<area shape="rect" id="node19" href="$ep__extension_8cc.html" title="ep_extension.cc" alt="" coords="85,238,213,266"/>
-<area shape="rect" id="node25" href="$flusher_8cc.html" title="flusher.cc" alt="" coords="783,238,868,266"/>
+<area shape="rect" id="node3" href="$dispatcher_8cc.html" title="dispatcher.cc" alt="" coords="5,83,115,111"/>
+<area shape="rect" id="node5" href="$ep_8hh.html" title="ep.hh" alt="" coords="451,83,509,111"/>
+<area shape="rect" id="node7" href="$ep_8cc.html" title="ep.cc" alt="" coords="168,238,224,266"/>
+<area shape="rect" id="node9" href="$flusher_8hh.html" title="flusher.hh" alt="" coords="240,161,328,189"/>
+<area shape="rect" id="node12" href="$ep__engine_8h.html" title="ep_engine.h" alt="" coords="484,238,588,266"/>
+<area shape="rect" id="node21" href="$ep__extension_8h.html" title="ep_extension.h" alt="" coords="669,161,792,189"/>
+<area shape="rect" id="node26" href="$sizes_8cc.html" title="sizes.cc" alt="" coords="573,161,645,189"/>
+<area shape="rect" id="node28" href="$sqlite-eval_8cc.html" title="sqlite&#45;eval.cc" alt="" coords="816,161,925,189"/>
+<area shape="rect" id="node30" href="$sqlite-strategies_8cc.html" title="sqlite&#45;strategies.cc" alt="" coords="352,161,499,189"/>
+<area shape="rect" id="node18" href="$flusher_8cc.html" title="flusher.cc" alt="" coords="248,238,333,266"/>
+<area shape="rect" id="node14" href="$ep__engine_8cc.html" title="ep_engine.cc" alt="" coords="417,315,527,343"/>
+<area shape="rect" id="node16" href="$tapclient_8cc.html" title="tapclient.cc" alt="" coords="551,315,649,343"/>
+<area shape="rect" id="node24" href="$ep__extension_8cc.html" title="ep_extension.cc" alt="" coords="667,238,795,266"/>
 </map>

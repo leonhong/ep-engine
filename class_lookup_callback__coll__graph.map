@@ -1,50 +1,48 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_callback.html" title="Callback\&lt; GetValue \&gt;" alt="" coords="4649,854,4817,882"/>
-<area shape="rect" id="node121" href="$class_load_storage_k_v_pair_callback.html" title="Helper class used to insert items into the storage by using the KVStore::dump method..." alt="" coords="4944,666,5149,694"/>
-<area shape="rect" id="node4" href="$class_callback.html" title="Interface for callbacks from storage APIs." alt="" coords="4352,854,4477,882"/>
-<area shape="rect" id="node6" href="$class_eventually_persistent_engine.html" title="EventuallyPersistentEngine" alt="" coords="5937,573,6140,601"/>
-<area shape="rect" id="node127" href="$class_tap_client_connection.html" title="Tap client connection." alt="" coords="6251,503,6411,531"/>
-<area shape="rect" id="node8" href="$class_eventually_persistent_store.html" title="EventuallyPersistentStore" alt="" coords="5380,615,5572,643"/>
-<area shape="rect" id="node43" href="$class_flusher.html" title="Flusher" alt="" coords="5701,471,5773,499"/>
-<area shape="rect" id="node134" href="$class_getl_extension.html" title="GetlExtension" alt="" coords="5680,573,5795,601"/>
-<area shape="rect" id="node10" href="$class_e_p_stats.html" title="Global engine stats container." alt="" coords="2792,675,2864,703"/>
-<area shape="rect" id="node12" href="$class_atomic.html" title="Atomic\&lt; int \&gt;" alt="" coords="2287,934,2404,962"/>
-<area shape="rect" id="node61" href="$class_r_c_value.html" title="RCValue" alt="" coords="2948,959,3023,987"/>
-<area shape="rect" id="node14" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="149,462,256,490"/>
-<area shape="rect" id="node18" href="$class_atomic.html" title="Atomic\&lt; time_t \&gt;" alt="" coords="1877,515,2019,543"/>
-<area shape="rect" id="node21" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="2276,383,2415,411"/>
-<area shape="rect" id="node24" href="$class_atomic.html" title="Atomic\&lt; rel_time_t \&gt;" alt="" coords="1865,641,2031,669"/>
-<area shape="rect" id="node27" href="$class_atomic.html" title="Atomic\&lt; bool \&gt;" alt="" coords="1884,679,2012,707"/>
-<area shape="rect" id="node57" href="$class_atomic.html" title="Atomic\&lt; VBucketHolder * \&gt;" alt="" coords="3696,711,3907,739"/>
-<area shape="rect" id="node71" href="$class_atomic.html" title="Atomic\&lt; C * \&gt;" alt="" coords="1119,743,1239,771"/>
-<area shape="rect" id="node76" href="$class_atomic.html" title="Atomic\&lt; T * \&gt;" alt="" coords="735,335,852,363"/>
-<area shape="rect" id="node101" href="$class_atomic.html" title="Atomic\&lt; std::queue\&lt; QueuedItem \&gt; * \&gt;" alt="" coords="647,203,940,231"/>
-<area shape="rect" id="node109" href="$class_atomic.html" title="Atomic\&lt; std::queue\&lt; T \&gt; * \&gt;" alt="" coords="1069,249,1288,277"/>
-<area shape="rect" id="node85" href="$class_atomic_queue.html" title="AtomicQueue\&lt; QueuedItem \&gt;" alt="" coords="3067,215,3293,243"/>
-<area shape="rect" id="node105" href="$class_atomic_queue.html" title="Efficient approximate&#45;FIFO queue optimize for concurrent writers." alt="" coords="2752,215,2904,243"/>
-<area shape="rect" id="node31" href="$class_dispatcher.html" title="Schedule and run tasks in another thread." alt="" coords="5000,450,5093,478"/>
-<area shape="rect" id="node33" href="$class_sync_object.html" title="Abstraction built on top of pthread mutexes." alt="" coords="4685,430,4781,458"/>
-<area shape="rect" id="node35" href="$class_mutex.html" title="Abstraction built on top of pthread mutexes." alt="" coords="4384,346,4445,374"/>
-<area shape="rect" id="node48" href="$class_v_bucket_map.html" title="A map of known vbuckets." alt="" coords="4680,695,4787,723"/>
-<area shape="rect" id="node37" href="$class_strategic_sqlite3.html" title="StrategicSqlite3" alt="" coords="4983,917,5111,945"/>
-<area shape="rect" id="node39" href="$class_sqlite_strategy.html" title="SqliteStrategy" alt="" coords="4675,926,4792,954"/>
-<area shape="rect" id="node41" href="$class_prepared_statement.html" title="A sqlite prepared statement." alt="" coords="4340,933,4489,961"/>
-<area shape="rect" id="node51" href="$class_r_c_ptr.html" title="RCPtr\&lt; VBucketHolder \&gt;" alt="" coords="4321,714,4508,742"/>
-<area shape="rect" id="node53" href="$class_spin_lock.html" title="A lighter&#45;weight, smaller lock than a mutex." alt="" coords="2304,851,2387,879"/>
-<area shape="rect" id="node64" href="$class_r_c_ptr.html" title="RCPtr\&lt; VBucket \&gt;" alt="" coords="3108,765,3252,793"/>
-<area shape="rect" id="node67" href="$class_r_c_ptr.html" title="Concurrent reference counted pointer." alt="" coords="2780,847,2876,875"/>
-<area shape="rect" id="node55" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; VBucketHolder \&gt;" alt="" coords="4005,693,4224,721"/>
-<area shape="rect" id="node59" href="$class_v_bucket_holder.html" title="VBucketHolder" alt="" coords="3395,813,3517,841"/>
-<area shape="rect" id="node69" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; C \&gt;" alt="" coords="2281,801,2409,829"/>
-<area shape="rect" id="node74" href="$class_atomic_ptr.html" title="Atomic pointer." alt="" coords="1529,335,1655,363"/>
-<area shape="rect" id="node99" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; std::queue\&lt; QueuedItem \&gt; \&gt;" alt="" coords="2195,163,2496,191"/>
-<area shape="rect" id="node107" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; std::queue\&lt; T \&gt; \&gt;" alt="" coords="2232,215,2459,243"/>
-<area shape="rect" id="node87" href="$class_thread_local_ptr.html" title="ThreadLocalPtr\&lt; AtomicPtr\&lt; std::queue\&lt; QueuedItem \&gt; \&gt; \&gt;" alt="" coords="2129,39,2561,67"/>
-<area shape="rect" id="node89" href="$class_thread_local.html" title="ThreadLocal\&lt; AtomicPtr\&lt; std::queue\&lt; QueuedItem \&gt; \&gt; * \&gt;" alt="" coords="967,5,1391,33"/>
-<area shape="rect" id="node91" href="$class_thread_local.html" title="Container of thread&#45;local data." alt="" coords="131,57,275,85"/>
-<area shape="rect" id="node95" href="$class_thread_local.html" title="ThreadLocal\&lt; T * \&gt;" alt="" coords="716,57,871,85"/>
-<area shape="rect" id="node116" href="$class_thread_local.html" title="ThreadLocal\&lt; AtomicPtr\&lt; std::queue\&lt; T \&gt; \&gt; * \&gt;" alt="" coords="1417,110,1767,138"/>
-<area shape="rect" id="node93" href="$class_thread_local_ptr.html" title="Container for a thread&#45;local pointer." alt="" coords="1511,57,1673,85"/>
-<area shape="rect" id="node114" href="$class_thread_local_ptr.html" title="ThreadLocalPtr\&lt; AtomicPtr\&lt; std::queue\&lt; T \&gt; \&gt; \&gt;" alt="" coords="2167,113,2524,141"/>
-<area shape="rect" id="node129" href="$class_binary_message.html" title="BinaryMessage" alt="" coords="5977,479,6100,507"/>
+<area shape="rect" id="node2" href="$class_callback.html" title="Callback\&lt; GetValue \&gt;" alt="" coords="3121,923,3289,951"/>
+<area shape="rect" id="node118" href="$class_load_storage_k_v_pair_callback.html" title="Helper class used to insert items into the storage by using the KVStore::dump method to load items fr..." alt="" coords="3416,809,3621,837"/>
+<area shape="rect" id="node4" href="$class_callback.html" title="Interface for callbacks from storage APIs." alt="" coords="2805,923,2931,951"/>
+<area shape="rect" id="node6" href="$class_eventually_persistent_engine.html" title="EventuallyPersistentEngine" alt="" coords="4409,205,4612,233"/>
+<area shape="rect" id="node124" href="$class_tap_client_connection.html" title="Tap client connection." alt="" coords="4723,85,4883,113"/>
+<area shape="rect" id="node8" href="$class_eventually_persistent_store.html" title="EventuallyPersistentStore" alt="" coords="3852,515,4044,543"/>
+<area shape="rect" id="node43" href="$class_flusher.html" title="Flusher" alt="" coords="4173,386,4245,414"/>
+<area shape="rect" id="node131" href="$class_getl_extension.html" title="GetlExtension" alt="" coords="4152,471,4267,499"/>
+<area shape="rect" id="node10" href="$class_e_p_stats.html" title="Global engine stats container." alt="" coords="1376,977,1448,1005"/>
+<area shape="rect" id="node12" href="$class_atomic.html" title="Atomic\&lt; int \&gt;" alt="" coords="692,615,809,643"/>
+<area shape="rect" id="node14" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="149,565,256,593"/>
+<area shape="rect" id="node18" href="$class_atomic.html" title="Atomic\&lt; time_t \&gt;" alt="" coords="680,750,821,778"/>
+<area shape="rect" id="node21" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="681,666,820,694"/>
+<area shape="rect" id="node24" href="$class_atomic.html" title="Atomic\&lt; rel_time_t \&gt;" alt="" coords="668,865,833,893"/>
+<area shape="rect" id="node27" href="$class_atomic.html" title="Atomic\&lt; bool \&gt;" alt="" coords="687,998,815,1026"/>
+<area shape="rect" id="node61" href="$class_atomic.html" title="Atomic\&lt; VBucketHolder * \&gt;" alt="" coords="645,331,856,359"/>
+<area shape="rect" id="node68" href="$class_atomic.html" title="Atomic\&lt; T * \&gt;" alt="" coords="692,417,809,445"/>
+<area shape="rect" id="node76" href="$class_atomic.html" title="Atomic\&lt; C * \&gt;" alt="" coords="1352,261,1472,289"/>
+<area shape="rect" id="node98" href="$class_atomic.html" title="Atomic\&lt; std::queue\&lt; QueuedItem \&gt; * \&gt;" alt="" coords="947,514,1240,542"/>
+<area shape="rect" id="node106" href="$class_atomic.html" title="Atomic\&lt; std::queue\&lt; T \&gt; * \&gt;" alt="" coords="984,547,1203,575"/>
+<area shape="rect" id="node82" href="$class_atomic_queue.html" title="AtomicQueue\&lt; QueuedItem \&gt;" alt="" coords="2755,674,2981,702"/>
+<area shape="rect" id="node102" href="$class_atomic_queue.html" title="Efficient approximate&#45;FIFO queue optimize for concurrent writers." alt="" coords="2424,674,2576,702"/>
+<area shape="rect" id="node31" href="$class_dispatcher.html" title="Schedule and run tasks in another thread." alt="" coords="3472,386,3565,414"/>
+<area shape="rect" id="node33" href="$class_sync_object.html" title="Abstraction built on top of pthread mutexes." alt="" coords="3157,337,3253,365"/>
+<area shape="rect" id="node35" href="$class_mutex.html" title="Abstraction built on top of pthread mutexes." alt="" coords="2837,255,2899,283"/>
+<area shape="rect" id="node52" href="$class_v_bucket_map.html" title="A map of known vbuckets." alt="" coords="3152,542,3259,570"/>
+<area shape="rect" id="node37" href="$class_strategic_sqlite3.html" title="StrategicSqlite3" alt="" coords="3455,115,3583,143"/>
+<area shape="rect" id="node39" href="$class_sqlite_strategy.html" title="SqliteStrategy" alt="" coords="3147,109,3264,137"/>
+<area shape="rect" id="node41" href="$class_prepared_statement.html" title="A sqlite prepared statement." alt="" coords="2793,11,2943,39"/>
+<area shape="rect" id="node55" href="$class_r_c_ptr.html" title="RCPtr\&lt; VBucketHolder \&gt;" alt="" coords="2775,371,2961,399"/>
+<area shape="rect" id="node57" href="$class_spin_lock.html" title="A lighter&#45;weight, smaller lock than a mutex." alt="" coords="2029,279,2112,307"/>
+<area shape="rect" id="node72" href="$class_r_c_ptr.html" title="Concurrent reference counted pointer." alt="" coords="2452,341,2548,369"/>
+<area shape="rect" id="node59" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; VBucketHolder \&gt;" alt="" coords="1961,394,2180,422"/>
+<area shape="rect" id="node63" href="$class_v_bucket_holder.html" title="VBucketHolder" alt="" coords="141,226,264,254"/>
+<area shape="rect" id="node66" href="$class_atomic_ptr.html" title="Atomic pointer." alt="" coords="1349,417,1475,445"/>
+<area shape="rect" id="node74" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; C \&gt;" alt="" coords="2007,343,2135,371"/>
+<area shape="rect" id="node96" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; std::queue\&lt; QueuedItem \&gt; \&gt;" alt="" coords="1920,522,2221,550"/>
+<area shape="rect" id="node104" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; std::queue\&lt; T \&gt; \&gt;" alt="" coords="1957,623,2184,651"/>
+<area shape="rect" id="node84" href="$class_thread_local_ptr.html" title="ThreadLocalPtr\&lt; AtomicPtr\&lt; std::queue\&lt; QueuedItem \&gt; \&gt; \&gt;" alt="" coords="1855,858,2287,886"/>
+<area shape="rect" id="node86" href="$class_thread_local.html" title="ThreadLocal\&lt; AtomicPtr\&lt; std::queue\&lt; QueuedItem \&gt; \&gt; * \&gt;" alt="" coords="881,1082,1305,1110"/>
+<area shape="rect" id="node88" href="$class_thread_local.html" title="Container of thread&#45;local data." alt="" coords="131,1049,275,1077"/>
+<area shape="rect" id="node92" href="$class_thread_local.html" title="ThreadLocal\&lt; T * \&gt;" alt="" coords="673,1049,828,1077"/>
+<area shape="rect" id="node113" href="$class_thread_local.html" title="ThreadLocal\&lt; AtomicPtr\&lt; std::queue\&lt; T \&gt; \&gt; * \&gt;" alt="" coords="919,969,1268,997"/>
+<area shape="rect" id="node90" href="$class_thread_local_ptr.html" title="Container for a thread&#45;local pointer." alt="" coords="1331,851,1493,879"/>
+<area shape="rect" id="node111" href="$class_thread_local_ptr.html" title="ThreadLocalPtr\&lt; AtomicPtr\&lt; std::queue\&lt; T \&gt; \&gt; \&gt;" alt="" coords="1892,725,2249,753"/>
+<area shape="rect" id="node126" href="$class_binary_message.html" title="BinaryMessage" alt="" coords="4449,5,4572,33"/>
 </map>

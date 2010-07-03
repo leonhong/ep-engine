@@ -2,8 +2,8 @@
 <area shape="rect" id="node3" href="$class_remembering_callback.html#a488ddf410ca2d8431b0344b146e4b8db" title="The callback implementation &#45;&#45; just store a value." alt="" coords="197,5,435,33"/>
 <area shape="rect" id="node5" href="$class_dispatcher.html#ae64402ad4f9c794868be79db9655e3cb" title="Dispatcher&#39;s main loop." alt="" coords="253,55,379,83"/>
 <area shape="rect" id="node15" href="$class_dispatcher.html#a3a657220baa43a9cde1a4a938d0bc8b5" title="Schedule a job to run." alt="" coords="235,106,397,134"/>
-<area shape="rect" id="node37" href="$class_dispatcher.html#ae3c73ff1334bcdbc0b354fd6f89d1c27" title="Stop this dispatcher." alt="" coords="251,157,381,185"/>
-<area shape="rect" id="node43" href="$class_dispatcher.html#a2fbf23f68f0c9b6cd817a45c9b09c014" title="Wake up the given task." alt="" coords="248,233,384,261"/>
+<area shape="rect" id="node35" href="$class_dispatcher.html#ae3c73ff1334bcdbc0b354fd6f89d1c27" title="Stop this dispatcher." alt="" coords="251,157,381,185"/>
+<area shape="rect" id="node41" href="$class_dispatcher.html#a2fbf23f68f0c9b6cd817a45c9b09c014" title="Wake up the given task." alt="" coords="248,233,384,261"/>
 <area shape="rect" id="node7" href="$dispatcher_8cc.html#a300914a3de319cdefcafa3cf663c67c4" title="launch_dispatcher_thread" alt="" coords="577,5,772,33"/>
 <area shape="rect" id="node9" href="$class_dispatcher.html#a740a58c6547cdf33dc9323d486630ccb" title="Start this dispatcher&#39;s thread." alt="" coords="1009,5,1143,33"/>
 <area shape="rect" id="node11" href="$class_eventually_persistent_store.html#af8760ca2c4c5ec7744d99696bf335d45" title="EventuallyPersistentStore::startDispatcher" alt="" coords="1285,5,1589,33"/>
@@ -17,8 +17,7 @@
 <area shape="rect" id="node25" href="$ep__engine_8cc.html#acb3114cabb056ea53ec6be27f400a846" title="EvpUnknownCommand" alt="" coords="1735,55,1913,83"/>
 <area shape="rect" id="node29" href="$ep__engine_8cc.html#aa57359c099d4ad1d06e02c1111c81844" title="EvpTapNotify" alt="" coords="1384,106,1491,134"/>
 <area shape="rect" id="node33" href="$ep__engine_8cc.html#acccf4678fa01a9df3d38e5d3e8e50e20" title="EvpTapIterator" alt="" coords="1379,157,1496,185"/>
-<area shape="rect" id="node35" href="$ep__engine_8cc.html#a4850045a6e5457497970116c2645e682" title="EvpGetTapIterator" alt="" coords="1753,157,1895,185"/>
-<area shape="rect" id="node39" href="$class_dispatcher.html#a52fc4e8bef278fa415723b39b61c28a7" title="Dispatcher::~Dispatcher" alt="" coords="583,157,767,185"/>
-<area shape="rect" id="node41" href="$class_eventually_persistent_store.html#a40ed32c5577b559a679e839468cceeec" title="EventuallyPersistentStore::~EventuallyPersistentStore" alt="" coords="484,207,865,235"/>
-<area shape="rect" id="node45" href="$class_flusher.html#ab1b2a9cc7418164e06ddd3532ab2e9dc" title="Flusher::wake" alt="" coords="617,258,732,286"/>
+<area shape="rect" id="node37" href="$class_dispatcher.html#a52fc4e8bef278fa415723b39b61c28a7" title="Dispatcher::~Dispatcher" alt="" coords="583,157,767,185"/>
+<area shape="rect" id="node39" href="$class_eventually_persistent_store.html#a40ed32c5577b559a679e839468cceeec" title="EventuallyPersistentStore::~EventuallyPersistentStore" alt="" coords="484,207,865,235"/>
+<area shape="rect" id="node43" href="$class_flusher.html#ab1b2a9cc7418164e06ddd3532ab2e9dc" title="Flusher::wake" alt="" coords="617,258,732,286"/>
 </map>

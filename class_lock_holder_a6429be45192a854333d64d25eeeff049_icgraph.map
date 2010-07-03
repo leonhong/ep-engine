@@ -3,13 +3,12 @@
 <area shape="rect" id="node13" href="$class_dispatcher.html#ae3c73ff1334bcdbc0b354fd6f89d1c27" title="Stop this dispatcher." alt="" coords="295,55,425,83"/>
 <area shape="rect" id="node19" href="$class_hash_table.html#a9edd623bc8d50b043144045c3a217fbb" title="Visit all items within this hashtable." alt="" coords="297,106,423,134"/>
 <area shape="rect" id="node21" href="$class_eventually_persistent_engine.html#af7a86dbf9bcaf99ec769734c26b94f7b" title="EventuallyPersistentEngine::walkTapQueue" alt="" coords="205,157,515,185"/>
-<area shape="rect" id="node27" href="$class_lock_holder.html#ae718cd98823888c866cb252b44ce1d16" title="Release the lock." alt="" coords="264,207,456,235"/>
+<area shape="rect" id="node25" href="$class_lock_holder.html#ae718cd98823888c866cb252b44ce1d16" title="Release the lock." alt="" coords="264,207,456,235"/>
 <area shape="rect" id="node5" href="$dispatcher_8cc.html#a300914a3de319cdefcafa3cf663c67c4" title="launch_dispatcher_thread" alt="" coords="657,5,852,33"/>
-<area shape="rect" id="node7" href="$class_dispatcher.html#a740a58c6547cdf33dc9323d486630ccb" title="Start this dispatcher&#39;s thread." alt="" coords="999,5,1132,33"/>
-<area shape="rect" id="node9" href="$class_eventually_persistent_store.html#af8760ca2c4c5ec7744d99696bf335d45" title="EventuallyPersistentStore::startDispatcher" alt="" coords="1184,5,1488,33"/>
-<area shape="rect" id="node11" href="$class_eventually_persistent_store.html#a6f50abd1a42374dc21615a028e9fb862" title="EventuallyPersistentStore::EventuallyPersistentStore" alt="" coords="1537,5,1908,33"/>
+<area shape="rect" id="node7" href="$class_dispatcher.html#a740a58c6547cdf33dc9323d486630ccb" title="Start this dispatcher&#39;s thread." alt="" coords="995,5,1128,33"/>
+<area shape="rect" id="node9" href="$class_eventually_persistent_store.html#af8760ca2c4c5ec7744d99696bf335d45" title="EventuallyPersistentStore::startDispatcher" alt="" coords="1176,5,1480,33"/>
+<area shape="rect" id="node11" href="$class_eventually_persistent_store.html#a6f50abd1a42374dc21615a028e9fb862" title="EventuallyPersistentStore::EventuallyPersistentStore" alt="" coords="1529,5,1900,33"/>
 <area shape="rect" id="node15" href="$class_dispatcher.html#a52fc4e8bef278fa415723b39b61c28a7" title="Dispatcher::~Dispatcher" alt="" coords="663,55,847,83"/>
 <area shape="rect" id="node17" href="$class_eventually_persistent_store.html#a40ed32c5577b559a679e839468cceeec" title="EventuallyPersistentStore::~EventuallyPersistentStore" alt="" coords="564,106,945,134"/>
 <area shape="rect" id="node23" href="$ep__engine_8cc.html#acccf4678fa01a9df3d38e5d3e8e50e20" title="EvpTapIterator" alt="" coords="696,157,813,185"/>
-<area shape="rect" id="node25" href="$ep__engine_8cc.html#a4850045a6e5457497970116c2645e682" title="EvpGetTapIterator" alt="" coords="995,157,1136,185"/>
 </map>

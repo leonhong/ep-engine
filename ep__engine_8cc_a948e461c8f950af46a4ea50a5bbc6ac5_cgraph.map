@@ -1,7 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$common_8hh.html#adc37afe8902889256d57848f4c88663c" title="parseUint16" alt="" coords="259,30,363,58"/>
 <area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#a64296190a342ab55e5486d617a41337d" title="EventuallyPersistentEngine::setVBucketState" alt="" coords="149,81,472,109"/>
-<area shape="rect" id="node19" href="$class_flusher.html#a8993c1f2b50b26bbaed8b09febadc462" title="Flusher::state" alt="" coords="255,131,367,159"/>
 <area shape="rect" id="node7" href="$class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="521,81,831,109"/>
 <area shape="rect" id="node9" href="$class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5" title="VBucketMap::addBucket" alt="" coords="880,5,1067,33"/>
 <area shape="rect" id="node11" href="$class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="883,55,1064,83"/>

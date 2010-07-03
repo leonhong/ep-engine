@@ -1,24 +1,24 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_r_c_value.html" title="RCValue" alt="" coords="1044,406,1119,434"/>
-<area shape="rect" id="node18" href="$class_v_bucket.html" title="An individual vbucket." alt="" coords="909,513,987,541"/>
-<area shape="rect" id="node4" href="$class_atomic.html" title="Atomic\&lt; int \&gt;" alt="" coords="1041,246,1159,274"/>
-<area shape="rect" id="node6" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="515,99,621,127"/>
-<area shape="rect" id="node16" href="$class_atomic.html" title="Atomic\&lt; VBucket * \&gt;" alt="" coords="865,606,1031,634"/>
-<area shape="rect" id="node23" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="499,193,637,221"/>
-<area shape="rect" id="node41" href="$class_atomic.html" title="Atomic\&lt; vbucket_state_t \&gt;" alt="" coords="853,353,1059,381"/>
-<area shape="rect" id="node47" href="$class_atomic.html" title="Atomic\&lt; T * \&gt;" alt="" coords="260,193,377,221"/>
-<area shape="rect" id="node55" href="$class_atomic.html" title="Atomic\&lt; C * \&gt;" alt="" coords="349,459,469,487"/>
-<area shape="rect" id="node10" href="$class_r_c_ptr.html" title="RCPtr\&lt; VBucket \&gt;" alt="" coords="671,793,815,821"/>
-<area shape="rect" id="node12" href="$class_spin_lock.html" title="A lighter&#45;weight, smaller lock than a mutex." alt="" coords="592,606,675,634"/>
-<area shape="rect" id="node51" href="$class_r_c_ptr.html" title="Concurrent reference counted pointer." alt="" coords="544,699,640,727"/>
-<area shape="rect" id="node14" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; VBucket \&gt;" alt="" coords="749,699,923,727"/>
-<area shape="rect" id="node21" href="$class_hash_table.html" title="A container of StoredValue instances." alt="" coords="632,406,720,434"/>
-<area shape="rect" id="node30" href="$class_stored_value.html" title="In&#45;memory storage for an item." alt="" coords="407,299,508,327"/>
-<area shape="rect" id="node26" href="$class_stored_value_factory.html" title="Creator of StoredValue instances." alt="" coords="684,299,833,327"/>
-<area shape="rect" id="node28" href="$class_mutex.html" title="Abstraction built on top of pthread mutexes." alt="" coords="857,299,919,327"/>
-<area shape="rect" id="node33" href="$unionstored__value__bodies.html" title="Union of StoredValue data." alt="" coords="79,193,236,221"/>
-<area shape="rect" id="node35" href="$structfeature__data.html" title="StoredValue &quot;featured&quot; data type." alt="" coords="5,99,112,127"/>
-<area shape="rect" id="node37" href="$structsmall__data.html" title="StoredValue &quot;small&quot; data storage." alt="" coords="136,99,229,127"/>
-<area shape="rect" id="node45" href="$class_atomic_ptr.html" title="Atomic pointer." alt="" coords="323,513,448,541"/>
-<area shape="rect" id="node53" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; C \&gt;" alt="" coords="421,606,549,634"/>
+<area shape="rect" id="node2" href="$class_r_c_value.html" title="RCValue" alt="" coords="768,406,843,434"/>
+<area shape="rect" id="node18" href="$class_v_bucket.html" title="An individual vbucket." alt="" coords="600,513,677,541"/>
+<area shape="rect" id="node4" href="$class_atomic.html" title="Atomic\&lt; int \&gt;" alt="" coords="615,246,732,274"/>
+<area shape="rect" id="node6" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="269,99,376,127"/>
+<area shape="rect" id="node16" href="$class_atomic.html" title="Atomic\&lt; VBucket * \&gt;" alt="" coords="397,606,563,634"/>
+<area shape="rect" id="node23" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="749,193,888,221"/>
+<area shape="rect" id="node45" href="$class_atomic.html" title="Atomic\&lt; vbucket_state_t \&gt;" alt="" coords="424,353,629,381"/>
+<area shape="rect" id="node51" href="$class_atomic.html" title="Atomic\&lt; T * \&gt;" alt="" coords="156,193,273,221"/>
+<area shape="rect" id="node59" href="$class_atomic.html" title="Atomic\&lt; C * \&gt;" alt="" coords="31,459,151,487"/>
+<area shape="rect" id="node10" href="$class_r_c_ptr.html" title="RCPtr\&lt; VBucket \&gt;" alt="" coords="224,793,368,821"/>
+<area shape="rect" id="node12" href="$class_spin_lock.html" title="A lighter&#45;weight, smaller lock than a mutex." alt="" coords="157,606,240,634"/>
+<area shape="rect" id="node55" href="$class_r_c_ptr.html" title="Concurrent reference counted pointer." alt="" coords="97,699,193,727"/>
+<area shape="rect" id="node14" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; VBucket \&gt;" alt="" coords="303,699,476,727"/>
+<area shape="rect" id="node21" href="$class_hash_table.html" title="A container of StoredValue instances." alt="" coords="867,406,955,434"/>
+<area shape="rect" id="node30" href="$class_stored_value.html" title="In&#45;memory storage for an item." alt="" coords="912,299,1013,327"/>
+<area shape="rect" id="node26" href="$class_stored_value_factory.html" title="Creator of StoredValue instances." alt="" coords="1092,299,1241,327"/>
+<area shape="rect" id="node28" href="$class_mutex.html" title="Abstraction built on top of pthread mutexes." alt="" coords="596,299,657,327"/>
+<area shape="rect" id="node33" href="$unionstored__value__bodies.html" title="Union of StoredValue data." alt="" coords="912,193,1069,221"/>
+<area shape="rect" id="node35" href="$structfeature__data.html" title="StoredValue &quot;featured&quot; data type." alt="" coords="872,99,979,127"/>
+<area shape="rect" id="node37" href="$structsmall__data.html" title="StoredValue &quot;small&quot; data storage." alt="" coords="1003,99,1096,127"/>
+<area shape="rect" id="node49" href="$class_atomic_ptr.html" title="Atomic pointer." alt="" coords="152,513,277,541"/>
+<area shape="rect" id="node57" href="$class_atomic_ptr.html" title="AtomicPtr\&lt; C \&gt;" alt="" coords="5,606,133,634"/>
 </map>

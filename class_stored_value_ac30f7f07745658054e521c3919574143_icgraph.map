@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_requeuer.html#a4e13db9f64e23cb2513c8a797837c251" title="Method called on callback." alt="" coords="225,5,375,33"/>
+<area shape="rect" id="node3" href="$class_requeuer.html#a4e13db9f64e23cb2513c8a797837c251" title="Requeuer::callback" alt="" coords="225,5,375,33"/>
 <area shape="rect" id="node5" href="$class_stored_value.html#a2f0c9872c42fe61eb6ba7da7654b9279" title="Mark this item as needing to be persisted." alt="" coords="211,55,389,83"/>
 <area shape="rect" id="node7" href="$class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c" title="Set a new value for this item." alt="" coords="857,17,1025,45"/>
 <area shape="rect" id="node11" href="$class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a" title="Get the size of a StoredValue object." alt="" coords="437,93,589,121"/>
@@ -7,8 +7,7 @@
 <area shape="rect" id="node13" href="$sizes_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="679,67,735,95"/>
 <area shape="rect" id="node15" href="$class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="Get the total size of this item." alt="" coords="639,118,775,146"/>
 <area shape="rect" id="node17" href="$class_hash_table.html#a0e58e888d0f0963247b5eea143da7ab4" title="Get the bucket number for the given C string key." alt="" coords="869,67,1013,95"/>
-<area shape="rect" id="node19" href="$class_hash_table.html#a95a64de238722621660852b97e1a4ca6" title="Get the number of hash table buckets this hash table has." alt="" coords="868,118,1015,146"/>
-<area shape="rect" id="node21" href="$class_hash_table.html#a06fb934d9694fa3b0ef6c721b3ddd364" title="Create a HashTable." alt="" coords="859,169,1024,197"/>
-<area shape="rect" id="node25" href="$class_hash_table_depth_stat_visitor.html#acb1f7a14057176b0a3f8a5f1460ab3cb" title="Called once for each hashtable bucket with its depth." alt="" coords="824,219,1059,247"/>
-<area shape="rect" id="node27" href="$class_stored_value.html#aa855286bf93c8db63c297dc43cb34f62" title="StoredValue::~StoredValue" alt="" coords="840,270,1043,298"/>
+<area shape="rect" id="node19" href="$class_hash_table.html#a06fb934d9694fa3b0ef6c721b3ddd364" title="Create a HashTable." alt="" coords="859,118,1024,146"/>
+<area shape="rect" id="node23" href="$class_hash_table_depth_stat_visitor.html#acb1f7a14057176b0a3f8a5f1460ab3cb" title="Called once for each hashtable bucket with its depth." alt="" coords="824,169,1059,197"/>
+<area shape="rect" id="node25" href="$class_stored_value.html#aa855286bf93c8db63c297dc43cb34f62" title="StoredValue::~StoredValue" alt="" coords="840,219,1043,247"/>
 </map>

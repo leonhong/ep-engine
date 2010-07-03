@@ -1,9 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node9" href="$common_8hh.html" title="common.hh" alt="" coords="1256,393,1357,421"/>
-<area shape="rect" id="node33" href="$item_8hh.html" title="item.hh" alt="" coords="344,83,416,111"/>
-<area shape="rect" id="node58" href="$locks_8hh.html" title="locks.hh" alt="" coords="607,238,684,266"/>
-<area shape="rect" id="node31" href="$config_8h.html" title="config.h" alt="" coords="127,470,201,498"/>
-<area shape="rect" id="node43" href="$mutex_8hh.html" title="mutex.hh" alt="" coords="603,315,688,343"/>
-<area shape="rect" id="node73" href="$atomic_8hh.html" title="atomic.hh" alt="" coords="1225,161,1313,189"/>
-<area shape="rect" id="node65" href="$syncobject_8hh.html" title="syncobject.hh" alt="" coords="712,315,827,343"/>
+<area shape="rect" id="node9" href="$common_8hh.html" title="common.hh" alt="" coords="500,470,601,498"/>
+<area shape="rect" id="node41" href="$item_8hh.html" title="item.hh" alt="" coords="820,83,892,111"/>
+<area shape="rect" id="node66" href="$locks_8hh.html" title="locks.hh" alt="" coords="855,315,932,343"/>
+<area shape="rect" id="node31" href="$config_8h.html" title="config.h" alt="" coords="1323,547,1397,575"/>
+<area shape="rect" id="node51" href="$mutex_8hh.html" title="mutex.hh" alt="" coords="684,393,769,421"/>
+<area shape="rect" id="node81" href="$atomic_8hh.html" title="atomic.hh" alt="" coords="948,161,1036,189"/>
+<area shape="rect" id="node73" href="$syncobject_8hh.html" title="syncobject.hh" alt="" coords="895,393,1009,421"/>
+<area shape="rect" id="node88" href="$callbacks_8hh.html" title="callbacks.hh" alt="" coords="1181,238,1285,266"/>
 </map>

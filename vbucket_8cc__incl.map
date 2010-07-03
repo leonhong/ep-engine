@@ -1,11 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node5" href="$vbucket_8hh.html" title="vbucket.hh" alt="" coords="1004,83,1100,111"/>
-<area shape="rect" id="node19" href="$common_8hh.html" title="common.hh" alt="" coords="527,547,628,575"/>
-<area shape="rect" id="node41" href="$atomic_8hh.html" title="atomic.hh" alt="" coords="921,315,1009,343"/>
-<area shape="rect" id="node102" href="$stored-value_8hh.html" title="stored&#45;value.hh" alt="" coords="1147,161,1272,189"/>
-<area shape="rect" id="node39" href="$config_8h.html" title="config.h" alt="" coords="791,625,865,653"/>
-<area shape="rect" id="node78" href="$locks_8hh.html" title="locks.hh" alt="" coords="1460,393,1537,421"/>
-<area shape="rect" id="node84" href="$mutex_8hh.html" title="mutex.hh" alt="" coords="1436,470,1521,498"/>
-<area shape="rect" id="node94" href="$syncobject_8hh.html" title="syncobject.hh" alt="" coords="1297,470,1412,498"/>
-<area shape="rect" id="node109" href="$item_8hh.html" title="item.hh" alt="" coords="1511,238,1583,266"/>
+<area shape="rect" id="node5" href="$vbucket_8hh.html" title="vbucket.hh" alt="" coords="1111,83,1207,111"/>
+<area shape="rect" id="node19" href="$common_8hh.html" title="common.hh" alt="" coords="727,625,828,653"/>
+<area shape="rect" id="node49" href="$atomic_8hh.html" title="atomic.hh" alt="" coords="388,315,476,343"/>
+<area shape="rect" id="node89" href="$stored-value_8hh.html" title="stored&#45;value.hh" alt="" coords="964,161,1089,189"/>
+<area shape="rect" id="node39" href="$config_8h.html" title="config.h" alt="" coords="1136,702,1211,730"/>
+<area shape="rect" id="node57" href="$callbacks_8hh.html" title="callbacks.hh" alt="" coords="283,393,387,421"/>
+<area shape="rect" id="node60" href="$locks_8hh.html" title="locks.hh" alt="" coords="484,470,561,498"/>
+<area shape="rect" id="node68" href="$mutex_8hh.html" title="mutex.hh" alt="" coords="560,547,645,575"/>
+<area shape="rect" id="node80" href="$syncobject_8hh.html" title="syncobject.hh" alt="" coords="320,547,435,575"/>
+<area shape="rect" id="node96" href="$item_8hh.html" title="item.hh" alt="" coords="840,238,912,266"/>
 </map>

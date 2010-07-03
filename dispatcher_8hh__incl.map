@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node7" href="$common_8hh.html" title="common.hh" alt="" coords="624,238,725,266"/>
-<area shape="rect" id="node31" href="$locks_8hh.html" title="locks.hh" alt="" coords="904,83,981,111"/>
+<area shape="rect" id="node7" href="$common_8hh.html" title="common.hh" alt="" coords="777,238,879,266"/>
+<area shape="rect" id="node39" href="$locks_8hh.html" title="locks.hh" alt="" coords="1057,83,1135,111"/>
 <area shape="rect" id="node29" href="$config_8h.html" title="config.h" alt="" coords="691,315,765,343"/>
-<area shape="rect" id="node39" href="$mutex_8hh.html" title="mutex.hh" alt="" coords="1028,161,1113,189"/>
-<area shape="rect" id="node52" href="$syncobject_8hh.html" title="syncobject.hh" alt="" coords="839,161,953,189"/>
+<area shape="rect" id="node47" href="$mutex_8hh.html" title="mutex.hh" alt="" coords="1181,161,1267,189"/>
+<area shape="rect" id="node60" href="$syncobject_8hh.html" title="syncobject.hh" alt="" coords="992,161,1107,189"/>
 </map>

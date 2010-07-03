@@ -3,7 +3,7 @@
 <area shape="rect" id="node5" href="$class_v_bucket.html#aa39d99ce0e43d804d5c722fa82f45e6e" title="VBucket::getStateString" alt="" coords="259,55,443,83"/>
 <area shape="rect" id="node7" href="$class_v_bucket.html#a7bae8a5920d4f0df1d54bbdb7d0e7fbd" title="VBucket::setState" alt="" coords="280,106,421,134"/>
 <area shape="rect" id="node9" href="$class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="196,157,505,185"/>
-<area shape="rect" id="node27" href="$class_stat_v_bucket_visitor.html#ad81ab100022974358d2cfecccb26321f" title="Begin visiting a bucket." alt="" coords="237,207,464,235"/>
+<area shape="rect" id="node25" href="$class_stat_v_bucket_visitor.html#ad81ab100022974358d2cfecccb26321f" title="Begin visiting a bucket." alt="" coords="237,207,464,235"/>
 <area shape="rect" id="node11" href="$class_eventually_persistent_engine.html#a64296190a342ab55e5486d617a41337d" title="EventuallyPersistentEngine::setVBucketState" alt="" coords="555,106,877,134"/>
 <area shape="rect" id="node17" href="$class_eventually_persistent_engine.html#ac342b14e74c4352f55ac1ca5f64e0f63" title="EventuallyPersistentEngine::tapNotify" alt="" coords="580,157,852,185"/>
 <area shape="rect" id="node21" href="$class_eventually_persistent_engine.html#af7a86dbf9bcaf99ec769734c26b94f7b" title="EventuallyPersistentEngine::walkTapQueue" alt="" coords="561,207,871,235"/>
@@ -11,5 +11,4 @@
 <area shape="rect" id="node15" href="$ep__engine_8cc.html#acb3114cabb056ea53ec6be27f400a846" title="EvpUnknownCommand" alt="" coords="1093,106,1272,134"/>
 <area shape="rect" id="node19" href="$ep__engine_8cc.html#aa57359c099d4ad1d06e02c1111c81844" title="EvpTapNotify" alt="" coords="932,157,1039,185"/>
 <area shape="rect" id="node23" href="$ep__engine_8cc.html#acccf4678fa01a9df3d38e5d3e8e50e20" title="EvpTapIterator" alt="" coords="927,207,1044,235"/>
-<area shape="rect" id="node25" href="$ep__engine_8cc.html#a4850045a6e5457497970116c2645e682" title="EvpGetTapIterator" alt="" coords="1112,207,1253,235"/>
 </map>

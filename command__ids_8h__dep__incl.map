@@ -1,5 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$ep__engine_8h.html" title="ep_engine.h" alt="" coords="5,83,109,111"/>
-<area shape="rect" id="node7" href="$ep__testsuite_8cc.html" title="ep_testsuite.cc" alt="" coords="133,83,253,111"/>
-<area shape="rect" id="node5" href="$tapclient_8cc.html" title="tapclient.cc" alt="" coords="8,161,107,189"/>
+<area shape="rect" id="node3" href="$ep__engine_8h.html" title="ep_engine.h" alt="" coords="72,83,176,111"/>
+<area shape="rect" id="node9" href="$ep__testsuite_8cc.html" title="ep_testsuite.cc" alt="" coords="200,83,320,111"/>
+<area shape="rect" id="node5" href="$ep__engine_8cc.html" title="ep_engine.cc" alt="" coords="5,161,115,189"/>
+<area shape="rect" id="node7" href="$tapclient_8cc.html" title="tapclient.cc" alt="" coords="139,161,237,189"/>
 </map>

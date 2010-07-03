@@ -1,16 +1,18 @@
 <map id="G" name="G">
-<area shape="rect" id="node9" href="$ep_8hh.html" title="ep.hh" alt="" coords="973,83,1032,111"/>
-<area shape="rect" id="node33" href="$stats_8hh.html" title="stats.hh" alt="" coords="748,315,823,343"/>
-<area shape="rect" id="node56" href="$atomic_8hh.html" title="atomic.hh" alt="" coords="1492,393,1580,421"/>
-<area shape="rect" id="node90" href="$locks_8hh.html" title="locks.hh" alt="" coords="2307,470,2384,498"/>
-<area shape="rect" id="node115" href="$sqlite-kvstore_8hh.html" title="sqlite&#45;kvstore.hh" alt="" coords="616,161,749,189"/>
-<area shape="rect" id="node142" href="$stored-value_8hh.html" title="stored&#45;value.hh" alt="" coords="2093,238,2219,266"/>
-<area shape="rect" id="node153" href="$dispatcher_8hh.html" title="dispatcher.hh" alt="" coords="1917,393,2029,421"/>
-<area shape="rect" id="node159" href="$vbucket_8hh.html" title="vbucket.hh" alt="" coords="1485,161,1581,189"/>
-<area shape="rect" id="node36" href="$common_8hh.html" title="common.hh" alt="" coords="1184,625,1285,653"/>
-<area shape="rect" id="node96" href="$mutex_8hh.html" title="mutex.hh" alt="" coords="2155,547,2240,575"/>
-<area shape="rect" id="node106" href="$syncobject_8hh.html" title="syncobject.hh" alt="" coords="2467,547,2581,575"/>
-<area shape="rect" id="node123" href="$sqlite-pst_8hh.html" title="sqlite&#45;pst.hh" alt="" coords="389,315,493,343"/>
-<area shape="rect" id="node129" href="$sqlite-strategies_8hh.html" title="sqlite&#45;strategies.hh" alt="" coords="504,238,653,266"/>
-<area shape="rect" id="node134" href="$item_8hh.html" title="item.hh" alt="" coords="1536,315,1608,343"/>
+<area shape="rect" id="node9" href="$ep_8hh.html" title="ep.hh" alt="" coords="765,83,824,111"/>
+<area shape="rect" id="node33" href="$stats_8hh.html" title="stats.hh" alt="" coords="1375,315,1449,343"/>
+<area shape="rect" id="node62" href="$atomic_8hh.html" title="atomic.hh" alt="" coords="964,393,1052,421"/>
+<area shape="rect" id="node71" href="$locks_8hh.html" title="locks.hh" alt="" coords="565,547,643,575"/>
+<area shape="rect" id="node100" href="$sqlite-kvstore_8hh.html" title="sqlite&#45;kvstore.hh" alt="" coords="1461,161,1595,189"/>
+<area shape="rect" id="node128" href="$stored-value_8hh.html" title="stored&#45;value.hh" alt="" coords="813,238,939,266"/>
+<area shape="rect" id="node139" href="$dispatcher_8hh.html" title="dispatcher.hh" alt="" coords="443,393,555,421"/>
+<area shape="rect" id="node145" href="$vbucket_8hh.html" title="vbucket.hh" alt="" coords="832,161,928,189"/>
+<area shape="rect" id="node36" href="$common_8hh.html" title="common.hh" alt="" coords="1113,702,1215,730"/>
+<area shape="rect" id="node56" href="$config_8h.html" title="config.h" alt="" coords="1395,779,1469,807"/>
+<area shape="rect" id="node68" href="$callbacks_8hh.html" title="callbacks.hh" alt="" coords="1069,470,1173,498"/>
+<area shape="rect" id="node78" href="$mutex_8hh.html" title="mutex.hh" alt="" coords="768,625,853,653"/>
+<area shape="rect" id="node90" href="$syncobject_8hh.html" title="syncobject.hh" alt="" coords="528,625,643,653"/>
+<area shape="rect" id="node108" href="$sqlite-pst_8hh.html" title="sqlite&#45;pst.hh" alt="" coords="1616,315,1720,343"/>
+<area shape="rect" id="node114" href="$sqlite-strategies_8hh.html" title="sqlite&#45;strategies.hh" alt="" coords="1563,238,1712,266"/>
+<area shape="rect" id="node119" href="$item_8hh.html" title="item.hh" alt="" coords="1175,315,1247,343"/>
 </map>
