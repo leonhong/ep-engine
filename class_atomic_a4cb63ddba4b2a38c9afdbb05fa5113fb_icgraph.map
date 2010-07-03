@@ -1,16 +1,18 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_eventually_persistent_store.html#a6f50abd1a42374dc21615a028e9fb862" title="EventuallyPersistentStore::EventuallyPersistentStore" alt="" coords="519,106,889,134"/>
-<area shape="rect" id="node5" href="$class_eventually_persistent_store.html#ae6b1c3f1e6830d5707bb6890ff2924a6" title="EventuallyPersistentStore::resetStats" alt="" coords="177,5,444,33"/>
-<area shape="rect" id="node11" href="$class_eventually_persistent_store.html#ad61387f0c42959878403cbf880af3695" title="EventuallyPersistentStore::setMinDataAge" alt="" coords="160,258,461,286"/>
-<area shape="rect" id="node21" href="$class_eventually_persistent_store.html#a1b0a19aedfa7197e20abaab8b9342b79" title="EventuallyPersistentStore::setQueueAgeCap" alt="" coords="153,55,468,83"/>
-<area shape="rect" id="node26" href="$class_eventually_persistent_store.html#ab6d45c94486d55cb8faf1a96717866c1" title="EventuallyPersistentStore::setTapStats" alt="" coords="172,207,449,235"/>
-<area shape="rect" id="node28" href="$class_eventually_persistent_store.html#a0d789b1bb07c397aac3962ed5104d970" title="EventuallyPersistentStore::setTxnSize" alt="" coords="175,157,447,185"/>
-<area shape="rect" id="node7" href="$class_eventually_persistent_engine.html#aceddcc971cc21be6b9fede2454666063" title="EventuallyPersistentEngine::resetStats" alt="" coords="564,5,844,33"/>
-<area shape="rect" id="node9" href="$ep__engine_8cc.html#a576061844491fbc2bf1cb6ccfa2880d4" title="EvpResetStats" alt="" coords="941,5,1056,33"/>
-<area shape="rect" id="node13" href="$class_eventually_persistent_engine.html#aa7f57575fd7391195eec7a3321586d74" title="EventuallyPersistentEngine::setMinDataAge" alt="" coords="548,233,860,261"/>
-<area shape="rect" id="node15" href="$ep__engine_8cc.html#a27f3ec2dd08be4cf7886d6181cb1ebf5" title="setFlushParam" alt="" coords="939,157,1059,185"/>
-<area shape="rect" id="node17" href="$ep__engine_8cc.html#a1422921e437cea5bf774068e5b5fe735" title="setParam" alt="" coords="1108,157,1191,185"/>
-<area shape="rect" id="node19" href="$ep__engine_8cc.html#acb3114cabb056ea53ec6be27f400a846" title="EvpUnknownCommand" alt="" coords="1240,157,1419,185"/>
-<area shape="rect" id="node23" href="$class_eventually_persistent_engine.html#a3d0385b884e54ae7d116de7cf73d326b" title="EventuallyPersistentEngine::setQueueAgeCap" alt="" coords="540,55,868,83"/>
-<area shape="rect" id="node31" href="$class_eventually_persistent_engine.html#afbde2dd2c36956abd2c9f717aca11f92" title="EventuallyPersistentEngine::setTxnSize" alt="" coords="561,157,847,185"/>
+<area shape="rect" id="node3" href="$class_eventually_persistent_store.html#ae6b1c3f1e6830d5707bb6890ff2924a6" title="EventuallyPersistentStore::resetStats" alt="" coords="177,5,444,33"/>
+<area shape="rect" id="node9" href="$class_eventually_persistent_store.html#ad61387f0c42959878403cbf880af3695" title="EventuallyPersistentStore::setMinDataAge" alt="" coords="160,106,461,134"/>
+<area shape="rect" id="node23" href="$class_eventually_persistent_store.html#a1b0a19aedfa7197e20abaab8b9342b79" title="EventuallyPersistentStore::setQueueAgeCap" alt="" coords="153,55,468,83"/>
+<area shape="rect" id="node29" href="$class_eventually_persistent_store.html#ab6d45c94486d55cb8faf1a96717866c1" title="EventuallyPersistentStore::setTapStats" alt="" coords="172,207,449,235"/>
+<area shape="rect" id="node31" href="$class_eventually_persistent_store.html#a0d789b1bb07c397aac3962ed5104d970" title="EventuallyPersistentStore::setTxnSize" alt="" coords="175,157,447,185"/>
+<area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#aceddcc971cc21be6b9fede2454666063" title="EventuallyPersistentEngine::resetStats" alt="" coords="564,5,844,33"/>
+<area shape="rect" id="node7" href="$ep__engine_8cc.html#a576061844491fbc2bf1cb6ccfa2880d4" title="EvpResetStats" alt="" coords="1016,5,1131,33"/>
+<area shape="rect" id="node11" href="$class_eventually_persistent_engine.html#aa7f57575fd7391195eec7a3321586d74" title="EventuallyPersistentEngine::setMinDataAge" alt="" coords="548,106,860,134"/>
+<area shape="rect" id="node13" href="$class_eventually_persistent_engine.html#a81c7ef1172d7ebcaf8f73333e0a92edd" title="EventuallyPersistentEngine::initialize" alt="" coords="939,55,1208,83"/>
+<area shape="rect" id="node17" href="$ep__engine_8cc.html#a27f3ec2dd08be4cf7886d6181cb1ebf5" title="setFlushParam" alt="" coords="1013,106,1133,134"/>
+<area shape="rect" id="node15" href="$ep__engine_8cc.html#a51d4c11d48d7ce41ae6c299da78beb07" title="EvpInitialize" alt="" coords="1257,55,1359,83"/>
+<area shape="rect" id="node19" href="$ep__engine_8cc.html#a1422921e437cea5bf774068e5b5fe735" title="setParam" alt="" coords="1267,106,1349,134"/>
+<area shape="rect" id="node21" href="$ep__engine_8cc.html#acb3114cabb056ea53ec6be27f400a846" title="EvpUnknownCommand" alt="" coords="1408,106,1587,134"/>
+<area shape="rect" id="node25" href="$class_eventually_persistent_engine.html#a3d0385b884e54ae7d116de7cf73d326b" title="EventuallyPersistentEngine::setQueueAgeCap" alt="" coords="540,55,868,83"/>
+<area shape="rect" id="node33" href="$class_eventually_persistent_store.html#a6f50abd1a42374dc21615a028e9fb862" title="EventuallyPersistentStore::EventuallyPersistentStore" alt="" coords="519,157,889,185"/>
+<area shape="rect" id="node35" href="$class_eventually_persistent_engine.html#afbde2dd2c36956abd2c9f717aca11f92" title="EventuallyPersistentEngine::setTxnSize" alt="" coords="561,207,847,235"/>
 </map>

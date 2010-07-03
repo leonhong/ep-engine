@@ -44,7 +44,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <div class="contents">
-<h1>tapclient.hh File Reference</h1><div class="dynheader">
+<h1>tapclient.hh File Reference</h1><code>#include &lt;sstream&gt;</code><br/>
+<div class="dynheader">
+Include dependency graph for tapclient.hh:</div>
+<div class="dynsection">
+<div class="center"><img src="tapclient_8hh__incl.png" border="0" usemap="#tapclient_8hh_map" alt=""/></div>
+</div>
+<div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dynsection">
 <div class="center"><img src="tapclient_8hh__dep__incl.png" border="0" usemap="#tapclient_8hhdep_map" alt=""/></div>
@@ -55,6 +61,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <p><a href="tapclient_8hh_source.html">Go to the source code of this file.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_binary_message.html">BinaryMessage</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tap_client_connection.html">TapClientConnection</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tap client connection.  <a href="class_tap_client_connection.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2>Defines</h2></td></tr>
@@ -62,6 +69,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="tapclient_8hh.html#aefcc4e58d64fe89092f16a2b3c551d25">MAX_RECONNECT_INTERVAL</a>&nbsp;&nbsp;&nbsp;30</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="tapclient_8hh.html#a4eeb023f5b54d2afb70817c5b767f698">MIN_RECONNECT_INTERVAL</a>&nbsp;&nbsp;&nbsp;5</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="tapclient_8hh.html#a0f95f8fc9a567ff92f02920ec9ddd6d0">MAX_RECONNECT_ATTEMPTS</a>&nbsp;&nbsp;&nbsp;300</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="tapclient_8hh.html#ad8512644399ac6ec00af8f727bb4fac6">VERY_BIG</a>&nbsp;&nbsp;&nbsp;(20 * 1024 * 1024)</td></tr>
 <tr><td colspan="2"><h2>Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="tapclient_8hh.html#af3411a1cde738b5a3ef3b289a1cffe73">tapClientConnectionMain</a> (void *arg)</td></tr>
 </table>
@@ -118,6 +126,21 @@ This graph shows which files directly or indirectly include this file:</div>
 
 </div>
 </div>
+<a class="anchor" id="ad8512644399ac6ec00af8f727bb4fac6"></a><!-- doxytag: member="tapclient.hh::VERY_BIG" ref="ad8512644399ac6ec00af8f727bb4fac6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VERY_BIG&nbsp;&nbsp;&nbsp;(20 * 1024 * 1024)</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Referenced by <a class="el" href="tapclient_8hh_source.html#l00039">BinaryMessage::BinaryMessage()</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Function Documentation</h2>
 <a class="anchor" id="af3411a1cde738b5a3ef3b289a1cffe73"></a><!-- doxytag: member="tapclient.hh::tapClientConnectionMain" ref="af3411a1cde738b5a3ef3b289a1cffe73" args="(void *arg)" -->
 <div class="memitem">
@@ -152,7 +175,7 @@ This graph shows which files directly or indirectly include this file:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:26 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

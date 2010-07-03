@@ -1,24 +1,30 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$ep__engine_8cc.html#a6978613380551af0677b42c2d6472cce" title="Helper function to avoid typing in the long cast all over the place." alt="" coords="929,5,1020,33"/>
-<area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#a81c7ef1172d7ebcaf8f73333e0a92edd" title="EventuallyPersistentEngine::initialize" alt="" coords="157,258,427,286"/>
-<area shape="rect" id="node7" href="$ep__engine_8cc.html#a82ff2e3aefdcbcb76360cc46497f173e" title="EvpHandleDisconnect" alt="" coords="533,55,701,83"/>
-<area shape="rect" id="node12" href="$class_eventually_persistent_store.html#a64b0ddc0bd7bfb29906560523fe2ea4c" title="EventuallyPersistentStore::getFlusher" alt="" coords="481,106,753,134"/>
-<area shape="rect" id="node14" href="$common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="929,106,1020,134"/>
-<area shape="rect" id="node16" href="$class_getl_extension.html#ac9658cbb0059aeaec5c93461dd158813" title="GetlExtension::initialize" alt="" coords="528,207,707,235"/>
-<area shape="rect" id="node31" href="$class_eventually_persistent_store.html#af0e3f187d43fd4501b9e17ab2e7e9fa1" title="EventuallyPersistentStore::reset" alt="" coords="500,258,735,286"/>
-<area shape="rect" id="node39" href="$class_hash_table.html#ad93b79271576e70a0b918bd1bd916ab2" title="Set the default number of hashtable buckets." alt="" coords="492,309,743,337"/>
-<area shape="rect" id="node41" href="$class_hash_table.html#af0cc96f6a1347c6259acbf0d7665f2c0" title="Set the default number of hashtable locks." alt="" coords="500,359,735,387"/>
-<area shape="rect" id="node43" href="$class_stored_value.html#a94ab12fe13dd29545cb0bdcd187f82ab" title="Set the default number of bytes available for stored values." alt="" coords="509,410,725,438"/>
-<area shape="rect" id="node45" href="$class_eventually_persistent_engine.html#ac0cf3c94869a08aca1374b5e6a6f6e7c" title="EventuallyPersistentEngine::setTapPeer" alt="" coords="476,461,759,489"/>
-<area shape="rect" id="node47" href="$class_flusher.html#a8993c1f2b50b26bbaed8b09febadc462" title="Flusher::state" alt="" coords="561,511,673,539"/>
-<area shape="rect" id="node10" href="$class_eventually_persistent_engine.html#a6dcd3e76861f9f2c039a625a33a09eb8" title="EventuallyPersistentEngine::handleDisconnect" alt="" coords="809,55,1140,83"/>
-<area shape="rect" id="node18" href="$ep__extension_8cc.html#a1e778492ca19ac7f5abd6727017e15b0" title="ext_abort" alt="" coords="932,157,1017,185"/>
-<area shape="rect" id="node20" href="$ep__extension_8cc.html#aaceffbd8ebf4b61bd9e0fcf4d2b82f97" title="ext_accept" alt="" coords="928,207,1021,235"/>
-<area shape="rect" id="node22" href="$ep__extension_8cc.html#a175bbeb123b986f1ca0a2c5670aef2d3" title="ext_execute" alt="" coords="924,258,1025,286"/>
-<area shape="rect" id="node28" href="$ep__extension_8cc.html#a3bbd40da21b5b24ce0d01fcfb23d1991" title="ext_get_name" alt="" coords="916,309,1033,337"/>
-<area shape="rect" id="node24" href="$class_getl_extension.html#af6469c3d7355710b681bde491301502c" title="GetlExtension::executeGetl" alt="" coords="1189,233,1392,261"/>
-<area shape="rect" id="node26" href="$ep__extension_8cc.html#a9b2406cf62813f913c77db5a6631ad3a" title="getExtension" alt="" coords="1236,283,1345,311"/>
-<area shape="rect" id="node33" href="$class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="880,359,1069,387"/>
-<area shape="rect" id="node35" href="$class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="836,410,1113,438"/>
-<area shape="rect" id="node37" href="$class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1200,410,1381,438"/>
+<area shape="rect" id="node3" href="$ep__engine_8cc.html#a6978613380551af0677b42c2d6472cce" title="Helper function to avoid typing in the long cast all over the place." alt="" coords="972,5,1063,33"/>
+<area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#a81c7ef1172d7ebcaf8f73333e0a92edd" title="EventuallyPersistentEngine::initialize" alt="" coords="157,334,427,362"/>
+<area shape="rect" id="node7" href="$ep__engine_8cc.html#a82ff2e3aefdcbcb76360cc46497f173e" title="EvpHandleDisconnect" alt="" coords="555,55,723,83"/>
+<area shape="rect" id="node12" href="$common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="1288,106,1379,134"/>
+<area shape="rect" id="node14" href="$class_eventually_persistent_store.html#a64b0ddc0bd7bfb29906560523fe2ea4c" title="EventuallyPersistentStore::getFlusher" alt="" coords="503,157,775,185"/>
+<area shape="rect" id="node17" href="$class_getl_extension.html#ac9658cbb0059aeaec5c93461dd158813" title="GetlExtension::initialize" alt="" coords="549,207,728,235"/>
+<area shape="rect" id="node32" href="$class_eventually_persistent_store.html#af0e3f187d43fd4501b9e17ab2e7e9fa1" title="EventuallyPersistentStore::reset" alt="" coords="521,258,756,286"/>
+<area shape="rect" id="node40" href="$class_hash_table.html#ad93b79271576e70a0b918bd1bd916ab2" title="Set the default number of buckets." alt="" coords="513,309,764,337"/>
+<area shape="rect" id="node42" href="$class_hash_table.html#af0cc96f6a1347c6259acbf0d7665f2c0" title="Set the default number of locks." alt="" coords="521,359,756,387"/>
+<area shape="rect" id="node44" href="$class_hash_table.html#a394ba8fd6fc9b5e888824e69d95e845d" title="Set the stored value type by name." alt="" coords="496,410,781,438"/>
+<area shape="rect" id="node46" href="$class_stored_value.html#a94ab12fe13dd29545cb0bdcd187f82ab" title="Set the maximum amount of data this instance can store." alt="" coords="531,461,747,489"/>
+<area shape="rect" id="node48" href="$class_eventually_persistent_engine.html#aa7f57575fd7391195eec7a3321586d74" title="EventuallyPersistentEngine::setMinDataAge" alt="" coords="483,511,795,539"/>
+<area shape="rect" id="node54" href="$class_eventually_persistent_engine.html#a3d0385b884e54ae7d116de7cf73d326b" title="EventuallyPersistentEngine::setQueueAgeCap" alt="" coords="475,562,803,590"/>
+<area shape="rect" id="node59" href="$class_eventually_persistent_engine.html#ac0cf3c94869a08aca1374b5e6a6f6e7c" title="EventuallyPersistentEngine::setTapPeer" alt="" coords="497,613,780,641"/>
+<area shape="rect" id="node61" href="$class_flusher.html#a8993c1f2b50b26bbaed8b09febadc462" title="Flusher::state" alt="" coords="583,663,695,691"/>
+<area shape="rect" id="node10" href="$class_eventually_persistent_engine.html#a6dcd3e76861f9f2c039a625a33a09eb8" title="EventuallyPersistentEngine::handleDisconnect" alt="" coords="852,55,1183,83"/>
+<area shape="rect" id="node19" href="$ep__extension_8cc.html#a1e778492ca19ac7f5abd6727017e15b0" title="ext_abort" alt="" coords="975,207,1060,235"/>
+<area shape="rect" id="node21" href="$ep__extension_8cc.html#aaceffbd8ebf4b61bd9e0fcf4d2b82f97" title="ext_accept" alt="" coords="971,258,1064,286"/>
+<area shape="rect" id="node23" href="$ep__extension_8cc.html#a175bbeb123b986f1ca0a2c5670aef2d3" title="ext_execute" alt="" coords="967,309,1068,337"/>
+<area shape="rect" id="node29" href="$ep__extension_8cc.html#a3bbd40da21b5b24ce0d01fcfb23d1991" title="ext_get_name" alt="" coords="959,359,1076,387"/>
+<area shape="rect" id="node25" href="$class_getl_extension.html#af6469c3d7355710b681bde491301502c" title="GetlExtension::executeGetl" alt="" coords="1232,283,1435,311"/>
+<area shape="rect" id="node27" href="$ep__extension_8cc.html#a9b2406cf62813f913c77db5a6631ad3a" title="getExtension" alt="" coords="1279,334,1388,362"/>
+<area shape="rect" id="node34" href="$class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="923,410,1112,438"/>
+<area shape="rect" id="node36" href="$class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="879,461,1156,489"/>
+<area shape="rect" id="node38" href="$class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1243,461,1424,489"/>
+<area shape="rect" id="node50" href="$class_eventually_persistent_store.html#ad61387f0c42959878403cbf880af3695" title="EventuallyPersistentStore::setMinDataAge" alt="" coords="867,511,1168,539"/>
+<area shape="rect" id="node52" href="$class_atomic.html#a4cb63ddba4b2a38c9afdbb05fa5113fb" title="Atomic::set" alt="" coords="1284,537,1383,565"/>
+<area shape="rect" id="node56" href="$class_eventually_persistent_store.html#a1b0a19aedfa7197e20abaab8b9342b79" title="EventuallyPersistentStore::setQueueAgeCap" alt="" coords="860,562,1175,590"/>
 </map>

@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_0x67.html#index_g"><span>g</span></a></li>
       <li><a href="functions_0x68.html#index_h"><span>h</span></a></li>
       <li><a href="functions_0x69.html#index_i"><span>i</span></a></li>
+      <li><a href="functions_0x6b.html#index_k"><span>k</span></a></li>
       <li><a href="functions_0x6c.html#index_l"><span>l</span></a></li>
       <li><a href="functions_0x6d.html#index_m"><span>m</span></a></li>
       <li><a href="functions_0x6e.html#index_n"><span>n</span></a></li>
@@ -111,6 +112,9 @@ Here is a list of all class members with links to the classes they belong to:
 <li>setDefaultNumLocks()
 : <a class="el" href="class_hash_table.html#af0cc96f6a1347c6259acbf0d7665f2c0">HashTable</a>
 </li>
+<li>setDefaultStorageValueType()
+: <a class="el" href="class_hash_table.html#a44955671dead826fa1970e85cf5b62ec">HashTable</a>
+</li>
 <li>setId()
 : <a class="el" href="class_stored_value.html#abcc5c1e8154bbbf3eb465574947b9956">StoredValue</a>
 </li>
@@ -126,7 +130,7 @@ Here is a list of all class members with links to the classes they belong to:
 , <a class="el" href="class_eventually_persistent_engine.html#a3d0385b884e54ae7d116de7cf73d326b">EventuallyPersistentEngine</a>
 </li>
 <li>setState()
-: <a class="el" href="class_v_bucket.html#a55477a627ab65c8c3a13ed56aef853d6">VBucket</a>
+: <a class="el" href="class_v_bucket.html#a7bae8a5920d4f0df1d54bbdb7d0e7fbd">VBucket</a>
 </li>
 <li>setStatus()
 : <a class="el" href="class_callback.html#a78c1324f547f588f2344b827c22f9c86">Callback&lt; RV &gt;</a>
@@ -154,13 +158,25 @@ Here is a list of all class members with links to the classes they belong to:
 : <a class="el" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a">Item</a>
 </li>
 <li>setVBucketState()
-: <a class="el" href="class_eventually_persistent_engine.html#a64296190a342ab55e5486d617a41337d">EventuallyPersistentEngine</a>
-, <a class="el" href="class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626">EventuallyPersistentStore</a>
+: <a class="el" href="class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626">EventuallyPersistentStore</a>
+, <a class="el" href="class_eventually_persistent_engine.html#a64296190a342ab55e5486d617a41337d">EventuallyPersistentEngine</a>
+</li>
+<li>shouldContinue()
+: <a class="el" href="class_back_fill_visitor.html#a7e8bdb290d9ef9065e6d83d826550cb0">BackFillVisitor</a>
+, <a class="el" href="class_hash_table_visitor.html#ac5628e4d448b2cbc869f6ea50997f45e">HashTableVisitor</a>
 </li>
 <li>size
-: <a class="el" href="class_binary_message.html#a5f1a270d316f948c743689b345897e6e">BinaryMessage</a>
+: <a class="el" href="class_hash_table_depth_stat_visitor.html#a4c5778e163206bdb26c43b1fe8c117da">HashTableDepthStatVisitor</a>
+, <a class="el" href="class_binary_message.html#a5f1a270d316f948c743689b345897e6e">BinaryMessage</a>
 , <a class="el" href="class_atomic_queue.html#a98f0ea58d8d56fc8e87338a011eaeb76">AtomicQueue&lt; T &gt;</a>
 , <a class="el" href="class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86">StoredValue</a>
+, <a class="el" href="class_v_bucket.html#a4bf6d86a3924ece6d9c718661afb6967">VBucket</a>
+</li>
+<li>sizeOf()
+: <a class="el" href="class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a">StoredValue</a>
+</li>
+<li>small
+: <a class="el" href="unionstored__value__bodies.html#adbc3e4a7afb2f7ac1f46a87abdec7897">stored_value_bodies</a>
 </li>
 <li>snooze()
 : <a class="el" href="class_dispatcher.html#a25ef00e88cad1a3a45e776b080ea8c82">Dispatcher</a>
@@ -191,15 +207,15 @@ Here is a list of all class members with links to the classes they belong to:
 <li>startReplication()
 : <a class="el" href="class_eventually_persistent_engine.html#a169cce655db799f6039adecabc98c6c8">EventuallyPersistentEngine</a>
 </li>
-<li>state
-: <a class="el" href="class_tap_v_bucket_event.html#a54cf5816401d46366eec5369b4bfbb09">TapVBucketEvent</a>
-, <a class="el" href="class_flusher.html#a8993c1f2b50b26bbaed8b09febadc462">Flusher</a>
-</li>
-<li>Statements()
-: <a class="el" href="class_statements.html#a1e38817db101066241f265f82d19b28a">Statements</a>
+<li>state()
+: <a class="el" href="class_flusher.html#a8993c1f2b50b26bbaed8b09febadc462">Flusher</a>
+, <a class="el" href="class_tap_v_bucket_event.html#a54cf5816401d46366eec5369b4bfbb09">TapVBucketEvent</a>
 </li>
 <li>statements
 : <a class="el" href="class_sqlite_strategy.html#a3b69727dbb49e86fd9bf11d20d8a2798">SqliteStrategy</a>
+</li>
+<li>Statements()
+: <a class="el" href="class_statements.html#a1e38817db101066241f265f82d19b28a">Statements</a>
 </li>
 <li>stateName()
 : <a class="el" href="class_flusher.html#af2bfa6e06b9825bcd75911dbf0d67315">Flusher</a>
@@ -211,12 +227,12 @@ Here is a list of all class members with links to the classes they belong to:
 : <a class="el" href="class_flusher.html#ae36fc32d84c57d06b8a1e099e811817e">Flusher</a>
 </li>
 <li>stop()
-: <a class="el" href="class_flusher.html#a7740fb8e61622f86978a72edb02af397">Flusher</a>
-, <a class="el" href="class_dispatcher.html#ae3c73ff1334bcdbc0b354fd6f89d1c27">Dispatcher</a>
+: <a class="el" href="class_dispatcher.html#ae3c73ff1334bcdbc0b354fd6f89d1c27">Dispatcher</a>
+, <a class="el" href="class_flusher.html#a7740fb8e61622f86978a72edb02af397">Flusher</a>
 </li>
 <li>stopFlusher()
-: <a class="el" href="class_eventually_persistent_engine.html#ad6a5b38b42f232b57418b862ceae54ae">EventuallyPersistentEngine</a>
-, <a class="el" href="class_eventually_persistent_store.html#aa00c6dfea5f7951399b567bd1452a007">EventuallyPersistentStore</a>
+: <a class="el" href="class_eventually_persistent_store.html#aa00c6dfea5f7951399b567bd1452a007">EventuallyPersistentStore</a>
+, <a class="el" href="class_eventually_persistent_engine.html#ad6a5b38b42f232b57418b862ceae54ae">EventuallyPersistentEngine</a>
 </li>
 <li>stopReplication()
 : <a class="el" href="class_eventually_persistent_engine.html#a3917700b7cf8af3431d501eb826faeb7">EventuallyPersistentEngine</a>
@@ -224,8 +240,9 @@ Here is a list of all class members with links to the classes they belong to:
 <li>store()
 : <a class="el" href="class_eventually_persistent_engine.html#afcbf29ea91f0193e711c5f63f7ebe90a">EventuallyPersistentEngine</a>
 </li>
-<li>StoredValue()
-: <a class="el" href="class_stored_value.html#a44641cc477b51c392f2b5cf27330241c">StoredValue</a>
+<li>StoredValueFactory()
+: <a class="el" href="class_stored_value_factory.html#a5979b7e8e9702652e344e9c674abc387">StoredValueFactory</a>
+, <a class="el" href="class_stored_value.html#ada7aa0d7f4dc7e50c794dcd7841cbda3">StoredValue</a>
 </li>
 <li>StrategicSqlite3()
 : <a class="el" href="class_strategic_sqlite3.html#a877fc5e4aaa58c908606b35908e06133">StrategicSqlite3</a>
@@ -255,7 +272,7 @@ Here is a list of all class members with links to the classes they belong to:
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:26 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

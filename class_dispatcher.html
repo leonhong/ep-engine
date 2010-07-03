@@ -113,7 +113,7 @@ Collaboration diagram for Dispatcher:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="dispatcher_8cc_source.html#l00084">stop()</a>.</p>
+<p>References <a class="el" href="dispatcher_8cc_source.html#l00099">stop()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -145,7 +145,7 @@ Here is the call graph for this function:</div>
 
 <p>Cancel a task. </p>
 
-<p>Referenced by <a class="el" href="flusher_8cc_source.html#l00055">Flusher::transition_state()</a>, and <a class="el" href="dispatcher_8cc_source.html#l00109">wake()</a>.</p>
+<p>Referenced by <a class="el" href="flusher_8cc_source.html#l00069">Flusher::transition_state()</a>, and <a class="el" href="dispatcher_8cc_source.html#l00124">wake()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -176,9 +176,9 @@ Here is the caller graph for this function:</div>
 <p>Dispatcher's main loop. </p>
 <p>Don't run this. </p>
 
-<p>References <a class="el" href="dispatcher_8hh_source.html#l00026">dispatcher_running</a>, <a class="el" href="dispatcher_8hh_source.html#l00028">dispatcher_stopped</a>, <a class="el" href="ep__engine_8cc_source.html#l00589">getLogger()</a>, <a class="el" href="common_8hh_source.html#l00062">less_tv()</a>, <a class="el" href="syncobject_8hh_source.html#l00061">SyncObject::notify()</a>, <a class="el" href="dispatcher_8hh_source.html#l00017">task_dead</a>, <a class="el" href="dispatcher_8hh_source.html#l00018">task_running</a>, <a class="el" href="dispatcher_8hh_source.html#l00019">task_sleeping</a>, <a class="el" href="locks_8hh_source.html#l00034">LockHolder::unlock()</a>, and <a class="el" href="syncobject_8hh_source.html#l00030">SyncObject::wait()</a>.</p>
+<p>References <a class="el" href="dispatcher_8hh_source.html#l00026">dispatcher_running</a>, <a class="el" href="dispatcher_8hh_source.html#l00028">dispatcher_stopped</a>, <a class="el" href="ep__engine_8cc_source.html#l00604">getLogger()</a>, <a class="el" href="common_8hh_source.html#l00062">less_tv()</a>, <a class="el" href="syncobject_8hh_source.html#l00061">SyncObject::notify()</a>, <a class="el" href="dispatcher_8hh_source.html#l00017">task_dead</a>, <a class="el" href="dispatcher_8hh_source.html#l00018">task_running</a>, <a class="el" href="dispatcher_8hh_source.html#l00019">task_sleeping</a>, <a class="el" href="locks_8hh_source.html#l00034">LockHolder::unlock()</a>, and <a class="el" href="syncobject_8hh_source.html#l00030">SyncObject::wait()</a>.</p>
 
-<p>Referenced by <a class="el" href="dispatcher_8cc_source.html#l00007">launch_dispatcher_thread()</a>.</p>
+<p>Referenced by <a class="el" href="dispatcher_8cc_source.html#l00022">launch_dispatcher_thread()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -250,7 +250,7 @@ Here is the caller graph for this function:</div>
 
 <p>References <a class="el" href="syncobject_8hh_source.html#l00061">SyncObject::notify()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00318">EventuallyPersistentStore::getFromUnderlying()</a>, and <a class="el" href="ep_8cc_source.html#l00207">EventuallyPersistentStore::setVBucketState()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00332">EventuallyPersistentStore::getFromUnderlying()</a>, and <a class="el" href="ep_8cc_source.html#l00221">EventuallyPersistentStore::setVBucketState()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -306,7 +306,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Referenced by <a class="el" href="flusher_8cc_source.html#l00118">Flusher::step()</a>.</p>
+<p>Referenced by <a class="el" href="flusher_8cc_source.html#l00132">Flusher::step()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -336,9 +336,9 @@ Here is the caller graph for this function:</div>
 
 <p>Start this dispatcher's thread. </p>
 
-<p>References <a class="el" href="dispatcher_8hh_source.html#l00026">dispatcher_running</a>, and <a class="el" href="dispatcher_8cc_source.html#l00007">launch_dispatcher_thread()</a>.</p>
+<p>References <a class="el" href="dispatcher_8hh_source.html#l00026">dispatcher_running</a>, and <a class="el" href="dispatcher_8cc_source.html#l00022">launch_dispatcher_thread()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00122">EventuallyPersistentStore::startDispatcher()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00136">EventuallyPersistentStore::startDispatcher()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -377,9 +377,9 @@ Here is the caller graph for this function:</div>
 
 <p>Stop this dispatcher. </p>
 
-<p>References <a class="el" href="dispatcher_8hh_source.html#l00028">dispatcher_stopped</a>, <a class="el" href="dispatcher_8hh_source.html#l00027">dispatcher_stopping</a>, <a class="el" href="ep__engine_8cc_source.html#l00589">getLogger()</a>, <a class="el" href="syncobject_8hh_source.html#l00061">SyncObject::notify()</a>, and <a class="el" href="locks_8hh_source.html#l00034">LockHolder::unlock()</a>.</p>
+<p>References <a class="el" href="dispatcher_8hh_source.html#l00028">dispatcher_stopped</a>, <a class="el" href="dispatcher_8hh_source.html#l00027">dispatcher_stopping</a>, <a class="el" href="ep__engine_8cc_source.html#l00604">getLogger()</a>, <a class="el" href="syncobject_8hh_source.html#l00061">SyncObject::notify()</a>, and <a class="el" href="locks_8hh_source.html#l00034">LockHolder::unlock()</a>.</p>
 
-<p>Referenced by <a class="el" href="dispatcher_8hh_source.html#l00128">~Dispatcher()</a>, and <a class="el" href="ep_8cc_source.html#l00094">EventuallyPersistentStore::~EventuallyPersistentStore()</a>.</p>
+<p>Referenced by <a class="el" href="dispatcher_8hh_source.html#l00128">~Dispatcher()</a>, and <a class="el" href="ep_8cc_source.html#l00108">EventuallyPersistentStore::~EventuallyPersistentStore()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -437,7 +437,7 @@ Here is the caller graph for this function:</div>
 
 <p>References <a class="el" href="dispatcher_8hh_source.html#l00179">cancel()</a>, and <a class="el" href="syncobject_8hh_source.html#l00061">SyncObject::notify()</a>.</p>
 
-<p>Referenced by <a class="el" href="flusher_8cc_source.html#l00112">Flusher::wake()</a>.</p>
+<p>Referenced by <a class="el" href="flusher_8cc_source.html#l00126">Flusher::wake()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -478,7 +478,7 @@ Here is the caller graph for this function:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:30 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

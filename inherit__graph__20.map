@@ -1,7 +1,3 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_hash_table_visitor.html" title="Base class for visiting a hash table." alt="" coords="7,55,137,83"/>
-<area shape="rect" id="node3" href="$class_v_bucket_visitor.html" title="vbucket&#45;aware hashtable visitor." alt="" coords="201,30,321,58"/>
-<area shape="rect" id="node9" href="$class_verify_stored_visitor.html" title="VerifyStoredVisitor" alt="" coords="188,81,335,109"/>
-<area shape="rect" id="node5" href="$class_back_fill_visitor.html" title="VBucketVisitor to backfill a TapConnection." alt="" coords="400,5,515,33"/>
-<area shape="rect" id="node7" href="$class_stat_v_bucket_visitor.html" title="StatVBucketVisitor" alt="" coords="384,55,531,83"/>
+<area shape="rect" id="node1" href="$class_hash_table.html" title="A container of StoredValue instances." alt="" coords="7,5,95,33"/>
 </map>

@@ -85,173 +85,199 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00054"></a><a class="code" href="class_v_bucket.html#ad44d9a82dabda2d7904366666898178f">00054</a>     <a class="code" href="class_v_bucket.html#ad44d9a82dabda2d7904366666898178f">VBucket</a>(<span class="keywordtype">int</span> i, vbucket_state_t initialState) :
 <a name="l00055"></a>00055         <a class="code" href="class_v_bucket.html#abd4a7241f3e957f05a9ca2fd31c375f0">ht</a>(), id(i), state(initialState) {}
 <a name="l00056"></a>00056 
-<a name="l00057"></a><a class="code" href="class_v_bucket.html#aabe52b36ccecb544834e0dbc6bc2ecd8">00057</a>     <span class="keywordtype">int</span> <a class="code" href="class_v_bucket.html#aabe52b36ccecb544834e0dbc6bc2ecd8">getId</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> id; }
-<a name="l00058"></a><a class="code" href="class_v_bucket.html#a9a565f696b256dfb0da54582035bc4d4">00058</a>     vbucket_state_t <a class="code" href="class_v_bucket.html#a9a565f696b256dfb0da54582035bc4d4">getState</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> state; }
-<a name="l00059"></a>00059     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket.html#a55477a627ab65c8c3a13ed56aef853d6">setState</a>(vbucket_state_t to, SERVER_CORE_API *core = NULL);
-<a name="l00060"></a>00060 
-<a name="l00061"></a><a class="code" href="class_v_bucket.html#aa39d99ce0e43d804d5c722fa82f45e6e">00061</a>     <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="class_v_bucket.html#aa39d99ce0e43d804d5c722fa82f45e6e">getStateString</a>(<span class="keywordtype">void</span>) {
-<a name="l00062"></a>00062         <span class="keywordflow">return</span> <a class="code" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db">VBucket::toString</a>(state);
-<a name="l00063"></a>00063     }
-<a name="l00064"></a>00064 
-<a name="l00065"></a><a class="code" href="class_v_bucket.html#a7bd89bc578b2d206c005d3d43f71d732">00065</a>     <span class="keywordtype">bool</span> <a class="code" href="class_v_bucket.html#a7bd89bc578b2d206c005d3d43f71d732">addPendingOp</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *cookie) {
-<a name="l00066"></a>00066         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(pendingOpLock);
-<a name="l00067"></a>00067         <span class="keywordflow">if</span> (state == active) {
-<a name="l00068"></a>00068             <span class="comment">// State transitioned while we were waiting.</span>
-<a name="l00069"></a>00069             <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00070"></a>00070         }
-<a name="l00071"></a>00071         pendingOps.push_back(cookie);
-<a name="l00072"></a>00072         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00057"></a><a class="code" href="class_v_bucket.html#afb824c47c7d06d2bbe40696a5b3d39b3">00057</a>     <a class="code" href="class_v_bucket.html#afb824c47c7d06d2bbe40696a5b3d39b3">~VBucket</a>() {
+<a name="l00058"></a>00058         <span class="keywordflow">if</span> (!pendingOps.empty()) {
+<a name="l00059"></a>00059             <a class="code" href="common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26">getLogger</a>()-&gt;log(EXTENSION_LOG_WARNING, NULL,
+<a name="l00060"></a>00060                              <span class="stringliteral">&quot;Have %d pending ops while destroying vbucket\n&quot;</span>,
+<a name="l00061"></a>00061                              pendingOps.size());
+<a name="l00062"></a>00062         }
+<a name="l00063"></a>00063         <a class="code" href="common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26">getLogger</a>()-&gt;log(EXTENSION_LOG_INFO, NULL,
+<a name="l00064"></a>00064                          <span class="stringliteral">&quot;Destroying vbucket %d\n&quot;</span>, <span class="keywordtype">id</span>);
+<a name="l00065"></a>00065     }
+<a name="l00066"></a>00066 
+<a name="l00067"></a><a class="code" href="class_v_bucket.html#aabe52b36ccecb544834e0dbc6bc2ecd8">00067</a>     <span class="keywordtype">int</span> <a class="code" href="class_v_bucket.html#aabe52b36ccecb544834e0dbc6bc2ecd8">getId</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> id; }
+<a name="l00068"></a><a class="code" href="class_v_bucket.html#a9a565f696b256dfb0da54582035bc4d4">00068</a>     vbucket_state_t <a class="code" href="class_v_bucket.html#a9a565f696b256dfb0da54582035bc4d4">getState</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> state; }
+<a name="l00069"></a>00069     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket.html#a7bae8a5920d4f0df1d54bbdb7d0e7fbd">setState</a>(vbucket_state_t to, SERVER_CORE_API *core);
+<a name="l00070"></a>00070 
+<a name="l00071"></a><a class="code" href="class_v_bucket.html#aa39d99ce0e43d804d5c722fa82f45e6e">00071</a>     <span class="keyword">const</span> <span class="keywordtype">char</span> * <a class="code" href="class_v_bucket.html#aa39d99ce0e43d804d5c722fa82f45e6e">getStateString</a>(<span class="keywordtype">void</span>) {
+<a name="l00072"></a>00072         <span class="keywordflow">return</span> <a class="code" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db">VBucket::toString</a>(state);
 <a name="l00073"></a>00073     }
 <a name="l00074"></a>00074 
-<a name="l00075"></a>00075     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket.html#a4a24b7101bdedc336914cdeb312477d8">fireAllOps</a>(SERVER_CORE_API *core, ENGINE_ERROR_CODE code = ENGINE_SUCCESS);
-<a name="l00076"></a>00076 
-<a name="l00077"></a><a class="code" href="class_v_bucket.html#abd4a7241f3e957f05a9ca2fd31c375f0">00077</a>     <a class="code" href="class_hash_table.html" title="Hash table that stores all of the items in memory.">HashTable</a>               <a class="code" href="class_v_bucket.html#abd4a7241f3e957f05a9ca2fd31c375f0">ht</a>;
-<a name="l00078"></a>00078 
-<a name="l00079"></a><a class="code" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db">00079</a>     <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db">toString</a>(vbucket_state_t s) {
-<a name="l00080"></a>00080         <span class="keywordflow">switch</span>(s) {
-<a name="l00081"></a>00081         <span class="keywordflow">case</span> active: <span class="keywordflow">return</span> <span class="stringliteral">&quot;active&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00082"></a>00082         <span class="keywordflow">case</span> replica: <span class="keywordflow">return</span> <span class="stringliteral">&quot;replica&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00083"></a>00083         <span class="keywordflow">case</span> pending: <span class="keywordflow">return</span> <span class="stringliteral">&quot;pending&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00084"></a>00084         <span class="keywordflow">case</span> dead: <span class="keywordflow">return</span> <span class="stringliteral">&quot;dead&quot;</span>; <span class="keywordflow">break</span>;
-<a name="l00085"></a>00085         }
-<a name="l00086"></a>00086         <span class="keywordflow">return</span> <span class="stringliteral">&quot;unknown&quot;</span>;
-<a name="l00087"></a>00087     }
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="keyword">private</span>:
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091     <span class="keywordtype">int</span>                      id;
-<a name="l00092"></a>00092     <a class="code" href="class_atomic.html">Atomic&lt;vbucket_state_t&gt;</a>  state;
-<a name="l00093"></a>00093     <a class="code" href="class_mutex.html" title="Abstraction built on top of pthread mutexes.">Mutex</a>                    pendingOpLock;
-<a name="l00094"></a>00094     std::vector&lt;const void*&gt; pendingOps;
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096     <a class="code" href="common_8hh.html#af8df3547bfde53a5acb93e2607b0034a">DISALLOW_COPY_AND_ASSIGN</a>(<a class="code" href="class_v_bucket.html" title="An individual vbucket.">VBucket</a>);
-<a name="l00097"></a>00097 };
-<a name="l00098"></a>00098 
-<a name="l00099"></a><a class="code" href="class_need_more_buckets.html">00099</a> <span class="keyword">class </span><a class="code" href="class_need_more_buckets.html">NeedMoreBuckets</a> : std::exception {};
-<a name="l00100"></a>00100 
-<a name="l00101"></a><a class="code" href="class_v_bucket_holder.html">00101</a> <span class="keyword">class </span><a class="code" href="class_v_bucket_holder.html">VBucketHolder</a> : <span class="keyword">public</span> <a class="code" href="class_r_c_value.html">RCValue</a> {
-<a name="l00102"></a>00102 <span class="keyword">public</span>:
-<a name="l00103"></a><a class="code" href="class_v_bucket_holder.html#ae9b2fc459e08b6636ea0989d94569a40">00103</a>     <a class="code" href="class_v_bucket_holder.html#ae9b2fc459e08b6636ea0989d94569a40">VBucketHolder</a>(<span class="keywordtype">size_t</span> sz) :
-<a name="l00104"></a>00104         buckets(new <a class="code" href="class_r_c_ptr.html" title="Concurrent reference counted pointer.">RCPtr</a>&lt;<a class="code" href="class_v_bucket.html" title="An individual vbucket.">VBucket</a>&gt;[sz]),
-<a name="l00105"></a>00105         size(sz) {}
+<a name="l00075"></a><a class="code" href="class_v_bucket.html#a7bd89bc578b2d206c005d3d43f71d732">00075</a>     <span class="keywordtype">bool</span> <a class="code" href="class_v_bucket.html#a7bd89bc578b2d206c005d3d43f71d732">addPendingOp</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *cookie) {
+<a name="l00076"></a>00076         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(pendingOpLock);
+<a name="l00077"></a>00077         <span class="keywordflow">if</span> (state != pending) {
+<a name="l00078"></a>00078             <span class="comment">// State transitioned while we were waiting.</span>
+<a name="l00079"></a>00079             <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00080"></a>00080         }
+<a name="l00081"></a>00081         pendingOps.push_back(cookie);
+<a name="l00082"></a>00082         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00083"></a>00083     }
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket.html#a4a24b7101bdedc336914cdeb312477d8">fireAllOps</a>(SERVER_CORE_API *core, ENGINE_ERROR_CODE code = ENGINE_SUCCESS);
+<a name="l00086"></a>00086 
+<a name="l00087"></a><a class="code" href="class_v_bucket.html#a4bf6d86a3924ece6d9c718661afb6967">00087</a>     <span class="keywordtype">size_t</span> <a class="code" href="class_v_bucket.html#a4bf6d86a3924ece6d9c718661afb6967">size</a>(<span class="keywordtype">void</span>) {
+<a name="l00088"></a>00088         <a class="code" href="class_hash_table_depth_stat_visitor.html" title="Hash table visitor that finds the min and max bucket depths.">HashTableDepthStatVisitor</a> v;
+<a name="l00089"></a>00089         <a class="code" href="class_v_bucket.html#abd4a7241f3e957f05a9ca2fd31c375f0">ht</a>.<a class="code" href="class_hash_table.html#a8b621f0689d13cef8180192e9ddea00b" title="Visit all items within this call with a depth visitor.">visitDepth</a>(v);
+<a name="l00090"></a>00090         <span class="keywordflow">return</span> v.<a class="code" href="class_hash_table_depth_stat_visitor.html#a4c5778e163206bdb26c43b1fe8c117da">size</a>;
+<a name="l00091"></a>00091     }
+<a name="l00092"></a>00092 
+<a name="l00093"></a><a class="code" href="class_v_bucket.html#abd4a7241f3e957f05a9ca2fd31c375f0">00093</a>     <a class="code" href="class_hash_table.html" title="A container of StoredValue instances.">HashTable</a>               <a class="code" href="class_v_bucket.html#abd4a7241f3e957f05a9ca2fd31c375f0">ht</a>;
+<a name="l00094"></a>00094 
+<a name="l00095"></a><a class="code" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db">00095</a>     <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db">toString</a>(vbucket_state_t s) {
+<a name="l00096"></a>00096         <span class="keywordflow">switch</span>(s) {
+<a name="l00097"></a>00097         <span class="keywordflow">case</span> active: <span class="keywordflow">return</span> <span class="stringliteral">&quot;active&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00098"></a>00098         <span class="keywordflow">case</span> replica: <span class="keywordflow">return</span> <span class="stringliteral">&quot;replica&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00099"></a>00099         <span class="keywordflow">case</span> pending: <span class="keywordflow">return</span> <span class="stringliteral">&quot;pending&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00100"></a>00100         <span class="keywordflow">case</span> dead: <span class="keywordflow">return</span> <span class="stringliteral">&quot;dead&quot;</span>; <span class="keywordflow">break</span>;
+<a name="l00101"></a>00101         }
+<a name="l00102"></a>00102         <span class="keywordflow">return</span> <span class="stringliteral">&quot;unknown&quot;</span>;
+<a name="l00103"></a>00103     }
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105 <span class="keyword">private</span>:
 <a name="l00106"></a>00106 
-<a name="l00107"></a><a class="code" href="class_v_bucket_holder.html#ade5b48c5dc7682483a611d2e7f0b21f7">00107</a>     <a class="code" href="class_v_bucket_holder.html#ae9b2fc459e08b6636ea0989d94569a40">VBucketHolder</a>(<span class="keyword">const</span> <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> &amp;vbh, <span class="keywordtype">size_t</span> sz) :
-<a name="l00108"></a>00108         buckets(new <a class="code" href="class_r_c_ptr.html" title="Concurrent reference counted pointer.">RCPtr</a>&lt;<a class="code" href="class_v_bucket.html" title="An individual vbucket.">VBucket</a>&gt;[sz]),
-<a name="l00109"></a>00109         size(sz) {
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111         <span class="comment">// No shrinkage allowed currently.</span>
-<a name="l00112"></a>00112         assert(sz &gt;= vbh-&gt;getSize());
-<a name="l00113"></a>00113 
-<a name="l00114"></a>00114         std::copy(buckets, buckets+vbh-&gt;getSize(), buckets);
-<a name="l00115"></a>00115     }
+<a name="l00107"></a>00107     <span class="keywordtype">int</span>                      id;
+<a name="l00108"></a>00108     <a class="code" href="class_atomic.html">Atomic&lt;vbucket_state_t&gt;</a>  state;
+<a name="l00109"></a>00109     <a class="code" href="class_mutex.html" title="Abstraction built on top of pthread mutexes.">Mutex</a>                    pendingOpLock;
+<a name="l00110"></a>00110     std::vector&lt;const void*&gt; pendingOps;
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112     <a class="code" href="common_8hh.html#af8df3547bfde53a5acb93e2607b0034a">DISALLOW_COPY_AND_ASSIGN</a>(<a class="code" href="class_v_bucket.html" title="An individual vbucket.">VBucket</a>);
+<a name="l00113"></a>00113 };
+<a name="l00114"></a>00114 
+<a name="l00115"></a><a class="code" href="class_need_more_buckets.html">00115</a> <span class="keyword">class </span><a class="code" href="class_need_more_buckets.html">NeedMoreBuckets</a> : std::exception {};
 <a name="l00116"></a>00116 
-<a name="l00117"></a><a class="code" href="class_v_bucket_holder.html#aba30d5ca55720b66127b362e59fe398c">00117</a>     <a class="code" href="class_v_bucket_holder.html#aba30d5ca55720b66127b362e59fe398c">~VBucketHolder</a>() {
-<a name="l00118"></a>00118         <span class="keyword">delete</span>[] buckets;
-<a name="l00119"></a>00119     }
-<a name="l00120"></a>00120 
-<a name="l00121"></a><a class="code" href="class_v_bucket_holder.html#a5b0a9e3fb4f3fd47c0e3dd368e12e7a6">00121</a>     <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> <a class="code" href="class_v_bucket_holder.html#a5b0a9e3fb4f3fd47c0e3dd368e12e7a6">getBucket</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const </span>{
-<a name="l00122"></a>00122         assert(<span class="keywordtype">id</span> &gt;= 0);
-<a name="l00123"></a>00123         <span class="keywordflow">if</span> (static_cast&lt;size_t&gt;(<span class="keywordtype">id</span>) &lt; size) {
-<a name="l00124"></a>00124             <span class="keywordflow">return</span> buckets[id];
-<a name="l00125"></a>00125         } <span class="keywordflow">else</span> {
-<a name="l00126"></a>00126             <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> r;
-<a name="l00127"></a>00127             <span class="keywordflow">return</span> r;
-<a name="l00128"></a>00128         }
-<a name="l00129"></a>00129     }
-<a name="l00130"></a>00130 
-<a name="l00131"></a><a class="code" href="class_v_bucket_holder.html#a4ba510960eaa3bcff64de592198b15b9">00131</a>     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket_holder.html#a4ba510960eaa3bcff64de592198b15b9">addBucket</a>(<span class="keyword">const</span> <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> &amp;b) {
-<a name="l00132"></a>00132         <span class="keywordflow">if</span> (static_cast&lt;size_t&gt;(b-&gt;getId()) &lt; size) {
-<a name="l00133"></a>00133             buckets[b-&gt;getId()].<a class="code" href="class_r_c_ptr.html#aa865132e8d68ee2de5b0a3f53fdd6b8b">reset</a>(b);
-<a name="l00134"></a>00134         } <span class="keywordflow">else</span> {
-<a name="l00135"></a>00135             <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="class_need_more_buckets.html">NeedMoreBuckets</a>;
-<a name="l00136"></a>00136         }
-<a name="l00137"></a>00137     }
-<a name="l00138"></a>00138 
-<a name="l00139"></a><a class="code" href="class_v_bucket_holder.html#ac122bcddafa487278c643d382fa8f0b4">00139</a>     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket_holder.html#ac122bcddafa487278c643d382fa8f0b4">removeBucket</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {
-<a name="l00140"></a>00140         assert(<span class="keywordtype">id</span> &gt;= 0);
-<a name="l00141"></a>00141         <span class="keywordflow">if</span> (static_cast&lt;size_t&gt;(<span class="keywordtype">id</span>) &lt; size) {
-<a name="l00142"></a>00142             buckets[id].<a class="code" href="class_r_c_ptr.html#aa865132e8d68ee2de5b0a3f53fdd6b8b">reset</a>();
-<a name="l00143"></a>00143         }
-<a name="l00144"></a>00144     }
-<a name="l00145"></a>00145 
-<a name="l00146"></a><a class="code" href="class_v_bucket_holder.html#afee4832f50f8cc64ed8f918ad913c822">00146</a>     std::vector&lt;int&gt; <a class="code" href="class_v_bucket_holder.html#afee4832f50f8cc64ed8f918ad913c822">getBuckets</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{
-<a name="l00147"></a>00147         std::vector&lt;int&gt; rv;
-<a name="l00148"></a>00148         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; size; ++i) {
-<a name="l00149"></a>00149             <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> b(buckets[i]);
-<a name="l00150"></a>00150             <span class="keywordflow">if</span> (b) {
-<a name="l00151"></a>00151                 rv.push_back(b-&gt;getId());
-<a name="l00152"></a>00152             }
-<a name="l00153"></a>00153         }
-<a name="l00154"></a>00154         <span class="keywordflow">return</span> rv;
-<a name="l00155"></a>00155     }
-<a name="l00156"></a>00156 
-<a name="l00157"></a><a class="code" href="class_v_bucket_holder.html#a7305f1decece7027e64264ea3c2d882a">00157</a>     <span class="keywordtype">size_t</span> <a class="code" href="class_v_bucket_holder.html#a7305f1decece7027e64264ea3c2d882a">getSize</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{
-<a name="l00158"></a>00158         <span class="keywordflow">return</span> size;
-<a name="l00159"></a>00159     }
-<a name="l00160"></a>00160 
-<a name="l00161"></a>00161 <span class="keyword">private</span>:
-<a name="l00162"></a>00162     <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> *buckets;
-<a name="l00163"></a>00163     <span class="keywordtype">size_t</span> size;
-<a name="l00164"></a>00164 };
-<a name="l00165"></a>00165 
-<a name="l00169"></a><a class="code" href="class_v_bucket_map.html">00169</a> <span class="keyword">class </span><a class="code" href="class_v_bucket_map.html" title="A map of known vbuckets.">VBucketMap</a> {
-<a name="l00170"></a>00170 <span class="keyword">public</span>:
-<a name="l00171"></a><a class="code" href="class_v_bucket_map.html#a53cfa0a62d64640fc1ccfe18943b0c5a">00171</a>     <a class="code" href="class_v_bucket_map.html#a53cfa0a62d64640fc1ccfe18943b0c5a">VBucketMap</a>() : buckets(new <a class="code" href="class_v_bucket_holder.html">VBucketHolder</a>(4096)) { }
-<a name="l00172"></a>00172 
-<a name="l00173"></a><a class="code" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5">00173</a>     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5">addBucket</a>(<a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> &amp;b) {
-<a name="l00174"></a>00174         assert(b);
-<a name="l00175"></a>00175         <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> o(buckets);
-<a name="l00176"></a>00176         <span class="keywordflow">try</span> {
-<a name="l00177"></a>00177             o-&gt;addBucket(b);
-<a name="l00178"></a>00178         } <span class="keywordflow">catch</span> (<a class="code" href="class_need_more_buckets.html">NeedMoreBuckets</a> &amp;e) {
-<a name="l00179"></a>00179             grow(b-&gt;getId())-&gt;<a class="code" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5">addBucket</a>(b);
-<a name="l00180"></a>00180         }
-<a name="l00181"></a>00181     }
-<a name="l00182"></a>00182 
-<a name="l00183"></a><a class="code" href="class_v_bucket_map.html#ae61f8ada845bb69451c4eff7ec989133">00183</a>     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket_map.html#ae61f8ada845bb69451c4eff7ec989133">removeBucket</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {
-<a name="l00184"></a>00184         <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> o(buckets);
-<a name="l00185"></a>00185         o-&gt;removeBucket(<span class="keywordtype">id</span>);
+<a name="l00117"></a><a class="code" href="class_v_bucket_holder.html">00117</a> <span class="keyword">class </span><a class="code" href="class_v_bucket_holder.html">VBucketHolder</a> : <span class="keyword">public</span> <a class="code" href="class_r_c_value.html">RCValue</a> {
+<a name="l00118"></a>00118 <span class="keyword">public</span>:
+<a name="l00119"></a><a class="code" href="class_v_bucket_holder.html#ae9b2fc459e08b6636ea0989d94569a40">00119</a>     <a class="code" href="class_v_bucket_holder.html#ae9b2fc459e08b6636ea0989d94569a40">VBucketHolder</a>(<span class="keywordtype">size_t</span> sz) :
+<a name="l00120"></a>00120         buckets(new <a class="code" href="class_r_c_ptr.html" title="Concurrent reference counted pointer.">RCPtr</a>&lt;<a class="code" href="class_v_bucket.html" title="An individual vbucket.">VBucket</a>&gt;[sz]),
+<a name="l00121"></a>00121         size(sz) {}
+<a name="l00122"></a>00122 
+<a name="l00123"></a><a class="code" href="class_v_bucket_holder.html#ade5b48c5dc7682483a611d2e7f0b21f7">00123</a>     <a class="code" href="class_v_bucket_holder.html#ae9b2fc459e08b6636ea0989d94569a40">VBucketHolder</a>(<span class="keyword">const</span> <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> &amp;vbh, <span class="keywordtype">size_t</span> sz) :
+<a name="l00124"></a>00124         buckets(new <a class="code" href="class_r_c_ptr.html" title="Concurrent reference counted pointer.">RCPtr</a>&lt;<a class="code" href="class_v_bucket.html" title="An individual vbucket.">VBucket</a>&gt;[sz]),
+<a name="l00125"></a>00125         size(sz) {
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127         <span class="comment">// No shrinkage allowed currently.</span>
+<a name="l00128"></a>00128         assert(sz &gt;= vbh-&gt;getSize());
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130         std::copy(buckets, buckets+vbh-&gt;getSize(), buckets);
+<a name="l00131"></a>00131     }
+<a name="l00132"></a>00132 
+<a name="l00133"></a><a class="code" href="class_v_bucket_holder.html#aba30d5ca55720b66127b362e59fe398c">00133</a>     <a class="code" href="class_v_bucket_holder.html#aba30d5ca55720b66127b362e59fe398c">~VBucketHolder</a>() {
+<a name="l00134"></a>00134         <span class="keyword">delete</span>[] buckets;
+<a name="l00135"></a>00135     }
+<a name="l00136"></a>00136 
+<a name="l00137"></a><a class="code" href="class_v_bucket_holder.html#a5b0a9e3fb4f3fd47c0e3dd368e12e7a6">00137</a>     <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> <a class="code" href="class_v_bucket_holder.html#a5b0a9e3fb4f3fd47c0e3dd368e12e7a6">getBucket</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const </span>{
+<a name="l00138"></a>00138         assert(<span class="keywordtype">id</span> &gt;= 0);
+<a name="l00139"></a>00139         <span class="keywordflow">if</span> (static_cast&lt;size_t&gt;(<span class="keywordtype">id</span>) &lt; size) {
+<a name="l00140"></a>00140             <span class="keywordflow">return</span> buckets[id];
+<a name="l00141"></a>00141         } <span class="keywordflow">else</span> {
+<a name="l00142"></a>00142             <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> r;
+<a name="l00143"></a>00143             <span class="keywordflow">return</span> r;
+<a name="l00144"></a>00144         }
+<a name="l00145"></a>00145     }
+<a name="l00146"></a>00146 
+<a name="l00147"></a><a class="code" href="class_v_bucket_holder.html#a4ba510960eaa3bcff64de592198b15b9">00147</a>     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket_holder.html#a4ba510960eaa3bcff64de592198b15b9">addBucket</a>(<span class="keyword">const</span> <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> &amp;b) {
+<a name="l00148"></a>00148         <span class="keywordflow">if</span> (static_cast&lt;size_t&gt;(b-&gt;getId()) &lt; size) {
+<a name="l00149"></a>00149             buckets[b-&gt;getId()].<a class="code" href="class_r_c_ptr.html#aa865132e8d68ee2de5b0a3f53fdd6b8b">reset</a>(b);
+<a name="l00150"></a>00150             <a class="code" href="common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26">getLogger</a>()-&gt;log(EXTENSION_LOG_INFO, NULL,
+<a name="l00151"></a>00151                              <span class="stringliteral">&quot;Mapped new vbucket %d in state %s\n&quot;</span>,
+<a name="l00152"></a>00152                              b-&gt;getId(), <a class="code" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db">VBucket::toString</a>(b-&gt;getState()));
+<a name="l00153"></a>00153         } <span class="keywordflow">else</span> {
+<a name="l00154"></a>00154             <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code" href="class_need_more_buckets.html">NeedMoreBuckets</a>;
+<a name="l00155"></a>00155         }
+<a name="l00156"></a>00156     }
+<a name="l00157"></a>00157 
+<a name="l00163"></a><a class="code" href="class_v_bucket_holder.html#ae544c9baa12c6097a20435189a845265">00163</a>     <span class="keywordtype">size_t</span> <a class="code" href="class_v_bucket_holder.html#ae544c9baa12c6097a20435189a845265" title="Remove a vbucket by ID.">removeBucket</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {
+<a name="l00164"></a>00164         assert(<span class="keywordtype">id</span> &gt;= 0);
+<a name="l00165"></a>00165         <span class="keywordtype">size_t</span> rv = 0;
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167         <span class="keywordflow">if</span> (static_cast&lt;size_t&gt;(<span class="keywordtype">id</span>) &lt; size) {
+<a name="l00168"></a>00168             <span class="comment">// Theoretically, this could be off slightly.  In</span>
+<a name="l00169"></a>00169             <span class="comment">// practice, this happens only on dead vbuckets.</span>
+<a name="l00170"></a>00170             rv = buckets[id]-&gt;size();
+<a name="l00171"></a>00171             buckets[id].<a class="code" href="class_r_c_ptr.html#aa865132e8d68ee2de5b0a3f53fdd6b8b">reset</a>();
+<a name="l00172"></a>00172         }
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174         <span class="keywordflow">return</span> rv;
+<a name="l00175"></a>00175     }
+<a name="l00176"></a>00176 
+<a name="l00177"></a><a class="code" href="class_v_bucket_holder.html#afee4832f50f8cc64ed8f918ad913c822">00177</a>     std::vector&lt;int&gt; <a class="code" href="class_v_bucket_holder.html#afee4832f50f8cc64ed8f918ad913c822">getBuckets</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{
+<a name="l00178"></a>00178         std::vector&lt;int&gt; rv;
+<a name="l00179"></a>00179         <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; size; ++i) {
+<a name="l00180"></a>00180             <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> b(buckets[i]);
+<a name="l00181"></a>00181             <span class="keywordflow">if</span> (b) {
+<a name="l00182"></a>00182                 rv.push_back(b-&gt;getId());
+<a name="l00183"></a>00183             }
+<a name="l00184"></a>00184         }
+<a name="l00185"></a>00185         <span class="keywordflow">return</span> rv;
 <a name="l00186"></a>00186     }
 <a name="l00187"></a>00187 
-<a name="l00188"></a><a class="code" href="class_v_bucket_map.html#a31d15a6d2c8f4425d43409463b1e2986">00188</a>     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket_map.html#a31d15a6d2c8f4425d43409463b1e2986">addBuckets</a>(<span class="keyword">const</span> std::vector&lt;VBucket*&gt; &amp;newBuckets) {
-<a name="l00189"></a>00189         std::vector&lt;VBucket*&gt;::const_iterator it;
-<a name="l00190"></a>00190         <span class="keywordflow">for</span> (it = newBuckets.begin(); it != newBuckets.end(); ++it) {
-<a name="l00191"></a>00191             <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> v(*it);
-<a name="l00192"></a>00192             <a class="code" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5">addBucket</a>(v);
-<a name="l00193"></a>00193         }
-<a name="l00194"></a>00194     }
-<a name="l00195"></a>00195 
-<a name="l00196"></a><a class="code" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854">00196</a>     <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> <a class="code" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854">getBucket</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const </span>{
-<a name="l00197"></a>00197         <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> o(buckets);
-<a name="l00198"></a>00198         <span class="keywordflow">return</span> o-&gt;getBucket(<span class="keywordtype">id</span>);
-<a name="l00199"></a>00199     }
-<a name="l00200"></a>00200 
-<a name="l00201"></a><a class="code" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d">00201</a>     std::vector&lt;int&gt; <a class="code" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d">getBuckets</a>(<span class="keywordtype">void</span>) {
-<a name="l00202"></a>00202 
-<a name="l00203"></a>00203         <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> o(buckets);
-<a name="l00204"></a>00204         <span class="keywordflow">return</span> o-&gt;getBuckets();
-<a name="l00205"></a>00205     }
-<a name="l00206"></a>00206 
-<a name="l00207"></a>00207 <span class="keyword">private</span>:
-<a name="l00208"></a>00208     <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> grow(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>) {
-<a name="l00209"></a>00209         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(mutex);
-<a name="l00210"></a>00210         <span class="keywordflow">if</span> (buckets-&gt;getSize() &lt;= id) {
-<a name="l00211"></a>00211             <span class="comment">// still not big enough</span>
-<a name="l00212"></a>00212             <span class="keywordtype">size_t</span> n(0);
-<a name="l00213"></a>00213             <span class="keywordflow">for</span> (n = 4096; n &lt;= id; n *= 2) {} <span class="comment">// find next power of 2</span>
-<a name="l00214"></a>00214             <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> nbh(<span class="keyword">new</span> <a class="code" href="class_v_bucket_holder.html">VBucketHolder</a>(buckets, n));
-<a name="l00215"></a>00215             buckets = nbh;
-<a name="l00216"></a>00216         }
-<a name="l00217"></a>00217         <span class="keywordflow">return</span> buckets;
-<a name="l00218"></a>00218     }
-<a name="l00219"></a>00219 
-<a name="l00220"></a>00220     <span class="keyword">mutable</span> <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> buckets;
-<a name="l00221"></a>00221     <a class="code" href="class_mutex.html" title="Abstraction built on top of pthread mutexes.">Mutex</a> mutex; <span class="comment">// Not acquired often, but you could have a lot of stuff waiting on it</span>
-<a name="l00222"></a>00222 
-<a name="l00223"></a>00223     <a class="code" href="common_8hh.html#af8df3547bfde53a5acb93e2607b0034a">DISALLOW_COPY_AND_ASSIGN</a>(<a class="code" href="class_v_bucket_map.html" title="A map of known vbuckets.">VBucketMap</a>);
-<a name="l00224"></a>00224 };
-<a name="l00225"></a>00225 
-<a name="l00226"></a>00226 <span class="preprocessor">#endif </span><span class="comment">/* VBUCKET_HH */</span>
+<a name="l00188"></a><a class="code" href="class_v_bucket_holder.html#a7305f1decece7027e64264ea3c2d882a">00188</a>     <span class="keywordtype">size_t</span> <a class="code" href="class_v_bucket_holder.html#a7305f1decece7027e64264ea3c2d882a">getSize</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{
+<a name="l00189"></a>00189         <span class="keywordflow">return</span> size;
+<a name="l00190"></a>00190     }
+<a name="l00191"></a>00191 
+<a name="l00192"></a>00192 <span class="keyword">private</span>:
+<a name="l00193"></a>00193     <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> *buckets;
+<a name="l00194"></a>00194     <span class="keywordtype">size_t</span> size;
+<a name="l00195"></a>00195 };
+<a name="l00196"></a>00196 
+<a name="l00200"></a><a class="code" href="class_v_bucket_map.html">00200</a> <span class="keyword">class </span><a class="code" href="class_v_bucket_map.html" title="A map of known vbuckets.">VBucketMap</a> {
+<a name="l00201"></a>00201 <span class="keyword">public</span>:
+<a name="l00202"></a><a class="code" href="class_v_bucket_map.html#a53cfa0a62d64640fc1ccfe18943b0c5a">00202</a>     <a class="code" href="class_v_bucket_map.html#a53cfa0a62d64640fc1ccfe18943b0c5a">VBucketMap</a>() : buckets(new <a class="code" href="class_v_bucket_holder.html">VBucketHolder</a>(4096)) { }
+<a name="l00203"></a>00203 
+<a name="l00204"></a><a class="code" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5">00204</a>     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5">addBucket</a>(<a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> &amp;b) {
+<a name="l00205"></a>00205         assert(b);
+<a name="l00206"></a>00206         <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> o(buckets);
+<a name="l00207"></a>00207         <span class="keywordflow">try</span> {
+<a name="l00208"></a>00208             o-&gt;addBucket(b);
+<a name="l00209"></a>00209         } <span class="keywordflow">catch</span> (<a class="code" href="class_need_more_buckets.html">NeedMoreBuckets</a> &amp;e) {
+<a name="l00210"></a>00210             grow(b-&gt;getId())-&gt;<a class="code" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5">addBucket</a>(b);
+<a name="l00211"></a>00211         }
+<a name="l00212"></a>00212     }
+<a name="l00213"></a>00213 
+<a name="l00214"></a><a class="code" href="class_v_bucket_map.html#ab5c37008460a1cf992f22115ee4a05da">00214</a>     <span class="keywordtype">size_t</span> <a class="code" href="class_v_bucket_map.html#ab5c37008460a1cf992f22115ee4a05da">removeBucket</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {
+<a name="l00215"></a>00215         <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> o(buckets);
+<a name="l00216"></a>00216         <span class="keywordflow">return</span> o-&gt;removeBucket(<span class="keywordtype">id</span>);
+<a name="l00217"></a>00217     }
+<a name="l00218"></a>00218 
+<a name="l00219"></a><a class="code" href="class_v_bucket_map.html#a31d15a6d2c8f4425d43409463b1e2986">00219</a>     <span class="keywordtype">void</span> <a class="code" href="class_v_bucket_map.html#a31d15a6d2c8f4425d43409463b1e2986">addBuckets</a>(<span class="keyword">const</span> std::vector&lt;VBucket*&gt; &amp;newBuckets) {
+<a name="l00220"></a>00220         std::vector&lt;VBucket*&gt;::const_iterator it;
+<a name="l00221"></a>00221         <span class="keywordflow">for</span> (it = newBuckets.begin(); it != newBuckets.end(); ++it) {
+<a name="l00222"></a>00222             <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> v(*it);
+<a name="l00223"></a>00223             <a class="code" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5">addBucket</a>(v);
+<a name="l00224"></a>00224         }
+<a name="l00225"></a>00225     }
+<a name="l00226"></a>00226 
+<a name="l00227"></a><a class="code" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854">00227</a>     <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucket&gt;</a> <a class="code" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854">getBucket</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>)<span class="keyword"> const </span>{
+<a name="l00228"></a>00228         <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> o(buckets);
+<a name="l00229"></a>00229         <span class="keywordflow">return</span> o-&gt;getBucket(<span class="keywordtype">id</span>);
+<a name="l00230"></a>00230     }
+<a name="l00231"></a>00231 
+<a name="l00232"></a><a class="code" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d">00232</a>     std::vector&lt;int&gt; <a class="code" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d">getBuckets</a>(<span class="keywordtype">void</span>) {
+<a name="l00233"></a>00233 
+<a name="l00234"></a>00234         <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> o(buckets);
+<a name="l00235"></a>00235         <span class="keywordflow">return</span> o-&gt;getBuckets();
+<a name="l00236"></a>00236     }
+<a name="l00237"></a>00237 
+<a name="l00238"></a>00238 <span class="keyword">private</span>:
+<a name="l00239"></a>00239     <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> grow(<span class="keywordtype">size_t</span> <span class="keywordtype">id</span>) {
+<a name="l00240"></a>00240         <a class="code" href="class_lock_holder.html">LockHolder</a> lh(mutex);
+<a name="l00241"></a>00241         <span class="keywordflow">if</span> (buckets-&gt;getSize() &lt;= id) {
+<a name="l00242"></a>00242             <span class="comment">// still not big enough</span>
+<a name="l00243"></a>00243             <span class="keywordtype">size_t</span> n(0);
+<a name="l00244"></a>00244             <span class="keywordflow">for</span> (n = 4096; n &lt;= id; n *= 2) {} <span class="comment">// find next power of 2</span>
+<a name="l00245"></a>00245             <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> nbh(<span class="keyword">new</span> <a class="code" href="class_v_bucket_holder.html">VBucketHolder</a>(buckets, n));
+<a name="l00246"></a>00246             buckets = nbh;
+<a name="l00247"></a>00247         }
+<a name="l00248"></a>00248         <span class="keywordflow">return</span> buckets;
+<a name="l00249"></a>00249     }
+<a name="l00250"></a>00250 
+<a name="l00251"></a>00251     <span class="keyword">mutable</span> <a class="code" href="class_r_c_ptr.html">RCPtr&lt;VBucketHolder&gt;</a> buckets;
+<a name="l00252"></a>00252     <a class="code" href="class_mutex.html" title="Abstraction built on top of pthread mutexes.">Mutex</a> mutex; <span class="comment">// Not acquired often, but you could have a lot of stuff waiting on it</span>
+<a name="l00253"></a>00253 
+<a name="l00254"></a>00254     <a class="code" href="common_8hh.html#af8df3547bfde53a5acb93e2607b0034a">DISALLOW_COPY_AND_ASSIGN</a>(<a class="code" href="class_v_bucket_map.html" title="A map of known vbuckets.">VBucketMap</a>);
+<a name="l00255"></a>00255 };
+<a name="l00256"></a>00256 
+<a name="l00257"></a>00257 <span class="preprocessor">#endif </span><span class="comment">/* VBUCKET_HH */</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -267,7 +293,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:01 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:39 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -16,7 +16,7 @@
 <area shape="rect" id="node84" href="$class_atomic.html" title="Atomic\&lt; C * \&gt;" alt="" coords="991,403,1111,431"/>
 <area shape="rect" id="node109" href="$class_atomic.html" title="Atomic\&lt; std::queue\&lt; QueuedItem \&gt; * \&gt;" alt="" coords="904,1102,1197,1130"/>
 <area shape="rect" id="node117" href="$class_atomic.html" title="Atomic\&lt; std::queue\&lt; T \&gt; * \&gt;" alt="" coords="941,1229,1160,1257"/>
-<area shape="rect" id="node68" href="$class_hash_table.html" title="Hash table that stores all of the items in memory." alt="" coords="1325,402,1413,430"/>
+<area shape="rect" id="node68" href="$class_hash_table.html" title="A container of StoredValue instances." alt="" coords="1325,402,1413,430"/>
 <area shape="rect" id="node93" href="$class_atomic_queue.html" title="AtomicQueue\&lt; QueuedItem \&gt;" alt="" coords="2709,1121,2936,1149"/>
 <area shape="rect" id="node113" href="$class_atomic_queue.html" title="Efficient approximate&#45;FIFO queue optimize for concurrent writers." alt="" coords="2388,1214,2540,1242"/>
 <area shape="rect" id="node25" href="$class_dispatcher.html" title="Schedule and run tasks in another thread." alt="" coords="4891,385,4984,413"/>

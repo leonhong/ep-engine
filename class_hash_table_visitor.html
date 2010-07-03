@@ -64,6 +64,8 @@ Inheritance diagram for HashTableVisitor:</div>
 <tr><td class="memItemLeft" align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table_visitor.html#a40366b4f29d47f57652fb9db7c6967b4">~HashTableVisitor</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table_visitor.html#a06543808134dd89382f8962a7308c099">visit</a> (<a class="el" href="class_stored_value.html">StoredValue</a> *v)=0</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Visit an individual item within a hash table.  <a href="#a06543808134dd89382f8962a7308c099"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table_visitor.html#ac5628e4d448b2cbc869f6ea50997f45e">shouldContinue</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">True if the visiting should continue.  <a href="#ac5628e4d448b2cbc869f6ea50997f45e"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Base class for visiting a hash table. </p>
@@ -86,6 +88,39 @@ Inheritance diagram for HashTableVisitor:</div>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac5628e4d448b2cbc869f6ea50997f45e"></a><!-- doxytag: member="HashTableVisitor::shouldContinue" ref="ac5628e4d448b2cbc869f6ea50997f45e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool HashTableVisitor::shouldContinue </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>True if the visiting should continue. </p>
+<p>This is called periodically to ensure the visitor still wants to visit items. </p>
+
+<p>Reimplemented in <a class="el" href="class_back_fill_visitor.html#a7e8bdb290d9ef9065e6d83d826550cb0">BackFillVisitor</a>.</p>
+
+<p>Referenced by <a class="el" href="stored-value_8cc_source.html#l00089">HashTable::visit()</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dynsection">
+<div class="center"><img src="class_hash_table_visitor_ac5628e4d448b2cbc869f6ea50997f45e_icgraph.png" border="0" usemap="#class_hash_table_visitor_ac5628e4d448b2cbc869f6ea50997f45e_icgraph_map" alt=""></div>
+<map name="class_hash_table_visitor_ac5628e4d448b2cbc869f6ea50997f45e_icgraph_map" id="class_hash_table_visitor_ac5628e4d448b2cbc869f6ea50997f45e_icgraph">
+<area shape="rect" id="node3" href="class_hash_table.html#a9edd623bc8d50b043144045c3a217fbb" title="Visit all items within this hashtable." alt="" coords="300,5,425,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a06543808134dd89382f8962a7308c099"></a><!-- doxytag: member="HashTableVisitor::visit" ref="a06543808134dd89382f8962a7308c099" args="(StoredValue *v)=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -112,14 +147,14 @@ Inheritance diagram for HashTableVisitor:</div>
 
 <p>Implemented in <a class="el" href="class_verify_stored_visitor.html#a41763d7a69e1757ac8ff5b1ee581cb0e">VerifyStoredVisitor</a>, <a class="el" href="class_stat_v_bucket_visitor.html#a2f74cbc62d33e410dd6da0413c84aa60">StatVBucketVisitor</a>, and <a class="el" href="class_back_fill_visitor.html#a24d109dc93214921475991185ed231d7">BackFillVisitor</a>.</p>
 
-<p>Referenced by <a class="el" href="stored-value_8cc_source.html#l00084">HashTable::visit()</a>.</p>
+<p>Referenced by <a class="el" href="stored-value_8cc_source.html#l00089">HashTable::visit()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_hash_table_visitor_a06543808134dd89382f8962a7308c099_icgraph.png" border="0" usemap="#class_hash_table_visitor_a06543808134dd89382f8962a7308c099_icgraph_map" alt=""></div>
 <map name="class_hash_table_visitor_a06543808134dd89382f8962a7308c099_icgraph_map" id="class_hash_table_visitor_a06543808134dd89382f8962a7308c099_icgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#a9edd623bc8d50b043144045c3a217fbb" title="HashTable::visit" alt="" coords="223,5,348,33"/></map>
+<area shape="rect" id="node3" href="class_hash_table.html#a9edd623bc8d50b043144045c3a217fbb" title="Visit all items within this hashtable." alt="" coords="223,5,348,33"/></map>
 </div>
 </p>
 
@@ -143,7 +178,7 @@ Here is the caller graph for this function:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:45 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:43 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

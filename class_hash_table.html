@@ -46,7 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <h1>HashTable Class Reference</h1><!-- doxytag: class="HashTable" -->
-<p>Hash table that stores all of the items in memory.  
+<p>A container of <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> instances.  
 <a href="#_details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="stored-value_8hh_source.html">stored-value.hh</a>&gt;</code></p>
@@ -55,42 +55,67 @@ Collaboration diagram for HashTable:</div>
 <div class="dynsection">
 <div class="center"><img src="class_hash_table__coll__graph.png" border="0" usemap="#_hash_table_coll__map" alt="Collaboration graph"/></div>
 <map name="_hash_table_coll__map" id="_hash_table_coll__map">
-<area shape="rect" id="node2" href="class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="5,193,144,221"/><area shape="rect" id="node10" href="class_stored_value.html" title="StoredValue" alt="" coords="107,286,208,314"/><area shape="rect" id="node4" href="class_atomic.html" title="Holder of atomic values." alt="" coords="21,99,128,127"/><area shape="rect" id="node8" href="class_mutex.html" title="Abstraction built on top of pthread mutexes." alt="" coords="287,286,348,314"/></map>
+<area shape="rect" id="node2" href="class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="261,193,400,221"/><area shape="rect" id="node12" href="class_stored_value.html" title="In&#45;memory storage for an item." alt="" coords="127,286,228,314"/><area shape="rect" id="node4" href="class_atomic.html" title="Holder of atomic values." alt="" coords="277,99,384,127"/><area shape="rect" id="node8" href="class_stored_value_factory.html" title="Creator of StoredValue instances." alt="" coords="404,286,553,314"/><area shape="rect" id="node10" href="class_mutex.html" title="Abstraction built on top of pthread mutexes." alt="" coords="577,286,639,314"/><area shape="rect" id="node15" href="unionstored__value__bodies.html" title="Union of StoredValue data." alt="" coords="80,193,237,221"/><area shape="rect" id="node17" href="structfeature__data.html" title="StoredValue &quot;featured&quot; data type." alt="" coords="5,99,112,127"/><area shape="rect" id="node19" href="structsmall__data.html" title="StoredValue &quot;small&quot; data storage." alt="" coords="136,99,229,127"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_hash_table-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#ac9e3db51c1e03eab15f6b9ae22209ae9">HashTable</a> (size_t s=0, size_t l=0)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a06fb934d9694fa3b0ef6c721b3ddd364">HashTable</a> (size_t s=0, size_t l=0, enum <a class="el" href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2eff">stored_value_type</a> t=featured)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Create a <a class="el" href="class_hash_table.html" title="A container of StoredValue instances.">HashTable</a>.  <a href="#a06fb934d9694fa3b0ef6c721b3ddd364"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a9ce5569bb945880cacb29aaba6f3e3f9">~HashTable</a> ()</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a95a64de238722621660852b97e1a4ca6">getSize</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of hash table buckets this hash table has.  <a href="#a95a64de238722621660852b97e1a4ca6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a30964fc4125baf87564761a220061ab0">getNumLocks</a> (void)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a80532994171008a6989dcdd3073e8ee7">clear</a> (bool deactivate=false)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of locks in this hash table.  <a href="#a30964fc4125baf87564761a220061ab0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a16d784d4d2721908e4d3221eba1d77fa">clear</a> (bool deactivate=false)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clear the hash table.  <a href="#a16d784d4d2721908e4d3221eba1d77fa"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stored_value.html">StoredValue</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a381a8da523a9469d0181e90b992df95b">find</a> (std::string &amp;key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Find the item with the given key.  <a href="#a381a8da523a9469d0181e90b992df95b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="stored-value_8hh.html#a02506aa17c2d3b817f701f16f960f692">mutation_type_t</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0">set</a> (const <a class="el" href="class_item.html">Item</a> &amp;val)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set a new <a class="el" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a> into this hashtable.  <a href="#a196a9fb276d4a13fd8bf928b26fe8be0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#ae77e22aa6f0a1e1af698863c399c3a44">add</a> (const <a class="el" href="class_item.html">Item</a> &amp;val, bool isDirty=true)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Add an item to the hash table iff it doesn't already exist.  <a href="#ae77e22aa6f0a1e1af698863c399c3a44"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_stored_value.html">StoredValue</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a92572ea340897dbee6f3e50cbff6dd1d">unlocked_find</a> (const std::string &amp;key, int bucket_num)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a98d2474aa2d5f0e3911f393b2f3ad088">bucket</a> (const std::string &amp;key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Find an item within a specific bucket assuming you already locked the bucket.  <a href="#a92572ea340897dbee6f3e50cbff6dd1d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a0e58e888d0f0963247b5eea143da7ab4">bucket</a> (const char *str, const size_t len)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the bucket number for the given C string key.  <a href="#a0e58e888d0f0963247b5eea143da7ab4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#afe373e76fa42d61c626a33d4335fc21f">bucket</a> (const std::string &amp;s)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the bucket number for the given string.  <a href="#afe373e76fa42d61c626a33d4335fc21f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mutex.html">Mutex</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#af1ea55e43cee12ab3fb33020346cc1c3">getMutexForLock</a> (int lock_num)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the <a class="el" href="class_mutex.html" title="Abstraction built on top of pthread mutexes.">Mutex</a> for the given lock.  <a href="#af1ea55e43cee12ab3fb33020346cc1c3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mutex.html">Mutex</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f">getMutex</a> (int bucket_num)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the mutex for a bucket (for doing your own lock management).  <a href="#abee30d2b6f2edeab4dfa3f2499e3685f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a65a4132a3011ea8bc100a6c0a45ce4e7">unlocked_del</a> (const std::string &amp;key, int bucket_num)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Delete a key from the cache without trying to lock the cache first (Please note that you <b>MUST</b> acquire the mutex before calling this function!!!  <a href="#a65a4132a3011ea8bc100a6c0a45ce4e7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a495a0cab010fd533f06c235f0c2af3cc">del</a> (const std::string &amp;key)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Delete the item with the given key.  <a href="#a495a0cab010fd533f06c235f0c2af3cc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a9edd623bc8d50b043144045c3a217fbb">visit</a> (<a class="el" href="class_hash_table_visitor.html">HashTableVisitor</a> &amp;visitor)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Visit all items within this hashtable.  <a href="#a9edd623bc8d50b043144045c3a217fbb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a8b621f0689d13cef8180192e9ddea00b">visitDepth</a> (<a class="el" href="class_hash_table_depth_visitor.html">HashTableDepthVisitor</a> &amp;visitor)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Visit all items within this call with a depth visitor.  <a href="#a8b621f0689d13cef8180192e9ddea00b"></a><br/></td></tr>
 <tr><td colspan="2"><h2>Static Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a06f83b5a9f3964a30546c464be691b23">getNumBuckets</a> (size_t)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of buckets for a hash table.  <a href="#a06f83b5a9f3964a30546c464be691b23"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a715243b0bec643bcd61be8e75b697ba1">getNumLocks</a> (size_t)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of locks for a hash table.  <a href="#a715243b0bec643bcd61be8e75b697ba1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a97986cbcc30e2279f10cbf528b512415">getNumBuckets</a> (size_t s)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of buckets that should be used for initialization.  <a href="#a97986cbcc30e2279f10cbf528b512415"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a829ef1107dd5620d2e4ac8e1f85efe49">getNumLocks</a> (size_t s)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the number of locks that should be used for initialization.  <a href="#a829ef1107dd5620d2e4ac8e1f85efe49"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#ad93b79271576e70a0b918bd1bd916ab2">setDefaultNumBuckets</a> (size_t)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the default number of hashtable buckets.  <a href="#ad93b79271576e70a0b918bd1bd916ab2"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the default number of buckets.  <a href="#ad93b79271576e70a0b918bd1bd916ab2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#af0cc96f6a1347c6259acbf0d7665f2c0">setDefaultNumLocks</a> (size_t)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the default number of hashtable locks.  <a href="#af0cc96f6a1347c6259acbf0d7665f2c0"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the default number of locks.  <a href="#af0cc96f6a1347c6259acbf0d7665f2c0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a394ba8fd6fc9b5e888824e69d95e845d">setDefaultStorageValueType</a> (const char *t)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the stored value type by name.  <a href="#a394ba8fd6fc9b5e888824e69d95e845d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a44955671dead826fa1970e85cf5b62ec">setDefaultStorageValueType</a> (enum <a class="el" href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2eff">stored_value_type</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Set the default <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> type by enum value.  <a href="#a44955671dead826fa1970e85cf5b62ec"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static enum <a class="el" href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2eff">stored_value_type</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a78c94e47e8d7f1fe6e325995de021df8">getDefaultStorageValueType</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the default <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> type.  <a href="#a78c94e47e8d7f1fe6e325995de021df8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static const char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html#a79386c3b7fbc702294d6f8f77b231635">getDefaultStorageValueTypeStr</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the default <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> type as a string.  <a href="#a79386c3b7fbc702294d6f8f77b231635"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Hash table that stores all of the items in memory. </p>
+<p>A container of <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> instances. </p>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac9e3db51c1e03eab15f6b9ae22209ae9"></a><!-- doxytag: member="HashTable::HashTable" ref="ac9e3db51c1e03eab15f6b9ae22209ae9" args="(size_t s=0, size_t l=0)" -->
+<a class="anchor" id="a06fb934d9694fa3b0ef6c721b3ddd364"></a><!-- doxytag: member="HashTable::HashTable" ref="a06fb934d9694fa3b0ef6c721b3ddd364" args="(size_t s=0, size_t l=0, enum stored_value_type t=featured)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -104,7 +129,13 @@ Collaboration diagram for HashTable:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&nbsp;</td>
-          <td class="paramname"> <em>l</em> = <code>0</code></td><td>&nbsp;</td>
+          <td class="paramname"> <em>l</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2eff">stored_value_type</a>&nbsp;</td>
+          <td class="paramname"> <em>t</em> = <code>featured</code></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -115,14 +146,24 @@ Collaboration diagram for HashTable:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="stored-value_8cc_source.html#l00032">getNumBuckets()</a>, and <a class="el" href="stored-value_8hh_source.html#l00293">getNumLocks()</a>.</p>
+<p>Create a <a class="el" href="class_hash_table.html" title="A container of StoredValue instances.">HashTable</a>. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>the number of hash table buckets </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>l</em>&nbsp;</td><td>the number of locks in the hash table </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>the type of StoredValues this hash table will contain </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>References <a class="el" href="stored-value_8cc_source.html#l00033">getNumBuckets()</a>, <a class="el" href="stored-value_8hh_source.html#l00619">getNumLocks()</a>, <a class="el" href="stored-value_8hh_source.html#l00301">StoredValue::size()</a>, and <a class="el" href="stored-value_8hh_source.html#l00387">StoredValue::StoredValueFactory</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
-<div class="center"><img src="class_hash_table_ac9e3db51c1e03eab15f6b9ae22209ae9_cgraph.png" border="0" usemap="#class_hash_table_ac9e3db51c1e03eab15f6b9ae22209ae9_cgraph_map" alt=""></div>
-<map name="class_hash_table_ac9e3db51c1e03eab15f6b9ae22209ae9_cgraph_map" id="class_hash_table_ac9e3db51c1e03eab15f6b9ae22209ae9_cgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#a06f83b5a9f3964a30546c464be691b23" title="Get the number of buckets for a hash table." alt="" coords="221,5,427,33"/><area shape="rect" id="node7" href="class_hash_table.html#a30964fc4125baf87564761a220061ab0" title="HashTable::getNumLocks" alt="" coords="229,55,419,83"/><area shape="rect" id="node5" href="stored-value_8cc.html#adfe08f5e338474f349b119ac4dbc89e1" title="getDefault" alt="" coords="476,5,567,33"/></map>
+<div class="center"><img src="class_hash_table_a06fb934d9694fa3b0ef6c721b3ddd364_cgraph.png" border="0" usemap="#class_hash_table_a06fb934d9694fa3b0ef6c721b3ddd364_cgraph_map" alt=""></div>
+<map name="class_hash_table_a06fb934d9694fa3b0ef6c721b3ddd364_cgraph_map" id="class_hash_table_a06fb934d9694fa3b0ef6c721b3ddd364_cgraph">
+<area shape="rect" id="node3" href="class_hash_table.html#a97986cbcc30e2279f10cbf528b512415" title="Get the number of buckets that should be used for initialization." alt="" coords="221,5,427,33"/><area shape="rect" id="node7" href="class_hash_table.html#a30964fc4125baf87564761a220061ab0" title="Get the number of locks in this hash table." alt="" coords="229,55,419,83"/><area shape="rect" id="node9" href="class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="Get the total size of this item." alt="" coords="256,106,392,134"/><area shape="rect" id="node5" href="stored-value_8cc.html#adfe08f5e338474f349b119ac4dbc89e1" title="getDefault" alt="" coords="520,5,611,33"/><area shape="rect" id="node11" href="class_stored_value.html#ac450ecb78542a05cfa1f3b337e2de947" title="Get the length of the key." alt="" coords="475,55,656,83"/><area shape="rect" id="node13" href="class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a" title="Get the size of a StoredValue object." alt="" coords="489,106,641,134"/><area shape="rect" id="node15" href="class_stored_value.html#a0cea17ad1e7f3f237cd31022444af71f" title="Get the current amount of of data stored." alt="" coords="708,5,919,33"/><area shape="rect" id="node19" href="class_stored_value.html#ab9a08f660bd17226483acf248e31db6c" title="Get the maximum amount of memory this instance can store." alt="" coords="704,55,923,83"/><area shape="rect" id="node21" href="class_stored_value.html#a2820ceb8daf99a8dab5bf06db1686bd0" title="Mark this item as clean." alt="" coords="721,106,905,134"/><area shape="rect" id="node23" href="class_stored_value.html#a2f0c9872c42fe61eb6ba7da7654b9279" title="Mark this item as needing to be persisted." alt="" coords="724,157,903,185"/><area shape="rect" id="node27" href="class_stored_value.html#a94ab12fe13dd29545cb0bdcd187f82ab" title="Set the maximum amount of data this instance can store." alt="" coords="705,207,921,235"/><area shape="rect" id="node17" href="class_atomic.html#a50d5b1eadc07bf419245a5e11d718486" title="Atomic::get" alt="" coords="999,5,1100,33"/><area shape="rect" id="node25" href="class_stored_value.html#ac30f7f07745658054e521c3919574143" title="Mark this item as dirty as of a certain time." alt="" coords="971,157,1128,185"/></map>
 </div>
 </p>
 
@@ -142,17 +183,6 @@ Here is the call graph for this function:</div>
       </table>
 </div>
 <div class="memdoc">
-
-<p>References <a class="el" href="stored-value_8cc_source.html#l00065">clear()</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dynsection">
-<div class="center"><img src="class_hash_table_a9ce5569bb945880cacb29aaba6f3e3f9_cgraph.png" border="0" usemap="#class_hash_table_a9ce5569bb945880cacb29aaba6f3e3f9_cgraph_map" alt=""></div>
-<map name="class_hash_table_a9ce5569bb945880cacb29aaba6f3e3f9_cgraph_map" id="class_hash_table_a9ce5569bb945880cacb29aaba6f3e3f9_cgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#a80532994171008a6989dcdd3073e8ee7" title="HashTable::clear" alt="" coords="233,5,364,33"/></map>
-</div>
-</p>
 
 </div>
 </div>
@@ -182,20 +212,30 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="stored-value_8hh_source.html#l00385">bucket()</a>, <a class="el" href="item_8hh_source.html#l00072">Item::getKey()</a>, <a class="el" href="stored-value_8hh_source.html#l00399">getMutex()</a>, <a class="el" href="stored-value_8hh_source.html#l00181">NOMEM</a>, <a class="el" href="item_8hh_source.html#l00100">Item::setCas()</a>, and <a class="el" href="stored-value_8hh_source.html#l00369">unlocked_find()</a>.</p>
+<p>Add an item to the hash table iff it doesn't already exist. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>val</em>&nbsp;</td><td>the item to store </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>isDirty</em>&nbsp;</td><td>true if the item should be marked dirty on store </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if the item is newly stored </dd></dl>
+
+<p>References <a class="el" href="item_8hh_source.html#l00130">Item::getKey()</a>, <a class="el" href="stored-value_8hh_source.html#l00105">StoredValue::isDirty()</a>, <a class="el" href="stored-value_8hh_source.html#l00421">NOMEM</a>, and <a class="el" href="item_8hh_source.html#l00158">Item::setCas()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_hash_table_ae77e22aa6f0a1e1af698863c399c3a44_cgraph.png" border="0" usemap="#class_hash_table_ae77e22aa6f0a1e1af698863c399c3a44_cgraph_map" alt=""></div>
 <map name="class_hash_table_ae77e22aa6f0a1e1af698863c399c3a44_cgraph_map" id="class_hash_table_ae77e22aa6f0a1e1af698863c399c3a44_cgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#a98d2474aa2d5f0e3911f393b2f3ad088" title="HashTable::bucket" alt="" coords="203,5,347,33"/><area shape="rect" id="node5" href="class_item.html#a69a127532c48e377f418623b03be542c" title="Item::getKey" alt="" coords="221,55,328,83"/><area shape="rect" id="node7" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f" title="HashTable::getMutex" alt="" coords="195,106,355,134"/><area shape="rect" id="node9" href="class_item.html#a4fb03efb2dd1e866009e9b6af4f08278" title="Item::setCas" alt="" coords="223,157,327,185"/><area shape="rect" id="node11" href="class_hash_table.html#a92572ea340897dbee6f3e50cbff6dd1d" title="HashTable::unlocked_find" alt="" coords="179,207,371,235"/><area shape="rect" id="node13" href="class_stored_value.html#a9027da615efcc3577e8b894db1a34d1d" title="StoredValue::getExptime" alt="" coords="420,182,607,210"/><area shape="rect" id="node15" href="class_hash_table.html#a65a4132a3011ea8bc100a6c0a45ce4e7" title="Delete a key from the cache without trying to lock the cache first (Please note that..." alt="" coords="420,233,607,261"/><area shape="rect" id="node17" href="class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="StoredValue::isLocked" alt="" coords="657,233,825,261"/></map>
+<area shape="rect" id="node3" href="class_item.html#a69a127532c48e377f418623b03be542c" title="Item::getKey" alt="" coords="203,5,309,33"/><area shape="rect" id="node5" href="class_stored_value.html#afb6c36da2c1af0ef8adc53ef555fdb08" title="True if this object is dirty." alt="" coords="179,55,333,83"/><area shape="rect" id="node7" href="class_item.html#a4fb03efb2dd1e866009e9b6af4f08278" title="Item::setCas" alt="" coords="204,106,308,134"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a98d2474aa2d5f0e3911f393b2f3ad088"></a><!-- doxytag: member="HashTable::bucket" ref="a98d2474aa2d5f0e3911f393b2f3ad088" args="(const std::string &amp;key)" -->
+<a class="anchor" id="afe373e76fa42d61c626a33d4335fc21f"></a><!-- doxytag: member="HashTable::bucket" ref="afe373e76fa42d61c626a33d4335fc21f" args="(const std::string &amp;s)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -203,7 +243,7 @@ Here is the call graph for this function:</div>
           <td class="memname">int HashTable::bucket </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&nbsp;</td>
-          <td class="paramname"> <em>key</em></td>
+          <td class="paramname"> <em>s</em></td>
           <td>&nbsp;)&nbsp;</td>
           <td><code> [inline]</code></td>
         </tr>
@@ -211,25 +251,71 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="stored-value_8hh_source.html#l00348">add()</a>, <a class="el" href="stored-value_8hh_source.html#l00457">del()</a>, <a class="el" href="stored-value_8hh_source.html#l00297">find()</a>, and <a class="el" href="stored-value_8hh_source.html#l00304">set()</a>.</p>
+<p>Get the bucket number for the given string. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>the key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the bucket number for this key </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0e58e888d0f0963247b5eea143da7ab4"></a><!-- doxytag: member="HashTable::bucket" ref="a0e58e888d0f0963247b5eea143da7ab4" args="(const char *str, const size_t len)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int HashTable::bucket </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&nbsp;</td>
+          <td class="paramname"> <em>len</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the bucket number for the given C string key. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>str</em>&nbsp;</td><td>the string </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>len</em>&nbsp;</td><td>the number of bytes to use for hash computation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the bucket number for this key </dd></dl>
+
+<p>References <a class="el" href="stored-value_8hh_source.html#l00301">StoredValue::size()</a>.</p>
 
 <p><div class="dynheader">
-Here is the caller graph for this function:</div>
+Here is the call graph for this function:</div>
 <div class="dynsection">
-<div class="center"><img src="class_hash_table_a98d2474aa2d5f0e3911f393b2f3ad088_icgraph.png" border="0" usemap="#class_hash_table_a98d2474aa2d5f0e3911f393b2f3ad088_icgraph_map" alt=""></div>
-<map name="class_hash_table_a98d2474aa2d5f0e3911f393b2f3ad088_icgraph_map" id="class_hash_table_a98d2474aa2d5f0e3911f393b2f3ad088_icgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#ae77e22aa6f0a1e1af698863c399c3a44" title="HashTable::add" alt="" coords="199,5,321,33"/><area shape="rect" id="node5" href="class_hash_table.html#a495a0cab010fd533f06c235f0c2af3cc" title="HashTable::del" alt="" coords="201,55,319,83"/><area shape="rect" id="node7" href="class_hash_table.html#a381a8da523a9469d0181e90b992df95b" title="HashTable::find" alt="" coords="199,106,321,134"/><area shape="rect" id="node9" href="class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0" title="HashTable::set" alt="" coords="201,157,319,185"/></map>
+<div class="center"><img src="class_hash_table_a0e58e888d0f0963247b5eea143da7ab4_cgraph.png" border="0" usemap="#class_hash_table_a0e58e888d0f0963247b5eea143da7ab4_cgraph_map" alt=""></div>
+<map name="class_hash_table_a0e58e888d0f0963247b5eea143da7ab4_cgraph_map" id="class_hash_table_a0e58e888d0f0963247b5eea143da7ab4_cgraph">
+<area shape="rect" id="node3" href="class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="Get the total size of this item." alt="" coords="199,106,335,134"/><area shape="rect" id="node5" href="class_stored_value.html#ac450ecb78542a05cfa1f3b337e2de947" title="Get the length of the key." alt="" coords="384,55,565,83"/><area shape="rect" id="node7" href="class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a" title="Get the size of a StoredValue object." alt="" coords="399,106,551,134"/><area shape="rect" id="node9" href="class_stored_value.html#a0cea17ad1e7f3f237cd31022444af71f" title="Get the current amount of of data stored." alt="" coords="617,5,828,33"/><area shape="rect" id="node13" href="class_stored_value.html#ab9a08f660bd17226483acf248e31db6c" title="Get the maximum amount of memory this instance can store." alt="" coords="613,55,832,83"/><area shape="rect" id="node15" href="class_stored_value.html#a2820ceb8daf99a8dab5bf06db1686bd0" title="Mark this item as clean." alt="" coords="631,106,815,134"/><area shape="rect" id="node17" href="class_stored_value.html#a2f0c9872c42fe61eb6ba7da7654b9279" title="Mark this item as needing to be persisted." alt="" coords="633,157,812,185"/><area shape="rect" id="node21" href="class_stored_value.html#a94ab12fe13dd29545cb0bdcd187f82ab" title="Set the maximum amount of data this instance can store." alt="" coords="615,207,831,235"/><area shape="rect" id="node11" href="class_atomic.html#a50d5b1eadc07bf419245a5e11d718486" title="Atomic::get" alt="" coords="908,5,1009,33"/><area shape="rect" id="node19" href="class_stored_value.html#ac30f7f07745658054e521c3919574143" title="Mark this item as dirty as of a certain time." alt="" coords="880,157,1037,185"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a80532994171008a6989dcdd3073e8ee7"></a><!-- doxytag: member="HashTable::clear" ref="a80532994171008a6989dcdd3073e8ee7" args="(bool deactivate=false)" -->
+<a class="anchor" id="a16d784d4d2721908e4d3221eba1d77fa"></a><!-- doxytag: member="HashTable::clear" ref="a16d784d4d2721908e4d3221eba1d77fa" args="(bool deactivate=false)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void HashTable::clear </td>
+          <td class="memname">size_t HashTable::clear </td>
           <td>(</td>
           <td class="paramtype">bool&nbsp;</td>
           <td class="paramname"> <em>deactivate</em> = <code>false</code></td>
@@ -240,16 +326,14 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="stored-value_8hh_source.html#l00281">~HashTable()</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dynsection">
-<div class="center"><img src="class_hash_table_a80532994171008a6989dcdd3073e8ee7_icgraph.png" border="0" usemap="#class_hash_table_a80532994171008a6989dcdd3073e8ee7_icgraph_map" alt=""></div>
-<map name="class_hash_table_a80532994171008a6989dcdd3073e8ee7_icgraph_map" id="class_hash_table_a80532994171008a6989dcdd3073e8ee7_icgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#a9ce5569bb945880cacb29aaba6f3e3f9" title="HashTable::~HashTable" alt="" coords="188,5,364,33"/></map>
-</div>
-</p>
+<p>Clear the hash table. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>deactivate</em>&nbsp;</td><td>true when this hash table is being destroyed completely</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the number of items removed </dd></dl>
 
 </div>
 </div>
@@ -269,16 +353,14 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="stored-value_8hh_source.html#l00385">bucket()</a>, <a class="el" href="stored-value_8hh_source.html#l00399">getMutex()</a>, and <a class="el" href="stored-value_8hh_source.html#l00418">unlocked_del()</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dynsection">
-<div class="center"><img src="class_hash_table_a495a0cab010fd533f06c235f0c2af3cc_cgraph.png" border="0" usemap="#class_hash_table_a495a0cab010fd533f06c235f0c2af3cc_cgraph_map" alt=""></div>
-<map name="class_hash_table_a495a0cab010fd533f06c235f0c2af3cc_cgraph_map" id="class_hash_table_a495a0cab010fd533f06c235f0c2af3cc_cgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#a98d2474aa2d5f0e3911f393b2f3ad088" title="HashTable::bucket" alt="" coords="195,5,339,33"/><area shape="rect" id="node5" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f" title="HashTable::getMutex" alt="" coords="187,55,347,83"/><area shape="rect" id="node7" href="class_hash_table.html#a65a4132a3011ea8bc100a6c0a45ce4e7" title="Delete a key from the cache without trying to lock the cache first (Please note that..." alt="" coords="173,106,360,134"/><area shape="rect" id="node9" href="class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="StoredValue::isLocked" alt="" coords="409,106,577,134"/></map>
-</div>
-</p>
+<p>Delete the item with the given key. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>the key to delete </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if the item existed before this call </dd></dl>
 
 </div>
 </div>
@@ -298,14 +380,72 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="stored-value_8hh_source.html#l00385">bucket()</a>, <a class="el" href="stored-value_8hh_source.html#l00399">getMutex()</a>, and <a class="el" href="stored-value_8hh_source.html#l00369">unlocked_find()</a>.</p>
+<p>Find the item with the given key. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>the key to find </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a pointer to a <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> -- NULL if not found </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a78c94e47e8d7f1fe6e325995de021df8"></a><!-- doxytag: member="HashTable::getDefaultStorageValueType" ref="a78c94e47e8d7f1fe6e325995de021df8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2eff">stored_value_type</a> HashTable::getDefaultStorageValueType </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the default <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> type. </p>
+
+<p>Referenced by <a class="el" href="stored-value_8cc_source.html#l00157">getDefaultStorageValueTypeStr()</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dynsection">
+<div class="center"><img src="class_hash_table_a78c94e47e8d7f1fe6e325995de021df8_icgraph.png" border="0" usemap="#class_hash_table_a78c94e47e8d7f1fe6e325995de021df8_icgraph_map" alt=""></div>
+<map name="class_hash_table_a78c94e47e8d7f1fe6e325995de021df8_icgraph_map" id="class_hash_table_a78c94e47e8d7f1fe6e325995de021df8_icgraph">
+<area shape="rect" id="node3" href="class_hash_table.html#a79386c3b7fbc702294d6f8f77b231635" title="Get the default StoredValue type as a string." alt="" coords="341,5,648,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a79386c3b7fbc702294d6f8f77b231635"></a><!-- doxytag: member="HashTable::getDefaultStorageValueTypeStr" ref="a79386c3b7fbc702294d6f8f77b231635" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * HashTable::getDefaultStorageValueTypeStr </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the default <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> type as a string. </p>
+
+<p>References <a class="el" href="stored-value_8hh_source.html#l00514">featured</a>, <a class="el" href="stored-value_8cc_source.html#l00153">getDefaultStorageValueType()</a>, and <a class="el" href="stored-value_8hh_source.html#l00513">small</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
-<div class="center"><img src="class_hash_table_a381a8da523a9469d0181e90b992df95b_cgraph.png" border="0" usemap="#class_hash_table_a381a8da523a9469d0181e90b992df95b_cgraph_map" alt=""></div>
-<map name="class_hash_table_a381a8da523a9469d0181e90b992df95b_cgraph_map" id="class_hash_table_a381a8da523a9469d0181e90b992df95b_cgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#a98d2474aa2d5f0e3911f393b2f3ad088" title="HashTable::bucket" alt="" coords="203,5,347,33"/><area shape="rect" id="node5" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f" title="HashTable::getMutex" alt="" coords="195,55,355,83"/><area shape="rect" id="node7" href="class_hash_table.html#a92572ea340897dbee6f3e50cbff6dd1d" title="HashTable::unlocked_find" alt="" coords="179,106,371,134"/><area shape="rect" id="node9" href="class_stored_value.html#a9027da615efcc3577e8b894db1a34d1d" title="StoredValue::getExptime" alt="" coords="420,81,607,109"/><area shape="rect" id="node11" href="class_hash_table.html#a65a4132a3011ea8bc100a6c0a45ce4e7" title="Delete a key from the cache without trying to lock the cache first (Please note that..." alt="" coords="420,131,607,159"/><area shape="rect" id="node13" href="class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="StoredValue::isLocked" alt="" coords="657,131,825,159"/></map>
+<div class="center"><img src="class_hash_table_a79386c3b7fbc702294d6f8f77b231635_cgraph.png" border="0" usemap="#class_hash_table_a79386c3b7fbc702294d6f8f77b231635_cgraph_map" alt=""></div>
+<map name="class_hash_table_a79386c3b7fbc702294d6f8f77b231635_cgraph_map" id="class_hash_table_a79386c3b7fbc702294d6f8f77b231635_cgraph">
+<area shape="rect" id="node3" href="class_hash_table.html#a78c94e47e8d7f1fe6e325995de021df8" title="Get the default StoredValue type." alt="" coords="360,5,648,33"/></map>
 </div>
 </p>
 
@@ -327,20 +467,56 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="stored-value_8hh_source.html#l00348">add()</a>, <a class="el" href="stored-value_8hh_source.html#l00457">del()</a>, <a class="el" href="stored-value_8hh_source.html#l00297">find()</a>, <a class="el" href="stored-value_8hh_source.html#l00304">set()</a>, <a class="el" href="stored-value_8cc_source.html#l00084">visit()</a>, and <a class="el" href="stored-value_8cc_source.html#l00102">visitDepth()</a>.</p>
+<p>Get the mutex for a bucket (for doing your own lock management). </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>bucket_num</em>&nbsp;</td><td>the bucket number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the <a class="el" href="class_mutex.html" title="Abstraction built on top of pthread mutexes.">Mutex</a> covering that bucket </dd></dl>
+
+<p>Referenced by <a class="el" href="stored-value_8cc_source.html#l00089">visit()</a>, and <a class="el" href="stored-value_8cc_source.html#l00113">visitDepth()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_hash_table_abee30d2b6f2edeab4dfa3f2499e3685f_icgraph.png" border="0" usemap="#class_hash_table_abee30d2b6f2edeab4dfa3f2499e3685f_icgraph_map" alt=""></div>
 <map name="class_hash_table_abee30d2b6f2edeab4dfa3f2499e3685f_icgraph_map" id="class_hash_table_abee30d2b6f2edeab4dfa3f2499e3685f_icgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#ae77e22aa6f0a1e1af698863c399c3a44" title="HashTable::add" alt="" coords="239,5,361,33"/><area shape="rect" id="node5" href="class_hash_table.html#a495a0cab010fd533f06c235f0c2af3cc" title="HashTable::del" alt="" coords="241,55,359,83"/><area shape="rect" id="node7" href="class_hash_table.html#a381a8da523a9469d0181e90b992df95b" title="HashTable::find" alt="" coords="239,106,361,134"/><area shape="rect" id="node9" href="class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0" title="HashTable::set" alt="" coords="241,157,359,185"/><area shape="rect" id="node11" href="class_hash_table.html#a9edd623bc8d50b043144045c3a217fbb" title="HashTable::visit" alt="" coords="237,207,363,235"/><area shape="rect" id="node13" href="class_hash_table.html#a8b621f0689d13cef8180192e9ddea00b" title="HashTable::visitDepth" alt="" coords="217,258,383,286"/></map>
+<area shape="rect" id="node3" href="class_hash_table.html#a9edd623bc8d50b043144045c3a217fbb" title="Visit all items within this hashtable." alt="" coords="237,5,363,33"/><area shape="rect" id="node5" href="class_hash_table.html#a8b621f0689d13cef8180192e9ddea00b" title="Visit all items within this call with a depth visitor." alt="" coords="217,55,383,83"/><area shape="rect" id="node7" href="class_v_bucket.html#a4bf6d86a3924ece6d9c718661afb6967" title="VBucket::size" alt="" coords="433,55,545,83"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a06f83b5a9f3964a30546c464be691b23"></a><!-- doxytag: member="HashTable::getNumBuckets" ref="a06f83b5a9f3964a30546c464be691b23" args="(size_t)" -->
+<a class="anchor" id="af1ea55e43cee12ab3fb33020346cc1c3"></a><!-- doxytag: member="HashTable::getMutexForLock" ref="af1ea55e43cee12ab3fb33020346cc1c3" args="(int lock_num)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mutex.html">Mutex</a>&amp; HashTable::getMutexForLock </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>lock_num</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the <a class="el" href="class_mutex.html" title="Abstraction built on top of pthread mutexes.">Mutex</a> for the given lock. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>lock_num</em>&nbsp;</td><td>the lock number to get </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the <a class="el" href="class_mutex.html" title="Abstraction built on top of pthread mutexes.">Mutex</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a97986cbcc30e2279f10cbf528b512415"></a><!-- doxytag: member="HashTable::getNumBuckets" ref="a97986cbcc30e2279f10cbf528b512415" args="(size_t s)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -356,24 +532,26 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Get the number of buckets for a hash table. </p>
+<p>Get the number of buckets that should be used for initialization. </p>
+<p>Get the number of buckets for a hash table.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>if 0, return the default number of buckets, else return s</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>the desired number of buckets, if 0, use the default</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the number of buckets to create </dd></dl>
 
-<p>References <a class="el" href="stored-value_8cc_source.html#l00021">getDefault()</a>.</p>
+<p>References <a class="el" href="stored-value_8cc_source.html#l00022">getDefault()</a>.</p>
 
-<p>Referenced by <a class="el" href="stored-value_8hh_source.html#l00267">HashTable()</a>.</p>
+<p>Referenced by <a class="el" href="stored-value_8hh_source.html#l00587">HashTable()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
-<div class="center"><img src="class_hash_table_a06f83b5a9f3964a30546c464be691b23_cgraph.png" border="0" usemap="#class_hash_table_a06f83b5a9f3964a30546c464be691b23_cgraph_map" alt=""></div>
-<map name="class_hash_table_a06f83b5a9f3964a30546c464be691b23_cgraph_map" id="class_hash_table_a06f83b5a9f3964a30546c464be691b23_cgraph">
+<div class="center"><img src="class_hash_table_a97986cbcc30e2279f10cbf528b512415_cgraph.png" border="0" usemap="#class_hash_table_a97986cbcc30e2279f10cbf528b512415_cgraph_map" alt=""></div>
+<map name="class_hash_table_a97986cbcc30e2279f10cbf528b512415_cgraph_map" id="class_hash_table_a97986cbcc30e2279f10cbf528b512415_cgraph">
 <area shape="rect" id="node3" href="stored-value_8cc.html#adfe08f5e338474f349b119ac4dbc89e1" title="getDefault" alt="" coords="260,5,351,33"/></map>
 </div>
 </p>
@@ -381,15 +559,15 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dynsection">
-<div class="center"><img src="class_hash_table_a06f83b5a9f3964a30546c464be691b23_icgraph.png" border="0" usemap="#class_hash_table_a06f83b5a9f3964a30546c464be691b23_icgraph_map" alt=""></div>
-<map name="class_hash_table_a06f83b5a9f3964a30546c464be691b23_icgraph_map" id="class_hash_table_a06f83b5a9f3964a30546c464be691b23_icgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#ac9e3db51c1e03eab15f6b9ae22209ae9" title="HashTable::HashTable" alt="" coords="260,5,425,33"/></map>
+<div class="center"><img src="class_hash_table_a97986cbcc30e2279f10cbf528b512415_icgraph.png" border="0" usemap="#class_hash_table_a97986cbcc30e2279f10cbf528b512415_icgraph_map" alt=""></div>
+<map name="class_hash_table_a97986cbcc30e2279f10cbf528b512415_icgraph_map" id="class_hash_table_a97986cbcc30e2279f10cbf528b512415_icgraph">
+<area shape="rect" id="node3" href="class_hash_table.html#a06fb934d9694fa3b0ef6c721b3ddd364" title="Create a HashTable." alt="" coords="260,5,425,33"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a715243b0bec643bcd61be8e75b697ba1"></a><!-- doxytag: member="HashTable::getNumLocks" ref="a715243b0bec643bcd61be8e75b697ba1" args="(size_t)" -->
+<a class="anchor" id="a829ef1107dd5620d2e4ac8e1f85efe49"></a><!-- doxytag: member="HashTable::getNumLocks" ref="a829ef1107dd5620d2e4ac8e1f85efe49" args="(size_t s)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -405,22 +583,24 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Get the number of locks for a hash table. </p>
+<p>Get the number of locks that should be used for initialization. </p>
+<p>Get the number of locks for a hash table.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>s</em>&nbsp;</td><td>if 0, return the default number of locks, else return s</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>n</em>&nbsp;</td><td>the desired number of locks, if 0, use the default</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>the number of locks to create </dd></dl>
 
-<p>References <a class="el" href="stored-value_8cc_source.html#l00021">getDefault()</a>.</p>
+<p>References <a class="el" href="stored-value_8cc_source.html#l00022">getDefault()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
-<div class="center"><img src="class_hash_table_a715243b0bec643bcd61be8e75b697ba1_cgraph.png" border="0" usemap="#class_hash_table_a715243b0bec643bcd61be8e75b697ba1_cgraph_map" alt=""></div>
-<map name="class_hash_table_a715243b0bec643bcd61be8e75b697ba1_cgraph_map" id="class_hash_table_a715243b0bec643bcd61be8e75b697ba1_cgraph">
+<div class="center"><img src="class_hash_table_a829ef1107dd5620d2e4ac8e1f85efe49_cgraph.png" border="0" usemap="#class_hash_table_a829ef1107dd5620d2e4ac8e1f85efe49_cgraph_map" alt=""></div>
+<map name="class_hash_table_a829ef1107dd5620d2e4ac8e1f85efe49_cgraph_map" id="class_hash_table_a829ef1107dd5620d2e4ac8e1f85efe49_cgraph">
 <area shape="rect" id="node3" href="stored-value_8cc.html#adfe08f5e338474f349b119ac4dbc89e1" title="getDefault" alt="" coords="244,5,335,33"/></map>
 </div>
 </p>
@@ -443,14 +623,16 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="stored-value_8hh_source.html#l00267">HashTable()</a>.</p>
+<p>Get the number of locks in this hash table. </p>
+
+<p>Referenced by <a class="el" href="stored-value_8hh_source.html#l00587">HashTable()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_hash_table_a30964fc4125baf87564761a220061ab0_icgraph.png" border="0" usemap="#class_hash_table_a30964fc4125baf87564761a220061ab0_icgraph_map" alt=""></div>
 <map name="class_hash_table_a30964fc4125baf87564761a220061ab0_icgraph_map" id="class_hash_table_a30964fc4125baf87564761a220061ab0_icgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#ac9e3db51c1e03eab15f6b9ae22209ae9" title="HashTable::HashTable" alt="" coords="244,5,409,33"/></map>
+<area shape="rect" id="node3" href="class_hash_table.html#a06fb934d9694fa3b0ef6c721b3ddd364" title="Create a HashTable." alt="" coords="244,5,409,33"/></map>
 </div>
 </p>
 
@@ -472,6 +654,19 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Get the number of hash table buckets this hash table has. </p>
+
+<p>References <a class="el" href="stored-value_8hh_source.html#l00301">StoredValue::size()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dynsection">
+<div class="center"><img src="class_hash_table_a95a64de238722621660852b97e1a4ca6_cgraph.png" border="0" usemap="#class_hash_table_a95a64de238722621660852b97e1a4ca6_cgraph_map" alt=""></div>
+<map name="class_hash_table_a95a64de238722621660852b97e1a4ca6_cgraph_map" id="class_hash_table_a95a64de238722621660852b97e1a4ca6_cgraph">
+<area shape="rect" id="node3" href="class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="Get the total size of this item." alt="" coords="204,106,340,134"/><area shape="rect" id="node5" href="class_stored_value.html#ac450ecb78542a05cfa1f3b337e2de947" title="Get the length of the key." alt="" coords="389,55,571,83"/><area shape="rect" id="node7" href="class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a" title="Get the size of a StoredValue object." alt="" coords="404,106,556,134"/><area shape="rect" id="node9" href="class_stored_value.html#a0cea17ad1e7f3f237cd31022444af71f" title="Get the current amount of of data stored." alt="" coords="623,5,833,33"/><area shape="rect" id="node13" href="class_stored_value.html#ab9a08f660bd17226483acf248e31db6c" title="Get the maximum amount of memory this instance can store." alt="" coords="619,55,837,83"/><area shape="rect" id="node15" href="class_stored_value.html#a2820ceb8daf99a8dab5bf06db1686bd0" title="Mark this item as clean." alt="" coords="636,106,820,134"/><area shape="rect" id="node17" href="class_stored_value.html#a2f0c9872c42fe61eb6ba7da7654b9279" title="Mark this item as needing to be persisted." alt="" coords="639,157,817,185"/><area shape="rect" id="node21" href="class_stored_value.html#a94ab12fe13dd29545cb0bdcd187f82ab" title="Set the maximum amount of data this instance can store." alt="" coords="620,207,836,235"/><area shape="rect" id="node11" href="class_atomic.html#a50d5b1eadc07bf419245a5e11d718486" title="Atomic::get" alt="" coords="913,5,1015,33"/><area shape="rect" id="node19" href="class_stored_value.html#ac30f7f07745658054e521c3919574143" title="Mark this item as dirty as of a certain time." alt="" coords="885,157,1043,185"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="a196a9fb276d4a13fd8bf928b26fe8be0"></a><!-- doxytag: member="HashTable::set" ref="a196a9fb276d4a13fd8bf928b26fe8be0" args="(const Item &amp;val)" -->
@@ -490,14 +685,23 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="stored-value_8hh_source.html#l00385">bucket()</a>, <a class="el" href="ep_8cc_source.html#l00020">ep_current_time</a>, <a class="el" href="stored-value_8hh_source.html#l00097">StoredValue::getCas()</a>, <a class="el" href="stored-value_8hh_source.html#l00399">getMutex()</a>, <a class="el" href="stored-value_8hh_source.html#l00179">INVALID_CAS</a>, <a class="el" href="stored-value_8hh_source.html#l00181">IS_LOCKED</a>, <a class="el" href="stored-value_8hh_source.html#l00066">StoredValue::isClean()</a>, <a class="el" href="stored-value_8hh_source.html#l00141">StoredValue::isLocked()</a>, <a class="el" href="stored-value_8hh_source.html#l00181">NOMEM</a>, <a class="el" href="stored-value_8hh_source.html#l00179">NOT_FOUND</a>, <a class="el" href="stored-value_8hh_source.html#l00086">StoredValue::setValue()</a>, <a class="el" href="stored-value_8hh_source.html#l00119">StoredValue::unlock()</a>, <a class="el" href="stored-value_8hh_source.html#l00369">unlocked_find()</a>, <a class="el" href="stored-value_8hh_source.html#l00180">WAS_CLEAN</a>, and <a class="el" href="stored-value_8hh_source.html#l00180">WAS_DIRTY</a>.</p>
+<p>Set a new <a class="el" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a> into this hashtable. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>the</em>&nbsp;</td><td><a class="el" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a> to store </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a result indicating the status of the store </dd></dl>
+
+<p>References <a class="el" href="ep_8cc_source.html#l00035">ep_current_time</a>, <a class="el" href="stored-value_8hh_source.html#l00215">StoredValue::getCas()</a>, <a class="el" href="stored-value_8hh_source.html#l00417">INVALID_CAS</a>, <a class="el" href="stored-value_8hh_source.html#l00420">IS_LOCKED</a>, <a class="el" href="stored-value_8hh_source.html#l00112">StoredValue::isClean()</a>, <a class="el" href="stored-value_8hh_source.html#l00311">StoredValue::isLocked()</a>, <a class="el" href="stored-value_8hh_source.html#l00421">NOMEM</a>, <a class="el" href="stored-value_8hh_source.html#l00416">NOT_FOUND</a>, <a class="el" href="stored-value_8hh_source.html#l00197">StoredValue::setValue()</a>, <a class="el" href="stored-value_8hh_source.html#l00259">StoredValue::unlock()</a>, <a class="el" href="stored-value_8hh_source.html#l00418">WAS_CLEAN</a>, and <a class="el" href="stored-value_8hh_source.html#l00419">WAS_DIRTY</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_hash_table_a196a9fb276d4a13fd8bf928b26fe8be0_cgraph.png" border="0" usemap="#class_hash_table_a196a9fb276d4a13fd8bf928b26fe8be0_cgraph_map" alt=""></div>
 <map name="class_hash_table_a196a9fb276d4a13fd8bf928b26fe8be0_cgraph_map" id="class_hash_table_a196a9fb276d4a13fd8bf928b26fe8be0_cgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#a98d2474aa2d5f0e3911f393b2f3ad088" title="HashTable::bucket" alt="" coords="197,5,341,33"/><area shape="rect" id="node5" href="class_stored_value.html#ae3cf1eaf21d603a3cab0ecc42c3f482c" title="StoredValue::getCas" alt="" coords="191,55,348,83"/><area shape="rect" id="node7" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f" title="HashTable::getMutex" alt="" coords="189,106,349,134"/><area shape="rect" id="node9" href="class_stored_value.html#a589a534b1464fa39039d09a49440f5aa" title="StoredValue::isClean" alt="" coords="189,157,349,185"/><area shape="rect" id="node11" href="class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="StoredValue::isLocked" alt="" coords="652,309,820,337"/><area shape="rect" id="node13" href="class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c" title="StoredValue::setValue" alt="" coords="185,207,353,235"/><area shape="rect" id="node21" href="class_stored_value.html#a6630950f48986ee770898a4fb14d7a68" title="StoredValue::unlock" alt="" coords="192,309,347,337"/><area shape="rect" id="node23" href="class_hash_table.html#a92572ea340897dbee6f3e50cbff6dd1d" title="HashTable::unlocked_find" alt="" coords="173,258,365,286"/><area shape="rect" id="node15" href="class_stored_value.html#a2f0c9872c42fe61eb6ba7da7654b9279" title="StoredValue::markDirty" alt="" coords="419,207,597,235"/><area shape="rect" id="node19" href="class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="StoredValue::size" alt="" coords="440,157,576,185"/><area shape="rect" id="node17" href="class_stored_value.html#afb6c36da2c1af0ef8adc53ef555fdb08" title="StoredValue::isDirty" alt="" coords="659,207,813,235"/><area shape="rect" id="node25" href="class_stored_value.html#a9027da615efcc3577e8b894db1a34d1d" title="StoredValue::getExptime" alt="" coords="415,309,601,337"/><area shape="rect" id="node27" href="class_hash_table.html#a65a4132a3011ea8bc100a6c0a45ce4e7" title="Delete a key from the cache without trying to lock the cache first (Please note that..." alt="" coords="415,258,601,286"/></map>
+<area shape="rect" id="node3" href="class_stored_value.html#ae3cf1eaf21d603a3cab0ecc42c3f482c" title="Get this item&#39;s CAS identifier." alt="" coords="180,5,337,33"/><area shape="rect" id="node5" href="class_stored_value.html#a589a534b1464fa39039d09a49440f5aa" title="True if this object is not dirty." alt="" coords="179,55,339,83"/><area shape="rect" id="node9" href="class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="Return true if this item is locked as of the given timestamp." alt="" coords="175,106,343,134"/><area shape="rect" id="node11" href="class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c" title="Set a new value for this item." alt="" coords="175,157,343,185"/><area shape="rect" id="node35" href="class_stored_value.html#a6630950f48986ee770898a4fb14d7a68" title="Unlock this item." alt="" coords="181,207,336,235"/><area shape="rect" id="node7" href="class_stored_value.html#afb6c36da2c1af0ef8adc53ef555fdb08" title="True if this object is dirty." alt="" coords="392,55,547,83"/><area shape="rect" id="node13" href="class_stored_value.html#a2f0c9872c42fe61eb6ba7da7654b9279" title="Mark this item as needing to be persisted." alt="" coords="844,131,1023,159"/><area shape="rect" id="node17" href="class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="Get the total size of this item." alt="" coords="401,207,537,235"/><area shape="rect" id="node15" href="class_stored_value.html#ac30f7f07745658054e521c3919574143" title="Mark this item as dirty as of a certain time." alt="" coords="1091,131,1248,159"/><area shape="rect" id="node19" href="class_stored_value.html#ac450ecb78542a05cfa1f3b337e2de947" title="Get the length of the key." alt="" coords="595,182,776,210"/><area shape="rect" id="node21" href="class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a" title="Get the size of a StoredValue object." alt="" coords="609,233,761,261"/><area shape="rect" id="node23" href="class_stored_value.html#a0cea17ad1e7f3f237cd31022444af71f" title="Get the current amount of of data stored." alt="" coords="828,182,1039,210"/><area shape="rect" id="node27" href="class_stored_value.html#ab9a08f660bd17226483acf248e31db6c" title="Get the maximum amount of memory this instance can store." alt="" coords="824,233,1043,261"/><area shape="rect" id="node29" href="class_stored_value.html#a2820ceb8daf99a8dab5bf06db1686bd0" title="Mark this item as clean." alt="" coords="841,283,1025,311"/><area shape="rect" id="node32" href="class_stored_value.html#a94ab12fe13dd29545cb0bdcd187f82ab" title="Set the maximum amount of data this instance can store." alt="" coords="825,334,1041,362"/><area shape="rect" id="node25" href="class_atomic.html#a50d5b1eadc07bf419245a5e11d718486" title="Atomic::get" alt="" coords="1119,182,1220,210"/></map>
 </div>
 </p>
 
@@ -519,9 +723,10 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Set the default number of buckets. </p>
 <p>Set the default number of hashtable buckets. </p>
 
-<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00409">EventuallyPersistentEngine::initialize()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00421">EventuallyPersistentEngine::initialize()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -550,9 +755,10 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>Set the default number of locks. </p>
 <p>Set the default number of hashtable locks. </p>
 
-<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00409">EventuallyPersistentEngine::initialize()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00421">EventuallyPersistentEngine::initialize()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -560,6 +766,66 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_hash_table_af0cc96f6a1347c6259acbf0d7665f2c0_icgraph.png" border="0" usemap="#class_hash_table_af0cc96f6a1347c6259acbf0d7665f2c0_icgraph_map" alt=""></div>
 <map name="class_hash_table_af0cc96f6a1347c6259acbf0d7665f2c0_icgraph_map" id="class_hash_table_af0cc96f6a1347c6259acbf0d7665f2c0_icgraph">
 <area shape="rect" id="node3" href="class_eventually_persistent_engine.html#a81c7ef1172d7ebcaf8f73333e0a92edd" title="EventuallyPersistentEngine::initialize" alt="" coords="291,5,560,33"/><area shape="rect" id="node5" href="ep__engine_8cc.html#a51d4c11d48d7ce41ae6c299da78beb07" title="EvpInitialize" alt="" coords="609,5,711,33"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a44955671dead826fa1970e85cf5b62ec"></a><!-- doxytag: member="HashTable::setDefaultStorageValueType" ref="a44955671dead826fa1970e85cf5b62ec" args="(enum stored_value_type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HashTable::setDefaultStorageValueType </td>
+          <td>(</td>
+          <td class="paramtype">enum <a class="el" href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2eff">stored_value_type</a>&nbsp;</td>
+          <td class="paramname"> <em>t</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the default <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> type by enum value. </p>
+
+</div>
+</div>
+<a class="anchor" id="a394ba8fd6fc9b5e888824e69d95e845d"></a><!-- doxytag: member="HashTable::setDefaultStorageValueType" ref="a394ba8fd6fc9b5e888824e69d95e845d" args="(const char *t)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HashTable::setDefaultStorageValueType </td>
+          <td>(</td>
+          <td class="paramtype">const char *&nbsp;</td>
+          <td class="paramname"> <em>t</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the stored value type by name. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>t</em>&nbsp;</td><td>either "small" or "featured"</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>true if this type is not handled. </p>
+
+<p>References <a class="el" href="stored-value_8hh_source.html#l00514">featured</a>, and <a class="el" href="stored-value_8hh_source.html#l00513">small</a>.</p>
+
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00421">EventuallyPersistentEngine::initialize()</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dynsection">
+<div class="center"><img src="class_hash_table_a394ba8fd6fc9b5e888824e69d95e845d_icgraph.png" border="0" usemap="#class_hash_table_a394ba8fd6fc9b5e888824e69d95e845d_icgraph_map" alt=""></div>
+<map name="class_hash_table_a394ba8fd6fc9b5e888824e69d95e845d_icgraph_map" id="class_hash_table_a394ba8fd6fc9b5e888824e69d95e845d_icgraph">
+<area shape="rect" id="node3" href="class_eventually_persistent_engine.html#a81c7ef1172d7ebcaf8f73333e0a92edd" title="EventuallyPersistentEngine::initialize" alt="" coords="341,5,611,33"/><area shape="rect" id="node5" href="ep__engine_8cc.html#a51d4c11d48d7ce41ae6c299da78beb07" title="EvpInitialize" alt="" coords="660,5,761,33"/></map>
 </div>
 </p>
 
@@ -600,25 +866,14 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>true if an object was deleted, false otherwise </dd></dl>
 
-<p>References <a class="el" href="ep_8cc_source.html#l00020">ep_current_time</a>, and <a class="el" href="stored-value_8hh_source.html#l00141">StoredValue::isLocked()</a>.</p>
-
-<p>Referenced by <a class="el" href="stored-value_8hh_source.html#l00457">del()</a>, and <a class="el" href="stored-value_8hh_source.html#l00369">unlocked_find()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00035">ep_current_time</a>, <a class="el" href="stored-value_8hh_source.html#l00144">StoredValue::hasKey()</a>, and <a class="el" href="stored-value_8hh_source.html#l00311">StoredValue::isLocked()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_hash_table_a65a4132a3011ea8bc100a6c0a45ce4e7_cgraph.png" border="0" usemap="#class_hash_table_a65a4132a3011ea8bc100a6c0a45ce4e7_cgraph_map" alt=""></div>
 <map name="class_hash_table_a65a4132a3011ea8bc100a6c0a45ce4e7_cgraph_map" id="class_hash_table_a65a4132a3011ea8bc100a6c0a45ce4e7_cgraph">
-<area shape="rect" id="node3" href="class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="StoredValue::isLocked" alt="" coords="241,5,409,33"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dynsection">
-<div class="center"><img src="class_hash_table_a65a4132a3011ea8bc100a6c0a45ce4e7_icgraph.png" border="0" usemap="#class_hash_table_a65a4132a3011ea8bc100a6c0a45ce4e7_icgraph_map" alt=""></div>
-<map name="class_hash_table_a65a4132a3011ea8bc100a6c0a45ce4e7_icgraph_map" id="class_hash_table_a65a4132a3011ea8bc100a6c0a45ce4e7_icgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#a495a0cab010fd533f06c235f0c2af3cc" title="HashTable::del" alt="" coords="277,5,395,33"/><area shape="rect" id="node5" href="class_hash_table.html#a92572ea340897dbee6f3e50cbff6dd1d" title="HashTable::unlocked_find" alt="" coords="240,55,432,83"/><area shape="rect" id="node7" href="class_hash_table.html#ae77e22aa6f0a1e1af698863c399c3a44" title="HashTable::add" alt="" coords="481,5,604,33"/><area shape="rect" id="node9" href="class_hash_table.html#a381a8da523a9469d0181e90b992df95b" title="HashTable::find" alt="" coords="481,55,604,83"/><area shape="rect" id="node11" href="class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0" title="HashTable::set" alt="" coords="484,106,601,134"/></map>
+<area shape="rect" id="node3" href="class_stored_value.html#a5690735ab7df847bb83295eb67dbc900" title="True of this item is for the given key." alt="" coords="247,30,404,58"/><area shape="rect" id="node9" href="class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="Return true if this item is locked as of the given timestamp." alt="" coords="241,81,409,109"/><area shape="rect" id="node5" href="class_stored_value.html#a3d14f5422d4f95add2b3beaf67d4418c" title="Get the pointer to the beginning of the key." alt="" coords="459,5,653,33"/><area shape="rect" id="node7" href="class_stored_value.html#ac450ecb78542a05cfa1f3b337e2de947" title="Get the length of the key." alt="" coords="465,55,647,83"/></map>
 </div>
 </p>
 
@@ -649,25 +904,24 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00020">ep_current_time</a>, <a class="el" href="stored-value_8hh_source.html#l00078">StoredValue::getExptime()</a>, and <a class="el" href="stored-value_8hh_source.html#l00418">unlocked_del()</a>.</p>
+<p>Find an item within a specific bucket assuming you already locked the bucket. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>key</em>&nbsp;</td><td>the key of the item to find </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>bucket_Num</em>&nbsp;</td><td>the bucket number</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a pointer to a <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> -- NULL if not found </dd></dl>
 
-<p>Referenced by <a class="el" href="stored-value_8hh_source.html#l00348">add()</a>, <a class="el" href="stored-value_8hh_source.html#l00297">find()</a>, and <a class="el" href="stored-value_8hh_source.html#l00304">set()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00035">ep_current_time</a>, <a class="el" href="stored-value_8hh_source.html#l00168">StoredValue::getExptime()</a>, and <a class="el" href="stored-value_8hh_source.html#l00144">StoredValue::hasKey()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_hash_table_a92572ea340897dbee6f3e50cbff6dd1d_cgraph.png" border="0" usemap="#class_hash_table_a92572ea340897dbee6f3e50cbff6dd1d_cgraph_map" alt=""></div>
 <map name="class_hash_table_a92572ea340897dbee6f3e50cbff6dd1d_cgraph_map" id="class_hash_table_a92572ea340897dbee6f3e50cbff6dd1d_cgraph">
-<area shape="rect" id="node3" href="class_stored_value.html#a9027da615efcc3577e8b894db1a34d1d" title="StoredValue::getExptime" alt="" coords="247,5,433,33"/><area shape="rect" id="node5" href="class_hash_table.html#a65a4132a3011ea8bc100a6c0a45ce4e7" title="Delete a key from the cache without trying to lock the cache first (Please note that..." alt="" coords="247,55,433,83"/><area shape="rect" id="node7" href="class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="StoredValue::isLocked" alt="" coords="484,55,652,83"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dynsection">
-<div class="center"><img src="class_hash_table_a92572ea340897dbee6f3e50cbff6dd1d_icgraph.png" border="0" usemap="#class_hash_table_a92572ea340897dbee6f3e50cbff6dd1d_icgraph_map" alt=""></div>
-<map name="class_hash_table_a92572ea340897dbee6f3e50cbff6dd1d_icgraph_map" id="class_hash_table_a92572ea340897dbee6f3e50cbff6dd1d_icgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#ae77e22aa6f0a1e1af698863c399c3a44" title="HashTable::add" alt="" coords="247,5,369,33"/><area shape="rect" id="node5" href="class_hash_table.html#a381a8da523a9469d0181e90b992df95b" title="HashTable::find" alt="" coords="247,55,369,83"/><area shape="rect" id="node7" href="class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0" title="HashTable::set" alt="" coords="249,106,367,134"/></map>
+<area shape="rect" id="node3" href="class_stored_value.html#a9027da615efcc3577e8b894db1a34d1d" title="Get the expiration time of this item." alt="" coords="247,5,433,33"/><area shape="rect" id="node5" href="class_stored_value.html#a5690735ab7df847bb83295eb67dbc900" title="True of this item is for the given key." alt="" coords="261,55,419,83"/><area shape="rect" id="node7" href="class_stored_value.html#a3d14f5422d4f95add2b3beaf67d4418c" title="Get the pointer to the beginning of the key." alt="" coords="483,30,677,58"/><area shape="rect" id="node9" href="class_stored_value.html#ac450ecb78542a05cfa1f3b337e2de947" title="Get the length of the key." alt="" coords="489,81,671,109"/></map>
 </div>
 </p>
 
@@ -689,14 +943,16 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="stored-value_8hh_source.html#l00399">getMutex()</a>, and <a class="el" href="class_hash_table_visitor.html#a06543808134dd89382f8962a7308c099">HashTableVisitor::visit()</a>.</p>
+<p>Visit all items within this hashtable. </p>
+
+<p>References <a class="el" href="stored-value_8hh_source.html#l00791">getMutex()</a>, <a class="el" href="stored-value_8hh_source.html#l00444">HashTableVisitor::shouldContinue()</a>, <a class="el" href="locks_8hh_source.html#l00034">LockHolder::unlock()</a>, and <a class="el" href="class_hash_table_visitor.html#a06543808134dd89382f8962a7308c099">HashTableVisitor::visit()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_hash_table_a9edd623bc8d50b043144045c3a217fbb_cgraph.png" border="0" usemap="#class_hash_table_a9edd623bc8d50b043144045c3a217fbb_cgraph_map" alt=""></div>
 <map name="class_hash_table_a9edd623bc8d50b043144045c3a217fbb_cgraph_map" id="class_hash_table_a9edd623bc8d50b043144045c3a217fbb_cgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f" title="HashTable::getMutex" alt="" coords="185,5,345,33"/><area shape="rect" id="node5" href="class_hash_table_visitor.html#a06543808134dd89382f8962a7308c099" title="Visit an individual item within a hash table." alt="" coords="181,55,349,83"/></map>
+<area shape="rect" id="node3" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f" title="Get the mutex for a bucket (for doing your own lock management)." alt="" coords="224,5,384,33"/><area shape="rect" id="node5" href="class_hash_table_visitor.html#ac5628e4d448b2cbc869f6ea50997f45e" title="True if the visiting should continue." alt="" coords="181,55,427,83"/><area shape="rect" id="node7" href="class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="LockHolder::unlock" alt="" coords="229,106,379,134"/><area shape="rect" id="node11" href="class_hash_table_visitor.html#a06543808134dd89382f8962a7308c099" title="Visit an individual item within a hash table." alt="" coords="220,157,388,185"/><area shape="rect" id="node9" href="class_mutex.html#ad43ff97f225007f2fbb0da2e98676b07" title="Mutex::release" alt="" coords="475,106,595,134"/></map>
 </div>
 </p>
 
@@ -718,14 +974,27 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="stored-value_8hh_source.html#l00399">getMutex()</a>, and <a class="el" href="class_hash_table_depth_visitor.html#a3434e37498ed61779cb30dea682b2336">HashTableDepthVisitor::visit()</a>.</p>
+<p>Visit all items within this call with a depth visitor. </p>
+
+<p>References <a class="el" href="stored-value_8hh_source.html#l00791">getMutex()</a>, and <a class="el" href="class_hash_table_depth_visitor.html#a3434e37498ed61779cb30dea682b2336">HashTableDepthVisitor::visit()</a>.</p>
+
+<p>Referenced by <a class="el" href="vbucket_8hh_source.html#l00087">VBucket::size()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_hash_table_a8b621f0689d13cef8180192e9ddea00b_cgraph.png" border="0" usemap="#class_hash_table_a8b621f0689d13cef8180192e9ddea00b_cgraph_map" alt=""></div>
 <map name="class_hash_table_a8b621f0689d13cef8180192e9ddea00b_cgraph_map" id="class_hash_table_a8b621f0689d13cef8180192e9ddea00b_cgraph">
-<area shape="rect" id="node3" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f" title="HashTable::getMutex" alt="" coords="245,5,405,33"/><area shape="rect" id="node5" href="class_hash_table_depth_visitor.html#a3434e37498ed61779cb30dea682b2336" title="Called once for each hashtable bucket with its depth." alt="" coords="221,55,429,83"/></map>
+<area shape="rect" id="node3" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f" title="Get the mutex for a bucket (for doing your own lock management)." alt="" coords="245,5,405,33"/><area shape="rect" id="node5" href="class_hash_table_depth_visitor.html#a3434e37498ed61779cb30dea682b2336" title="Called once for each hashtable bucket with its depth." alt="" coords="221,55,429,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dynsection">
+<div class="center"><img src="class_hash_table_a8b621f0689d13cef8180192e9ddea00b_icgraph.png" border="0" usemap="#class_hash_table_a8b621f0689d13cef8180192e9ddea00b_icgraph_map" alt=""></div>
+<map name="class_hash_table_a8b621f0689d13cef8180192e9ddea00b_icgraph_map" id="class_hash_table_a8b621f0689d13cef8180192e9ddea00b_icgraph">
+<area shape="rect" id="node3" href="class_v_bucket.html#a4bf6d86a3924ece6d9c718661afb6967" title="VBucket::size" alt="" coords="223,5,335,33"/></map>
 </div>
 </p>
 
@@ -750,7 +1019,7 @@ Here is the call graph for this function:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:45 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:43 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

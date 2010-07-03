@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_hash_table.html#ae77e22aa6f0a1e1af698863c399c3a44" title="HashTable::add" alt="" coords="240,5,363,33"/>
+<area shape="rect" id="node3" href="$class_hash_table.html#ae77e22aa6f0a1e1af698863c399c3a44" title="Add an item to the hash table iff it doesn&#39;t already exist." alt="" coords="240,5,363,33"/>
 <area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#aa56df4fb762677e2e278c699f42d8742" title="EventuallyPersistentEngine::arithmetic" alt="" coords="160,55,443,83"/>
 <area shape="rect" id="node9" href="$class_eventually_persistent_store.html#a6cde59588b9142737e11f8cfbb342308" title="EventuallyPersistentStore::getLocked" alt="" coords="167,106,436,134"/>
 <area shape="rect" id="node7" href="$ep__engine_8cc.html#a93d3b7e7949034d17723e2fc86981c06" title="EvpArithmetic" alt="" coords="491,55,608,83"/>

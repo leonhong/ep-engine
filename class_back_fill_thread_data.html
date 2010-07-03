@@ -56,13 +56,13 @@ Collaboration diagram for BackFillThreadData:</div>
 <p><a href="class_back_fill_thread_data-members.html">List of all members.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_back_fill_thread_data.html#aab2fc07840e3c3ef488adf4c7f2644c8">BackFillThreadData</a> (<a class="el" href="class_eventually_persistent_engine.html">EventuallyPersistentEngine</a> *e, <a class="el" href="class_tap_connection.html">TapConnection</a> *tc, <a class="el" href="class_eventually_persistent_store.html">EventuallyPersistentStore</a> *s)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_back_fill_thread_data.html#a94663468c6791a4f4b0a0692b8cb2ebe">BackFillThreadData</a> (<a class="el" href="class_eventually_persistent_engine.html">EventuallyPersistentEngine</a> *e, <a class="el" href="class_tap_connection.html">TapConnection</a> *tc, <a class="el" href="class_eventually_persistent_store.html">EventuallyPersistentStore</a> *s, const void *tok)</td></tr>
 <tr><td colspan="2"><h2>Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_back_fill_visitor.html">BackFillVisitor</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_back_fill_thread_data.html#ad2101d1208415fc63f037c9be95823cd">bfv</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_eventually_persistent_store.html">EventuallyPersistentStore</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_back_fill_thread_data.html#a5335096f597ff1b4fe402cd71c5fa20a">epstore</a></td></tr>
 </table>
 <hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aab2fc07840e3c3ef488adf4c7f2644c8"></a><!-- doxytag: member="BackFillThreadData::BackFillThreadData" ref="aab2fc07840e3c3ef488adf4c7f2644c8" args="(EventuallyPersistentEngine *e, TapConnection *tc, EventuallyPersistentStore *s)" -->
+<a class="anchor" id="a94663468c6791a4f4b0a0692b8cb2ebe"></a><!-- doxytag: member="BackFillThreadData::BackFillThreadData" ref="a94663468c6791a4f4b0a0692b8cb2ebe" args="(EventuallyPersistentEngine *e, TapConnection *tc, EventuallyPersistentStore *s, const void *tok)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -82,7 +82,13 @@ Collaboration diagram for BackFillThreadData:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_eventually_persistent_store.html">EventuallyPersistentStore</a> *&nbsp;</td>
-          <td class="paramname"> <em>s</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&nbsp;</td>
+          <td class="paramname"> <em>tok</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -107,7 +113,7 @@ Collaboration diagram for BackFillThreadData:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00654">launch_backfill_thread()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00691">launch_backfill_thread()</a>.</p>
 
 </div>
 </div>
@@ -122,7 +128,7 @@ Collaboration diagram for BackFillThreadData:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00654">launch_backfill_thread()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00691">launch_backfill_thread()</a>.</p>
 
 </div>
 </div>
@@ -144,7 +150,7 @@ Collaboration diagram for BackFillThreadData:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:28 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

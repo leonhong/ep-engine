@@ -72,8 +72,8 @@ Collaboration diagram for EventuallyPersistentEngine:</div>
 <tr><td class="memItemLeft" align="right" valign="top">tap_event_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eventually_persistent_engine.html#af7a86dbf9bcaf99ec769734c26b94f7b">walkTapQueue</a> (const void *cookie, item **itm, void **es, uint16_t *nes, uint8_t *ttl, uint16_t *flags, uint32_t *seqno, uint16_t *vbucket)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eventually_persistent_engine.html#a7d812924813dcfc5ba7609923dc2e31b">createTapQueue</a> (const void *cookie, std::string &amp;client, uint32_t flags, const void *userdata, size_t nuserdata)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">ENGINE_ERROR_CODE&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eventually_persistent_engine.html#ac342b14e74c4352f55ac1ca5f64e0f63">tapNotify</a> (const void *cookie, void *engine_specific, uint16_t nengine, uint8_t ttl, uint16_t tap_flags, tap_event_t tap_event, uint32_t tap_seqno, const void *key, size_t nkey, uint32_t flags, uint32_t exptime, uint64_t cas, const void *data, size_t ndata, uint16_t vbucket)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eventually_persistent_engine.html#ab402b319285b5490687e41980b0ae00b">queueBackfill</a> (<a class="el" href="class_tap_connection.html">TapConnection</a> *tc)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Visit the objects and add them to the tap connecitons queue.  <a href="#ab402b319285b5490687e41980b0ae00b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eventually_persistent_engine.html#ae01d8ac86fed6a4cb22d0ee014f96ee5">queueBackfill</a> (<a class="el" href="class_tap_connection.html">TapConnection</a> *tc, const void *tok)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Visit the objects and add them to the tap connecitons queue.  <a href="#ae01d8ac86fed6a4cb22d0ee014f96ee5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eventually_persistent_engine.html#a6dcd3e76861f9f2c039a625a33a09eb8">handleDisconnect</a> (const void *cookie)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">protocol_binary_response_status&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eventually_persistent_engine.html#ad6a5b38b42f232b57418b862ceae54ae">stopFlusher</a> (const char **msg)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">protocol_binary_response_status&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_eventually_persistent_engine.html#a7c8ea99b597d583c1afb6caaccc84a33">startFlusher</a> (const char **msg)</td></tr>
@@ -195,16 +195,16 @@ Collaboration diagram for EventuallyPersistentEngine:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="item_8hh_source.html#l00096">Item::getCas()</a>, <a class="el" href="item_8hh_source.html#l00064">Item::getData()</a>, <a class="el" href="item_8hh_source.html#l00092">Item::getFlags()</a>, <a class="el" href="item_8hh_source.html#l00100">Item::setCas()</a>, <a class="el" href="ep__engine_8h_source.html#l00687">store()</a>, and <a class="el" href="ep__testsuite_8cc_source.html#l00052">vals</a>.</p>
+<p>References <a class="el" href="item_8hh_source.html#l00154">Item::getCas()</a>, <a class="el" href="item_8hh_source.html#l00122">Item::getData()</a>, <a class="el" href="item_8hh_source.html#l00150">Item::getFlags()</a>, <a class="el" href="item_8hh_source.html#l00158">Item::setCas()</a>, <a class="el" href="ep__engine_8h_source.html#l00722">store()</a>, and <a class="el" href="ep__testsuite_8cc_source.html#l00067">vals</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00112">EvpArithmetic()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00127">EvpArithmetic()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_eventually_persistent_engine_aa56df4fb762677e2e278c699f42d8742_cgraph.png" border="0" usemap="#class_eventually_persistent_engine_aa56df4fb762677e2e278c699f42d8742_cgraph_map" alt=""></div>
 <map name="class_eventually_persistent_engine_aa56df4fb762677e2e278c699f42d8742_cgraph_map" id="class_eventually_persistent_engine_aa56df4fb762677e2e278c699f42d8742_cgraph">
-<area shape="rect" id="node3" href="class_item.html#ace70aa3fc891b5371319eb1d07edfa44" title="Item::getCas" alt="" coords="1063,22,1169,50"/><area shape="rect" id="node5" href="class_item.html#a9db6711a31cdacddcba49525daaa69bc" title="Item::getData" alt="" coords="403,225,517,253"/><area shape="rect" id="node7" href="class_item.html#a553eb7e9f447ee7c17a3933e992962e3" title="Item::getFlags" alt="" coords="401,275,519,303"/><area shape="rect" id="node9" href="class_item.html#a4fb03efb2dd1e866009e9b6af4f08278" title="Item::setCas" alt="" coords="408,326,512,354"/><area shape="rect" id="node11" href="class_eventually_persistent_engine.html#afcbf29ea91f0193e711c5f63f7ebe90a" title="EventuallyPersistentEngine::store" alt="" coords="337,174,583,202"/><area shape="rect" id="node13" href="class_item.html#a1445a9ba65ccc4014b9b52774615c995" title="Append another item to this item." alt="" coords="724,225,836,253"/><area shape="rect" id="node18" href="class_item.html#a69a127532c48e377f418623b03be542c" title="Item::getKey" alt="" coords="1063,427,1169,455"/><area shape="rect" id="node20" href="class_item.html#a33942c720908bb11513178a6236b2073" title="Item::getNKey" alt="" coords="721,73,839,101"/><area shape="rect" id="node22" href="class_eventually_persistent_engine.html#a119a35f23e4bddfcbe50176a0d4056d0" title="EventuallyPersistentEngine::itemRelease" alt="" coords="633,123,927,151"/><area shape="rect" id="node24" href="class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9" title="Prepend another item to this item." alt="" coords="721,275,839,303"/><area shape="rect" id="node29" href="class_eventually_persistent_store.html#a262c5453ebb0a2e7d7e6a4bde2fcb429" title="EventuallyPersistentStore::set" alt="" coords="669,326,891,354"/><area shape="rect" id="node39" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a" title="Item::setVBucketId" alt="" coords="705,174,855,202"/><area shape="rect" id="node15" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5" title="Item::getValue" alt="" coords="1056,225,1176,253"/><area shape="rect" id="node26" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c" title="Item::getNBytes" alt="" coords="1051,275,1181,303"/><area shape="rect" id="node33" href="class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="977,326,1255,354"/><area shape="rect" id="node37" href="class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488" title="Item::getVBucketId" alt="" coords="1041,377,1191,405"/><area shape="rect" id="node35" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1305,326,1487,354"/></map>
+<area shape="rect" id="node3" href="class_item.html#ace70aa3fc891b5371319eb1d07edfa44" title="Item::getCas" alt="" coords="1063,22,1169,50"/><area shape="rect" id="node5" href="class_item.html#a9db6711a31cdacddcba49525daaa69bc" title="Item::getData" alt="" coords="403,225,517,253"/><area shape="rect" id="node7" href="class_item.html#a553eb7e9f447ee7c17a3933e992962e3" title="Item::getFlags" alt="" coords="401,275,519,303"/><area shape="rect" id="node9" href="class_item.html#a4fb03efb2dd1e866009e9b6af4f08278" title="Item::setCas" alt="" coords="408,326,512,354"/><area shape="rect" id="node11" href="class_eventually_persistent_engine.html#afcbf29ea91f0193e711c5f63f7ebe90a" title="EventuallyPersistentEngine::store" alt="" coords="337,174,583,202"/><area shape="rect" id="node13" href="class_item.html#a1445a9ba65ccc4014b9b52774615c995" title="Append another item to this item." alt="" coords="724,225,836,253"/><area shape="rect" id="node20" href="class_item.html#a69a127532c48e377f418623b03be542c" title="Item::getKey" alt="" coords="1063,427,1169,455"/><area shape="rect" id="node22" href="class_item.html#a33942c720908bb11513178a6236b2073" title="Item::getNKey" alt="" coords="721,73,839,101"/><area shape="rect" id="node24" href="class_eventually_persistent_engine.html#a119a35f23e4bddfcbe50176a0d4056d0" title="EventuallyPersistentEngine::itemRelease" alt="" coords="633,123,927,151"/><area shape="rect" id="node26" href="class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9" title="Prepend another item to this item." alt="" coords="721,275,839,303"/><area shape="rect" id="node32" href="class_eventually_persistent_store.html#a262c5453ebb0a2e7d7e6a4bde2fcb429" title="EventuallyPersistentStore::set" alt="" coords="669,326,891,354"/><area shape="rect" id="node42" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a" title="Item::setVBucketId" alt="" coords="705,174,855,202"/><area shape="rect" id="node15" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5" title="Item::getValue" alt="" coords="1056,225,1176,253"/><area shape="rect" id="node17" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a" title="Blob::New" alt="" coords="1072,174,1160,202"/><area shape="rect" id="node28" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c" title="Item::getNBytes" alt="" coords="1051,275,1181,303"/><area shape="rect" id="node36" href="class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="977,377,1255,405"/><area shape="rect" id="node40" href="class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488" title="Item::getVBucketId" alt="" coords="1041,326,1191,354"/><area shape="rect" id="node38" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1305,377,1487,405"/></map>
 </div>
 </p>
 
@@ -262,9 +262,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep__engine_8cc_source.html#l00589">getLogger()</a>.</p>
+<p>References <a class="el" href="ep__engine_8cc_source.html#l00604">getLogger()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00503">EvpGetTapIterator()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00518">EvpGetTapIterator()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -302,16 +302,16 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00225">EventuallyPersistentStore::deleteVBucket()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00239">EventuallyPersistentStore::deleteVBucket()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00346">deleteVBucket()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00361">deleteVBucket()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_eventually_persistent_engine_a6f703485e33d95adc2aab023c4989500_cgraph.png" border="0" usemap="#class_eventually_persistent_engine_a6f703485e33d95adc2aab023c4989500_cgraph_map" alt=""></div>
 <map name="class_eventually_persistent_engine_a6f703485e33d95adc2aab023c4989500_cgraph_map" id="class_eventually_persistent_engine_a6f703485e33d95adc2aab023c4989500_cgraph">
-<area shape="rect" id="node3" href="class_eventually_persistent_store.html#ab91fc6aee88dbb8abcb21538740cb98a" title="EventuallyPersistentStore::deleteVBucket" alt="" coords="363,30,661,58"/><area shape="rect" id="node5" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="725,5,907,33"/><area shape="rect" id="node7" href="class_v_bucket_map.html#ae61f8ada845bb69451c4eff7ec989133" title="VBucketMap::removeBucket" alt="" coords="711,55,921,83"/></map>
+<area shape="rect" id="node3" href="class_eventually_persistent_store.html#ab91fc6aee88dbb8abcb21538740cb98a" title="EventuallyPersistentStore::deleteVBucket" alt="" coords="363,55,661,83"/><area shape="rect" id="node5" href="class_atomic.html#a2015110afb1268ae3306cfc35f186607" title="Atomic::decr" alt="" coords="761,5,871,33"/><area shape="rect" id="node7" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="725,55,907,83"/><area shape="rect" id="node9" href="class_v_bucket_map.html#ab5c37008460a1cf992f22115ee4a05da" title="VBucketMap::removeBucket" alt="" coords="711,106,921,134"/></map>
 </div>
 </p>
 
@@ -341,9 +341,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep__engine_8h_source.html#l01239">stopReplication()</a>.</p>
+<p>References <a class="el" href="ep__engine_8h_source.html#l01295">stopReplication()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00047">EvpDestroy()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00062">EvpDestroy()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -390,9 +390,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00396">EventuallyPersistentStore::reset()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00411">EventuallyPersistentStore::reset()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00130">EvpFlush()</a>, and <a class="el" href="ep__engine_8h_source.html#l01066">tapNotify()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00145">EvpFlush()</a>, and <a class="el" href="ep__engine_8h_source.html#l01118">tapNotify()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -457,9 +457,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00239">EventuallyPersistentStore::get()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00253">EventuallyPersistentStore::get()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00083">EvpGet()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00098">EvpGet()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -496,9 +496,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep__engine_8h_source.html#l01833">info</a>.</p>
+<p>References <a class="el" href="ep__engine_8h_source.html#l01940">info</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00036">EvpGetInfo()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00051">EvpGetInfo()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -548,7 +548,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00093">EvpGetStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00108">EvpGetStats()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -594,9 +594,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00203">EventuallyPersistentStore::getVBucket()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00217">EventuallyPersistentStore::getVBucket()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00346">deleteVBucket()</a>, and <a class="el" href="ep__engine_8cc_source.html#l00249">getVbucket()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00361">deleteVBucket()</a>, and <a class="el" href="ep__engine_8cc_source.html#l00264">getVbucket()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -634,7 +634,18 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00518">EvpHandleDisconnect()</a>.</p>
+<p>References <a class="el" href="ep__engine_8cc_source.html#l00604">getLogger()</a>.</p>
+
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00533">EvpHandleDisconnect()</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dynsection">
+<div class="center"><img src="class_eventually_persistent_engine_a6dcd3e76861f9f2c039a625a33a09eb8_cgraph.png" border="0" usemap="#class_eventually_persistent_engine_a6dcd3e76861f9f2c039a625a33a09eb8_cgraph_map" alt=""></div>
+<map name="class_eventually_persistent_engine_a6dcd3e76861f9f2c039a625a33a09eb8_cgraph_map" id="class_eventually_persistent_engine_a6dcd3e76861f9f2c039a625a33a09eb8_cgraph">
+<area shape="rect" id="node3" href="common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="387,5,477,33"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -663,16 +674,16 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep__engine_8cc_source.html#l00518">EvpHandleDisconnect()</a>, <a class="el" href="ep_8cc_source.html#l00127">EventuallyPersistentStore::getFlusher()</a>, <a class="el" href="ep__engine_8cc_source.html#l00589">getLogger()</a>, <a class="el" href="ep__extension_8cc_source.html#l00064">GetlExtension::initialize()</a>, <a class="el" href="flusher_8hh_source.html#l00010">initializing</a>, <a class="el" href="ep__engine_8h_source.html#l00021">NUMBER_OF_SHARDS</a>, <a class="el" href="ep_8cc_source.html#l00396">EventuallyPersistentStore::reset()</a>, <a class="el" href="stored-value_8cc_source.html#l00050">HashTable::setDefaultNumBuckets()</a>, <a class="el" href="stored-value_8cc_source.html#l00059">HashTable::setDefaultNumLocks()</a>, <a class="el" href="stored-value_8cc_source.html#l00128">StoredValue::setMaxDataSize()</a>, <a class="el" href="ep__engine_8h_source.html#l01256">setTapPeer()</a>, and <a class="el" href="flusher_8cc_source.html#l00081">Flusher::state()</a>.</p>
+<p>References <a class="el" href="ep__engine_8cc_source.html#l00533">EvpHandleDisconnect()</a>, <a class="el" href="ep_8cc_source.html#l00141">EventuallyPersistentStore::getFlusher()</a>, <a class="el" href="ep__engine_8cc_source.html#l00604">getLogger()</a>, <a class="el" href="ep__extension_8cc_source.html#l00079">GetlExtension::initialize()</a>, <a class="el" href="flusher_8hh_source.html#l00010">initializing</a>, <a class="el" href="ep__engine_8h_source.html#l00022">NUMBER_OF_SHARDS</a>, <a class="el" href="ep_8cc_source.html#l00411">EventuallyPersistentStore::reset()</a>, <a class="el" href="stored-value_8cc_source.html#l00051">HashTable::setDefaultNumBuckets()</a>, <a class="el" href="stored-value_8cc_source.html#l00060">HashTable::setDefaultNumLocks()</a>, <a class="el" href="stored-value_8cc_source.html#l00137">HashTable::setDefaultStorageValueType()</a>, <a class="el" href="stored-value_8cc_source.html#l00179">StoredValue::setMaxDataSize()</a>, <a class="el" href="ep__engine_8h_source.html#l01267">setMinDataAge()</a>, <a class="el" href="ep__engine_8h_source.html#l01271">setQueueAgeCap()</a>, <a class="el" href="ep__engine_8h_source.html#l01312">setTapPeer()</a>, and <a class="el" href="flusher_8cc_source.html#l00095">Flusher::state()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00041">EvpInitialize()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00056">EvpInitialize()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_eventually_persistent_engine_a81c7ef1172d7ebcaf8f73333e0a92edd_cgraph.png" border="0" usemap="#class_eventually_persistent_engine_a81c7ef1172d7ebcaf8f73333e0a92edd_cgraph_map" alt=""></div>
 <map name="class_eventually_persistent_engine_a81c7ef1172d7ebcaf8f73333e0a92edd_cgraph_map" id="class_eventually_persistent_engine_a81c7ef1172d7ebcaf8f73333e0a92edd_cgraph">
-<area shape="rect" id="node3" href="ep__engine_8cc.html#a82ff2e3aefdcbcb76360cc46497f173e" title="EvpHandleDisconnect" alt="" coords="381,55,549,83"/><area shape="rect" id="node9" href="class_eventually_persistent_store.html#a64b0ddc0bd7bfb29906560523fe2ea4c" title="EventuallyPersistentStore::getFlusher" alt="" coords="329,106,601,134"/><area shape="rect" id="node11" href="common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="777,106,868,134"/><area shape="rect" id="node13" href="class_getl_extension.html#ac9658cbb0059aeaec5c93461dd158813" title="GetlExtension::initialize" alt="" coords="376,207,555,235"/><area shape="rect" id="node28" href="class_eventually_persistent_store.html#af0e3f187d43fd4501b9e17ab2e7e9fa1" title="EventuallyPersistentStore::reset" alt="" coords="348,258,583,286"/><area shape="rect" id="node36" href="class_hash_table.html#ad93b79271576e70a0b918bd1bd916ab2" title="Set the default number of hashtable buckets." alt="" coords="340,309,591,337"/><area shape="rect" id="node38" href="class_hash_table.html#af0cc96f6a1347c6259acbf0d7665f2c0" title="Set the default number of hashtable locks." alt="" coords="348,359,583,387"/><area shape="rect" id="node40" href="class_stored_value.html#a94ab12fe13dd29545cb0bdcd187f82ab" title="Set the default number of bytes available for stored values." alt="" coords="357,410,573,438"/><area shape="rect" id="node42" href="class_eventually_persistent_engine.html#ac0cf3c94869a08aca1374b5e6a6f6e7c" title="EventuallyPersistentEngine::setTapPeer" alt="" coords="324,461,607,489"/><area shape="rect" id="node44" href="class_flusher.html#a8993c1f2b50b26bbaed8b09febadc462" title="Flusher::state" alt="" coords="409,511,521,539"/><area shape="rect" id="node5" href="ep__engine_8cc.html#a6978613380551af0677b42c2d6472cce" title="Helper function to avoid typing in the long cast all over the place." alt="" coords="777,5,868,33"/><area shape="rect" id="node7" href="class_eventually_persistent_engine.html#a6dcd3e76861f9f2c039a625a33a09eb8" title="EventuallyPersistentEngine::handleDisconnect" alt="" coords="657,55,988,83"/><area shape="rect" id="node15" href="ep__extension_8cc.html#a1e778492ca19ac7f5abd6727017e15b0" title="ext_abort" alt="" coords="780,157,865,185"/><area shape="rect" id="node17" href="ep__extension_8cc.html#aaceffbd8ebf4b61bd9e0fcf4d2b82f97" title="ext_accept" alt="" coords="776,207,869,235"/><area shape="rect" id="node19" href="ep__extension_8cc.html#a175bbeb123b986f1ca0a2c5670aef2d3" title="ext_execute" alt="" coords="772,258,873,286"/><area shape="rect" id="node25" href="ep__extension_8cc.html#a3bbd40da21b5b24ce0d01fcfb23d1991" title="ext_get_name" alt="" coords="764,309,881,337"/><area shape="rect" id="node21" href="class_getl_extension.html#af6469c3d7355710b681bde491301502c" title="GetlExtension::executeGetl" alt="" coords="1037,233,1240,261"/><area shape="rect" id="node23" href="ep__extension_8cc.html#a9b2406cf62813f913c77db5a6631ad3a" title="getExtension" alt="" coords="1084,283,1193,311"/><area shape="rect" id="node30" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="728,359,917,387"/><area shape="rect" id="node32" href="class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="684,410,961,438"/><area shape="rect" id="node34" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1048,410,1229,438"/></map>
+<area shape="rect" id="node3" href="ep__engine_8cc.html#a82ff2e3aefdcbcb76360cc46497f173e" title="EvpHandleDisconnect" alt="" coords="403,55,571,83"/><area shape="rect" id="node9" href="common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="1136,106,1227,134"/><area shape="rect" id="node11" href="class_eventually_persistent_store.html#a64b0ddc0bd7bfb29906560523fe2ea4c" title="EventuallyPersistentStore::getFlusher" alt="" coords="351,207,623,235"/><area shape="rect" id="node14" href="class_getl_extension.html#ac9658cbb0059aeaec5c93461dd158813" title="GetlExtension::initialize" alt="" coords="397,258,576,286"/><area shape="rect" id="node29" href="class_eventually_persistent_store.html#af0e3f187d43fd4501b9e17ab2e7e9fa1" title="EventuallyPersistentStore::reset" alt="" coords="369,309,604,337"/><area shape="rect" id="node37" href="class_hash_table.html#ad93b79271576e70a0b918bd1bd916ab2" title="Set the default number of buckets." alt="" coords="361,359,612,387"/><area shape="rect" id="node39" href="class_hash_table.html#af0cc96f6a1347c6259acbf0d7665f2c0" title="Set the default number of locks." alt="" coords="369,410,604,438"/><area shape="rect" id="node41" href="class_hash_table.html#a394ba8fd6fc9b5e888824e69d95e845d" title="Set the stored value type by name." alt="" coords="344,461,629,489"/><area shape="rect" id="node43" href="class_stored_value.html#a94ab12fe13dd29545cb0bdcd187f82ab" title="Set the maximum amount of data this instance can store." alt="" coords="379,511,595,539"/><area shape="rect" id="node45" href="class_eventually_persistent_engine.html#aa7f57575fd7391195eec7a3321586d74" title="EventuallyPersistentEngine::setMinDataAge" alt="" coords="331,562,643,590"/><area shape="rect" id="node51" href="class_eventually_persistent_engine.html#a3d0385b884e54ae7d116de7cf73d326b" title="EventuallyPersistentEngine::setQueueAgeCap" alt="" coords="323,613,651,641"/><area shape="rect" id="node56" href="class_eventually_persistent_engine.html#ac0cf3c94869a08aca1374b5e6a6f6e7c" title="EventuallyPersistentEngine::setTapPeer" alt="" coords="345,663,628,691"/><area shape="rect" id="node58" href="class_flusher.html#a8993c1f2b50b26bbaed8b09febadc462" title="Flusher::state" alt="" coords="431,714,543,742"/><area shape="rect" id="node5" href="ep__engine_8cc.html#a6978613380551af0677b42c2d6472cce" title="Helper function to avoid typing in the long cast all over the place." alt="" coords="820,5,911,33"/><area shape="rect" id="node7" href="class_eventually_persistent_engine.html#a6dcd3e76861f9f2c039a625a33a09eb8" title="EventuallyPersistentEngine::handleDisconnect" alt="" coords="700,55,1031,83"/><area shape="rect" id="node16" href="ep__extension_8cc.html#a1e778492ca19ac7f5abd6727017e15b0" title="ext_abort" alt="" coords="823,207,908,235"/><area shape="rect" id="node18" href="ep__extension_8cc.html#aaceffbd8ebf4b61bd9e0fcf4d2b82f97" title="ext_accept" alt="" coords="819,258,912,286"/><area shape="rect" id="node20" href="ep__extension_8cc.html#a175bbeb123b986f1ca0a2c5670aef2d3" title="ext_execute" alt="" coords="815,309,916,337"/><area shape="rect" id="node26" href="ep__extension_8cc.html#a3bbd40da21b5b24ce0d01fcfb23d1991" title="ext_get_name" alt="" coords="807,359,924,387"/><area shape="rect" id="node22" href="class_getl_extension.html#af6469c3d7355710b681bde491301502c" title="GetlExtension::executeGetl" alt="" coords="1080,283,1283,311"/><area shape="rect" id="node24" href="ep__extension_8cc.html#a9b2406cf62813f913c77db5a6631ad3a" title="getExtension" alt="" coords="1127,334,1236,362"/><area shape="rect" id="node31" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="771,410,960,438"/><area shape="rect" id="node33" href="class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="727,461,1004,489"/><area shape="rect" id="node35" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1091,461,1272,489"/><area shape="rect" id="node47" href="class_eventually_persistent_store.html#ad61387f0c42959878403cbf880af3695" title="EventuallyPersistentStore::setMinDataAge" alt="" coords="715,562,1016,590"/><area shape="rect" id="node49" href="class_atomic.html#a4cb63ddba4b2a38c9afdbb05fa5113fb" title="Atomic::set" alt="" coords="1132,587,1231,615"/><area shape="rect" id="node53" href="class_eventually_persistent_store.html#a1b0a19aedfa7197e20abaab8b9342b79" title="EventuallyPersistentStore::setQueueAgeCap" alt="" coords="708,613,1023,641"/></map>
 </div>
 </p>
 
@@ -742,7 +753,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00053">EvpItemAllocate()</a>, and <a class="el" href="ep__engine_8h_source.html#l00871">walkTapQueue()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00068">EvpItemAllocate()</a>, and <a class="el" href="ep__engine_8h_source.html#l00912">walkTapQueue()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -786,7 +797,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00370">EventuallyPersistentStore::del()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00385">EventuallyPersistentStore::del()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -842,7 +853,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00066">EvpItemDelete()</a>, and <a class="el" href="ep__engine_8h_source.html#l01066">tapNotify()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00081">EvpItemDelete()</a>, and <a class="el" href="ep__engine_8h_source.html#l01118">tapNotify()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -880,7 +891,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00076">EvpItemRelease()</a>, and <a class="el" href="ep__engine_8h_source.html#l00687">store()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00091">EvpItemRelease()</a>, and <a class="el" href="ep__engine_8h_source.html#l00722">store()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -893,7 +904,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="ab402b319285b5490687e41980b0ae00b"></a><!-- doxytag: member="EventuallyPersistentEngine::queueBackfill" ref="ab402b319285b5490687e41980b0ae00b" args="(TapConnection *tc)" -->
+<a class="anchor" id="ae01d8ac86fed6a4cb22d0ee014f96ee5"></a><!-- doxytag: member="EventuallyPersistentEngine::queueBackfill" ref="ae01d8ac86fed6a4cb22d0ee014f96ee5" args="(TapConnection *tc, const void *tok)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -901,9 +912,18 @@ Here is the caller graph for this function:</div>
           <td class="memname">void EventuallyPersistentEngine::queueBackfill </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_tap_connection.html">TapConnection</a> *&nbsp;</td>
-          <td class="paramname"> <em>tc</em></td>
-          <td>&nbsp;)&nbsp;</td>
+          <td class="paramname"> <em>tc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const void *&nbsp;</td>
+          <td class="paramname"> <em>tok</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
         </tr>
       </table>
 </div>
@@ -912,15 +932,15 @@ Here is the caller graph for this function:</div>
 <p>Visit the objects and add them to the tap connecitons queue. </p>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>this code should honor the backfill time! </dd></dl>
 
-<p>References <a class="el" href="ep__engine_8cc_source.html#l00654">launch_backfill_thread()</a>.</p>
+<p>References <a class="el" href="ep__engine_8cc_source.html#l00691">launch_backfill_thread()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00871">walkTapQueue()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00912">walkTapQueue()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
-<div class="center"><img src="class_eventually_persistent_engine_ab402b319285b5490687e41980b0ae00b_cgraph.png" border="0" usemap="#class_eventually_persistent_engine_ab402b319285b5490687e41980b0ae00b_cgraph_map" alt=""></div>
-<map name="class_eventually_persistent_engine_ab402b319285b5490687e41980b0ae00b_cgraph_map" id="class_eventually_persistent_engine_ab402b319285b5490687e41980b0ae00b_cgraph">
+<div class="center"><img src="class_eventually_persistent_engine_ae01d8ac86fed6a4cb22d0ee014f96ee5_cgraph.png" border="0" usemap="#class_eventually_persistent_engine_ae01d8ac86fed6a4cb22d0ee014f96ee5_cgraph_map" alt=""></div>
+<map name="class_eventually_persistent_engine_ae01d8ac86fed6a4cb22d0ee014f96ee5_cgraph_map" id="class_eventually_persistent_engine_ae01d8ac86fed6a4cb22d0ee014f96ee5_cgraph">
 <area shape="rect" id="node3" href="ep__engine_8cc.html#a55ebba1dc1503a6cf1eea8f650cdf44c" title="launch_backfill_thread" alt="" coords="357,30,531,58"/><area shape="rect" id="node5" href="class_back_fill_visitor.html#a4b3a67c5e1ca6b986b1ee8f6a34dd2e3" title="BackFillVisitor::apply" alt="" coords="613,5,773,33"/><area shape="rect" id="node7" href="class_eventually_persistent_store.html#a403a339804475ad6a7cdef3259179b2f" title="EventuallyPersistentStore::visit" alt="" coords="579,55,808,83"/><area shape="rect" id="node9" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="867,5,1048,33"/><area shape="rect" id="node11" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="863,55,1052,83"/><area shape="rect" id="node13" href="class_v_bucket_visitor.html#a0e11afbfcf63018528ade208d9852041" title="Begin visiting a bucket." alt="" coords="856,106,1059,134"/></map>
 </div>
 </p>
@@ -928,8 +948,8 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dynsection">
-<div class="center"><img src="class_eventually_persistent_engine_ab402b319285b5490687e41980b0ae00b_icgraph.png" border="0" usemap="#class_eventually_persistent_engine_ab402b319285b5490687e41980b0ae00b_icgraph_map" alt=""></div>
-<map name="class_eventually_persistent_engine_ab402b319285b5490687e41980b0ae00b_icgraph_map" id="class_eventually_persistent_engine_ab402b319285b5490687e41980b0ae00b_icgraph">
+<div class="center"><img src="class_eventually_persistent_engine_ae01d8ac86fed6a4cb22d0ee014f96ee5_icgraph.png" border="0" usemap="#class_eventually_persistent_engine_ae01d8ac86fed6a4cb22d0ee014f96ee5_icgraph_map" alt=""></div>
+<map name="class_eventually_persistent_engine_ae01d8ac86fed6a4cb22d0ee014f96ee5_icgraph_map" id="class_eventually_persistent_engine_ae01d8ac86fed6a4cb22d0ee014f96ee5_icgraph">
 <area shape="rect" id="node3" href="class_eventually_persistent_engine.html#af7a86dbf9bcaf99ec769734c26b94f7b" title="EventuallyPersistentEngine::walkTapQueue" alt="" coords="357,5,667,33"/><area shape="rect" id="node5" href="ep__engine_8cc.html#acccf4678fa01a9df3d38e5d3e8e50e20" title="EvpTapIterator" alt="" coords="716,5,833,33"/><area shape="rect" id="node7" href="ep__engine_8cc.html#a4850045a6e5457497970116c2645e682" title="EvpGetTapIterator" alt="" coords="883,5,1024,33"/></map>
 </div>
 </p>
@@ -952,9 +972,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00360">EventuallyPersistentStore::resetStats()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00375">EventuallyPersistentStore::resetStats()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00136">EvpResetStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00151">EvpResetStats()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -992,9 +1012,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00352">EventuallyPersistentStore::setMinDataAge()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00367">EventuallyPersistentStore::setMinDataAge()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00174">setFlushParam()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00421">initialize()</a>, and <a class="el" href="ep__engine_8cc_source.html#l00189">setFlushParam()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1010,7 +1030,7 @@ Here is the caller graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_eventually_persistent_engine_aa7f57575fd7391195eec7a3321586d74_icgraph.png" border="0" usemap="#class_eventually_persistent_engine_aa7f57575fd7391195eec7a3321586d74_icgraph_map" alt=""></div>
 <map name="class_eventually_persistent_engine_aa7f57575fd7391195eec7a3321586d74_icgraph_map" id="class_eventually_persistent_engine_aa7f57575fd7391195eec7a3321586d74_icgraph">
-<area shape="rect" id="node3" href="ep__engine_8cc.html#a27f3ec2dd08be4cf7886d6181cb1ebf5" title="setFlushParam" alt="" coords="368,5,488,33"/><area shape="rect" id="node5" href="ep__engine_8cc.html#a1422921e437cea5bf774068e5b5fe735" title="setParam" alt="" coords="537,5,620,33"/><area shape="rect" id="node7" href="ep__engine_8cc.html#acb3114cabb056ea53ec6be27f400a846" title="EvpUnknownCommand" alt="" coords="669,5,848,33"/></map>
+<area shape="rect" id="node3" href="class_eventually_persistent_engine.html#a81c7ef1172d7ebcaf8f73333e0a92edd" title="EventuallyPersistentEngine::initialize" alt="" coords="368,5,637,33"/><area shape="rect" id="node7" href="ep__engine_8cc.html#a27f3ec2dd08be4cf7886d6181cb1ebf5" title="setFlushParam" alt="" coords="443,55,563,83"/><area shape="rect" id="node5" href="ep__engine_8cc.html#a51d4c11d48d7ce41ae6c299da78beb07" title="EvpInitialize" alt="" coords="687,5,788,33"/><area shape="rect" id="node9" href="ep__engine_8cc.html#a1422921e437cea5bf774068e5b5fe735" title="setParam" alt="" coords="696,55,779,83"/><area shape="rect" id="node11" href="ep__engine_8cc.html#acb3114cabb056ea53ec6be27f400a846" title="EvpUnknownCommand" alt="" coords="837,55,1016,83"/></map>
 </div>
 </p>
 
@@ -1032,9 +1052,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00356">EventuallyPersistentStore::setQueueAgeCap()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00371">EventuallyPersistentStore::setQueueAgeCap()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00174">setFlushParam()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00421">initialize()</a>, and <a class="el" href="ep__engine_8cc_source.html#l00189">setFlushParam()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1050,7 +1070,7 @@ Here is the caller graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_eventually_persistent_engine_a3d0385b884e54ae7d116de7cf73d326b_icgraph.png" border="0" usemap="#class_eventually_persistent_engine_a3d0385b884e54ae7d116de7cf73d326b_icgraph_map" alt=""></div>
 <map name="class_eventually_persistent_engine_a3d0385b884e54ae7d116de7cf73d326b_icgraph_map" id="class_eventually_persistent_engine_a3d0385b884e54ae7d116de7cf73d326b_icgraph">
-<area shape="rect" id="node3" href="ep__engine_8cc.html#a27f3ec2dd08be4cf7886d6181cb1ebf5" title="setFlushParam" alt="" coords="381,5,501,33"/><area shape="rect" id="node5" href="ep__engine_8cc.html#a1422921e437cea5bf774068e5b5fe735" title="setParam" alt="" coords="551,5,633,33"/><area shape="rect" id="node7" href="ep__engine_8cc.html#acb3114cabb056ea53ec6be27f400a846" title="EvpUnknownCommand" alt="" coords="683,5,861,33"/></map>
+<area shape="rect" id="node3" href="class_eventually_persistent_engine.html#a81c7ef1172d7ebcaf8f73333e0a92edd" title="EventuallyPersistentEngine::initialize" alt="" coords="381,5,651,33"/><area shape="rect" id="node7" href="ep__engine_8cc.html#a27f3ec2dd08be4cf7886d6181cb1ebf5" title="setFlushParam" alt="" coords="456,55,576,83"/><area shape="rect" id="node5" href="ep__engine_8cc.html#a51d4c11d48d7ce41ae6c299da78beb07" title="EvpInitialize" alt="" coords="700,5,801,33"/><area shape="rect" id="node9" href="ep__engine_8cc.html#a1422921e437cea5bf774068e5b5fe735" title="setParam" alt="" coords="709,55,792,83"/><area shape="rect" id="node11" href="ep__engine_8cc.html#acb3114cabb056ea53ec6be27f400a846" title="EvpUnknownCommand" alt="" coords="851,55,1029,83"/></map>
 </div>
 </p>
 
@@ -1072,7 +1092,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00409">initialize()</a>, and <a class="el" href="ep__engine_8cc_source.html#l00158">setTapParam()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00421">initialize()</a>, and <a class="el" href="ep__engine_8cc_source.html#l00173">setTapParam()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1101,9 +1121,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8hh_source.html#l00229">EventuallyPersistentStore::setTxnSize()</a>.</p>
+<p>References <a class="el" href="ep_8hh_source.html#l00243">EventuallyPersistentStore::setTxnSize()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00174">setFlushParam()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00189">setFlushParam()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1150,9 +1170,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00207">EventuallyPersistentStore::setVBucketState()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00221">EventuallyPersistentStore::setVBucketState()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00288">setVbucket()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00303">setVbucket()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1190,9 +1210,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00127">EventuallyPersistentStore::getFlusher()</a>, <a class="el" href="ep__engine_8cc_source.html#l00589">getLogger()</a>, <a class="el" href="ep_8cc_source.html#l00147">EventuallyPersistentStore::resumeFlusher()</a>, and <a class="el" href="flusher_8cc_source.html#l00077">Flusher::stateName()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00141">EventuallyPersistentStore::getFlusher()</a>, <a class="el" href="ep__engine_8cc_source.html#l00604">getLogger()</a>, <a class="el" href="ep_8cc_source.html#l00161">EventuallyPersistentStore::resumeFlusher()</a>, and <a class="el" href="flusher_8cc_source.html#l00091">Flusher::stateName()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00147">startFlusher()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00162">startFlusher()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1229,9 +1249,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep__engine_8cc_source.html#l00589">getLogger()</a>.</p>
+<p>References <a class="el" href="ep__engine_8cc_source.html#l00604">getLogger()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00393">EvpUnknownCommand()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00408">EvpUnknownCommand()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1269,9 +1289,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep_8cc_source.html#l00127">EventuallyPersistentStore::getFlusher()</a>, <a class="el" href="ep__engine_8cc_source.html#l00589">getLogger()</a>, <a class="el" href="ep_8cc_source.html#l00142">EventuallyPersistentStore::pauseFlusher()</a>, and <a class="el" href="flusher_8cc_source.html#l00077">Flusher::stateName()</a>.</p>
+<p>References <a class="el" href="ep_8cc_source.html#l00141">EventuallyPersistentStore::getFlusher()</a>, <a class="el" href="ep__engine_8cc_source.html#l00604">getLogger()</a>, <a class="el" href="ep_8cc_source.html#l00156">EventuallyPersistentStore::pauseFlusher()</a>, and <a class="el" href="flusher_8cc_source.html#l00091">Flusher::stateName()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00142">stopFlusher()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00157">stopFlusher()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1308,9 +1328,9 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep__engine_8cc_source.html#l00589">getLogger()</a>.</p>
+<p>References <a class="el" href="ep__engine_8cc_source.html#l00604">getLogger()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00586">destroy()</a>, and <a class="el" href="ep__engine_8cc_source.html#l00393">EvpUnknownCommand()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00621">destroy()</a>, and <a class="el" href="ep__engine_8cc_source.html#l00408">EvpUnknownCommand()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1375,16 +1395,16 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="item_8hh_source.html#l00114">Item::append()</a>, <a class="el" href="item_8hh_source.html#l00096">Item::getCas()</a>, <a class="el" href="item_8hh_source.html#l00072">Item::getKey()</a>, <a class="el" href="item_8hh_source.html#l00080">Item::getNKey()</a>, <a class="el" href="ep__engine_8h_source.html#l00638">itemRelease()</a>, <a class="el" href="item_8hh_source.html#l00131">Item::prepend()</a>, <a class="el" href="ep_8cc_source.html#l00164">EventuallyPersistentStore::set()</a>, and <a class="el" href="item_8hh_source.html#l00146">Item::setVBucketId()</a>.</p>
+<p>References <a class="el" href="item_8hh_source.html#l00172">Item::append()</a>, <a class="el" href="item_8hh_source.html#l00154">Item::getCas()</a>, <a class="el" href="item_8hh_source.html#l00130">Item::getKey()</a>, <a class="el" href="item_8hh_source.html#l00138">Item::getNKey()</a>, <a class="el" href="ep__engine_8h_source.html#l00673">itemRelease()</a>, <a class="el" href="item_8hh_source.html#l00185">Item::prepend()</a>, <a class="el" href="ep_8cc_source.html#l00178">EventuallyPersistentStore::set()</a>, and <a class="el" href="item_8hh_source.html#l00196">Item::setVBucketId()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00786">arithmetic()</a>, and <a class="el" href="ep__engine_8cc_source.html#l00102">EvpStore()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00827">arithmetic()</a>, and <a class="el" href="ep__engine_8cc_source.html#l00117">EvpStore()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_eventually_persistent_engine_afcbf29ea91f0193e711c5f63f7ebe90a_cgraph.png" border="0" usemap="#class_eventually_persistent_engine_afcbf29ea91f0193e711c5f63f7ebe90a_cgraph_map" alt=""></div>
 <map name="class_eventually_persistent_engine_afcbf29ea91f0193e711c5f63f7ebe90a_cgraph_map" id="class_eventually_persistent_engine_afcbf29ea91f0193e711c5f63f7ebe90a_cgraph">
-<area shape="rect" id="node3" href="class_item.html#a1445a9ba65ccc4014b9b52774615c995" title="Append another item to this item." alt="" coords="393,5,505,33"/><area shape="rect" id="node7" href="class_item.html#ace70aa3fc891b5371319eb1d07edfa44" title="Item::getCas" alt="" coords="732,106,839,134"/><area shape="rect" id="node9" href="class_item.html#a69a127532c48e377f418623b03be542c" title="Item::getKey" alt="" coords="732,157,839,185"/><area shape="rect" id="node11" href="class_item.html#a33942c720908bb11513178a6236b2073" title="Item::getNKey" alt="" coords="391,258,508,286"/><area shape="rect" id="node13" href="class_eventually_persistent_engine.html#a119a35f23e4bddfcbe50176a0d4056d0" title="EventuallyPersistentEngine::itemRelease" alt="" coords="303,309,596,337"/><area shape="rect" id="node15" href="class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9" title="Prepend another item to this item." alt="" coords="391,55,508,83"/><area shape="rect" id="node20" href="class_eventually_persistent_store.html#a262c5453ebb0a2e7d7e6a4bde2fcb429" title="EventuallyPersistentStore::set" alt="" coords="339,207,560,235"/><area shape="rect" id="node30" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a" title="Item::setVBucketId" alt="" coords="375,359,524,387"/><area shape="rect" id="node5" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5" title="Item::getValue" alt="" coords="725,5,845,33"/><area shape="rect" id="node17" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c" title="Item::getNBytes" alt="" coords="720,55,851,83"/><area shape="rect" id="node24" href="class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="647,207,924,235"/><area shape="rect" id="node28" href="class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488" title="Item::getVBucketId" alt="" coords="711,258,860,286"/><area shape="rect" id="node26" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="975,207,1156,235"/></map>
+<area shape="rect" id="node3" href="class_item.html#a1445a9ba65ccc4014b9b52774615c995" title="Append another item to this item." alt="" coords="393,55,505,83"/><area shape="rect" id="node9" href="class_item.html#ace70aa3fc891b5371319eb1d07edfa44" title="Item::getCas" alt="" coords="732,157,839,185"/><area shape="rect" id="node11" href="class_item.html#a69a127532c48e377f418623b03be542c" title="Item::getKey" alt="" coords="732,207,839,235"/><area shape="rect" id="node13" href="class_item.html#a33942c720908bb11513178a6236b2073" title="Item::getNKey" alt="" coords="391,309,508,337"/><area shape="rect" id="node15" href="class_eventually_persistent_engine.html#a119a35f23e4bddfcbe50176a0d4056d0" title="EventuallyPersistentEngine::itemRelease" alt="" coords="303,359,596,387"/><area shape="rect" id="node17" href="class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9" title="Prepend another item to this item." alt="" coords="391,106,508,134"/><area shape="rect" id="node23" href="class_eventually_persistent_store.html#a262c5453ebb0a2e7d7e6a4bde2fcb429" title="EventuallyPersistentStore::set" alt="" coords="339,258,560,286"/><area shape="rect" id="node33" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a" title="Item::setVBucketId" alt="" coords="375,410,524,438"/><area shape="rect" id="node5" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5" title="Item::getValue" alt="" coords="725,55,845,83"/><area shape="rect" id="node7" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a" title="Blob::New" alt="" coords="741,5,829,33"/><area shape="rect" id="node19" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c" title="Item::getNBytes" alt="" coords="720,106,851,134"/><area shape="rect" id="node27" href="class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="647,309,924,337"/><area shape="rect" id="node31" href="class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488" title="Item::getVBucketId" alt="" coords="711,258,860,286"/><area shape="rect" id="node29" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="975,309,1156,337"/></map>
 </div>
 </p>
 
@@ -1502,16 +1522,16 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep__engine_8h_source.html#l00857">flush()</a>, <a class="el" href="ep__engine_8h_source.html#l00613">itemDelete()</a>, <a class="el" href="ep_8cc_source.html#l00164">EventuallyPersistentStore::set()</a>, <a class="el" href="item_8hh_source.html#l00146">Item::setVBucketId()</a>, and <a class="el" href="ep_8cc_source.html#l00207">EventuallyPersistentStore::setVBucketState()</a>.</p>
+<p>References <a class="el" href="ep__engine_8h_source.html#l00898">flush()</a>, <a class="el" href="ep__engine_8h_source.html#l00648">itemDelete()</a>, <a class="el" href="item_8hh_source.html#l00020">Blob::New()</a>, <a class="el" href="ep_8cc_source.html#l00178">EventuallyPersistentStore::set()</a>, <a class="el" href="item_8hh_source.html#l00196">Item::setVBucketId()</a>, and <a class="el" href="ep_8cc_source.html#l00221">EventuallyPersistentStore::setVBucketState()</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00469">EvpTapNotify()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00484">EvpTapNotify()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_eventually_persistent_engine_ac342b14e74c4352f55ac1ca5f64e0f63_cgraph.png" border="0" usemap="#class_eventually_persistent_engine_ac342b14e74c4352f55ac1ca5f64e0f63_cgraph_map" alt=""></div>
 <map name="class_eventually_persistent_engine_ac342b14e74c4352f55ac1ca5f64e0f63_cgraph_map" id="class_eventually_persistent_engine_ac342b14e74c4352f55ac1ca5f64e0f63_cgraph">
-<area shape="rect" id="node3" href="class_eventually_persistent_engine.html#aba27758916a7a98512e82de4fd8aeee3" title="EventuallyPersistentEngine::flush" alt="" coords="361,18,607,46"/><area shape="rect" id="node13" href="class_eventually_persistent_engine.html#a501522bf0f7872a80960ffb25e43efcb" title="EventuallyPersistentEngine::itemDelete" alt="" coords="341,94,627,122"/><area shape="rect" id="node15" href="class_eventually_persistent_store.html#a262c5453ebb0a2e7d7e6a4bde2fcb429" title="EventuallyPersistentStore::set" alt="" coords="373,145,595,173"/><area shape="rect" id="node24" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a" title="Item::setVBucketId" alt="" coords="409,195,559,223"/><area shape="rect" id="node26" href="class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="329,309,639,337"/><area shape="rect" id="node5" href="class_eventually_persistent_store.html#af0e3f187d43fd4501b9e17ab2e7e9fa1" title="EventuallyPersistentStore::reset" alt="" coords="688,5,923,33"/><area shape="rect" id="node7" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="1016,5,1205,33"/><area shape="rect" id="node9" href="class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="972,55,1249,83"/><area shape="rect" id="node11" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1300,157,1481,185"/><area shape="rect" id="node17" href="class_item.html#ace70aa3fc891b5371319eb1d07edfa44" title="Item::getCas" alt="" coords="752,106,859,134"/><area shape="rect" id="node19" href="class_item.html#a69a127532c48e377f418623b03be542c" title="Item::getKey" alt="" coords="752,157,859,185"/><area shape="rect" id="node22" href="class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488" title="Item::getVBucketId" alt="" coords="731,207,880,235"/><area shape="rect" id="node28" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5" title="VBucketMap::addBucket" alt="" coords="712,309,899,337"/><area shape="rect" id="node31" href="class_dispatcher.html#a3a657220baa43a9cde1a4a938d0bc8b5" title="Schedule a job to run." alt="" coords="724,359,887,387"/><area shape="rect" id="node35" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db" title="VBucket::toString" alt="" coords="735,410,876,438"/><area shape="rect" id="node33" href="class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4" title="SyncObject::notify" alt="" coords="1039,359,1183,387"/></map>
+<area shape="rect" id="node3" href="class_eventually_persistent_engine.html#aba27758916a7a98512e82de4fd8aeee3" title="EventuallyPersistentEngine::flush" alt="" coords="361,5,607,33"/><area shape="rect" id="node13" href="class_eventually_persistent_engine.html#a501522bf0f7872a80960ffb25e43efcb" title="EventuallyPersistentEngine::itemDelete" alt="" coords="341,55,627,83"/><area shape="rect" id="node15" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a" title="Blob::New" alt="" coords="440,106,528,134"/><area shape="rect" id="node17" href="class_eventually_persistent_store.html#a262c5453ebb0a2e7d7e6a4bde2fcb429" title="EventuallyPersistentStore::set" alt="" coords="373,157,595,185"/><area shape="rect" id="node26" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a" title="Item::setVBucketId" alt="" coords="409,207,559,235"/><area shape="rect" id="node28" href="class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="329,309,639,337"/><area shape="rect" id="node5" href="class_eventually_persistent_store.html#af0e3f187d43fd4501b9e17ab2e7e9fa1" title="EventuallyPersistentStore::reset" alt="" coords="688,5,923,33"/><area shape="rect" id="node7" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="1016,5,1205,33"/><area shape="rect" id="node9" href="class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="972,55,1249,83"/><area shape="rect" id="node11" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1300,157,1481,185"/><area shape="rect" id="node19" href="class_item.html#ace70aa3fc891b5371319eb1d07edfa44" title="Item::getCas" alt="" coords="752,106,859,134"/><area shape="rect" id="node21" href="class_item.html#a69a127532c48e377f418623b03be542c" title="Item::getKey" alt="" coords="752,157,859,185"/><area shape="rect" id="node24" href="class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488" title="Item::getVBucketId" alt="" coords="731,207,880,235"/><area shape="rect" id="node30" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5" title="VBucketMap::addBucket" alt="" coords="712,309,899,337"/><area shape="rect" id="node33" href="class_dispatcher.html#a3a657220baa43a9cde1a4a938d0bc8b5" title="Schedule a job to run." alt="" coords="724,359,887,387"/><area shape="rect" id="node37" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db" title="VBucket::toString" alt="" coords="735,410,876,438"/><area shape="rect" id="node35" href="class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4" title="SyncObject::notify" alt="" coords="1039,359,1183,387"/></map>
 </div>
 </p>
 
@@ -1587,16 +1607,16 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>References <a class="el" href="ep__engine_8h_source.html#l00157">TapVBucketEvent::event</a>, <a class="el" href="ep_8hh_source.html#l00056">QueuedItem::getKey()</a>, <a class="el" href="ep__engine_8cc_source.html#l00589">getLogger()</a>, <a class="el" href="ep_8hh_source.html#l00057">QueuedItem::getVBucketId()</a>, <a class="el" href="ep__engine_8h_source.html#l00592">itemAllocate()</a>, <a class="el" href="ep__engine_8cc_source.html#l00670">queueBackfill()</a>, <a class="el" href="ep_8cc_source.html#l00207">EventuallyPersistentStore::setVBucketState()</a>, <a class="el" href="ep__engine_8h_source.html#l00159">TapVBucketEvent::state</a>, <a class="el" href="locks_8hh_source.html#l00034">LockHolder::unlock()</a>, and <a class="el" href="ep__engine_8h_source.html#l00158">TapVBucketEvent::vbucket</a>.</p>
+<p>References <a class="el" href="ep__engine_8h_source.html#l00166">TapVBucketEvent::event</a>, <a class="el" href="ep_8hh_source.html#l00068">QueuedItem::getKey()</a>, <a class="el" href="ep__engine_8cc_source.html#l00604">getLogger()</a>, <a class="el" href="ep_8hh_source.html#l00069">QueuedItem::getVBucketId()</a>, <a class="el" href="ep__engine_8h_source.html#l00627">itemAllocate()</a>, <a class="el" href="ep__engine_8cc_source.html#l00707">queueBackfill()</a>, <a class="el" href="ep_8cc_source.html#l00221">EventuallyPersistentStore::setVBucketState()</a>, <a class="el" href="ep__engine_8h_source.html#l00168">TapVBucketEvent::state</a>, <a class="el" href="locks_8hh_source.html#l00034">LockHolder::unlock()</a>, and <a class="el" href="ep__engine_8h_source.html#l00167">TapVBucketEvent::vbucket</a>.</p>
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00494">EvpTapIterator()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00509">EvpTapIterator()</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dynsection">
 <div class="center"><img src="class_eventually_persistent_engine_af7a86dbf9bcaf99ec769734c26b94f7b_cgraph.png" border="0" usemap="#class_eventually_persistent_engine_af7a86dbf9bcaf99ec769734c26b94f7b_cgraph_map" alt=""></div>
 <map name="class_eventually_persistent_engine_af7a86dbf9bcaf99ec769734c26b94f7b_cgraph_map" id="class_eventually_persistent_engine_af7a86dbf9bcaf99ec769734c26b94f7b_cgraph">
-<area shape="rect" id="node3" href="class_queued_item.html#a86a0531b1aab718ce060da1988a2d53d" title="QueuedItem::getKey" alt="" coords="439,5,599,33"/><area shape="rect" id="node5" href="common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="473,55,564,83"/><area shape="rect" id="node7" href="class_queued_item.html#afbe4b8470c4b7a8b96a9b7fdccbd3e47" title="QueuedItem::getVBucketId" alt="" coords="417,106,620,134"/><area shape="rect" id="node9" href="class_eventually_persistent_engine.html#a30caa820a0590133a8329013d4f4e31f" title="EventuallyPersistentEngine::itemAllocate" alt="" coords="371,157,667,185"/><area shape="rect" id="node11" href="class_eventually_persistent_engine.html#ab402b319285b5490687e41980b0ae00b" title="Visit the objects and add them to the tap connecitons queue." alt="" coords="367,207,671,235"/><area shape="rect" id="node25" href="class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="364,258,673,286"/><area shape="rect" id="node36" href="class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="LockHolder::unlock" alt="" coords="444,334,593,362"/><area shape="rect" id="node13" href="ep__engine_8cc.html#a55ebba1dc1503a6cf1eea8f650cdf44c" title="launch_backfill_thread" alt="" coords="729,131,903,159"/><area shape="rect" id="node15" href="class_back_fill_visitor.html#a4b3a67c5e1ca6b986b1ee8f6a34dd2e3" title="BackFillVisitor::apply" alt="" coords="992,106,1152,134"/><area shape="rect" id="node17" href="class_eventually_persistent_store.html#a403a339804475ad6a7cdef3259179b2f" title="EventuallyPersistentStore::visit" alt="" coords="957,157,1187,185"/><area shape="rect" id="node19" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1245,245,1427,273"/><area shape="rect" id="node21" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="1241,182,1431,210"/><area shape="rect" id="node23" href="class_v_bucket_visitor.html#a0e11afbfcf63018528ade208d9852041" title="Begin visiting a bucket." alt="" coords="1235,131,1437,159"/><area shape="rect" id="node27" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5" title="VBucketMap::addBucket" alt="" coords="723,334,909,362"/><area shape="rect" id="node30" href="class_dispatcher.html#a3a657220baa43a9cde1a4a938d0bc8b5" title="Schedule a job to run." alt="" coords="735,182,897,210"/><area shape="rect" id="node34" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db" title="VBucket::toString" alt="" coords="745,233,887,261"/><area shape="rect" id="node32" href="class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4" title="SyncObject::notify" alt="" coords="1000,207,1144,235"/><area shape="rect" id="node38" href="class_mutex.html#ad43ff97f225007f2fbb0da2e98676b07" title="Mutex::release" alt="" coords="756,385,876,413"/></map>
+<area shape="rect" id="node3" href="class_queued_item.html#a86a0531b1aab718ce060da1988a2d53d" title="QueuedItem::getKey" alt="" coords="439,5,599,33"/><area shape="rect" id="node5" href="common_8hh.html#a176d29eac969ba0153b53f4e87e1ad26" title="getLogger" alt="" coords="473,55,564,83"/><area shape="rect" id="node7" href="class_queued_item.html#afbe4b8470c4b7a8b96a9b7fdccbd3e47" title="QueuedItem::getVBucketId" alt="" coords="417,106,620,134"/><area shape="rect" id="node9" href="class_eventually_persistent_engine.html#a30caa820a0590133a8329013d4f4e31f" title="EventuallyPersistentEngine::itemAllocate" alt="" coords="371,157,667,185"/><area shape="rect" id="node11" href="class_eventually_persistent_engine.html#ae01d8ac86fed6a4cb22d0ee014f96ee5" title="Visit the objects and add them to the tap connecitons queue." alt="" coords="367,207,671,235"/><area shape="rect" id="node25" href="class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="364,258,673,286"/><area shape="rect" id="node36" href="class_lock_holder.html#a6429be45192a854333d64d25eeeff049" title="LockHolder::unlock" alt="" coords="444,334,593,362"/><area shape="rect" id="node13" href="ep__engine_8cc.html#a55ebba1dc1503a6cf1eea8f650cdf44c" title="launch_backfill_thread" alt="" coords="729,131,903,159"/><area shape="rect" id="node15" href="class_back_fill_visitor.html#a4b3a67c5e1ca6b986b1ee8f6a34dd2e3" title="BackFillVisitor::apply" alt="" coords="992,106,1152,134"/><area shape="rect" id="node17" href="class_eventually_persistent_store.html#a403a339804475ad6a7cdef3259179b2f" title="EventuallyPersistentStore::visit" alt="" coords="957,157,1187,185"/><area shape="rect" id="node19" href="class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1245,245,1427,273"/><area shape="rect" id="node21" href="class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="1241,182,1431,210"/><area shape="rect" id="node23" href="class_v_bucket_visitor.html#a0e11afbfcf63018528ade208d9852041" title="Begin visiting a bucket." alt="" coords="1235,131,1437,159"/><area shape="rect" id="node27" href="class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5" title="VBucketMap::addBucket" alt="" coords="723,334,909,362"/><area shape="rect" id="node30" href="class_dispatcher.html#a3a657220baa43a9cde1a4a938d0bc8b5" title="Schedule a job to run." alt="" coords="735,182,897,210"/><area shape="rect" id="node34" href="class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db" title="VBucket::toString" alt="" coords="745,233,887,261"/><area shape="rect" id="node32" href="class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4" title="SyncObject::notify" alt="" coords="1000,207,1144,235"/><area shape="rect" id="node38" href="class_mutex.html#ad43ff97f225007f2fbb0da2e98676b07" title="Mutex::release" alt="" coords="756,385,876,413"/></map>
 </div>
 </p>
 
@@ -1726,7 +1746,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l01274">getInfo()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l01330">getInfo()</a>.</p>
 
 </div>
 </div>
@@ -1749,7 +1769,7 @@ Here is the caller graph for this function:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:35 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

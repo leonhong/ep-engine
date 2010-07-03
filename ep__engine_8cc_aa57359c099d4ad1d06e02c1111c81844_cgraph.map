@@ -1,20 +1,21 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$ep__engine_8cc.html#a6978613380551af0677b42c2d6472cce" title="Helper function to avoid typing in the long cast all over the place." alt="" coords="255,94,345,122"/>
-<area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#ac342b14e74c4352f55ac1ca5f64e0f63" title="EventuallyPersistentEngine::tapNotify" alt="" coords="164,145,436,173"/>
-<area shape="rect" id="node7" href="$class_eventually_persistent_engine.html#aba27758916a7a98512e82de4fd8aeee3" title="EventuallyPersistentEngine::flush" alt="" coords="519,18,764,46"/>
-<area shape="rect" id="node17" href="$class_eventually_persistent_engine.html#a501522bf0f7872a80960ffb25e43efcb" title="EventuallyPersistentEngine::itemDelete" alt="" coords="499,94,784,122"/>
-<area shape="rect" id="node19" href="$class_eventually_persistent_store.html#a262c5453ebb0a2e7d7e6a4bde2fcb429" title="EventuallyPersistentStore::set" alt="" coords="531,145,752,173"/>
-<area shape="rect" id="node28" href="$class_item.html#a45f854602ab1a9f17b8097ad00b38d3a" title="Item::setVBucketId" alt="" coords="567,195,716,223"/>
-<area shape="rect" id="node30" href="$class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="487,309,796,337"/>
+<area shape="rect" id="node3" href="$ep__engine_8cc.html#a6978613380551af0677b42c2d6472cce" title="Helper function to avoid typing in the long cast all over the place." alt="" coords="255,81,345,109"/>
+<area shape="rect" id="node5" href="$class_eventually_persistent_engine.html#ac342b14e74c4352f55ac1ca5f64e0f63" title="EventuallyPersistentEngine::tapNotify" alt="" coords="164,131,436,159"/>
+<area shape="rect" id="node7" href="$class_eventually_persistent_engine.html#aba27758916a7a98512e82de4fd8aeee3" title="EventuallyPersistentEngine::flush" alt="" coords="519,5,764,33"/>
+<area shape="rect" id="node17" href="$class_eventually_persistent_engine.html#a501522bf0f7872a80960ffb25e43efcb" title="EventuallyPersistentEngine::itemDelete" alt="" coords="499,55,784,83"/>
+<area shape="rect" id="node19" href="$class_blob.html#ab7e65554d93c6cc358c682b3243bde8a" title="Blob::New" alt="" coords="597,106,685,134"/>
+<area shape="rect" id="node21" href="$class_eventually_persistent_store.html#a262c5453ebb0a2e7d7e6a4bde2fcb429" title="EventuallyPersistentStore::set" alt="" coords="531,157,752,185"/>
+<area shape="rect" id="node30" href="$class_item.html#a45f854602ab1a9f17b8097ad00b38d3a" title="Item::setVBucketId" alt="" coords="567,207,716,235"/>
+<area shape="rect" id="node32" href="$class_eventually_persistent_store.html#a06ea26e70348c1aaa6fcd0df0dec7626" title="EventuallyPersistentStore::setVBucketState" alt="" coords="487,309,796,337"/>
 <area shape="rect" id="node9" href="$class_eventually_persistent_store.html#af0e3f187d43fd4501b9e17ab2e7e9fa1" title="EventuallyPersistentStore::reset" alt="" coords="845,5,1080,33"/>
 <area shape="rect" id="node11" href="$class_v_bucket_map.html#a2cb68a5d25154ae4650aeeb8832b110d" title="VBucketMap::getBuckets" alt="" coords="1173,5,1363,33"/>
 <area shape="rect" id="node13" href="$class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="1129,55,1407,83"/>
 <area shape="rect" id="node15" href="$class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="1457,157,1639,185"/>
-<area shape="rect" id="node21" href="$class_item.html#ace70aa3fc891b5371319eb1d07edfa44" title="Item::getCas" alt="" coords="909,106,1016,134"/>
-<area shape="rect" id="node23" href="$class_item.html#a69a127532c48e377f418623b03be542c" title="Item::getKey" alt="" coords="909,157,1016,185"/>
-<area shape="rect" id="node26" href="$class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488" title="Item::getVBucketId" alt="" coords="888,207,1037,235"/>
-<area shape="rect" id="node32" href="$class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5" title="VBucketMap::addBucket" alt="" coords="869,309,1056,337"/>
-<area shape="rect" id="node35" href="$class_dispatcher.html#a3a657220baa43a9cde1a4a938d0bc8b5" title="Schedule a job to run." alt="" coords="881,359,1044,387"/>
-<area shape="rect" id="node39" href="$class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db" title="VBucket::toString" alt="" coords="892,410,1033,438"/>
-<area shape="rect" id="node37" href="$class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4" title="SyncObject::notify" alt="" coords="1196,359,1340,387"/>
+<area shape="rect" id="node23" href="$class_item.html#ace70aa3fc891b5371319eb1d07edfa44" title="Item::getCas" alt="" coords="909,106,1016,134"/>
+<area shape="rect" id="node25" href="$class_item.html#a69a127532c48e377f418623b03be542c" title="Item::getKey" alt="" coords="909,157,1016,185"/>
+<area shape="rect" id="node28" href="$class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488" title="Item::getVBucketId" alt="" coords="888,207,1037,235"/>
+<area shape="rect" id="node34" href="$class_v_bucket_map.html#a13d1ac51dd1608102603e56dc1bc31a5" title="VBucketMap::addBucket" alt="" coords="869,309,1056,337"/>
+<area shape="rect" id="node37" href="$class_dispatcher.html#a3a657220baa43a9cde1a4a938d0bc8b5" title="Schedule a job to run." alt="" coords="881,359,1044,387"/>
+<area shape="rect" id="node41" href="$class_v_bucket.html#a5af617eff7ee70d402de9d0e473634db" title="VBucket::toString" alt="" coords="892,410,1033,438"/>
+<area shape="rect" id="node39" href="$class_sync_object.html#ab27c39d3f676725ab2e193bf2678d5b4" title="SyncObject::notify" alt="" coords="1196,359,1340,387"/>
 </map>

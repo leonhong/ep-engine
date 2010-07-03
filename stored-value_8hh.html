@@ -45,6 +45,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <h1>stored-value.hh File Reference</h1><code>#include &lt;climits&gt;</code><br/>
+<code>#include &lt;cstring&gt;</code><br/>
 <code>#include &lt;algorithm&gt;</code><br/>
 <code>#include &quot;<a class="el" href="common_8hh_source.html">common.hh</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="item_8hh_source.html">item.hh</a>&quot;</code><br/>
@@ -54,7 +55,7 @@ Include dependency graph for stored-value.hh:</div>
 <div class="dynsection">
 <div class="center"><img src="stored-value_8hh__incl.png" border="0" usemap="#stored-value_8hh_map" alt=""/></div>
 <map name="stored-value_8hh_map" id="stored-value_8hh">
-<area shape="rect" id="node7" href="common_8hh.html" title="common.hh" alt="" coords="561,393,663,421"/><area shape="rect" id="node31" href="item_8hh.html" title="item.hh" alt="" coords="741,83,813,111"/><area shape="rect" id="node57" href="locks_8hh.html" title="locks.hh" alt="" coords="1644,238,1721,266"/><area shape="rect" id="node29" href="config_8h.html" title="config.h" alt="" coords="1752,470,1827,498"/><area shape="rect" id="node41" href="mutex_8hh.html" title="mutex.hh" alt="" coords="1295,315,1380,343"/><area shape="rect" id="node72" href="atomic_8hh.html" title="atomic.hh" alt="" coords="835,161,923,189"/><area shape="rect" id="node64" href="syncobject_8hh.html" title="syncobject.hh" alt="" coords="1505,315,1620,343"/></map>
+<area shape="rect" id="node9" href="common_8hh.html" title="common.hh" alt="" coords="1256,393,1357,421"/><area shape="rect" id="node33" href="item_8hh.html" title="item.hh" alt="" coords="344,83,416,111"/><area shape="rect" id="node58" href="locks_8hh.html" title="locks.hh" alt="" coords="607,238,684,266"/><area shape="rect" id="node31" href="config_8h.html" title="config.h" alt="" coords="127,470,201,498"/><area shape="rect" id="node43" href="mutex_8hh.html" title="mutex.hh" alt="" coords="603,315,688,343"/><area shape="rect" id="node73" href="atomic_8hh.html" title="atomic.hh" alt="" coords="1225,161,1313,189"/><area shape="rect" id="node65" href="syncobject_8hh.html" title="syncobject.hh" alt="" coords="712,315,827,343"/></map>
 </div>
 <div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
@@ -67,7 +68,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <p><a href="stored-value_8hh_source.html">Go to the source code of this file.</a></p>
 <table border="0" cellpadding="0" cellspacing="0">
 <tr><td colspan="2"><h2>Classes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsmall__data.html">small_data</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> "small" data storage.  <a href="structsmall__data.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfeature__data.html">feature_data</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> "featured" data type.  <a href="structfeature__data.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">union &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionstored__value__bodies.html">stored_value_bodies</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Union of <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> data.  <a href="unionstored__value__bodies.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stored_value.html">StoredValue</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">In-memory storage for an item.  <a href="class_stored_value.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table_visitor.html">HashTableVisitor</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Base class for visiting a hash table.  <a href="class_hash_table_visitor.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table_depth_visitor.html">HashTableDepthVisitor</a></td></tr>
@@ -76,8 +84,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Hash table visitor that finds the min and max bucket depths.  <a href="class_hash_table_depth_stat_visitor.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_visitor_tracker.html">VisitorTracker</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Track the current number of hashtable visitors.  <a href="class_visitor_tracker.html#_details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stored_value_factory.html">StoredValueFactory</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creator of <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> instances.  <a href="class_stored_value_factory.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hash_table.html">HashTable</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Hash table that stores all of the items in memory.  <a href="class_hash_table.html#_details">More...</a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A container of <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> instances.  <a href="class_hash_table.html#_details">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2>Enumerations</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="stored-value_8hh.html#a02506aa17c2d3b817f701f16f960f692">mutation_type_t</a> { <br/>
 &nbsp;&nbsp;<a class="el" href="stored-value_8hh.html#a02506aa17c2d3b817f701f16f960f692a5bd61f9b20ccb5f8345d116dc294d346">INVALID_VBUCKET</a>, 
@@ -91,6 +101,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <a class="el" href="stored-value_8hh.html#a02506aa17c2d3b817f701f16f960f692ac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>
 <br/>
  }</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><p>Mutation types as returned by store commands. </p>
+ <a href="stored-value_8hh.html#a02506aa17c2d3b817f701f16f960f692">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2eff">stored_value_type</a> { <a class="el" href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2effa6eb5ea92f3d8e929ccc26a9692383761">small</a>, 
+<a class="el" href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2effabca93e8b7670e031fd99e0dd3a6b07bc">featured</a>
+ }</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><p>Types of stored values. </p>
+ <a href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2eff">More...</a><br/></td></tr>
 <tr><td colspan="2"><h2>Variables</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">rel_time_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="stored-value_8hh.html#aad8dbaaedfb31a202228839359309462">ep_current_time</a> )()</td></tr>
 </table>
@@ -105,8 +122,11 @@ This graph shows which files directly or indirectly include this file:</div>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Mutation types as returned by store commands. </p>
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
 <tr><td valign="top"><em><a class="anchor" id="a02506aa17c2d3b817f701f16f960f692a5bd61f9b20ccb5f8345d116dc294d346"></a><!-- doxytag: member="INVALID_VBUCKET" ref="a02506aa17c2d3b817f701f16f960f692a5bd61f9b20ccb5f8345d116dc294d346" args="" -->INVALID_VBUCKET</em>&nbsp;</td><td>
+<p>Storage was attempted on a vbucket not managed by this node. </p>
 </td></tr>
 <tr><td valign="top"><em><a class="anchor" id="a02506aa17c2d3b817f701f16f960f692acdaa2919bac56fe1090eb3dbb9526472"></a><!-- doxytag: member="NOT_FOUND" ref="a02506aa17c2d3b817f701f16f960f692acdaa2919bac56fe1090eb3dbb9526472" args="" -->NOT_FOUND</em>&nbsp;</td><td>
 </td></tr>
@@ -128,6 +148,29 @@ This graph shows which files directly or indirectly include this file:</div>
 
 </div>
 </div>
+<a class="anchor" id="accfa4e65c7ce74d9157e4d6d24db2eff"></a><!-- doxytag: member="stored&#45;value.hh::stored_value_type" ref="accfa4e65c7ce74d9157e4d6d24db2eff" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="stored-value_8hh.html#accfa4e65c7ce74d9157e4d6d24db2eff">stored_value_type</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Types of stored values. </p>
+<dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="accfa4e65c7ce74d9157e4d6d24db2effa6eb5ea92f3d8e929ccc26a9692383761"></a><!-- doxytag: member="small" ref="accfa4e65c7ce74d9157e4d6d24db2effa6eb5ea92f3d8e929ccc26a9692383761" args="" -->small</em>&nbsp;</td><td>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="accfa4e65c7ce74d9157e4d6d24db2effabca93e8b7670e031fd99e0dd3a6b07bc"></a><!-- doxytag: member="featured" ref="accfa4e65c7ce74d9157e4d6d24db2effabca93e8b7670e031fd99e0dd3a6b07bc" args="" -->featured</em>&nbsp;</td><td>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+</div>
+</div>
 <hr/><h2>Variable Documentation</h2>
 <a class="anchor" id="aad8dbaaedfb31a202228839359309462"></a><!-- doxytag: member="stored&#45;value.hh::ep_current_time" ref="aad8dbaaedfb31a202228839359309462" args=")()" -->
 <div class="memitem">
@@ -140,7 +183,7 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00540">create_instance()</a>, <a class="el" href="ep_8cc_source.html#l00239">EventuallyPersistentStore::get()</a>, <a class="el" href="stored-value_8hh_source.html#l00038">StoredValue::markDirty()</a>, <a class="el" href="stored-value_8hh_source.html#l00304">HashTable::set()</a>, <a class="el" href="stored-value_8hh_source.html#l00418">HashTable::unlocked_del()</a>, and <a class="el" href="stored-value_8hh_source.html#l00369">HashTable::unlocked_find()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8cc_source.html#l00555">create_instance()</a>, <a class="el" href="ep_8cc_source.html#l00253">EventuallyPersistentStore::get()</a>, <a class="el" href="stored-value_8hh_source.html#l00071">StoredValue::markDirty()</a>, <a class="el" href="stored-value_8hh_source.html#l00649">HashTable::set()</a>, <a class="el" href="stored-value_8hh_source.html#l00804">HashTable::unlocked_del()</a>, and <a class="el" href="stored-value_8hh_source.html#l00728">HashTable::unlocked_find()</a>.</p>
 
 </div>
 </div>
@@ -159,7 +202,7 @@ This graph shows which files directly or indirectly include this file:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:25 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

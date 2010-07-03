@@ -1,5 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c" title="StoredValue::setValue" alt="" coords="244,5,412,33"/>
-<area shape="rect" id="node7" href="$class_stored_value.html#a44641cc477b51c392f2b5cf27330241c" title="StoredValue::StoredValue" alt="" coords="232,55,424,83"/>
-<area shape="rect" id="node5" href="$class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0" title="HashTable::set" alt="" coords="473,5,591,33"/>
+<area shape="rect" id="node3" href="$class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c" title="Set a new value for this item." alt="" coords="652,5,820,33"/>
+<area shape="rect" id="node7" href="$class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a" title="Get the size of a StoredValue object." alt="" coords="232,81,384,109"/>
+<area shape="rect" id="node5" href="$class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0" title="Set a new Item into this hashtable." alt="" coords="903,5,1020,33"/>
+<area shape="rect" id="node9" href="$sizes_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="473,55,529,83"/>
+<area shape="rect" id="node11" href="$class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="Get the total size of this item." alt="" coords="433,106,569,134"/>
+<area shape="rect" id="node13" href="$class_hash_table.html#a0e58e888d0f0963247b5eea143da7ab4" title="Get the bucket number for the given C string key." alt="" coords="664,55,808,83"/>
+<area shape="rect" id="node15" href="$class_hash_table.html#a95a64de238722621660852b97e1a4ca6" title="Get the number of hash table buckets this hash table has." alt="" coords="663,106,809,134"/>
+<area shape="rect" id="node17" href="$class_hash_table.html#a06fb934d9694fa3b0ef6c721b3ddd364" title="Create a HashTable." alt="" coords="653,157,819,185"/>
+<area shape="rect" id="node21" href="$class_hash_table_depth_stat_visitor.html#acb1f7a14057176b0a3f8a5f1460ab3cb" title="Called once for each hashtable bucket with its depth." alt="" coords="619,207,853,235"/>
+<area shape="rect" id="node23" href="$class_stored_value.html#aa855286bf93c8db63c297dc43cb34f62" title="StoredValue::~StoredValue" alt="" coords="635,258,837,286"/>
 </map>

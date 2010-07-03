@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="Get the total size of this item." alt="" coords="289,106,425,134"/>
+<area shape="rect" id="node5" href="$class_stored_value.html#ac450ecb78542a05cfa1f3b337e2de947" title="Get the length of the key." alt="" coords="475,55,656,83"/>
+<area shape="rect" id="node7" href="$class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a" title="Get the size of a StoredValue object." alt="" coords="489,106,641,134"/>
+<area shape="rect" id="node9" href="$class_stored_value.html#a0cea17ad1e7f3f237cd31022444af71f" title="Get the current amount of of data stored." alt="" coords="708,5,919,33"/>
+<area shape="rect" id="node13" href="$class_stored_value.html#ab9a08f660bd17226483acf248e31db6c" title="Get the maximum amount of memory this instance can store." alt="" coords="704,55,923,83"/>
+<area shape="rect" id="node15" href="$class_stored_value.html#a2820ceb8daf99a8dab5bf06db1686bd0" title="Mark this item as clean." alt="" coords="721,106,905,134"/>
+<area shape="rect" id="node17" href="$class_stored_value.html#a2f0c9872c42fe61eb6ba7da7654b9279" title="Mark this item as needing to be persisted." alt="" coords="724,157,903,185"/>
+<area shape="rect" id="node21" href="$class_stored_value.html#a94ab12fe13dd29545cb0bdcd187f82ab" title="Set the maximum amount of data this instance can store." alt="" coords="705,207,921,235"/>
+<area shape="rect" id="node11" href="$class_atomic.html#a50d5b1eadc07bf419245a5e11d718486" title="Atomic::get" alt="" coords="999,5,1100,33"/>
+<area shape="rect" id="node19" href="$class_stored_value.html#ac30f7f07745658054e521c3919574143" title="Mark this item as dirty as of a certain time." alt="" coords="971,157,1128,185"/>
+</map>

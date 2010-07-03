@@ -144,7 +144,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Amount of time spent in the commit phase. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00360">EventuallyPersistentStore::resetStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00375">EventuallyPersistentStore::resetStats()</a>.</p>
 
 </div>
 </div>
@@ -177,7 +177,7 @@ Collaboration diagram for EPStats:</div>
 <p>Total number of items. </p>
 <p>This would be total_items if we recycled items, but we don't right now. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00370">EventuallyPersistentStore::del()</a>, and <a class="el" href="ep_8cc_source.html#l00164">EventuallyPersistentStore::set()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00385">EventuallyPersistentStore::del()</a>, <a class="el" href="ep_8cc_source.html#l00239">EventuallyPersistentStore::deleteVBucket()</a>, <a class="el" href="ep_8cc_source.html#l00411">EventuallyPersistentStore::reset()</a>, and <a class="el" href="ep_8cc_source.html#l00178">EventuallyPersistentStore::set()</a>.</p>
 
 </div>
 </div>
@@ -224,7 +224,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>How long an object is dirty before written. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00360">EventuallyPersistentStore::resetStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00375">EventuallyPersistentStore::resetStats()</a>.</p>
 
 </div>
 </div>
@@ -241,7 +241,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Oldest enqueued object we've seen while persisting. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00360">EventuallyPersistentStore::resetStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00375">EventuallyPersistentStore::resetStats()</a>.</p>
 
 </div>
 </div>
@@ -258,7 +258,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>How long does it take to do an entire flush cycle. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00360">EventuallyPersistentStore::resetStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00375">EventuallyPersistentStore::resetStats()</a>.</p>
 
 </div>
 </div>
@@ -275,7 +275,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Longest flush cycle we've seen. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00360">EventuallyPersistentStore::resetStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00375">EventuallyPersistentStore::resetStats()</a>.</p>
 
 </div>
 </div>
@@ -307,7 +307,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Number of times an item flush failed. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00480">Requeuer::callback()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00495">Requeuer::callback()</a>.</p>
 
 </div>
 </div>
@@ -324,7 +324,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Beyond this point are config items Minimum data age before a record can be persisted. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00059">EventuallyPersistentStore::EventuallyPersistentStore()</a>, and <a class="el" href="ep_8cc_source.html#l00352">EventuallyPersistentStore::setMinDataAge()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00367">EventuallyPersistentStore::setMinDataAge()</a>.</p>
 
 </div>
 </div>
@@ -341,7 +341,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Maximum data age before a record is forced to be persisted. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00059">EventuallyPersistentStore::EventuallyPersistentStore()</a>, and <a class="el" href="ep_8cc_source.html#l00356">EventuallyPersistentStore::setQueueAgeCap()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00371">EventuallyPersistentStore::setQueueAgeCap()</a>.</p>
 
 </div>
 </div>
@@ -373,7 +373,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Total number of tap messages sent. </p>
 
-<p>Referenced by <a class="el" href="ep_8hh_source.html#l00233">EventuallyPersistentStore::setTapStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8hh_source.html#l00247">EventuallyPersistentStore::setTapStats()</a>.</p>
 
 </div>
 </div>
@@ -390,7 +390,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Current tap queue size. </p>
 
-<p>Referenced by <a class="el" href="ep_8hh_source.html#l00233">EventuallyPersistentStore::setTapStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8hh_source.html#l00247">EventuallyPersistentStore::setTapStats()</a>.</p>
 
 </div>
 </div>
@@ -407,7 +407,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Objects that were forced into persistence for being too old. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00360">EventuallyPersistentStore::resetStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00375">EventuallyPersistentStore::resetStats()</a>.</p>
 
 </div>
 </div>
@@ -424,7 +424,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Objects that were rejected from persistence for being too fresh. </p>
 
-<p>Referenced by <a class="el" href="ep_8cc_source.html#l00360">EventuallyPersistentStore::resetStats()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8cc_source.html#l00375">EventuallyPersistentStore::resetStats()</a>.</p>
 
 </div>
 </div>
@@ -471,7 +471,7 @@ Collaboration diagram for EPStats:</div>
 
 <p>Number of records warmed up. </p>
 
-<p>Referenced by <a class="el" href="ep_8hh_source.html#l00116">LoadStorageKVPairCallback::callback()</a>.</p>
+<p>Referenced by <a class="el" href="ep_8hh_source.html#l00130">LoadStorageKVPairCallback::callback()</a>.</p>
 
 </div>
 </div>
@@ -523,7 +523,7 @@ Collaboration diagram for EPStats:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:30 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

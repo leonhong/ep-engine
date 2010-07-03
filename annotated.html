@@ -52,6 +52,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="indexkey"><a class="el" href="class_back_fill_thread_data.html">BackFillThreadData</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_back_fill_visitor.html">BackFillVisitor</a></td><td class="indexvalue"><a class="el" href="class_v_bucket_visitor.html" title="vbucket-aware hashtable visitor.">VBucketVisitor</a> to backfill a <a class="el" href="class_tap_connection.html" title="Class used by the EventuallyPersistentEngine to keep track of all information needed...">TapConnection</a> </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_binary_message.html">BinaryMessage</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_blob.html">Blob</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_bool_callback.html">BoolCallback</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_bool_pair_callback.html">BoolPairCallback</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_callback.html">Callback&lt; RV &gt;</a></td><td class="indexvalue">Interface for callbacks from storage APIs </td></tr>
@@ -61,12 +62,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="indexkey"><a class="el" href="class_e_p_stats.html">EPStats</a></td><td class="indexvalue">Global engine stats container </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_eventually_persistent_engine.html">EventuallyPersistentEngine</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_eventually_persistent_store.html">EventuallyPersistentStore</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="structfeature__data.html">feature_data</a></td><td class="indexvalue"><a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> "featured" data type </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_flusher.html">Flusher</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_flusher_stepper.html">FlusherStepper</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_get_callback.html">GetCallback</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_getl_extension.html">GetlExtension</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_get_value.html">GetValue</a></td><td class="indexvalue">Value for callback for GET operations </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_hash_table.html">HashTable</a></td><td class="indexvalue">Hash table that stores all of the items in memory </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_hash_table.html">HashTable</a></td><td class="indexvalue">A container of <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> instances </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_hash_table_depth_stat_visitor.html">HashTableDepthStatVisitor</a></td><td class="indexvalue">Hash table visitor that finds the min and max bucket depths </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_hash_table_depth_visitor.html">HashTableDepthVisitor</a></td><td class="indexvalue">Hash table visitor that reports the depth of each hashtable bucket </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_hash_table_visitor.html">HashTableVisitor</a></td><td class="indexvalue">Base class for visiting a hash table </td></tr>
@@ -87,13 +89,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="indexkey"><a class="el" href="class_remembering_callback.html">RememberingCallback&lt; T &gt;</a></td><td class="indexvalue">Threadsafe callback implementation that just captures the value </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_requeuer.html">Requeuer</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_set_v_b_state_callback.html">SetVBStateCallback</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="structsmall__data.html">small_data</a></td><td class="indexvalue"><a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> "small" data storage </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_spin_lock.html">SpinLock</a></td><td class="indexvalue">A lighter-weight, smaller lock than a mutex </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_spin_lock_holder.html">SpinLockHolder</a></td><td class="indexvalue">Safe <a class="el" href="class_lock_holder.html">LockHolder</a> for <a class="el" href="class_spin_lock.html" title="A lighter-weight, smaller lock than a mutex.">SpinLock</a> instances </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_sqlite_evaluator.html">SqliteEvaluator</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_sqlite_strategy.html">SqliteStrategy</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_statements.html">Statements</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_stat_v_bucket_visitor.html">StatVBucketVisitor</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_stored_value.html">StoredValue</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="unionstored__value__bodies.html">stored_value_bodies</a></td><td class="indexvalue">Union of <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> data </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_stored_value.html">StoredValue</a></td><td class="indexvalue">In-memory storage for an item </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_stored_value_factory.html">StoredValueFactory</a></td><td class="indexvalue">Creator of <a class="el" href="class_stored_value.html" title="In-memory storage for an item.">StoredValue</a> instances </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_strategic_sqlite3.html">StrategicSqlite3</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="class_sync_object.html">SyncObject</a></td><td class="indexvalue">Abstraction built on top of pthread mutexes </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_tap_client_connection.html">TapClientConnection</a></td><td class="indexvalue">Tap client connection </td></tr>
@@ -126,7 +131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:26 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

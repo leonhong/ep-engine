@@ -112,16 +112,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_stored_value.html#a0cea17ad1e7f3f237cd31022444af71f">StoredValue</a>
 </li>
 <li>getData()
-: <a class="el" href="class_item.html#a9db6711a31cdacddcba49525daaa69bc">Item</a>
+: <a class="el" href="class_blob.html#a8df7ac8b1e26822fe82c27d45819d75f">Blob</a>
+, <a class="el" href="class_item.html#a9db6711a31cdacddcba49525daaa69bc">Item</a>
 </li>
 <li>getDataAge()
 : <a class="el" href="class_stored_value.html#a412cd1ccaf552bc18d3b79524c9d5872">StoredValue</a>
+</li>
+<li>getDefaultStorageValueType()
+: <a class="el" href="class_hash_table.html#a78c94e47e8d7f1fe6e325995de021df8">HashTable</a>
+</li>
+<li>getDefaultStorageValueTypeStr()
+: <a class="el" href="class_hash_table.html#a79386c3b7fbc702294d6f8f77b231635">HashTable</a>
 </li>
 <li>getDelVBucketStateST()
 : <a class="el" href="class_sqlite_strategy.html#a87e6511119cbbab819c5144b9a473ed3">SqliteStrategy</a>
 </li>
 <li>getDirtied()
-: <a class="el" href="class_stored_value.html#a4bfe3c0ac8dbba64c4efccdc7b55df59">StoredValue</a>
+: <a class="el" href="class_queued_item.html#a9a073f5c37a4c497c22e726088eb97af">QueuedItem</a>
 </li>
 <li>getExptime()
 : <a class="el" href="class_item.html#a384715ade9f1bb7548416ea4d61b1bd3">Item</a>
@@ -157,7 +164,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getKey()
 : <a class="el" href="class_queued_item.html#a86a0531b1aab718ce060da1988a2d53d">QueuedItem</a>
 , <a class="el" href="class_item.html#a69a127532c48e377f418623b03be542c">Item</a>
-, <a class="el" href="class_stored_value.html#a238ba9c01355ec0d53e337355ecfe755">StoredValue</a>
+, <a class="el" href="class_stored_value.html#ac0fdbefbc61365b58e3310d3e12a885a">StoredValue</a>
+</li>
+<li>getKeyBytes()
+: <a class="el" href="class_stored_value.html#a3d14f5422d4f95add2b3beaf67d4418c">StoredValue</a>
+</li>
+<li>getKeyLen()
+: <a class="el" href="class_stored_value.html#ac450ecb78542a05cfa1f3b337e2de947">StoredValue</a>
 </li>
 <li>getKeyStats()
 : <a class="el" href="class_eventually_persistent_store.html#a3b1ec9df8ef6203b16f0d3c862edfbb6">EventuallyPersistentStore</a>
@@ -174,6 +187,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getMutex()
 : <a class="el" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f">HashTable</a>
 </li>
+<li>getMutexForLock()
+: <a class="el" href="class_hash_table.html#af1ea55e43cee12ab3fb33020346cc1c3">HashTable</a>
+</li>
 <li>getNBytes()
 : <a class="el" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c">Item</a>
 </li>
@@ -181,7 +197,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_item.html#a33942c720908bb11513178a6236b2073">Item</a>
 </li>
 <li>getNumBuckets()
-: <a class="el" href="class_hash_table.html#a06f83b5a9f3964a30546c464be691b23">HashTable</a>
+: <a class="el" href="class_hash_table.html#a97986cbcc30e2279f10cbf528b512415">HashTable</a>
 </li>
 <li>getNumLocks()
 : <a class="el" href="class_hash_table.html#a30964fc4125baf87564761a220061ab0">HashTable</a>
@@ -196,8 +212,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_sqlite_strategy.html#a81ae98593cfd6e6c78d487d7a9c4286b">SqliteStrategy</a>
 </li>
 <li>getSize()
-: <a class="el" href="class_v_bucket_holder.html#a7305f1decece7027e64264ea3c2d882a">VBucketHolder</a>
-, <a class="el" href="class_hash_table.html#a95a64de238722621660852b97e1a4ca6">HashTable</a>
+: <a class="el" href="class_hash_table.html#a95a64de238722621660852b97e1a4ca6">HashTable</a>
+, <a class="el" href="class_v_bucket_holder.html#a7305f1decece7027e64264ea3c2d882a">VBucketHolder</a>
 </li>
 <li>getState()
 : <a class="el" href="class_v_bucket.html#a9a565f696b256dfb0da54582035bc4d4">VBucket</a>
@@ -206,8 +222,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_v_bucket.html#aa39d99ce0e43d804d5c722fa82f45e6e">VBucket</a>
 </li>
 <li>getStats()
-: <a class="el" href="class_eventually_persistent_engine.html#af3e372af7421e3be8d38aaca6cf4ab91">EventuallyPersistentEngine</a>
-, <a class="el" href="class_eventually_persistent_store.html#a18dff3cdaf2e6ff61f21d3f480253e1c">EventuallyPersistentStore</a>
+: <a class="el" href="class_eventually_persistent_store.html#a18dff3cdaf2e6ff61f21d3f480253e1c">EventuallyPersistentStore</a>
+, <a class="el" href="class_eventually_persistent_engine.html#af3e372af7421e3be8d38aaca6cf4ab91">EventuallyPersistentEngine</a>
 </li>
 <li>getStatus()
 : <a class="el" href="class_get_value.html#a29b1af7bd02fcc1184035533daf6d65c">GetValue</a>
@@ -220,25 +236,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="class_eventually_persistent_store.html#aa9a3b088e767cb94008d756032505de4">EventuallyPersistentStore</a>
 </li>
 <li>getValue()
-: <a class="el" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5">Item</a>
+: <a class="el" href="class_get_value.html#ae1cd9cfc457f71a763ce709a912bd687">GetValue</a>
 </li>
 <li>GetValue()
 : <a class="el" href="class_get_value.html#a988026c961aac2ef526fceee59adff54">GetValue</a>
 </li>
 <li>getValue()
-: <a class="el" href="class_bool_callback.html#aca5f31115a70d57ede10753c9b620ea1">BoolCallback</a>
+: <a class="el" href="class_stored_value.html#a6f4710f674349b6b62efa3a8bfe6e76c">StoredValue</a>
 , <a class="el" href="class_bool_pair_callback.html#a3e34ecb3e05e5beb08af92be718f9e5d">BoolPairCallback</a>
+</li>
+<li>GetValue()
+: <a class="el" href="class_get_value.html#aa89691b988a16ae8477acf9a7b5033fa">GetValue</a>
+</li>
+<li>getValue()
+: <a class="el" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5">Item</a>
 </li>
 <li>GetValue()
 : <a class="el" href="class_get_value.html#a2b099bddaebee7de3b6f5f7cb9b2a263">GetValue</a>
 </li>
 <li>getValue()
-: <a class="el" href="class_stored_value.html#a6f4710f674349b6b62efa3a8bfe6e76c">StoredValue</a>
-, <a class="el" href="class_get_value.html#ae1cd9cfc457f71a763ce709a912bd687">GetValue</a>
+: <a class="el" href="class_bool_callback.html#aca5f31115a70d57ede10753c9b620ea1">BoolCallback</a>
 </li>
 <li>getVBucket()
-: <a class="el" href="class_eventually_persistent_engine.html#a73067d30ccb9733332a0f5c14dcc802c">EventuallyPersistentEngine</a>
-, <a class="el" href="class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928">EventuallyPersistentStore</a>
+: <a class="el" href="class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928">EventuallyPersistentStore</a>
+, <a class="el" href="class_eventually_persistent_engine.html#a73067d30ccb9733332a0f5c14dcc802c">EventuallyPersistentEngine</a>
 </li>
 <li>getVBucketId()
 : <a class="el" href="class_queued_item.html#afbe4b8470c4b7a8b96a9b7fdccbd3e47">QueuedItem</a>
@@ -260,7 +281,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:26 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:40 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

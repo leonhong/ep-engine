@@ -1,3 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="StoredValue::isLocked" alt="" coords="241,5,409,33"/>
+<area shape="rect" id="node3" href="$class_stored_value.html#a5690735ab7df847bb83295eb67dbc900" title="True of this item is for the given key." alt="" coords="247,30,404,58"/>
+<area shape="rect" id="node9" href="$class_stored_value.html#ae4da538b356f568086190b9e85b92416" title="Return true if this item is locked as of the given timestamp." alt="" coords="241,81,409,109"/>
+<area shape="rect" id="node5" href="$class_stored_value.html#a3d14f5422d4f95add2b3beaf67d4418c" title="Get the pointer to the beginning of the key." alt="" coords="459,5,653,33"/>
+<area shape="rect" id="node7" href="$class_stored_value.html#ac450ecb78542a05cfa1f3b337e2de947" title="Get the length of the key." alt="" coords="465,55,647,83"/>
 </map>

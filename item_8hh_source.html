@@ -56,169 +56,219 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="locks_8hh.html">locks.hh</a>&quot;</span>
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="atomic_8hh.html">atomic.hh</a>&quot;</span>
 <a name="l00014"></a>00014 
-<a name="l00015"></a><a class="code" href="item_8hh.html#abae346acc690a206513f314279475d13">00015</a> <span class="keyword">typedef</span> shared_ptr&lt;const std::string&gt; <a class="code" href="item_8hh.html#abae346acc690a206513f314279475d13">value_t</a>;
-<a name="l00016"></a>00016 
-<a name="l00022"></a><a class="code" href="class_item.html">00022</a> <span class="keyword">class </span><a class="code" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a> {
-<a name="l00023"></a>00023 <span class="keyword">public</span>:
-<a name="l00024"></a><a class="code" href="class_item.html#a677316dfeb9349bfe61601206ef16148">00024</a>     <a class="code" href="class_item.html#a677316dfeb9349bfe61601206ef16148">Item</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* k, <span class="keyword">const</span> <span class="keywordtype">size_t</span> nk, <span class="keyword">const</span> <span class="keywordtype">size_t</span> nb,
-<a name="l00025"></a>00025          <span class="keyword">const</span> <span class="keywordtype">int</span> fl, <span class="keyword">const</span> rel_time_t exp, uint64_t theCas = 0,
-<a name="l00026"></a>00026          int64_t i = -1, uint16_t vbid = 0) :
-<a name="l00027"></a>00027         flags(fl), exptime(exp), cas(theCas), id(i), vbucketId(vbid)
-<a name="l00028"></a>00028     {
-<a name="l00029"></a>00029         key.assign(static_cast&lt;const char*&gt;(k), nk);
-<a name="l00030"></a>00030         assert(<span class="keywordtype">id</span> != 0);
-<a name="l00031"></a>00031         setData(NULL, nb);
-<a name="l00032"></a>00032     }
-<a name="l00033"></a>00033 
-<a name="l00034"></a><a class="code" href="class_item.html#a615ecaa98a86ec448eaf49ac751aab33">00034</a>     <a class="code" href="class_item.html#a677316dfeb9349bfe61601206ef16148">Item</a>(<span class="keyword">const</span> std::string &amp;k, <span class="keyword">const</span> <span class="keywordtype">int</span> fl, <span class="keyword">const</span> rel_time_t exp,
-<a name="l00035"></a>00035          <span class="keyword">const</span> <span class="keywordtype">void</span> *dta, <span class="keyword">const</span> <span class="keywordtype">size_t</span> nb, uint64_t theCas = 0,
-<a name="l00036"></a>00036          int64_t i = -1, uint16_t vbid = 0) :
-<a name="l00037"></a>00037         flags(fl), exptime(exp), cas(theCas), id(i), vbucketId(vbid)
-<a name="l00038"></a>00038     {
-<a name="l00039"></a>00039         key.assign(k);
-<a name="l00040"></a>00040         assert(<span class="keywordtype">id</span> != 0);
-<a name="l00041"></a>00041         setData(static_cast&lt;const char*&gt;(dta), nb);
+<a name="l00015"></a><a class="code" href="class_blob.html">00015</a> <span class="keyword">class </span><a class="code" href="class_blob.html">Blob</a> {
+<a name="l00016"></a>00016 <span class="keyword">public</span>:
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018     <span class="comment">// Constructors.</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a">00020</a>     <span class="keyword">static</span> <a class="code" href="class_blob.html">Blob</a>* <a class="code" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a">New</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *start, <span class="keyword">const</span> <span class="keywordtype">size_t</span> len) {
+<a name="l00021"></a>00021         <span class="keywordtype">size_t</span> total_len = len + <span class="keyword">sizeof</span>(<a class="code" href="class_blob.html">Blob</a>);
+<a name="l00022"></a>00022         <a class="code" href="class_blob.html">Blob</a> *t = <span class="keyword">new</span> (::operator <span class="keyword">new</span>(total_len)) <a class="code" href="class_blob.html">Blob</a>(start, len);
+<a name="l00023"></a>00023         assert(t-&gt;length() == len);
+<a name="l00024"></a>00024         <span class="keywordflow">return</span> t;
+<a name="l00025"></a>00025     }
+<a name="l00026"></a>00026 
+<a name="l00027"></a><a class="code" href="class_blob.html#a025843b28cba4bd1774f8e71846db68d">00027</a>     <span class="keyword">static</span> <a class="code" href="class_blob.html">Blob</a>* <a class="code" href="class_blob.html#a025843b28cba4bd1774f8e71846db68d">New</a>(<span class="keyword">const</span> std::string&amp; s) {
+<a name="l00028"></a>00028         <span class="keywordflow">return</span> <a class="code" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a">New</a>(s.data(), s.length());
+<a name="l00029"></a>00029     }
+<a name="l00030"></a>00030 
+<a name="l00031"></a><a class="code" href="class_blob.html#abc6c8bcbf19f237fd14387facc32980c">00031</a>     <span class="keyword">static</span> <a class="code" href="class_blob.html">Blob</a>* <a class="code" href="class_blob.html#abc6c8bcbf19f237fd14387facc32980c">New</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> len, <span class="keyword">const</span> <span class="keywordtype">char</span> c) {
+<a name="l00032"></a>00032         <span class="keywordtype">size_t</span> total_len = len + <span class="keyword">sizeof</span>(<a class="code" href="class_blob.html">Blob</a>);
+<a name="l00033"></a>00033         <a class="code" href="class_blob.html">Blob</a> *t = <span class="keyword">new</span> (::operator <span class="keyword">new</span>(total_len)) <a class="code" href="class_blob.html">Blob</a>(c, len);
+<a name="l00034"></a>00034         assert(t-&gt;length() == len);
+<a name="l00035"></a>00035         <span class="keywordflow">return</span> t;
+<a name="l00036"></a>00036     }
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038     <span class="comment">// Actual accessorish things.</span>
+<a name="l00039"></a>00039 
+<a name="l00040"></a><a class="code" href="class_blob.html#a8df7ac8b1e26822fe82c27d45819d75f">00040</a>     <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_blob.html#a8df7ac8b1e26822fe82c27d45819d75f">getData</a>()<span class="keyword"> const </span>{
+<a name="l00041"></a>00041         <span class="keywordflow">return</span> data;
 <a name="l00042"></a>00042     }
 <a name="l00043"></a>00043 
-<a name="l00044"></a><a class="code" href="class_item.html#af64588d8528ea27a9bc6615060260cc4">00044</a>     <a class="code" href="class_item.html#a677316dfeb9349bfe61601206ef16148">Item</a>(<span class="keyword">const</span> std::string &amp;k, <span class="keyword">const</span> <span class="keywordtype">int</span> fl, <span class="keyword">const</span> rel_time_t exp,
-<a name="l00045"></a>00045          <a class="code" href="item_8hh.html#abae346acc690a206513f314279475d13">value_t</a> val, uint64_t theCas = 0,  int64_t i = -1, uint16_t vbid = 0) :
-<a name="l00046"></a>00046         flags(fl), exptime(exp), value(val), cas(theCas), id(i), vbucketId(vbid)
-<a name="l00047"></a>00047     {
-<a name="l00048"></a>00048         assert(<span class="keywordtype">id</span> != 0);
-<a name="l00049"></a>00049         key.assign(k);
+<a name="l00044"></a><a class="code" href="class_blob.html#a0eb11406bd9eb33abea488c81cf8d6dc">00044</a>     <span class="keywordtype">size_t</span> <a class="code" href="class_blob.html#a0eb11406bd9eb33abea488c81cf8d6dc">length</a>()<span class="keyword"> const </span>{
+<a name="l00045"></a>00045         <span class="keywordflow">return</span> size;
+<a name="l00046"></a>00046     }
+<a name="l00047"></a>00047 
+<a name="l00048"></a><a class="code" href="class_blob.html#acc83abf9e242e58d275ff902cad85926">00048</a>     <span class="keyword">const</span> std::string <a class="code" href="class_blob.html#acc83abf9e242e58d275ff902cad85926">to_s</a>()<span class="keyword"> const </span>{
+<a name="l00049"></a>00049         <span class="keywordflow">return</span> std::string(data, size);
 <a name="l00050"></a>00050     }
 <a name="l00051"></a>00051 
-<a name="l00052"></a><a class="code" href="class_item.html#a13c3edd3fc7f6601189ee2133408ca9e">00052</a>     <a class="code" href="class_item.html#a677316dfeb9349bfe61601206ef16148">Item</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *k, uint16_t nk, <span class="keyword">const</span> <span class="keywordtype">int</span> fl, <span class="keyword">const</span> rel_time_t exp,
-<a name="l00053"></a>00053          <span class="keyword">const</span> <span class="keywordtype">void</span> *dta, <span class="keyword">const</span> <span class="keywordtype">size_t</span> nb, uint64_t theCas = 0,
-<a name="l00054"></a>00054          int64_t i = -1, uint16_t vbid = 0) :
-<a name="l00055"></a>00055         flags(fl), exptime(exp), cas(theCas), id(i), vbucketId(vbid)
-<a name="l00056"></a>00056     {
-<a name="l00057"></a>00057         assert(<span class="keywordtype">id</span> != 0);
-<a name="l00058"></a>00058         key.assign(static_cast&lt;const char*&gt;(k), nk);
-<a name="l00059"></a>00059         setData(static_cast&lt;const char*&gt;(dta), nb);
-<a name="l00060"></a>00060     }
-<a name="l00061"></a>00061 
-<a name="l00062"></a><a class="code" href="class_item.html#a11663c84075b78c3ae5e30fdfcd7c458">00062</a>     <a class="code" href="class_item.html#a11663c84075b78c3ae5e30fdfcd7c458">~Item</a>() {}
-<a name="l00063"></a>00063 
-<a name="l00064"></a><a class="code" href="class_item.html#a9db6711a31cdacddcba49525daaa69bc">00064</a>     <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="class_item.html#a9db6711a31cdacddcba49525daaa69bc">getData</a>()<span class="keyword"> const </span>{
-<a name="l00065"></a>00065         <span class="keywordflow">return</span> value-&gt;c_str();
-<a name="l00066"></a>00066     }
-<a name="l00067"></a>00067 
-<a name="l00068"></a><a class="code" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5">00068</a>     <a class="code" href="item_8hh.html#abae346acc690a206513f314279475d13">value_t</a> <a class="code" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5">getValue</a>()<span class="keyword"> const </span>{
-<a name="l00069"></a>00069         <span class="keywordflow">return</span> value;
-<a name="l00070"></a>00070     }
-<a name="l00071"></a>00071 
-<a name="l00072"></a><a class="code" href="class_item.html#a69a127532c48e377f418623b03be542c">00072</a>     <span class="keyword">const</span> std::string &amp;<a class="code" href="class_item.html#a69a127532c48e377f418623b03be542c">getKey</a>()<span class="keyword"> const </span>{
-<a name="l00073"></a>00073         <span class="keywordflow">return</span> key;
-<a name="l00074"></a>00074     }
-<a name="l00075"></a>00075 
-<a name="l00076"></a><a class="code" href="class_item.html#aa3bd74215bd1aca19c378fe3c538db23">00076</a>     int64_t <a class="code" href="class_item.html#aa3bd74215bd1aca19c378fe3c538db23">getId</a>()<span class="keyword"> const </span>{
-<a name="l00077"></a>00077         <span class="keywordflow">return</span> id;
-<a name="l00078"></a>00078     }
-<a name="l00079"></a>00079 
-<a name="l00080"></a><a class="code" href="class_item.html#a33942c720908bb11513178a6236b2073">00080</a>     <span class="keywordtype">int</span> <a class="code" href="class_item.html#a33942c720908bb11513178a6236b2073">getNKey</a>()<span class="keyword"> const </span>{
-<a name="l00081"></a>00081         <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.length());
-<a name="l00082"></a>00082     }
-<a name="l00083"></a>00083 
-<a name="l00084"></a><a class="code" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c">00084</a>     uint32_t <a class="code" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c">getNBytes</a>()<span class="keyword"> const </span>{
-<a name="l00085"></a>00085         <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(value-&gt;length());
-<a name="l00086"></a>00086     }
-<a name="l00087"></a>00087 
-<a name="l00088"></a><a class="code" href="class_item.html#a384715ade9f1bb7548416ea4d61b1bd3">00088</a>     rel_time_t <a class="code" href="class_item.html#a384715ade9f1bb7548416ea4d61b1bd3">getExptime</a>()<span class="keyword"> const </span>{
-<a name="l00089"></a>00089         <span class="keywordflow">return</span> exptime;
+<a name="l00052"></a>00052     <span class="comment">// This is necessary for making C++ happy when I&#39;m doing a</span>
+<a name="l00053"></a>00053     <span class="comment">// placement new on fairly &quot;normal&quot; c++ heap allocations, just</span>
+<a name="l00054"></a>00054     <span class="comment">// with variable-sized objects.</span>
+<a name="l00055"></a><a class="code" href="class_blob.html#a332fca5c1a7b36f981f5cf1cf08b206f">00055</a>     <span class="keywordtype">void</span> <a class="code" href="class_blob.html#a332fca5c1a7b36f981f5cf1cf08b206f">operator delete</a>(<span class="keywordtype">void</span>* p) { ::operator <span class="keyword">delete</span>(p); }
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="keyword">private</span>:
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059     <span class="keyword">explicit</span> <a class="code" href="class_blob.html">Blob</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *start, <span class="keyword">const</span> <span class="keywordtype">size_t</span> len) : size(static_cast&lt;uint32_t&gt;(len)) {
+<a name="l00060"></a>00060         std::memcpy(data, start, len);
+<a name="l00061"></a>00061     }
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063     <span class="keyword">explicit</span> <a class="code" href="class_blob.html">Blob</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> c, <span class="keyword">const</span> <span class="keywordtype">size_t</span> len) : size(static_cast&lt;uint32_t&gt;(len)) {
+<a name="l00064"></a>00064         std::memset(data, c, len);
+<a name="l00065"></a>00065     }
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067     <span class="keyword">const</span> uint32_t size;
+<a name="l00068"></a>00068     <span class="keywordtype">char</span> data[1];
+<a name="l00069"></a>00069 
+<a name="l00070"></a>00070     <a class="code" href="common_8hh.html#af8df3547bfde53a5acb93e2607b0034a">DISALLOW_COPY_AND_ASSIGN</a>(<a class="code" href="class_blob.html">Blob</a>);
+<a name="l00071"></a>00071 };
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="item_8hh.html#a6c55cd4fb4a7097b3636fd57526fe13c">00073</a> <span class="keyword">typedef</span> shared_ptr&lt;const Blob&gt; <a class="code" href="item_8hh.html#a6c55cd4fb4a7097b3636fd57526fe13c">value_t</a>;
+<a name="l00074"></a>00074 
+<a name="l00080"></a><a class="code" href="class_item.html">00080</a> <span class="keyword">class </span><a class="code" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a> {
+<a name="l00081"></a>00081 <span class="keyword">public</span>:
+<a name="l00082"></a><a class="code" href="class_item.html#a677316dfeb9349bfe61601206ef16148">00082</a>     <a class="code" href="class_item.html#a677316dfeb9349bfe61601206ef16148">Item</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* k, <span class="keyword">const</span> <span class="keywordtype">size_t</span> nk, <span class="keyword">const</span> <span class="keywordtype">size_t</span> nb,
+<a name="l00083"></a>00083          <span class="keyword">const</span> <span class="keywordtype">int</span> fl, <span class="keyword">const</span> rel_time_t exp, uint64_t theCas = 0,
+<a name="l00084"></a>00084          int64_t i = -1, uint16_t vbid = 0) :
+<a name="l00085"></a>00085         flags(fl), exptime(exp), cas(theCas), id(i), vbucketId(vbid)
+<a name="l00086"></a>00086     {
+<a name="l00087"></a>00087         key.assign(static_cast&lt;const char*&gt;(k), nk);
+<a name="l00088"></a>00088         assert(<span class="keywordtype">id</span> != 0);
+<a name="l00089"></a>00089         setData(NULL, nb);
 <a name="l00090"></a>00090     }
 <a name="l00091"></a>00091 
-<a name="l00092"></a><a class="code" href="class_item.html#a553eb7e9f447ee7c17a3933e992962e3">00092</a>     <span class="keywordtype">int</span> <a class="code" href="class_item.html#a553eb7e9f447ee7c17a3933e992962e3">getFlags</a>()<span class="keyword"> const </span>{
-<a name="l00093"></a>00093         <span class="keywordflow">return</span> flags;
-<a name="l00094"></a>00094     }
-<a name="l00095"></a>00095 
-<a name="l00096"></a><a class="code" href="class_item.html#ace70aa3fc891b5371319eb1d07edfa44">00096</a>     uint64_t <a class="code" href="class_item.html#ace70aa3fc891b5371319eb1d07edfa44">getCas</a>()<span class="keyword"> const </span>{
-<a name="l00097"></a>00097         <span class="keywordflow">return</span> cas;
-<a name="l00098"></a>00098     }
-<a name="l00099"></a>00099 
-<a name="l00100"></a><a class="code" href="class_item.html#a4fb03efb2dd1e866009e9b6af4f08278">00100</a>     <span class="keywordtype">void</span> <a class="code" href="class_item.html#a4fb03efb2dd1e866009e9b6af4f08278">setCas</a>() {
-<a name="l00101"></a>00101         cas = nextCas();
-<a name="l00102"></a>00102     }
-<a name="l00103"></a>00103 
-<a name="l00104"></a><a class="code" href="class_item.html#a932d0489d9d2bbe9ee99fe37134b4bf8">00104</a>     <span class="keywordtype">void</span> <a class="code" href="class_item.html#a932d0489d9d2bbe9ee99fe37134b4bf8">setCas</a>(uint64_t ncas) {
-<a name="l00105"></a>00105         cas = ncas;
-<a name="l00106"></a>00106     }
-<a name="l00107"></a>00107 
-<a name="l00114"></a><a class="code" href="class_item.html#a1445a9ba65ccc4014b9b52774615c995">00114</a>     <span class="keywordtype">bool</span> <a class="code" href="class_item.html#a1445a9ba65ccc4014b9b52774615c995" title="Append another item to this item.">append</a>(<span class="keyword">const</span> <a class="code" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a> &amp;item) {
-<a name="l00115"></a>00115         std::string *newValue = <span class="keyword">new</span> std::string(*value, 0, value-&gt;length() - 2);
-<a name="l00116"></a>00116         <span class="keywordflow">if</span> (newValue != NULL) {
-<a name="l00117"></a>00117             newValue-&gt;append(*item.<a class="code" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5">getValue</a>());
-<a name="l00118"></a>00118             value.reset(newValue);
-<a name="l00119"></a>00119             <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00120"></a>00120         } <span class="keywordflow">else</span> {
-<a name="l00121"></a>00121             <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00122"></a>00122         }
-<a name="l00123"></a>00123     }
-<a name="l00124"></a>00124 
-<a name="l00131"></a><a class="code" href="class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9">00131</a>     <span class="keywordtype">bool</span> <a class="code" href="class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9" title="Prepend another item to this item.">prepend</a>(<span class="keyword">const</span> <a class="code" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a> &amp;item) {
-<a name="l00132"></a>00132         std::string *newValue = <span class="keyword">new</span> std::string(*item.<a class="code" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5">getValue</a>(), 0, item.<a class="code" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c">getNBytes</a>() - 2);
-<a name="l00133"></a>00133         <span class="keywordflow">if</span> (newValue != NULL) {
-<a name="l00134"></a>00134             newValue-&gt;append(*value);
-<a name="l00135"></a>00135             value.reset(newValue);
-<a name="l00136"></a>00136             <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00137"></a>00137         } <span class="keywordflow">else</span> {
-<a name="l00138"></a>00138             <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00139"></a>00139         }
+<a name="l00092"></a><a class="code" href="class_item.html#a615ecaa98a86ec448eaf49ac751aab33">00092</a>     <a class="code" href="class_item.html#a677316dfeb9349bfe61601206ef16148">Item</a>(<span class="keyword">const</span> std::string &amp;k, <span class="keyword">const</span> <span class="keywordtype">int</span> fl, <span class="keyword">const</span> rel_time_t exp,
+<a name="l00093"></a>00093          <span class="keyword">const</span> <span class="keywordtype">void</span> *dta, <span class="keyword">const</span> <span class="keywordtype">size_t</span> nb, uint64_t theCas = 0,
+<a name="l00094"></a>00094          int64_t i = -1, uint16_t vbid = 0) :
+<a name="l00095"></a>00095         flags(fl), exptime(exp), cas(theCas), id(i), vbucketId(vbid)
+<a name="l00096"></a>00096     {
+<a name="l00097"></a>00097         key.assign(k);
+<a name="l00098"></a>00098         assert(<span class="keywordtype">id</span> != 0);
+<a name="l00099"></a>00099         setData(static_cast&lt;const char*&gt;(dta), nb);
+<a name="l00100"></a>00100     }
+<a name="l00101"></a>00101 
+<a name="l00102"></a><a class="code" href="class_item.html#af64588d8528ea27a9bc6615060260cc4">00102</a>     <a class="code" href="class_item.html#a677316dfeb9349bfe61601206ef16148">Item</a>(<span class="keyword">const</span> std::string &amp;k, <span class="keyword">const</span> <span class="keywordtype">int</span> fl, <span class="keyword">const</span> rel_time_t exp,
+<a name="l00103"></a>00103          <a class="code" href="item_8hh.html#a6c55cd4fb4a7097b3636fd57526fe13c">value_t</a> val, uint64_t theCas = 0,  int64_t i = -1, uint16_t vbid = 0) :
+<a name="l00104"></a>00104         flags(fl), exptime(exp), value(val), cas(theCas), id(i), vbucketId(vbid)
+<a name="l00105"></a>00105     {
+<a name="l00106"></a>00106         assert(<span class="keywordtype">id</span> != 0);
+<a name="l00107"></a>00107         key.assign(k);
+<a name="l00108"></a>00108     }
+<a name="l00109"></a>00109 
+<a name="l00110"></a><a class="code" href="class_item.html#a13c3edd3fc7f6601189ee2133408ca9e">00110</a>     <a class="code" href="class_item.html#a677316dfeb9349bfe61601206ef16148">Item</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *k, uint16_t nk, <span class="keyword">const</span> <span class="keywordtype">int</span> fl, <span class="keyword">const</span> rel_time_t exp,
+<a name="l00111"></a>00111          <span class="keyword">const</span> <span class="keywordtype">void</span> *dta, <span class="keyword">const</span> <span class="keywordtype">size_t</span> nb, uint64_t theCas = 0,
+<a name="l00112"></a>00112          int64_t i = -1, uint16_t vbid = 0) :
+<a name="l00113"></a>00113         flags(fl), exptime(exp), cas(theCas), id(i), vbucketId(vbid)
+<a name="l00114"></a>00114     {
+<a name="l00115"></a>00115         assert(<span class="keywordtype">id</span> != 0);
+<a name="l00116"></a>00116         key.assign(static_cast&lt;const char*&gt;(k), nk);
+<a name="l00117"></a>00117         setData(static_cast&lt;const char*&gt;(dta), nb);
+<a name="l00118"></a>00118     }
+<a name="l00119"></a>00119 
+<a name="l00120"></a><a class="code" href="class_item.html#a11663c84075b78c3ae5e30fdfcd7c458">00120</a>     <a class="code" href="class_item.html#a11663c84075b78c3ae5e30fdfcd7c458">~Item</a>() {}
+<a name="l00121"></a>00121 
+<a name="l00122"></a><a class="code" href="class_item.html#a9db6711a31cdacddcba49525daaa69bc">00122</a>     <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="class_item.html#a9db6711a31cdacddcba49525daaa69bc">getData</a>()<span class="keyword"> const </span>{
+<a name="l00123"></a>00123         <span class="keywordflow">return</span> value-&gt;getData();
+<a name="l00124"></a>00124     }
+<a name="l00125"></a>00125 
+<a name="l00126"></a><a class="code" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5">00126</a>     <a class="code" href="item_8hh.html#a6c55cd4fb4a7097b3636fd57526fe13c">value_t</a> <a class="code" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5">getValue</a>()<span class="keyword"> const </span>{
+<a name="l00127"></a>00127         <span class="keywordflow">return</span> value;
+<a name="l00128"></a>00128     }
+<a name="l00129"></a>00129 
+<a name="l00130"></a><a class="code" href="class_item.html#a69a127532c48e377f418623b03be542c">00130</a>     <span class="keyword">const</span> std::string &amp;<a class="code" href="class_item.html#a69a127532c48e377f418623b03be542c">getKey</a>()<span class="keyword"> const </span>{
+<a name="l00131"></a>00131         <span class="keywordflow">return</span> key;
+<a name="l00132"></a>00132     }
+<a name="l00133"></a>00133 
+<a name="l00134"></a><a class="code" href="class_item.html#aa3bd74215bd1aca19c378fe3c538db23">00134</a>     int64_t <a class="code" href="class_item.html#aa3bd74215bd1aca19c378fe3c538db23">getId</a>()<span class="keyword"> const </span>{
+<a name="l00135"></a>00135         <span class="keywordflow">return</span> id;
+<a name="l00136"></a>00136     }
+<a name="l00137"></a>00137 
+<a name="l00138"></a><a class="code" href="class_item.html#a33942c720908bb11513178a6236b2073">00138</a>     <span class="keywordtype">int</span> <a class="code" href="class_item.html#a33942c720908bb11513178a6236b2073">getNKey</a>()<span class="keyword"> const </span>{
+<a name="l00139"></a>00139         <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(key.length());
 <a name="l00140"></a>00140     }
 <a name="l00141"></a>00141 
-<a name="l00142"></a><a class="code" href="class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488">00142</a>     uint16_t <a class="code" href="class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488">getVBucketId</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{
-<a name="l00143"></a>00143         <span class="keywordflow">return</span> vbucketId;
+<a name="l00142"></a><a class="code" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c">00142</a>     uint32_t <a class="code" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c">getNBytes</a>()<span class="keyword"> const </span>{
+<a name="l00143"></a>00143         <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(value-&gt;length());
 <a name="l00144"></a>00144     }
 <a name="l00145"></a>00145 
-<a name="l00146"></a><a class="code" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a">00146</a>     <span class="keywordtype">void</span> <a class="code" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a">setVBucketId</a>(uint16_t to) {
-<a name="l00147"></a>00147         vbucketId = to;
+<a name="l00146"></a><a class="code" href="class_item.html#a384715ade9f1bb7548416ea4d61b1bd3">00146</a>     rel_time_t <a class="code" href="class_item.html#a384715ade9f1bb7548416ea4d61b1bd3">getExptime</a>()<span class="keyword"> const </span>{
+<a name="l00147"></a>00147         <span class="keywordflow">return</span> exptime;
 <a name="l00148"></a>00148     }
 <a name="l00149"></a>00149 
-<a name="l00150"></a>00150 <span class="keyword">private</span>:
-<a name="l00155"></a>00155     <span class="keywordtype">void</span> setData(<span class="keyword">const</span> <span class="keywordtype">char</span> *dta, <span class="keyword">const</span> <span class="keywordtype">size_t</span> nb) {
-<a name="l00156"></a>00156         std::string *data;
-<a name="l00157"></a>00157         <span class="keywordflow">if</span> (dta == NULL) {
-<a name="l00158"></a>00158             data = <span class="keyword">new</span> std::string(nb, <span class="charliteral">&#39;\0&#39;</span>);
-<a name="l00159"></a>00159         } <span class="keywordflow">else</span> {
-<a name="l00160"></a>00160             data = <span class="keyword">new</span> std::string(dta, nb);
-<a name="l00161"></a>00161         }
-<a name="l00162"></a>00162 
-<a name="l00163"></a>00163         assert(data);
-<a name="l00164"></a>00164         value.reset(data);
-<a name="l00165"></a>00165     }
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167     <span class="keywordtype">int</span> flags;
-<a name="l00168"></a>00168     rel_time_t exptime;
-<a name="l00169"></a>00169     std::string key;
-<a name="l00170"></a>00170     <a class="code" href="item_8hh.html#abae346acc690a206513f314279475d13">value_t</a> value;
-<a name="l00171"></a>00171     uint64_t cas;
-<a name="l00172"></a>00172     int64_t id;
-<a name="l00173"></a>00173     uint16_t vbucketId;
-<a name="l00174"></a>00174 
-<a name="l00175"></a>00175     <span class="keyword">static</span> uint64_t nextCas(<span class="keywordtype">void</span>) {
-<a name="l00176"></a>00176         uint64_t ret;
-<a name="l00177"></a>00177         ret = casCounter++;
-<a name="l00178"></a>00178         <span class="keywordflow">if</span> ((ret % casNotificationFrequency) == 0) {
-<a name="l00179"></a>00179             casNotifier(ret);
-<a name="l00180"></a>00180         }
-<a name="l00181"></a>00181 
-<a name="l00182"></a>00182         <span class="keywordflow">return</span> ret;
-<a name="l00183"></a>00183     }
-<a name="l00184"></a>00184 
-<a name="l00185"></a>00185     <span class="keyword">static</span> <span class="keywordtype">void</span> initializeCas(uint64_t initial, <span class="keywordtype">void</span> (*notifier)(uint64_t current),
-<a name="l00186"></a>00186                               uint64_t frequency) {
-<a name="l00187"></a>00187         casCounter = initial;
-<a name="l00188"></a>00188         casNotifier = notifier;
-<a name="l00189"></a>00189         casNotificationFrequency = frequency;
+<a name="l00150"></a><a class="code" href="class_item.html#a553eb7e9f447ee7c17a3933e992962e3">00150</a>     <span class="keywordtype">int</span> <a class="code" href="class_item.html#a553eb7e9f447ee7c17a3933e992962e3">getFlags</a>()<span class="keyword"> const </span>{
+<a name="l00151"></a>00151         <span class="keywordflow">return</span> flags;
+<a name="l00152"></a>00152     }
+<a name="l00153"></a>00153 
+<a name="l00154"></a><a class="code" href="class_item.html#ace70aa3fc891b5371319eb1d07edfa44">00154</a>     uint64_t <a class="code" href="class_item.html#ace70aa3fc891b5371319eb1d07edfa44">getCas</a>()<span class="keyword"> const </span>{
+<a name="l00155"></a>00155         <span class="keywordflow">return</span> cas;
+<a name="l00156"></a>00156     }
+<a name="l00157"></a>00157 
+<a name="l00158"></a><a class="code" href="class_item.html#a4fb03efb2dd1e866009e9b6af4f08278">00158</a>     <span class="keywordtype">void</span> <a class="code" href="class_item.html#a4fb03efb2dd1e866009e9b6af4f08278">setCas</a>() {
+<a name="l00159"></a>00159         cas = nextCas();
+<a name="l00160"></a>00160     }
+<a name="l00161"></a>00161 
+<a name="l00162"></a><a class="code" href="class_item.html#a932d0489d9d2bbe9ee99fe37134b4bf8">00162</a>     <span class="keywordtype">void</span> <a class="code" href="class_item.html#a932d0489d9d2bbe9ee99fe37134b4bf8">setCas</a>(uint64_t ncas) {
+<a name="l00163"></a>00163         cas = ncas;
+<a name="l00164"></a>00164     }
+<a name="l00165"></a>00165 
+<a name="l00172"></a><a class="code" href="class_item.html#a1445a9ba65ccc4014b9b52774615c995">00172</a>     <span class="keywordtype">bool</span> <a class="code" href="class_item.html#a1445a9ba65ccc4014b9b52774615c995" title="Append another item to this item.">append</a>(<span class="keyword">const</span> <a class="code" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a> &amp;item) {
+<a name="l00173"></a>00173         std::string newValue(value-&gt;getData(), 0, value-&gt;length() - 2);
+<a name="l00174"></a>00174         newValue.append(item.<a class="code" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5">getValue</a>()-&gt;to_s());
+<a name="l00175"></a>00175         value.reset(<a class="code" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a">Blob::New</a>(newValue));
+<a name="l00176"></a>00176         <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00177"></a>00177     }
+<a name="l00178"></a>00178 
+<a name="l00185"></a><a class="code" href="class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9">00185</a>     <span class="keywordtype">bool</span> <a class="code" href="class_item.html#a7d2a3e2eb3c8b612340ace68ace3d9f9" title="Prepend another item to this item.">prepend</a>(<span class="keyword">const</span> <a class="code" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a> &amp;item) {
+<a name="l00186"></a>00186         std::string newValue(item.<a class="code" href="class_item.html#ab5385ec49546b2c2eb0857630f5f25a5">getValue</a>()-&gt;to_s(), 0, item.<a class="code" href="class_item.html#a0a9d310ffc2cc4e441057d3f98568d4c">getNBytes</a>() - 2);
+<a name="l00187"></a>00187         newValue.append(value-&gt;to_s());
+<a name="l00188"></a>00188         value.reset(<a class="code" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a">Blob::New</a>(newValue));
+<a name="l00189"></a>00189         <span class="keywordflow">return</span> <span class="keyword">true</span>;
 <a name="l00190"></a>00190     }
 <a name="l00191"></a>00191 
-<a name="l00192"></a>00192     <span class="keyword">static</span> uint64_t casNotificationFrequency;
-<a name="l00193"></a>00193     <span class="keyword">static</span> void (*casNotifier)(uint64_t);
-<a name="l00194"></a>00194     <span class="keyword">static</span> <a class="code" href="class_atomic.html">Atomic&lt;uint64_t&gt;</a> casCounter;
-<a name="l00195"></a>00195     <a class="code" href="common_8hh.html#af8df3547bfde53a5acb93e2607b0034a">DISALLOW_COPY_AND_ASSIGN</a>(<a class="code" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a>);
-<a name="l00196"></a>00196 };
-<a name="l00197"></a>00197 
-<a name="l00198"></a>00198 <span class="preprocessor">#endif</span>
+<a name="l00192"></a><a class="code" href="class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488">00192</a>     uint16_t <a class="code" href="class_item.html#ac1018f0bb01bcfc6f24eb4a3e7401488">getVBucketId</a>(<span class="keywordtype">void</span>)<span class="keyword"> const </span>{
+<a name="l00193"></a>00193         <span class="keywordflow">return</span> vbucketId;
+<a name="l00194"></a>00194     }
+<a name="l00195"></a>00195 
+<a name="l00196"></a><a class="code" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a">00196</a>     <span class="keywordtype">void</span> <a class="code" href="class_item.html#a45f854602ab1a9f17b8097ad00b38d3a">setVBucketId</a>(uint16_t to) {
+<a name="l00197"></a>00197         vbucketId = to;
+<a name="l00198"></a>00198     }
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200 <span class="keyword">private</span>:
+<a name="l00205"></a>00205     <span class="keywordtype">void</span> setData(<span class="keyword">const</span> <span class="keywordtype">char</span> *dta, <span class="keyword">const</span> <span class="keywordtype">size_t</span> nb) {
+<a name="l00206"></a>00206         <a class="code" href="class_blob.html">Blob</a> *data;
+<a name="l00207"></a>00207         <span class="keywordflow">if</span> (dta == NULL) {
+<a name="l00208"></a>00208             data = <a class="code" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a">Blob::New</a>(nb, <span class="charliteral">&#39;\0&#39;</span>);
+<a name="l00209"></a>00209         } <span class="keywordflow">else</span> {
+<a name="l00210"></a>00210             data = <a class="code" href="class_blob.html#ab7e65554d93c6cc358c682b3243bde8a">Blob::New</a>(dta, nb);
+<a name="l00211"></a>00211         }
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213         assert(data);
+<a name="l00214"></a>00214         value.reset(data);
+<a name="l00215"></a>00215     }
+<a name="l00216"></a>00216 
+<a name="l00217"></a>00217     <span class="keywordtype">int</span> flags;
+<a name="l00218"></a>00218     rel_time_t exptime;
+<a name="l00219"></a>00219     std::string key;
+<a name="l00220"></a>00220     <a class="code" href="item_8hh.html#a6c55cd4fb4a7097b3636fd57526fe13c">value_t</a> value;
+<a name="l00221"></a>00221     uint64_t cas;
+<a name="l00222"></a>00222     int64_t id;
+<a name="l00223"></a>00223     uint16_t vbucketId;
+<a name="l00224"></a>00224 
+<a name="l00225"></a>00225     <span class="keyword">static</span> uint64_t nextCas(<span class="keywordtype">void</span>) {
+<a name="l00226"></a>00226         uint64_t ret;
+<a name="l00227"></a>00227         ret = casCounter++;
+<a name="l00228"></a>00228         <span class="keywordflow">if</span> ((ret % casNotificationFrequency) == 0) {
+<a name="l00229"></a>00229             casNotifier(ret);
+<a name="l00230"></a>00230         }
+<a name="l00231"></a>00231 
+<a name="l00232"></a>00232         <span class="keywordflow">return</span> ret;
+<a name="l00233"></a>00233     }
+<a name="l00234"></a>00234 
+<a name="l00235"></a>00235     <span class="keyword">static</span> <span class="keywordtype">void</span> initializeCas(uint64_t initial, <span class="keywordtype">void</span> (*notifier)(uint64_t current),
+<a name="l00236"></a>00236                               uint64_t frequency) {
+<a name="l00237"></a>00237         casCounter = initial;
+<a name="l00238"></a>00238         casNotifier = notifier;
+<a name="l00239"></a>00239         casNotificationFrequency = frequency;
+<a name="l00240"></a>00240     }
+<a name="l00241"></a>00241 
+<a name="l00242"></a>00242     <span class="keyword">static</span> uint64_t casNotificationFrequency;
+<a name="l00243"></a>00243     <span class="keyword">static</span> void (*casNotifier)(uint64_t);
+<a name="l00244"></a>00244     <span class="keyword">static</span> <a class="code" href="class_atomic.html">Atomic&lt;uint64_t&gt;</a> casCounter;
+<a name="l00245"></a>00245     <a class="code" href="common_8hh.html#af8df3547bfde53a5acb93e2607b0034a">DISALLOW_COPY_AND_ASSIGN</a>(<a class="code" href="class_item.html" title="The Item structure we use to pass information between the memcached core and the...">Item</a>);
+<a name="l00246"></a>00246 };
+<a name="l00247"></a>00247 
+<a name="l00248"></a>00248 <span class="preprocessor">#endif</span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -234,7 +284,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:01 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:39 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

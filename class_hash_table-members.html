@@ -47,19 +47,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <h1>HashTable Member List</h1>This is the complete list of members for <a class="el" href="class_hash_table.html">HashTable</a>, including all inherited members.<table>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#ae77e22aa6f0a1e1af698863c399c3a44">add</a>(const Item &amp;val, bool isDirty=true)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a98d2474aa2d5f0e3911f393b2f3ad088">bucket</a>(const std::string &amp;key)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a80532994171008a6989dcdd3073e8ee7">clear</a>(bool deactivate=false)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a0e58e888d0f0963247b5eea143da7ab4">bucket</a>(const char *str, const size_t len)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#afe373e76fa42d61c626a33d4335fc21f">bucket</a>(const std::string &amp;s)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a16d784d4d2721908e4d3221eba1d77fa">clear</a>(bool deactivate=false)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#a495a0cab010fd533f06c235f0c2af3cc">del</a>(const std::string &amp;key)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#a381a8da523a9469d0181e90b992df95b">find</a>(std::string &amp;key)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a78c94e47e8d7f1fe6e325995de021df8">getDefaultStorageValueType</a>()</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a79386c3b7fbc702294d6f8f77b231635">getDefaultStorageValueTypeStr</a>()</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#abee30d2b6f2edeab4dfa3f2499e3685f">getMutex</a>(int bucket_num)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a06f83b5a9f3964a30546c464be691b23">getNumBuckets</a>(size_t)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#af1ea55e43cee12ab3fb33020346cc1c3">getMutexForLock</a>(int lock_num)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a97986cbcc30e2279f10cbf528b512415">getNumBuckets</a>(size_t s)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#a30964fc4125baf87564761a220061ab0">getNumLocks</a>(void)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a715243b0bec643bcd61be8e75b697ba1">getNumLocks</a>(size_t)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a829ef1107dd5620d2e4ac8e1f85efe49">getNumLocks</a>(size_t s)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#a95a64de238722621660852b97e1a4ca6">getSize</a>(void)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_hash_table.html#ac9e3db51c1e03eab15f6b9ae22209ae9">HashTable</a>(size_t s=0, size_t l=0)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a06fb934d9694fa3b0ef6c721b3ddd364">HashTable</a>(size_t s=0, size_t l=0, enum stored_value_type t=featured)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0">set</a>(const Item &amp;val)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#ad93b79271576e70a0b918bd1bd916ab2">setDefaultNumBuckets</a>(size_t)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#af0cc96f6a1347c6259acbf0d7665f2c0">setDefaultNumLocks</a>(size_t)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a394ba8fd6fc9b5e888824e69d95e845d">setDefaultStorageValueType</a>(const char *t)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_hash_table.html#a44955671dead826fa1970e85cf5b62ec">setDefaultStorageValueType</a>(enum stored_value_type)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#a65a4132a3011ea8bc100a6c0a45ce4e7">unlocked_del</a>(const std::string &amp;key, int bucket_num)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#a92572ea340897dbee6f3e50cbff6dd1d">unlocked_find</a>(const std::string &amp;key, int bucket_num)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_hash_table.html#a9edd623bc8d50b043144045c3a217fbb">visit</a>(HashTableVisitor &amp;visitor)</td><td><a class="el" href="class_hash_table.html">HashTable</a></td><td></td></tr>
@@ -80,7 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:45 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:43 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

@@ -1,5 +1,15 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$ep__engine_8h.html#aff090e2323364e5dcdea2610c431b0d4" title="add_casted_stat" alt="" coords="228,5,359,33"/>
-<area shape="rect" id="node5" href="$class_stored_value.html#a0cea17ad1e7f3f237cd31022444af71f" title="What&#39;s the total size of allocations?" alt="" coords="188,55,399,83"/>
-<area shape="rect" id="node7" href="$class_eventually_persistent_store.html#aa9a3b088e767cb94008d756032505de4" title="EventuallyPersistentStore::getTxnSize" alt="" coords="156,106,431,134"/>
+<area shape="rect" id="node3" href="$ep__engine_8h.html#aff090e2323364e5dcdea2610c431b0d4" title="add_casted_stat" alt="" coords="228,81,359,109"/>
+<area shape="rect" id="node5" href="$class_stored_value.html#a0cea17ad1e7f3f237cd31022444af71f" title="Get the current amount of of data stored." alt="" coords="188,131,399,159"/>
+<area shape="rect" id="node28" href="$class_eventually_persistent_store.html#aa9a3b088e767cb94008d756032505de4" title="EventuallyPersistentStore::getTxnSize" alt="" coords="156,182,431,210"/>
+<area shape="rect" id="node7" href="$class_stored_value.html#a2b2ce73c52fd67b63debc2104829818a" title="Get the size of a StoredValue object." alt="" coords="480,131,632,159"/>
+<area shape="rect" id="node9" href="$sizes_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="721,81,777,109"/>
+<area shape="rect" id="node11" href="$class_stored_value.html#ac3872d62bf3b5e42e30d062b90a75e86" title="Get the total size of this item." alt="" coords="681,131,817,159"/>
+<area shape="rect" id="node13" href="$class_hash_table.html#a0e58e888d0f0963247b5eea143da7ab4" title="Get the bucket number for the given C string key." alt="" coords="912,5,1056,33"/>
+<area shape="rect" id="node15" href="$class_hash_table.html#a95a64de238722621660852b97e1a4ca6" title="Get the number of hash table buckets this hash table has." alt="" coords="911,55,1057,83"/>
+<area shape="rect" id="node17" href="$class_hash_table.html#a06fb934d9694fa3b0ef6c721b3ddd364" title="Create a HashTable." alt="" coords="901,106,1067,134"/>
+<area shape="rect" id="node19" href="$class_stored_value.html#a811d80d0acdd37232da08a5de6985c4c" title="Set a new value for this item." alt="" coords="900,157,1068,185"/>
+<area shape="rect" id="node24" href="$class_hash_table_depth_stat_visitor.html#acb1f7a14057176b0a3f8a5f1460ab3cb" title="Called once for each hashtable bucket with its depth." alt="" coords="867,207,1101,235"/>
+<area shape="rect" id="node26" href="$class_stored_value.html#aa855286bf93c8db63c297dc43cb34f62" title="StoredValue::~StoredValue" alt="" coords="883,258,1085,286"/>
+<area shape="rect" id="node21" href="$class_hash_table.html#a196a9fb276d4a13fd8bf928b26fe8be0" title="Set a new Item into this hashtable." alt="" coords="1151,157,1268,185"/>
 </map>

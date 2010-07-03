@@ -1,10 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_r_c_value.html" title="RCValue" alt="" coords="5,353,80,381"/>
-<area shape="rect" id="node4" href="$class_atomic.html" title="Atomic\&lt; int \&gt;" alt="" coords="17,246,135,274"/>
-<area shape="rect" id="node6" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="224,99,331,127"/>
-<area shape="rect" id="node12" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="208,193,347,221"/>
-<area shape="rect" id="node22" href="$class_atomic.html" title="Atomic\&lt; vbucket_state_t \&gt;" alt="" coords="411,246,616,274"/>
-<area shape="rect" id="node10" href="$class_hash_table.html" title="Hash table that stores all of the items in memory." alt="" coords="245,406,333,434"/>
-<area shape="rect" id="node17" href="$class_stored_value.html" title="StoredValue" alt="" coords="329,299,431,327"/>
-<area shape="rect" id="node15" href="$class_mutex.html" title="Abstraction built on top of pthread mutexes." alt="" coords="147,299,208,327"/>
+<area shape="rect" id="node2" href="$class_r_c_value.html" title="RCValue" alt="" coords="252,353,327,381"/>
+<area shape="rect" id="node4" href="$class_atomic.html" title="Atomic\&lt; int \&gt;" alt="" coords="217,246,335,274"/>
+<area shape="rect" id="node6" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="221,99,328,127"/>
+<area shape="rect" id="node12" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="312,193,451,221"/>
+<area shape="rect" id="node30" href="$class_atomic.html" title="Atomic\&lt; vbucket_state_t \&gt;" alt="" coords="5,246,211,274"/>
+<area shape="rect" id="node10" href="$class_hash_table.html" title="A container of StoredValue instances." alt="" coords="461,406,549,434"/>
+<area shape="rect" id="node19" href="$class_stored_value.html" title="In&#45;memory storage for an item." alt="" coords="455,299,556,327"/>
+<area shape="rect" id="node15" href="$class_stored_value_factory.html" title="Creator of StoredValue instances." alt="" coords="635,299,784,327"/>
+<area shape="rect" id="node17" href="$class_mutex.html" title="Abstraction built on top of pthread mutexes." alt="" coords="808,299,869,327"/>
+<area shape="rect" id="node22" href="$unionstored__value__bodies.html" title="Union of StoredValue data." alt="" coords="475,193,632,221"/>
+<area shape="rect" id="node24" href="$structfeature__data.html" title="StoredValue &quot;featured&quot; data type." alt="" coords="580,99,687,127"/>
+<area shape="rect" id="node26" href="$structsmall__data.html" title="StoredValue &quot;small&quot; data storage." alt="" coords="463,99,556,127"/>
 </map>

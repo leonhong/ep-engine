@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node5" href="$stored-value_8hh.html" title="stored&#45;value.hh" alt="" coords="1324,83,1449,111"/>
-<area shape="rect" id="node11" href="$common_8hh.html" title="common.hh" alt="" coords="745,470,847,498"/>
-<area shape="rect" id="node34" href="$item_8hh.html" title="item.hh" alt="" coords="1025,161,1097,189"/>
-<area shape="rect" id="node60" href="$locks_8hh.html" title="locks.hh" alt="" coords="1615,315,1692,343"/>
-<area shape="rect" id="node32" href="$config_8h.html" title="config.h" alt="" coords="213,547,288,575"/>
-<area shape="rect" id="node44" href="$mutex_8hh.html" title="mutex.hh" alt="" coords="1327,393,1412,421"/>
-<area shape="rect" id="node75" href="$atomic_8hh.html" title="atomic.hh" alt="" coords="1017,238,1105,266"/>
-<area shape="rect" id="node67" href="$syncobject_8hh.html" title="syncobject.hh" alt="" coords="1537,393,1652,421"/>
+<area shape="rect" id="node5" href="$stored-value_8hh.html" title="stored&#45;value.hh" alt="" coords="1729,83,1855,111"/>
+<area shape="rect" id="node13" href="$common_8hh.html" title="common.hh" alt="" coords="963,470,1064,498"/>
+<area shape="rect" id="node36" href="$item_8hh.html" title="item.hh" alt="" coords="749,161,821,189"/>
+<area shape="rect" id="node61" href="$locks_8hh.html" title="locks.hh" alt="" coords="384,315,461,343"/>
+<area shape="rect" id="node34" href="$config_8h.html" title="config.h" alt="" coords="671,547,745,575"/>
+<area shape="rect" id="node46" href="$mutex_8hh.html" title="mutex.hh" alt="" coords="536,393,621,421"/>
+<area shape="rect" id="node76" href="$atomic_8hh.html" title="atomic.hh" alt="" coords="969,238,1057,266"/>
+<area shape="rect" id="node68" href="$syncobject_8hh.html" title="syncobject.hh" alt="" coords="296,393,411,421"/>
 </map>

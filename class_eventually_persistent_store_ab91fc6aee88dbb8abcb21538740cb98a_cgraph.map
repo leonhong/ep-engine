@@ -1,4 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="368,5,549,33"/>
-<area shape="rect" id="node5" href="$class_v_bucket_map.html#ae61f8ada845bb69451c4eff7ec989133" title="VBucketMap::removeBucket" alt="" coords="353,55,564,83"/>
+<area shape="rect" id="node3" href="$class_atomic.html#a2015110afb1268ae3306cfc35f186607" title="Atomic::decr" alt="" coords="404,5,513,33"/>
+<area shape="rect" id="node5" href="$class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="368,55,549,83"/>
+<area shape="rect" id="node7" href="$class_v_bucket_map.html#ab5c37008460a1cf992f22115ee4a05da" title="VBucketMap::removeBucket" alt="" coords="353,106,564,134"/>
 </map>

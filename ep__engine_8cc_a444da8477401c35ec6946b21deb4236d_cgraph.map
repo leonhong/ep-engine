@@ -1,9 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_eventually_persistent_engine.html#a6f703485e33d95adc2aab023c4989500" title="EventuallyPersistentEngine::deleteVBucket" alt="" coords="173,5,483,33"/>
-<area shape="rect" id="node11" href="$class_eventually_persistent_engine.html#a73067d30ccb9733332a0f5c14dcc802c" title="EventuallyPersistentEngine::getVBucket" alt="" coords="184,55,472,83"/>
-<area shape="rect" id="node16" href="$common_8hh.html#adc37afe8902889256d57848f4c88663c" title="parseUint16" alt="" coords="276,106,380,134"/>
-<area shape="rect" id="node5" href="$class_eventually_persistent_store.html#ab91fc6aee88dbb8abcb21538740cb98a" title="EventuallyPersistentStore::deleteVBucket" alt="" coords="531,5,829,33"/>
-<area shape="rect" id="node7" href="$class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="893,55,1075,83"/>
-<area shape="rect" id="node9" href="$class_v_bucket_map.html#ae61f8ada845bb69451c4eff7ec989133" title="VBucketMap::removeBucket" alt="" coords="879,5,1089,33"/>
-<area shape="rect" id="node13" href="$class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="541,55,819,83"/>
+<area shape="rect" id="node3" href="$class_eventually_persistent_engine.html#a6f703485e33d95adc2aab023c4989500" title="EventuallyPersistentEngine::deleteVBucket" alt="" coords="173,55,483,83"/>
+<area shape="rect" id="node13" href="$class_eventually_persistent_engine.html#a73067d30ccb9733332a0f5c14dcc802c" title="EventuallyPersistentEngine::getVBucket" alt="" coords="184,106,472,134"/>
+<area shape="rect" id="node18" href="$common_8hh.html#adc37afe8902889256d57848f4c88663c" title="parseUint16" alt="" coords="276,157,380,185"/>
+<area shape="rect" id="node5" href="$class_eventually_persistent_store.html#ab91fc6aee88dbb8abcb21538740cb98a" title="EventuallyPersistentStore::deleteVBucket" alt="" coords="531,55,829,83"/>
+<area shape="rect" id="node7" href="$class_atomic.html#a2015110afb1268ae3306cfc35f186607" title="Atomic::decr" alt="" coords="929,5,1039,33"/>
+<area shape="rect" id="node9" href="$class_v_bucket_map.html#a18ab611b49f420f599579541a7f31854" title="VBucketMap::getBucket" alt="" coords="893,106,1075,134"/>
+<area shape="rect" id="node11" href="$class_v_bucket_map.html#ab5c37008460a1cf992f22115ee4a05da" title="VBucketMap::removeBucket" alt="" coords="879,55,1089,83"/>
+<area shape="rect" id="node15" href="$class_eventually_persistent_store.html#a9daff8cc0d0bfdade59dc3a392c71928" title="EventuallyPersistentStore::getVBucket" alt="" coords="541,106,819,134"/>
 </map>

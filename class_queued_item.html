@@ -54,6 +54,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queued_item.html#afc8b2d821247e25d99317b0cc9dd1f00">QueuedItem</a> (const std::string &amp;k, const uint16_t vb, enum <a class="el" href="ep_8hh.html#a6234f6b0f0b3358a7de63d03851eee3c">queue_operation</a> o)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queued_item.html#a86a0531b1aab718ce060da1988a2d53d">getKey</a> (void) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">uint16_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queued_item.html#afbe4b8470c4b7a8b96a9b7fdccbd3e47">getVBucketId</a> (void) const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">rel_time_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queued_item.html#a9a073f5c37a4c497c22e726088eb97af">getDirtied</a> (void) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="ep_8hh.html#a6234f6b0f0b3358a7de63d03851eee3c">queue_operation</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queued_item.html#a0c406e879e19e721bac28a43f46820cb">getOperation</a> (void) const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_queued_item.html#a45e0cbb65a521348bb576af136f53d3a">operator&lt;</a> (const <a class="el" href="class_queued_item.html">QueuedItem</a> &amp;other) const </td></tr>
 </table>
@@ -92,6 +93,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a9a073f5c37a4c497c22e726088eb97af"></a><!-- doxytag: member="QueuedItem::getDirtied" ref="a9a073f5c37a4c497c22e726088eb97af" args="(void) const " -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rel_time_t QueuedItem::getDirtied </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td> const<code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a86a0531b1aab718ce060da1988a2d53d"></a><!-- doxytag: member="QueuedItem::getKey" ref="a86a0531b1aab718ce060da1988a2d53d" args="(void) const " -->
 <div class="memitem">
 <div class="memproto">
@@ -108,7 +127,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00871">EventuallyPersistentEngine::walkTapQueue()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00912">EventuallyPersistentEngine::walkTapQueue()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -155,7 +174,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00871">EventuallyPersistentEngine::walkTapQueue()</a>.</p>
+<p>Referenced by <a class="el" href="ep__engine_8h_source.html#l00912">EventuallyPersistentEngine::walkTapQueue()</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -204,7 +223,7 @@ Here is the caller graph for this function:</div>
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Tue Jun 22 16:28:52 2010 for membase core engine by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Fri Jul 2 22:24:44 2010 for membase core engine by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

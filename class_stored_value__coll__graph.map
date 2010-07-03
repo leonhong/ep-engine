@@ -1,4 +1,7 @@
 <map id="G" name="G">
 <area shape="rect" id="node2" href="$class_atomic.html" title="Atomic\&lt; size_t \&gt;" alt="" coords="5,193,144,221"/>
 <area shape="rect" id="node4" href="$class_atomic.html" title="Holder of atomic values." alt="" coords="21,99,128,127"/>
+<area shape="rect" id="node8" href="$unionstored__value__bodies.html" title="Union of StoredValue data." alt="" coords="168,193,325,221"/>
+<area shape="rect" id="node10" href="$structfeature__data.html" title="StoredValue &quot;featured&quot; data type." alt="" coords="172,99,279,127"/>
+<area shape="rect" id="node12" href="$structsmall__data.html" title="StoredValue &quot;small&quot; data storage." alt="" coords="303,99,396,127"/>
 </map>
