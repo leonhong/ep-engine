@@ -694,9 +694,9 @@ public:
         return ret;
     }
 
-    tap_event_t walkTapQueue(const void *cookie, item **itm, void **es,
-                             uint16_t *nes, uint8_t *ttl, uint16_t *flags,
-                             uint32_t *seqno, uint16_t *vbucket) {
+    tap_event_t doWalkTapQueue(const void *cookie, item **itm, void **es,
+                               uint16_t *nes, uint8_t *ttl, uint16_t *flags,
+                               uint32_t *seqno, uint16_t *vbucket, TapConnection **c) {
         LockHolder lh(tapNotifySync);
         std::map<const void*, TapConnection*>::iterator iter;
         TapConnection *connection = NULL;
@@ -714,6 +714,8 @@ public:
                              "Disconnecting pending connection\n");
             return TAP_DISCONNECT;
         }
+
+        *c = connection;
 
         if (connection->doRunBackfill) {
             queueBackfill(connection, cookie);
@@ -794,6 +796,24 @@ public:
         return ret;
     }
 
+
+    tap_event_t walkTapQueue(const void *cookie, item **itm, void **es,
+                             uint16_t *nes, uint8_t *ttl, uint16_t *flags,
+                             uint32_t *seqno, uint16_t *vbucket) {
+        TapConnection *connection;
+        tap_event_t ret = doWalkTapQueue(cookie, itm, es, nes, ttl, flags,
+                                         seqno, vbucket, &connection);
+
+        if (ret != TAP_DISCONNECT && ret != TAP_PAUSE) {
+            *seqno = connection->getSeqno();
+            if (connection->requestTapAck()) {
+                *flags = TAP_FLAG_ACK;
+            }
+        }
+
+        return ret;
+    }
+
     void createTapQueue(const void *cookie, std::string &client, uint32_t flags,
                         const void *userdata,
                         size_t nuserdata) {
@@ -849,11 +869,13 @@ public:
                 getLogger()->log(EXTENSION_LOG_INFO, NULL,
                                  "The TAP channel (\"%s\") exists... grabbing the channel\n",
                                  name.c_str());
-                TapConnection *n = new TapConnection(TapConnection::getAnonTapName(), 0);
-                n->doDisconnect = true;
-                n->paused = true;
-                allTaps.push_back(n);
-                tapConnectionMap[miter->first] = n;
+                if (miter->first != NULL) {
+                    TapConnection *n = new TapConnection(TapConnection::getAnonTapName(), 0);
+                    n->doDisconnect = true;
+                    n->paused = true;
+                    allTaps.push_back(n);
+                    tapConnectionMap[miter->first] = n;
+                }
             }
         }
 
@@ -924,6 +946,34 @@ public:
         } else {
             tapConnectionMap[cookie] = tap;
             tap->connected = true;
+
+            std::list<TapLogElement>::iterator i = tap->tapLog.begin();
+            while (i != tap->tapLog.end()) {
+                getLogger()->log(EXTENSION_LOG_WARNING, NULL,
+                                 "Reschedule message (%u:#%u)\n", i->event, i->seqno);
+                switch (i->event) {
+                case TAP_VBUCKET_SET:
+                    {
+                        TapVBucketEvent e(i->event, i->vbucket, i->state);
+                        if (i->state == pending) {
+                            tap->addVBucketHighPriority(e);
+                        } else {
+                            tap->addVBucketLowPriority(e);
+                        }
+                    }
+                    break;
+                case TAP_MUTATION:
+                    tap->addEvent(i->key, i->vbucket, queue_op_set);
+                    break;
+                default:
+                    getLogger()->log(EXTENSION_LOG_WARNING, NULL,
+                                     "Internal error. Not implemented");
+                    abort();
+                }
+                tap->tapLog.erase(i);
+                i = tap->tapLog.begin();
+            }
+
         }
         tapNotifySync.notify();
     }
@@ -944,11 +994,7 @@ public:
                                 size_t ndata,
                                 uint16_t vbucket)
     {
-        (void)engine_specific;
-        (void)nengine;
         (void)ttl;
-        (void)tap_flags;
-        (void)tap_seqno;
 
         // If cookie is null, this is the internal tap client, so we
         // should disconnect it if tap isn't enabled.
@@ -956,14 +1002,15 @@ public:
             return ENGINE_DISCONNECT;
         }
 
+        std::string k(static_cast<const char*>(key), nkey);
+
         switch (tap_event) {
+        case TAP_ACK:
+            return processTapAck(cookie, tap_seqno, tap_flags, k);
         case TAP_FLUSH:
             return flush(cookie, 0);
         case TAP_DELETION:
-            {
-                std::string k(static_cast<const char*>(key), nkey);
-                return itemDelete(cookie, k, vbucket);
-            }
+            return itemDelete(cookie, k, vbucket);
 
         case TAP_MUTATION:
             {
@@ -973,8 +1020,6 @@ public:
                 // We do this by manually constructing the item using its
                 // value_t constructor to reduce memory copies as much as
                 // possible.
-
-                std::string k(static_cast<const char *>(key), nkey);
                 std::string v;
                 v.reserve(ndata+2);
                 v.append(static_cast<const char*>(data), ndata);
@@ -1202,6 +1247,27 @@ private:
                                              GET_SERVER_API get_server_api,
                                              ENGINE_HANDLE **handle);
 
+    ENGINE_ERROR_CODE processTapAck(const void *cookie, uint32_t seqno, uint16_t status,
+                                    const std::string &msg)
+    {
+        LockHolder lh(tapNotifySync);
+        std::map<const void*, TapConnection*>::iterator iter;
+        iter = tapConnectionMap.find(cookie);
+        if (iter == tapConnectionMap.end()) {
+            getLogger()->log(EXTENSION_LOG_WARNING, NULL,
+                             "Can't find client connection\n");
+            return ENGINE_DISCONNECT;
+        }
+        TapConnection *connection = iter->second;
+        if (connection->doDisconnect) {
+            getLogger()->log(EXTENSION_LOG_WARNING, NULL,
+                             "Disconnecting pending connection\n");
+            return ENGINE_DISCONNECT;
+        }
+
+        return connection->processTapAck(seqno, status, msg);
+    }
+
     void updateTapStats(void) {
         LockHolder lh(tapNotifySync);
         size_t depth = 0, totalSent = 0;
@@ -1256,6 +1322,12 @@ private:
         std::list<const void *> toNotify;
         for (iter = tapConnectionMap.begin(); iter != tapConnectionMap.end(); iter++) {
             if (iter->second->paused || iter->second->doDisconnect) {
+                if (iter->first == NULL) {
+                    TapConnection *tc = iter->second;
+                    tc->empty();
+                    abort();
+                }
+
                 toNotify.push_back(iter->first);
             }
         }
@@ -1645,6 +1717,21 @@ private:
             }
             if (tc->backfillAge != 0) {
                 addTapStat("backfill_age", tc, (size_t)tc->backfillAge, add_stat, cookie);
+            }
+
+            if (tc->tapAckSupported) {
+                addTapStat("ack_seqno", tc, tc->tapSeqno, add_stat, cookie);
+                addTapStat("ack_log_size", tc, tc->tapLog.size(), add_stat, cookie);
+
+#if 0
+                std::list<TapLogElement>::iterator i = tc->tapLog.begin();
+
+                while (i != tc->tapLog.end()) {
+                    addTapStat("seqno", tc, i->seqno, add_stat, cookie);
+                    i++;
+                }
+#endif
+
             }
         }
         add_casted_stat("ep_tap_count", totalTaps, add_stat, cookie);

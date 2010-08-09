@@ -18,6 +18,31 @@
 #include "config.h"
 #include "ep_engine.h"
 
+
+ENGINE_ERROR_CODE TapConnection::processTapAck(uint32_t seqno,
+                                               uint16_t status,
+                                               const std::string &msg) {
+
+    if (status != PROTOCOL_BINARY_RESPONSE_SUCCESS) {
+        getLogger()->log(EXTENSION_LOG_WARNING, NULL,
+                         "Received negative TAP ack from <%s> (#%u): Code: %u (%s)\n",
+                         client.c_str(), seqno, status, msg.c_str());
+        doDisconnect = true;
+        expiry_time = 0;
+        return ENGINE_DISCONNECT;
+    } else {
+
+        // @todo optimize this by using algorithm
+        std::list<TapLogElement>::iterator iter = tapLog.begin();
+        while (iter != tapLog.end() && (*iter).seqno == seqno) {
+            tapLog.erase(iter);
+            iter = tapLog.begin();
+        }
+    }
+
+    return ENGINE_SUCCESS;
+}
+
 void TapConnection::encodeVBucketStateTransition(const TapVBucketEvent &ev, void **es,
                                                  uint16_t *nes, uint16_t *vbucket) const
 {
