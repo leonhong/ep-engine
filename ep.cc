@@ -365,9 +365,9 @@ void EventuallyPersistentStore::bgFetch(const std::string &key,
                                                         vbucket, rowid, cookie));
     ++bgFetchQueue;
     assert(bgFetchQueue > 0);
-    getLogger()->log(EXTENSION_LOG_DEBUG, NULL,
-                     "Queued a background fetch, now at %zd\n",
-                     bgFetchQueue.get());
+    // getLogger()->log(EXTENSION_LOG_DEBUG, NULL,
+    //                  "Queued a background fetch, now at %zd\n",
+    //                  bgFetchQueue.get());
     dispatcher->schedule(dcb, NULL, -1, bgFetchDelay);
 }
 
